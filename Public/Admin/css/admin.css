@@ -7,11 +7,25 @@
  fixed-layout 固定头部和边栏布局
 */
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 html,
 body {
   height: 100%;
   overflow: hidden;
 }
+<<<<<<< HEAD
+=======
+=======
+/* html,
+body {
+  height: 100%; 
+  overflow: hidden; 
+} */
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 
 ul {
   margin-top: 0;
@@ -22,11 +36,25 @@ ul {
 }
 
 .admin-header {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1500;
+<<<<<<< HEAD
+=======
+=======
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 600;
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
   font-size: 1.4rem;
   margin-bottom: 0;
 }
@@ -165,7 +193,15 @@ ul {
 .admin-content-file li:last-child {
   border-bottom: none;
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+ 
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 .admin-content-file li .am-progress {
   margin-bottom: 4px;
 }

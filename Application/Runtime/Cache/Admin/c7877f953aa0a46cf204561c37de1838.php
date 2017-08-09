@@ -20,7 +20,15 @@
     
 </head>
 
+<<<<<<< HEAD
 <body data-type="index">
+=======
+<<<<<<< HEAD
+<body data-type="generalComponents">
+=======
+<body data-type="index">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -148,7 +156,15 @@
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
+<<<<<<< HEAD
                 Amaze UI 列表
+=======
+<<<<<<< HEAD
+                                                   管理 列表
+=======
+                Amaze UI 列表
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -167,7 +183,15 @@
 		     </li> -->
 		     <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-table"></i>
+=======
+<<<<<<< HEAD
+		               <i class="am-icon-wpforms"></i>
+=======
+		               <i class="am-icon-table"></i>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		               <span>介绍板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -192,7 +216,15 @@
 		          </ul>
 		    </li> <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-table"></i>
+=======
+<<<<<<< HEAD
+		               <i class="am-icon-bars"></i>
+=======
+		               <i class="am-icon-table"></i>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		               <span>申请板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -248,24 +280,72 @@
 		          </ul>
 		    </li>
 		    <li class="tpl-left-nav-item">
+<<<<<<< HEAD
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-table"></i>
+=======
+<<<<<<< HEAD
+		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-weixin"></i>
+		               <span>微信信息记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		           </a>
+		    </li>
+		    <li class="tpl-left-nav-item">
+		           <a href="/Admin/Master/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-user-plus"></i>
+		               <span>站长记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		           </a>
+		    </li>
+		    <li class="tpl-left-nav-item">
+		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-group"></i>
+=======
+		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-table"></i>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
 		          <ul class="tpl-left-nav-sub-menu">
 		               <li>
+<<<<<<< HEAD
 		                   <a href="table-font-list.html">
+=======
+<<<<<<< HEAD
+		                   <a href="/Admin/Admin/index">
+=======
+		                   <a href="table-font-list.html">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>超级管理员列表</span>
 		                       <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="table-images-list.html">
+=======
+<<<<<<< HEAD
+		                   <a href="/Admin/Admin/indexs">
+=======
+		                   <a href="table-images-list.html">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>站长管理员列表</span>
 		                       <i class="tpl-left-nav-content tpl-badge-success">18</i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="form-news.html">
+=======
+<<<<<<< HEAD
+		                   <a href="/Admin/Admin/indexss">
+=======
+		                   <a href="form-news.html">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>考点管理员列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
@@ -292,17 +372,40 @@
 
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                                     考官申请信息添加列表
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li class="am-active">申请板块</li>
+                <li class="am-active">考官列表</li>
+=======
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                 Amaze UI 表单
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
                 <li><a href="#">表单</a></li>
                 <li class="am-active">Amaze UI 表单</li>
+<<<<<<< HEAD
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
                     <div class="caption font-green bold">
+<<<<<<< HEAD
                         <span class="am-icon-code"></span> 表单
+=======
+<<<<<<< HEAD
+                        <span class="am-icon-font-awesome"></span> 考官信息添加
+=======
+                        <span class="am-icon-code"></span> 表单
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                     </div>
                     <div class="tpl-portlet-input tpl-fz-ml">
                         <div class="portlet-input input-small input-inline">
@@ -317,22 +420,57 @@
                         <div class="tpl-form-body tpl-form-line">
                             <form class="am-form tpl-form-line-form">
                                 <div class="am-form-group">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                    <label class="am-u-sm-3 am-form-label">姓名<span class="tpl-form-line-small-title">Tname</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" class="tpl-form-input" name="tname" placeholder="请输入姓名">
+                                        <!-- <small>请填写标题文字10-20字左右。</small> -->
+=======
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                     <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
                                         <small>请填写标题文字10-20字左右。</small>
+<<<<<<< HEAD
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                    <label class="am-u-sm-3 am-form-label">性别<span class="tpl-form-line-small-title">Sex</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input name="sex" type="radio" value="男" checked="checked" /><span style="color:#888;font-size:16px;margin-right:100px;">男</span>
+                                        <input name="sex" type="radio" value="女"  /><span style="color:#888;font-size:16px;">女</span>
+                                        <!-- <small>发布时间为必填</small> -->
+=======
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                     <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly/>
                                         <small>发布时间为必填</small>
+<<<<<<< HEAD
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                    <label class="am-u-sm-3 am-form-label">身份证号码<span class="tpl-form-line-small-title">Idcard</span></label>
+                                    <div class="am-u-sm-9">
+                                    <input type="text" name="idcard" placeholder="请输入身份证号码">
+=======
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                     <label for="user-phone" class="am-u-sm-3 am-form-label">作者 <span class="tpl-form-line-small-title">Author</span></label>
                                     <div class="am-u-sm-9">
                                         <select data-am-selected="{searchBox: 1}">
@@ -340,41 +478,129 @@
 										  <option value="b">夕风色</option>
 										  <option value="o">Orange</option>
 										</select>
+<<<<<<< HEAD
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
+<<<<<<< HEAD
                                     <label class="am-u-sm-3 am-form-label">SEO关键字 <span class="tpl-form-line-small-title">SEO</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" placeholder="输入SEO关键字">
+=======
+<<<<<<< HEAD
+                                    <label class="am-u-sm-3 am-form-label">手机号码<span class="tpl-form-line-small-title">Phone</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" name="phone" placeholder="请输入手机号码">
+=======
+                                    <label class="am-u-sm-3 am-form-label">SEO关键字 <span class="tpl-form-line-small-title">SEO</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" placeholder="输入SEO关键字">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
+<<<<<<< HEAD
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">封面图 <span class="tpl-form-line-small-title">Images</span></label>
+=======
+<<<<<<< HEAD
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">个人照片<span class="tpl-form-line-small-title">Picture</span></label>
+=======
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">封面图 <span class="tpl-form-line-small-title">Images</span></label>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
                                             <div class="tpl-form-file-img">
                                                 <img src="/Public/Admin/images/a5.png" alt="">
                                             </div>
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                            <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                            <i class="am-icon-cloud-upload"></i> 添加个人图片</button>
                                             <input id="doc-form-file" type="file" multiple>
                                         </div>
-
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">自我介绍</label>
+                                    <div class="am-u-sm-9">
+                                        <textarea class="" rows="10"  placeholder="请输入自我介绍"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">居住地址</label>
+                                    <div class="am-u-sm-9">
+                                        <input  type="text" placeholder="请输入居住地址"/>
+=======
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
+                                            <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
+                                            <input id="doc-form-file" type="file" multiple>
+                                        </div>
+
+<<<<<<< HEAD
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">资格证书图片<span class="tpl-form-line-small-title">Picture</span></label>
+                                    <div class="am-u-sm-9">
+                                        <div class="am-form-group am-form-file">
+                                            <div class="tpl-form-file-img">
+                                                <img src="/Public/Admin/images/a5.png" alt="">
+                                            </div>
+                                            <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                            <i class="am-icon-cloud-upload"></i> 添加资格证书图片</button>
+                                            <input id="doc-form-file" type="file" multiple>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">考点地址</label>
+                                    <div class="am-u-sm-9">
+                                        <input  type="text" placeholder="请输入考点地址"/>
+                                    </div>
+                                </div>
+<!--                                <div class="am-form-group">
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">添加分类 <span class="tpl-form-line-small-title">Type</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" id="user-weibo" placeholder="请添加分类用点号隔开">
                                         <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                        </div>
+                                    </div>
+                                </div>
+=======
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 
                                         </div>
                                     </div>
                                 </div>
 
+<<<<<<< HEAD
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                 <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">隐藏文章</label>
                                     <div class="am-u-sm-9">
@@ -385,6 +611,17 @@
                                                 </div>
                                             </div>
                                         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                    </div>
+                                </div> -->
+
+                                <div class="am-form-group">
+                                    <div class="am-u-sm-9 am-u-sm-push-3">
+                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">添加</button>
+=======
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 
                                     </div>
                                 </div>
@@ -399,6 +636,10 @@
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
                                         <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+<<<<<<< HEAD
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
                                     </div>
                                 </div>
                             </form>
@@ -418,6 +659,14 @@
     <script src="/Public/Admin/js/amazeui.min.js"></script>
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 </body>
 </html>

@@ -20,7 +20,11 @@
     
 </head>
 
+<<<<<<< HEAD
 <body data-type="generalComponents">
+=======
+<body data-type="index">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -167,7 +171,11 @@
 		     </li> -->
 		     <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-wpforms"></i>
+=======
+		               <i class="am-icon-table"></i>
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		               <span>介绍板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -192,7 +200,11 @@
 		          </ul>
 		    </li> <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-bars"></i>
+=======
+		               <i class="am-icon-table"></i>
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		               <span>申请板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -249,12 +261,17 @@
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-weixin"></i>
+=======
+		               <i class="am-icon-bar-chart"></i>
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		               <span>微信信息记录表</span>
 		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
+<<<<<<< HEAD
 		           <a href="/Admin/Master/index" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-user-plus"></i>
 		               <span>站长记录表</span>
@@ -264,22 +281,38 @@
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-group"></i>
+=======
+		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-table"></i>
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
 		          <ul class="tpl-left-nav-sub-menu">
 		               <li>
+<<<<<<< HEAD
 		                   <a href="/Admin/Admin/index">
+=======
+		                   <a href="table-font-list.html">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>超级管理员列表</span>
 		                       <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="/Admin/Admin/indexs">
+=======
+		                   <a href="table-images-list.html">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>站长管理员列表</span>
 		                       <i class="tpl-left-nav-content tpl-badge-success">18</i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="/Admin/Admin/indexss">
+=======
+		                   <a href="form-news.html">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>考点管理员列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>

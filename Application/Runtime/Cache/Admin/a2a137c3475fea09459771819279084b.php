@@ -13,14 +13,33 @@
     <link rel="icon" type="image/png" href="/Public/Admin/i/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/Public/Admin/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<<<<<<< HEAD
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
+=======
+<<<<<<< HEAD
+    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
+=======
+    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" /> 
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
     
 </head>
+<<<<<<< HEAD
 
 <body data-type="index">
+=======
+<<<<<<< HEAD
+
+<body data-type="generalComponents">
+=======
+<body>
+	
+<body data-type="generalComponents"> 
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -143,12 +162,28 @@
                 <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
             </ul>
         </div>
+<<<<<<< HEAD
     </header>
+=======
+<<<<<<< HEAD
+    </header>
+=======
+    </header> 
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
+<<<<<<< HEAD
                 Amaze UI 列表
+=======
+<<<<<<< HEAD
+                                                   管理 列表
+=======
+                Amaze UI 列表
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -158,16 +193,35 @@
 		               <span>首页</span>
 		           </a>
 		      </li>
+<<<<<<< HEAD
 <!-- 		      <li class="tpl-left-nav-item">
+=======
+<<<<<<< HEAD
+<!-- 		      <li class="tpl-left-nav-item">
+=======
+		      <li class="tpl-left-nav-item">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-bar-chart"></i>
 		               <span>数据表</span>
 		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
 		           </a>
+<<<<<<< HEAD
 		     </li> -->
 		     <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-table"></i>
+=======
+<<<<<<< HEAD
+		     </li> -->
+=======
+		     </li>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+		     <li class="tpl-left-nav-item">
+		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-wpforms"></i>
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		               <span>介绍板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -192,7 +246,11 @@
 		          </ul>
 		    </li> <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-table"></i>
+=======
+		               <i class="am-icon-bars"></i>
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		               <span>申请板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -224,22 +282,38 @@
 		          </a>
 		          <ul class="tpl-left-nav-sub-menu">
 		               <li>
+<<<<<<< HEAD
 		                   <a href="table-font-list.html">
+=======
+		                   <a href="/Admin/News/index">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>新闻资讯列表</span>
 		                       <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="table-images-list.html">
+=======
+		                   <a href="/Admin/Notice/index">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>考试公告列表</span>
 		                       <i class="tpl-left-nav-content tpl-badge-success">18</i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="form-news.html">
+=======
+		                   <a href="/Admin/Grade/index">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>证书录入列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
 		                   </a>
+<<<<<<< HEAD
 			               <a href="form-amazeui.html">
+=======
+			               <a href="/Admin/Live/index">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 			                   <i class="am-icon-angle-right"></i>
 			                   <span>考试直播列表</span>
 			                   <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
@@ -248,24 +322,55 @@
 		          </ul>
 		    </li>
 		    <li class="tpl-left-nav-item">
+<<<<<<< HEAD
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-table"></i>
+=======
+		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-weixin"></i>
+		               <span>微信信息记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		           </a>
+		    </li>
+		    <li class="tpl-left-nav-item">
+		           <a href="/Admin/Master/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-user-plus"></i>
+		               <span>站长记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		           </a>
+		    </li>
+		    <li class="tpl-left-nav-item">
+		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-group"></i>
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
 		          <ul class="tpl-left-nav-sub-menu">
 		               <li>
+<<<<<<< HEAD
 		                   <a href="table-font-list.html">
+=======
+		                   <a href="/Admin/Admin/index">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>超级管理员列表</span>
 		                       <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="table-images-list.html">
+=======
+		                   <a href="/Admin/Admin/indexs">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>站长管理员列表</span>
 		                       <i class="tpl-left-nav-content tpl-badge-success">18</i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="form-news.html">
+=======
+		                   <a href="/Admin/Admin/indexss">
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>考点管理员列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
@@ -273,11 +378,23 @@
 		              </li>
 		          </ul>
 		    </li>
+<<<<<<< HEAD
 <!-- 		    <li class="tpl-left-nav-item">
+=======
+<<<<<<< HEAD
+<!-- 		    <li class="tpl-left-nav-item">
+=======
+		    <li class="tpl-left-nav-item">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>
 		            <span>登录</span>
 		        </a>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 		    </li> -->
 		</ul>
         </div>
@@ -287,6 +404,20 @@
 
 
 
+<<<<<<< HEAD
+=======
+=======
+		    </li>
+		</ul>
+        </div>
+    </div>
+</div>  
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+<script src="/Public/Admin/js/amazeui.min.js"></script>
+<script src="/Public/Admin/js/iscroll.js"></script>
+<script src="/Public/Admin/js/app.js"></script>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 
 
 
@@ -413,12 +544,22 @@
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 </div>
 
     <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
     <script src="/Public/Admin/js/amazeui.min.js"></script>
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
+<<<<<<< HEAD
 
+=======
+    
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 </body>
 </html>

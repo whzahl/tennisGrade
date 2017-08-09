@@ -20,7 +20,15 @@
     
 </head>
 
+<<<<<<< HEAD
 <body data-type="index">
+=======
+<<<<<<< HEAD
+<body data-type="generalComponents">
+=======
+<body data-type="index">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -148,7 +156,15 @@
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
+<<<<<<< HEAD
                 Amaze UI 列表
+=======
+<<<<<<< HEAD
+                                                   管理 列表
+=======
+                Amaze UI 列表
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -433,6 +449,14 @@
     <script src="/Public/Admin/js/amazeui.min.js"></script>
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 </body>
 </html>

@@ -1,14 +1,23 @@
 [ 2017-08-05T18:19:59+08:00 ] 183.232.210.59 /
 INFO: [ app_init ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
 INFO: [ app_init ] --END-- [ RunTime:0.006325s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017509s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.017591s ]
+=======
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006352s ]
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 ERR: 模板不存在:./Application/Home/View/Index/index.html
 
 [ 2017-08-05T18:20:04+08:00 ] 183.232.210.59 /
 INFO: [ app_init ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
 INFO: [ app_begin ] --START--
@@ -86,14 +95,101 @@ INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+=======
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+ERR: 模板不存在:./Application/Home/View/Index/index.html
+
+[ 2017-08-05T18:20:04+08:00 ] 183.232.210.59 /Portal/Portal.mwsl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+ERR: 无法加载控制器:Portal
+
+[ 2017-08-05T18:20:05+08:00 ] 183.232.210.59 /docs/cplugError.html/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007536s ]
+ERR: 无法加载控制器:Docs
+
+[ 2017-08-05T18:20:06+08:00 ] 183.232.210.59 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+ERR: 模板不存在:./Application/Home/View/Index/index.html
+
+[ 2017-08-05T18:20:07+08:00 ] 183.232.210.59 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+ERR: 模板不存在:./Application/Home/View/Index/index.html
+
+[ 2017-08-05T18:20:18+08:00 ] 183.232.210.59 /ibm/console/logon.jsp?action=OK
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+ERR: 无法加载控制器:Ibm
+
+[ 2017-08-05T18:20:18+08:00 ] 183.232.210.59 /console/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+ERR: 无法加载控制器:Console
+
+[ 2017-08-05T18:20:18+08:00 ] 183.232.210.59 /console/portal/0/Welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002471s ]
+ERR: 无法加载控制器:Console
+
+[ 2017-08-05T18:20:18+08:00 ] 183.232.210.59 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 ERR: 模板不存在:./Application/Home/View/Index/index.html
 
 [ 2017-08-05T18:20:19+08:00 ] 183.232.210.59 /
 INFO: [ app_init ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+=======
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003470s ]
+>>>>>>> 21e42812763a8ef038b91e9e58eebdb894902cf6
 ERR: 模板不存在:./Application/Home/View/Index/index.html
 

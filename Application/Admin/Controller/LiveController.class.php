@@ -14,7 +14,6 @@ class LiveController extends CheckController{
 
 
 	public function index(){
-		
 		$strTitle=I('get.title');
 		if (!empty($strTitle)) {
 			$arrWhere['title'] = array('like','%'.$strTitle.'%');
@@ -131,4 +130,13 @@ class LiveController extends CheckController{
 	 	$max = pow(10, $length) - 1;
 	 	return rand($min, $max);
 	 }
+		$this->display();
+	}
+	
+	public function edit(){
+		$this->display();
+	}
+
+
+ 
 }
