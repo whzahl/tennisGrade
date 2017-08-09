@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" href="/Public/Admin/i/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/Public/Admin/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<<<<<<< HEAD
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
@@ -39,6 +40,17 @@
 </head>
 
 <body data-type="generalComponents">
+=======
+    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" /> 
+    <link rel="stylesheet" href="/Public/Admin/css/admin.css">
+    <link rel="stylesheet" href="/Public/Admin/css/app.css">
+    <script src="/Public/Admin/js/echarts.min.js"></script>
+    
+</head>
+<body>
+	
+<body data-type="generalComponents"> 
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -161,12 +173,20 @@
                 <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
             </ul>
         </div>
+<<<<<<< HEAD
     </header>
+=======
+    </header> 
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
+<<<<<<< HEAD
                                                    管理 列表
+=======
+                Amaze UI 列表
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -176,13 +196,21 @@
 		               <span>首页</span>
 		           </a>
 		      </li>
+<<<<<<< HEAD
 <!-- 		      <li class="tpl-left-nav-item">
+=======
+		      <li class="tpl-left-nav-item">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-bar-chart"></i>
 		               <span>数据表</span>
 		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
 		           </a>
+<<<<<<< HEAD
 		     </li> -->
+=======
+		     </li>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		     <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-wpforms"></i>
@@ -266,6 +294,7 @@
 		          </ul>
 		    </li>
 		    <li class="tpl-left-nav-item">
+<<<<<<< HEAD
 		           <a href="/Admin/Order/index" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-balance-scale"></i>
 		               <span>订单信息记录表</span>
@@ -277,18 +306,34 @@
 		               <i class="am-icon-weixin"></i>&nbsp;
 		               <span> 微信信息记录表</span>
 		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
+=======
+		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-weixin"></i>
+		               <span>微信信息记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="/Admin/Master/index" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-user-plus"></i>&nbsp;
 		               <span> 站长记录表</span>
 		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
+=======
+		               <i class="am-icon-user-plus"></i>
+		               <span>站长记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-group"></i>&nbsp;
+=======
+		               <i class="am-icon-group"></i>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -312,11 +357,16 @@
 		              </li>
 		          </ul>
 		    </li>
+<<<<<<< HEAD
 <!-- 		    <li class="tpl-left-nav-item">
+=======
+		    <li class="tpl-left-nav-item">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>
 		            <span>登录</span>
 		        </a>
+<<<<<<< HEAD
 		    </li> -->
 		</ul>
         </div>
@@ -326,29 +376,59 @@
 
 
 
+=======
+		    </li>
+		</ul>
+        </div>
+    </div>
+</div>  
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+<script src="/Public/Admin/js/amazeui.min.js"></script>
+<script src="/Public/Admin/js/iscroll.js"></script>
+<script src="/Public/Admin/js/app.js"></script>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 
 
 
  <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
+<<<<<<< HEAD
                                                      站长申请列表
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
                 <li>站长记录表</li>
+=======
+                Amaze UI 文字列表
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li><a href="#">Amaze UI CSS</a></li>
+                <li class="am-active">文字列表</li>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
                     <div class="caption font-green bold">
+<<<<<<< HEAD
                         <span class="am-icon-font-awesome"></span> 列表详情
                     </div>
 <!--                     <div class="tpl-portlet-input tpl-fz-ml">
+=======
+                        <span class="am-icon-code"></span> 列表
+                    </div>
+                    <div class="tpl-portlet-input tpl-fz-ml">
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
                         <div class="portlet-input input-small input-inline">
                             <div class="input-icon right">
                                 <i class="am-icon-search"></i>
                                 <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
                         </div>
+<<<<<<< HEAD
                     </div> -->
+=======
+                    </div>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 
 
                 </div>
@@ -357,10 +437,17 @@
                         <div class="am-u-sm-12 am-u-md-6">
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
+<<<<<<< HEAD
                                     <!-- <a href="/Admin/Live/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a> -->
                                     <!-- <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button> -->
                                     <!-- <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button> -->
 <!--                                     <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
+=======
+                                    <a href="/Admin/Live/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
+                                    <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
                                 </div>
                             </div>
                         </div>
@@ -371,6 +458,12 @@
 				                <option value="option2">IT业界</option>
 				                <option value="option3">数码产品</option>
 				                <option value="option3">笔记本电脑</option>
+<<<<<<< HEAD
+=======
+				                <option value="option3">平板电脑</option>
+				                <option value="option3">只能手机</option>
+				                <option value="option3">超极本</option>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 				            </select>
                             </div>
                         </div>
@@ -389,6 +482,7 @@
 		                      <table class="am-table am-table-striped am-table-hover table-main">
 		                          <thead>
 		                              <tr>
+<<<<<<< HEAD
 		                                  <th></th>
 		                                  <!-- <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th> -->
 		                                  <th class="table-id">ID</th>
@@ -396,10 +490,19 @@
 		                                  <th class="table-type">考点名称</th>
 		                                  <th class="table-author am-hide-sm-only">地址</th>
 		                                  <th class="table-date am-hide-sm-only">申请时间</th>
+=======
+		                                  <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
+		                                  <th class="table-id">ID</th>
+		                                  <th class="table-title">标题</th>
+		                                  <th class="table-type">类别</th>
+		                                  <th class="table-author am-hide-sm-only">作者</th>
+		                                  <th class="table-date am-hide-sm-only">修改日期</th>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		                                  <th class="table-set">操作</th>
 		                              </tr>
 		                          </thead>
 		                          <tbody>
+<<<<<<< HEAD
 		                          <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
 		                                  <td></td>
 		                                  <!-- <td><input type="checkbox"></td> -->
@@ -422,6 +525,25 @@
 		                                      </div>
 		                                  </td>
 		                              </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+=======
+		                              <tr>
+		                                  <td><input type="checkbox"></td>
+		                                  <td>5</td>
+		                                  <td><a href="#">Business management</a></td>
+		                                  <td>default</td>
+		                                  <td class="am-hide-sm-only">测试1号</td>
+		                                  <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
+		                                  <td>
+		                                      <div class="am-btn-toolbar">
+		                                          <div class="am-btn-group am-btn-group-xs">
+		                                              <a href="/Admin/Live/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+		                                              <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
+		                                              <a href="/Admin/Live/delete"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></a>
+		                                          </div>
+		                                      </div>
+		                                  </td>
+		                              </tr>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		                          </tbody>
 		                      </table>
 		                      <div class="am-cf">
@@ -454,6 +576,7 @@
 
 
 
+<<<<<<< HEAD
 </div>
 
     <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
@@ -461,5 +584,7 @@
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
     
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 </body>
 </html>

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
+<<<<<<< HEAD
 <script type="text/javascript"> 
 	function del(){ 
 		if(confirm("确认要删除？")){ 
@@ -35,6 +36,8 @@
 		}
 	} 
 </script> 
+=======
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
     
 </head>
 
@@ -166,7 +169,11 @@
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
+<<<<<<< HEAD
                                                    管理 列表
+=======
+                Amaze UI 列表
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -266,6 +273,7 @@
 		          </ul>
 		    </li>
 		    <li class="tpl-left-nav-item">
+<<<<<<< HEAD
 		           <a href="/Admin/Order/index" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-balance-scale"></i>
 		               <span>订单信息记录表</span>
@@ -276,19 +284,33 @@
 		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-weixin"></i>&nbsp;
 		               <span> 微信信息记录表</span>
+=======
+		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-weixin"></i>
+		               <span>微信信息记录表</span>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="/Admin/Master/index" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-user-plus"></i>&nbsp;
 		               <span> 站长记录表</span>
+=======
+		               <i class="am-icon-user-plus"></i>
+		               <span>站长记录表</span>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-group"></i>&nbsp;
+=======
+		               <i class="am-icon-group"></i>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -458,6 +480,10 @@
     <script src="/Public/Admin/js/amazeui.min.js"></script>
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 </body>
 </html>

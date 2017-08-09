@@ -13,10 +13,15 @@ class PlaceController extends CheckController{
 	}
 
 
+<<<<<<< HEAD
     public function index(){
     	
     } 
     
+=======
+
+
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 
 
 

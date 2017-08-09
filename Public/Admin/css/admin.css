@@ -7,11 +7,19 @@
  fixed-layout 固定头部和边栏布局
 */
 
+<<<<<<< HEAD
 html,
 body {
   height: 100%;
   overflow: hidden;
 }
+=======
+/* html,
+body {
+  height: 100%; 
+  overflow: hidden; 
+} */
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 
 ul {
   margin-top: 0;
@@ -22,11 +30,19 @@ ul {
 }
 
 .admin-header {
+<<<<<<< HEAD
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1500;
+=======
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 600;
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
   font-size: 1.4rem;
   margin-bottom: 0;
 }
@@ -165,7 +181,11 @@ ul {
 .admin-content-file li:last-child {
   border-bottom: none;
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 .admin-content-file li .am-progress {
   margin-bottom: 4px;
 }

@@ -12,6 +12,7 @@ class MasterController extends CheckController{
 		parent::__construct();
 	}
 
+<<<<<<< HEAD
 	public function index(){
 		$intCount = D('Master','Service') ->count($arrWhere);
 		$Page = new \Think\Page($intCount,10);
@@ -43,6 +44,11 @@ class MasterController extends CheckController{
 		}
 		$this->display();
 	}
+=======
+
+
+
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 
 
 

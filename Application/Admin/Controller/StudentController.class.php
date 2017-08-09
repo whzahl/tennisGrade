@@ -13,6 +13,7 @@ class StudentController extends CheckController{
 	}
 
     public function index(){
+<<<<<<< HEAD
     	$intCount = D('Student','Service') ->count($arrWhere);
     	$Page = new \Think\Page($intCount,10);
     	$show =  $Page ->show();
@@ -77,6 +78,21 @@ class StudentController extends CheckController{
     	}
     	$this->display();
     }
+=======
+    	$this->display();
+    }
+    
+    public function add(){
+    	$this->display();
+    }
+
+    public function edit(){
+    	$this->display();
+    }
+
+
+
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 
 
 }

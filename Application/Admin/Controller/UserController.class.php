@@ -2,7 +2,11 @@
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
+<<<<<<< HEAD
 // | Author:  min <min_xiaoxie@163.com>
+=======
+// | Author:  min <min_wenhao@163.com>
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 // +----------------------------------------------------------------------
 // | 2016-7-2
 // +----------------------------------------------------------------------
@@ -18,6 +22,7 @@ class UserController extends CheckController {
 	}
 	
     public function index(){
+<<<<<<< HEAD
     	$intCount = D('User','Service') ->count($arrWhere);
     	$Page = new \Think\Page($intCount,10);
     	$show =  $Page ->show();
@@ -42,4 +47,8 @@ class UserController extends CheckController {
     
     
     
+=======
+        $this->display();
+    }
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 }

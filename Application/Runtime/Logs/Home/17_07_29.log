@@ -1,5 +1,27 @@
+<<<<<<< HEAD
 [ 2017-07-29T09:43:29+08:00 ] 59.172.228.108 /favicon.ico
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+=======
+[ 2017-07-29T09:06:32+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+
+[ 2017-07-29T09:10:07+08:00 ] 127.0.0.1 /Public/Admin/img/syncfusion-icons-white.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+
+[ 2017-07-29T09:10:44+08:00 ] 127.0.0.1 /Public/Admin/img/syncfusion-icons-white.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+
+[ 2017-07-29T09:11:55+08:00 ] 127.0.0.1 /Public/Admin/img/syncfusion-icons-white.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+>>>>>>> 7a5f72a3869f79d153204755c2996470b12fee66
 
