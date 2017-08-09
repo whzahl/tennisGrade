@@ -17,7 +17,6 @@ class IntroController extends CheckController{
     public function intro(){
         $arrDate = D('Intro','Service')->findOne($arrWhere);
         $this->list = $arrData;
-
     	$this->display();
     }
     

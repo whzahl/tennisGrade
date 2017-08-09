@@ -82,7 +82,7 @@ class TeacherController extends CheckController{
     	} else {
     		$this->error('删除失败');
     	}
-=======
+
     	$this->display();
     }
     
