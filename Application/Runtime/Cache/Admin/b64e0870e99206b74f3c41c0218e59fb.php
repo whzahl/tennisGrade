@@ -40,6 +40,16 @@
 
 <body data-type="generalComponents">
 
+    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/Public/Admin/css/admin.css">
+    <link rel="stylesheet" href="/Public/Admin/css/app.css">
+    <script src="/Public/Admin/js/echarts.min.js"></script>
+    
+</head>
+
+<body data-type="generalComponents">
+
+<body>
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
             <a href="javascript:;" class="tpl-logo">
@@ -161,8 +171,7 @@
                 <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
             </ul>
         </div>
-    </header>
-
+    </header> 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
@@ -176,14 +185,7 @@
 		               <span>首页</span>
 		           </a>
 		      </li>
-<!-- 		      <li class="tpl-left-nav-item">
-		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
-		               <i class="am-icon-bar-chart"></i>
-		               <span>数据表</span>
-		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
-		           </a>
-		     </li> -->
-		     <li class="tpl-left-nav-item">
+		      <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-wpforms"></i>
 		               <span>介绍板块</span>
@@ -266,24 +268,24 @@
 		          </ul>
 		    </li>
 		    <li class="tpl-left-nav-item">
-		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
+		           <a href="/Admin/Order/index" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-balance-scale"></i>
 		               <span>订单信息记录表</span>
-		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-weixin"></i>&nbsp;
 		               <span> 微信信息记录表</span>
-		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="/Admin/Master/index" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-user-plus"></i>&nbsp;
 		               <span> 站长记录表</span>
-		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
@@ -312,143 +314,128 @@
 		              </li>
 		          </ul>
 		    </li>
-<!-- 		    <li class="tpl-left-nav-item">
-		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
-		            <i class="am-icon-key"></i>
-		            <span>登录</span>
-		        </a>
-		    </li> -->
 		</ul>
         </div>
     </div>
 </div>
 
 
-
-
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+<script src="/Public/Admin/js/amazeui.min.js"></script>
+<script src="/Public/Admin/js/iscroll.js"></script>
+<script src="/Public/Admin/js/app.js"></script>
 
 
 
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                                                考点信息修改页
+                Amaze UI 表单
             </div>
             <ol class="am-breadcrumb">
-                <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
-                <li class="am-active">申请板块</li>
-                <li class="am-active">考点信息修改页</li>
+                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li><a href="#">表单</a></li>
+                <li class="am-active">Amaze UI 表单</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
                     <div class="caption font-green bold">
-                        <span class="am-icon-font-awesome"></span> 考点信息修改
+                        <span class="am-icon-code"></span> 表单
                     </div>
-<!--                     <div class="tpl-portlet-input tpl-fz-ml">
+                    <div class="tpl-portlet-input tpl-fz-ml">
                         <div class="portlet-input input-small input-inline">
                             <div class="input-icon right">
                                 <i class="am-icon-search"></i>
                                 <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="tpl-form-body tpl-form-line">
-                            <form class="am-form tpl-form-line-form"  action="/Admin/Place/edit" method="post">
-                                <input name="pid" type="hidden"  value="<?php echo ($list["pid"]); ?>" >
+                            <form class="am-form tpl-form-line-form">
                                 <div class="am-form-group">
-                                    <label for="user-name" class="am-u-sm-3 am-form-label">考点名称 <span class="tpl-form-line-small-title">Pname</span></label>
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" class="tpl-form-input" name="pname"  value="<?php echo ($list["pname"]); ?>" placeholder="请输入考点名称">
-                                    </div>
-                                </div>
-
-<!--                                 <div class="am-form-group">
-                                    <label for="user-email" class="am-u-sm-3 am-form-label">负责人<span class="tpl-form-line-small-title">Manager</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" class="am-form-field tpl-form-no-bg" placeholder="请输入负责人" data-am-datepicker="" readonly/>
-                                        <small>请填写负责人的名字</small>
-                                    </div>
-                                </div> -->
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-form-label">负责人<span class="tpl-form-line-small-title">Manager</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" name="manager"  value="<?php echo ($list["manager"]); ?>" placeholder="请输入负责人名称">
+                                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
+                                        <small>请填写标题文字10-20字左右。</small>
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
-                                    <label for="user-phone" class="am-u-sm-3 am-form-label">考点地址 <span class="tpl-form-line-small-title">Address</span></label>
+                                    <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly/>
+                                        <small>发布时间为必填</small>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label for="user-phone" class="am-u-sm-3 am-form-label">作者 <span class="tpl-form-line-small-title">Author</span></label>
                                     <div class="am-u-sm-9">
                                         <select data-am-selected="{searchBox: 1}">
 										  <option value="a">-The.CC</option>
 										  <option value="b">夕风色</option>
 										  <option value="o">Orange</option>
 										</select>
-										<br>
-										<input type="text" placeholder="请输入详细地址">
                                     </div>
                                 </div>
+
                                 <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">考点具体介绍 <span class="tpl-form-line-small-title">Pintro</span></label>
+                                    <label class="am-u-sm-3 am-form-label">SEO关键字 <span class="tpl-form-line-small-title">SEO</span></label>
                                     <div class="am-u-sm-9">
-                                        <textarea class="" rows="10" id="user-intro" name="pintro"  value="<?php echo ($list["pintro"]); ?>"  placeholder="请输入具体介绍"><?php echo (stripslashes(htmlspecialchars_decode($list["pintro"]))); ?></textarea>
+                                        <input type="text" placeholder="输入SEO关键字">
                                     </div>
                                 </div>
+
                                 <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-form-label">手机号码<span class="tpl-form-line-small-title">Phone</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" name="phone"  value="<?php echo ($list["phone"]); ?>" placeholder="请输入手机号码">
-                                    </div>
-                                </div>
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-form-label">邮箱 <span class="tpl-form-line-small-title">Email</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" name="email"  value="<?php echo ($list["email"]); ?>"  placeholder="请输入邮箱">
-                                    </div>
-                                </div>
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-form-label">场馆电话<span class="tpl-form-line-small-title">Telephone</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" name="telephone"  value="<?php echo ($list["telephone"]); ?>"  placeholder="请输入场馆电话">
-                                    </div>
-                                </div>
-                                <div class="am-form-group">
-                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">场馆图片 <span class="tpl-form-line-small-title">Picture</span></label>
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">封面图 <span class="tpl-form-line-small-title">Images</span></label>
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
                                             <div class="tpl-form-file-img">
-                                                <?php if(empty($list['certificate'])): ?><img src="/Public/Admin/images/2.jpg" class="ml50 mt20">
-			                                	<?php else: ?>
-												<img src="<?php echo ($list["certificate"]); ?>" class="ml50 mt20" style="width:103px;height:107px;">
-												<input type="hidden" name="certificate" value="<?php echo ($list["certificate"]); ?>"><?php endif; ?>
+                                                <img src="/Public/Admin/images/a5.png" alt="">
                                             </div>
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                            <i class="am-icon-cloud-upload"></i> 添加场馆图片</button>
-                                            <input id="doc-form-file" type="file" name="certificate" multiple>
+                                            <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
+                                            <input id="doc-form-file" type="file" multiple>
                                         </div>
+
                                     </div>
                                 </div>
+
                                 <div class="am-form-group">
-                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">营业执照 <span class="tpl-form-line-small-title">Certificate</span></label>
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">添加分类 <span class="tpl-form-line-small-title">Type</span></label>
                                     <div class="am-u-sm-9">
-                                        <div class="am-form-group am-form-file">
-                                            <div class="tpl-form-file-img">
-                                                <?php if(empty($list['picture'])): ?><img src="/Public/Admin/images/2.jpg" class="ml50 mt20">
-			                                	<?php else: ?>
-												<img src="<?php echo ($list["picture"]); ?>" class="ml50 mt20" style="width:103px;height:107px;">
-												<input type="hidden" name="picture" value="<?php echo ($list["picture"]); ?>"><?php endif; ?>
-                                            </div>
-                                            <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                            <i class="am-icon-cloud-upload"></i> 添加营业执照图片</button>
-                                            <input id="doc-form-file" type="file" name="picture" multiple>
+                                        <input type="text" id="user-weibo" placeholder="请添加分类用点号隔开">
+                                        <div>
+
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="am-form-group">
+                                    <label for="user-intro" class="am-u-sm-3 am-form-label">隐藏文章</label>
+                                    <div class="am-u-sm-9">
+                                        <div class="tpl-switch">
+                                            <input type="checkbox" class="ios-switch bigswitch tpl-switch-btn" checked />
+                                            <div class="tpl-switch-btn-view">
+                                                <div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
+                                    <div class="am-u-sm-9">
+                                        <textarea class="" rows="10" id="user-intro" placeholder="请输入文章内容"></textarea>
+                                    </div>
+                                </div>
+
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
-                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">修改</button>
-                                        <a href=""  class="am-btn am-btn-primary tpl-btn-bg-color-success " onclick ="javascript:history.go(-1);" style="margin-left:20px;">返回</a>
+                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
                                     </div>
                                 </div>
                             </form>
@@ -462,12 +449,5 @@
 
 
 
-</div>
-
-    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-    <script src="/Public/Admin/js/amazeui.min.js"></script>
-    <script src="/Public/Admin/js/iscroll.js"></script>
-    <script src="/Public/Admin/js/app.js"></script>
-    
 </body>
 </html>

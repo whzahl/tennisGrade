@@ -39,18 +39,6 @@
 </head>
 
 <body data-type="generalComponents">
-    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
-    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" /> 
-    <link rel="stylesheet" href="/Public/Admin/css/admin.css">
-    <link rel="stylesheet" href="/Public/Admin/css/app.css">
-    <script src="/Public/Admin/js/echarts.min.js"></script>
-    
-</head>
-
-<body data-type="generalComponents">
-<body>
-	
-<body data-type="generalComponents"> 
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -174,14 +162,11 @@
             </ul>
         </div>
     </header>
-    </header>
-    </header> 
 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
                                                    管理 列表
-                Amaze UI 列表
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -192,8 +177,6 @@
 		           </a>
 		      </li>
 <!-- 		      <li class="tpl-left-nav-item">
-<!-- 		      <li class="tpl-left-nav-item">
-		      <li class="tpl-left-nav-item">
 		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-bar-chart"></i>
 		               <span>数据表</span>
@@ -306,7 +289,6 @@
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-group"></i>&nbsp;
-		               <i class="am-icon-group"></i>
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -331,7 +313,6 @@
 		          </ul>
 		    </li>
 <!-- 		    <li class="tpl-left-nav-item">
-		    <li class="tpl-left-nav-item">
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>
 		            <span>登录</span>
@@ -473,6 +454,5 @@
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
     
-
 </body>
 </html>

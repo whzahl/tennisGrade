@@ -39,18 +39,6 @@
 </head>
 
 <body data-type="generalComponents">
-    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
-    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" /> 
-    <link rel="stylesheet" href="/Public/Admin/css/admin.css">
-    <link rel="stylesheet" href="/Public/Admin/css/app.css">
-    <script src="/Public/Admin/js/echarts.min.js"></script>
-    
-</head>
-
-<body data-type="generalComponents">
-<body>
-	
-<body data-type="generalComponents"> 
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -174,14 +162,11 @@
             </ul>
         </div>
     </header>
-    </header>
-    </header> 
 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
                                                    管理 列表
-                Amaze UI 列表
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -192,8 +177,6 @@
 		           </a>
 		      </li>
 <!-- 		      <li class="tpl-left-nav-item">
-<!-- 		      <li class="tpl-left-nav-item">
-		      <li class="tpl-left-nav-item">
 		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-bar-chart"></i>
 		               <span>数据表</span>
@@ -306,7 +289,6 @@
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-group"></i>&nbsp;
-		               <i class="am-icon-group"></i>
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -331,7 +313,6 @@
 		          </ul>
 		    </li>
 <!-- 		    <li class="tpl-left-nav-item">
-		    <li class="tpl-left-nav-item">
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>
 		            <span>登录</span>
@@ -341,21 +322,34 @@
         </div>
     </div>
 </div>
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+<script src="/Public/Admin/js/amazeui.min.js"></script>
+<script src="/Public/Admin/js/iscroll.js"></script>
+<script src="/Public/Admin/js/app.js"></script>
 
 
-
-
-
-
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script>
+	window.onload = function (){
+		//编辑器资源文件根路径说明
+		window.UEDITOR_HOME_URL = "/Public/ueditor/";
+		//编辑器的高度
+		window.UEDITOR_CONFIG.initialFrameHeight=300; 
+		//实例化编辑器
+		var ue = UE.getEditor('editor');
+	}
+</script>
 
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                Amaze UI 表单
+                新增委员会简介
             </div>
             <ol class="am-breadcrumb">
-                <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">表单</a></li>
-                <li class="am-active">Amaze UI 表单</li>
+                <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
+                <li><a href="/Admin/Index/index">介绍板块</a></li>
+                <li class="am-active">新增委员会简介</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
@@ -382,33 +376,33 @@
                                     </div>
                                 </div>
 
-                                <div class="am-form-group">
+                                <!-- <div class="am-form-group">
                                     <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly/>
                                         <small>发布时间为必填</small>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="am-form-group">
-                                    <label for="user-phone" class="am-u-sm-3 am-form-label">作者 <span class="tpl-form-line-small-title">Author</span></label>
+                                    <label for="user-phone" class="am-u-sm-3 am-form-label">发布状态 <span class="tpl-form-line-small-title">status</span></label>
                                     <div class="am-u-sm-9">
                                         <select data-am-selected="{searchBox: 1}">
-										  <option value="a">-The.CC</option>
-										  <option value="b">夕风色</option>
-										  <option value="o">Orange</option>
+										  <option value="a">已发布</option>
+										  <option value="b">未发布</option>
+										  <option value="o">删除</option>
 										</select>
                                     </div>
-                                </div>
+                                </div> 
 
-                                <div class="am-form-group">
+                                <!-- <div class="am-form-group">
                                     <label class="am-u-sm-3 am-form-label">SEO关键字 <span class="tpl-form-line-small-title">SEO</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" placeholder="输入SEO关键字">
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="am-form-group">
+                                <!-- <div class="am-form-group">
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">封面图 <span class="tpl-form-line-small-title">Images</span></label>
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
@@ -421,9 +415,9 @@
                                         </div>
 
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="am-form-group">
+                               <!--  <div class="am-form-group">
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">添加分类 <span class="tpl-form-line-small-title">Type</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" id="user-weibo" placeholder="请添加分类用点号隔开">
@@ -431,9 +425,9 @@
 
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="am-form-group">
+                                <!-- <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">隐藏文章</label>
                                     <div class="am-u-sm-9">
                                         <div class="tpl-switch">
@@ -445,12 +439,12 @@
                                         </div>
 
                                     </div>
-                                </div>
-
+                                </div> -->
+								
                                 <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
+                                    <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容<span class="tpl-form-line-small-title">content</span></label>
                                     <div class="am-u-sm-9">
-                                        <textarea class="" rows="10" id="user-intro" placeholder="请输入文章内容"></textarea>
+                                        <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
                                     </div>
                                 </div>
 
@@ -470,13 +464,6 @@
 
 
 
-</div>
-
-    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-    <script src="/Public/Admin/js/amazeui.min.js"></script>
-    <script src="/Public/Admin/js/iscroll.js"></script>
-    <script src="/Public/Admin/js/app.js"></script>
-    
 
 </body>
 </html>

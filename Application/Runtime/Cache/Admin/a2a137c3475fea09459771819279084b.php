@@ -39,18 +39,6 @@
 </head>
 
 <body data-type="generalComponents">
-    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
-    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" /> 
-    <link rel="stylesheet" href="/Public/Admin/css/admin.css">
-    <link rel="stylesheet" href="/Public/Admin/css/app.css">
-    <script src="/Public/Admin/js/echarts.min.js"></script>
-    
-</head>
-
-<body data-type="generalComponents">
-<body>
-	
-<body data-type="generalComponents"> 
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -174,14 +162,11 @@
             </ul>
         </div>
     </header>
-    </header>
-    </header> 
 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
                                                    管理 列表
-                Amaze UI 列表
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -192,8 +177,6 @@
 		           </a>
 		      </li>
 <!-- 		      <li class="tpl-left-nav-item">
-<!-- 		      <li class="tpl-left-nav-item">
-		      <li class="tpl-left-nav-item">
 		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-bar-chart"></i>
 		               <span>数据表</span>
@@ -306,7 +289,6 @@
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-group"></i>&nbsp;
-		               <i class="am-icon-group"></i>
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -331,7 +313,6 @@
 		          </ul>
 		    </li>
 <!-- 		    <li class="tpl-left-nav-item">
-		    <li class="tpl-left-nav-item">
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>
 		            <span>登录</span>
@@ -350,12 +331,12 @@
 
  <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                Amaze UI 文字列表
+                委员会简介
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">Amaze UI CSS</a></li>
-                <li class="am-active">文字列表</li>
+                <li><a href="#">介绍板块</a></li>
+                <li class="am-active">委员会简介</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
@@ -378,14 +359,14 @@
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
                                     <a href="/Admin/Intro/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
-                                    <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
+                                   <!--  <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
                                     <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
                                 </div>
                             </div>
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
-                            <div class="am-form-group">
+                            <!-- <div class="am-form-group">
                              <select data-am-selected="{btnSize: 'sm'}">
 				                <option value="option1">所有类别</option>
 				                <option value="option2">IT业界</option>
@@ -395,7 +376,7 @@
 				                <option value="option3">只能手机</option>
 				                <option value="option3">超极本</option>
 				            </select>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
                             <div class="am-input-group am-input-group-sm">
@@ -414,9 +395,9 @@
 		                              <tr>
 		                                  <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
 		                                  <th class="table-id">ID</th>
-		                                  <th class="table-title">标题</th>
+		                                  <!-- <th class="table-title">标题</th> -->
 		                                  <th class="table-type">类别</th>
-		                                  <th class="table-author am-hide-sm-only">作者</th>
+		                                  <!-- <th class="table-author am-hide-sm-only">作者</th> -->
 		                                  <th class="table-date am-hide-sm-only">修改日期</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
@@ -425,23 +406,23 @@
 		                              <tr>
 		                                  <td><input type="checkbox"></td>
 		                                  <td>5</td>
-		                                  <td><a href="#">Business management</a></td>
+		                                  <!-- <td><a href="#">Business management</a></td> -->
 		                                  <td>default</td>
-		                                  <td class="am-hide-sm-only">测试1号</td>
+		                                  <!-- <td class="am-hide-sm-only">测试1号</td> -->
 		                                  <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
 		                                              <a href="/Admin/Intro/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
-		                                              <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
-		                                              <a href="/Admin/Intro/delete"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></a>
+		                                              <!-- <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
+		                                              <a href="/Admin/Intro/delete" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-trash-o"></span> 删除</a>
 		                                          </div>
 		                                      </div>
 		                                  </td>
 		                              </tr>
 		                          </tbody>
 		                      </table>
-		                      <div class="am-cf">
+		                      <!-- <div class="am-cf">
 		
 		                          <div class="am-fr">
 		                              <ul class="am-pagination tpl-pagination">
@@ -454,7 +435,7 @@
 		                                  <li><a href="#">»</a></li>
 		                              </ul>
 		                          </div>
-		                      </div>
+		                      </div> -->
 		                      <hr>
 		
 		                  </form>
@@ -478,6 +459,5 @@
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
     
-
 </body>
 </html>
