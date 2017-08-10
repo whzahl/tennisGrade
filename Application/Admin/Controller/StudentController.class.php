@@ -75,8 +75,14 @@ class StudentController extends CheckController{
     	} else {
     		$this->error('删除失败');
     	}
+    }
+    
+    public function add(){
     	$this->display();
     }
+
+
+
 
 
 }

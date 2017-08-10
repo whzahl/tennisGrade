@@ -13,14 +13,33 @@
     <link rel="icon" type="image/png" href="/Public/Admin/i/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/Public/Admin/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<<<<<<< HEAD
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
+=======
+<<<<<<< HEAD
+    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
+=======
+    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" /> 
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
     
 </head>
+<<<<<<< HEAD
 
 <body data-type="generalComponents">
+=======
+<<<<<<< HEAD
+
+<body data-type="generalComponents">
+=======
+<body>
+	
+<body data-type="generalComponents"> 
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -143,7 +162,15 @@
                 <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
             </ul>
         </div>
+<<<<<<< HEAD
     </header>
+=======
+<<<<<<< HEAD
+    </header>
+=======
+    </header> 
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
@@ -158,13 +185,29 @@
 		               <span>首页</span>
 		           </a>
 		      </li>
+<<<<<<< HEAD
 <!-- 		      <li class="tpl-left-nav-item">
+=======
+<<<<<<< HEAD
+<!-- 		      <li class="tpl-left-nav-item">
+=======
+		      <li class="tpl-left-nav-item">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-bar-chart"></i>
 		               <span>数据表</span>
 		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
 		           </a>
+<<<<<<< HEAD
 		     </li> -->
+=======
+<<<<<<< HEAD
+		     </li> -->
+=======
+		     </li>
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		     <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-wpforms"></i>
@@ -287,11 +330,23 @@
 		              </li>
 		          </ul>
 		    </li>
+<<<<<<< HEAD
 <!-- 		    <li class="tpl-left-nav-item">
+=======
+<<<<<<< HEAD
+<!-- 		    <li class="tpl-left-nav-item">
+=======
+		    <li class="tpl-left-nav-item">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>
 		            <span>登录</span>
 		        </a>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		    </li> -->
 		</ul>
         </div>
@@ -302,8 +357,40 @@
 
 
 
+<<<<<<< HEAD
 
 
+=======
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		//编辑器资源文件根路径说明
+		window.UEDITOR_HOME_URL = "/Public/ueditor/";
+//编辑器的高度
+		window.UEDITOR_CONFIG.initialFrameHeight=300; 
+		//实例化编辑器
+		var ue = UE.getEditor('editor');
+	}
+</script>
+
+
+=======
+		    </li>
+		</ul>
+        </div>
+    </div>
+</div>  
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+<script src="/Public/Admin/js/amazeui.min.js"></script>
+<script src="/Public/Admin/js/iscroll.js"></script>
+<script src="/Public/Admin/js/app.js"></script>
+
+
+
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
                 Amaze UI 表单
@@ -318,6 +405,12 @@
                     <div class="caption font-green bold">
                         <span class="am-icon-code"></span> 表单
                     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  
+=======
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                     <div class="tpl-portlet-input tpl-fz-ml">
                         <div class="portlet-input input-small input-inline">
                             <div class="input-icon right">
@@ -325,20 +418,57 @@
                                 <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                 </div>
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="tpl-form-body tpl-form-line">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                            <form class="am-form tpl-form-line-form" action="/Admin/Live/add" method="post" enctype="multipart/form-data">
+                                <div class="am-form-group">
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" class="tpl-form-input" name="title" id="user-name"  placeholder="请输入标题文字">
+=======
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                             <form class="am-form tpl-form-line-form">
                                 <div class="am-form-group">
                                     <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
+<<<<<<< HEAD
+=======
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                         <small>请填写标题文字10-20字左右。</small>
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                    <label for="user-email" class="am-u-sm-3 am-form-label">视频连接 <span class="tpl-form-line-small-title">href</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" class="tpl-form-input" id="user-name" name="url" placeholder="请输入链接">
+                                        <small>视频连接为必填</small>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="am-form-group">
+                                    <label for="user-intro" class="am-u-sm-3 am-form-label">视频介绍</label>
+                                    <div class="am-u-sm-9">
+                                       <!--  <textarea class="" rows="10" id="user-intro" placeholder="请输入介绍信息"></textarea> -->
+                                    <script id="editor" name="content" type="text/plain" style="width:750px;height:500px;"></script>
+=======
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                     <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly/>
@@ -407,12 +537,24 @@
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
                                     <div class="am-u-sm-9">
                                         <textarea class="" rows="10" id="user-intro" placeholder="请输入文章内容"></textarea>
+<<<<<<< HEAD
+=======
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
+<<<<<<< HEAD
                                         <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+=======
+<<<<<<< HEAD
+                                        <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+=======
+                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                     </div>
                                 </div>
                             </form>
@@ -426,6 +568,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 </div>
 
     <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
@@ -433,5 +579,10 @@
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 </body>
 </html>

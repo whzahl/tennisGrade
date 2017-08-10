@@ -24,7 +24,17 @@ class CheckController extends BaseController {
         if(!$session){
         	//	跳转登录界面
            	$this->redirect('https://open.weixin.qq.com/connect/qrconnect?appid=wx97cea69a39e328a5&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect');
-        }
+/*         $arrSession = $_SESSION['User'];
+        
+        // 判断是否登录
+        if(!$arrSession){
+        	//	跳转登录界面
+           $this->redirect('/Login/index'); 	
+        }else{
+            $this->uid = $arrSession['uid'];
+            $this->uname = $arrSession['uname'];
+        } */
+    }
     }
     
 }

@@ -302,6 +302,22 @@
 
 
 
+<<<<<<< HEAD
+=======
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		//编辑器资源文件根路径说明
+		window.UEDITOR_HOME_URL = "/Public/ueditor/";
+//编辑器的高度
+		window.UEDITOR_CONFIG.initialFrameHeight=300; 
+		//实例化编辑器
+		var ue = UE.getEditor('editor');
+	}
+</script>
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 
 
         <div class="tpl-content-wrapper" style="margin:0 20px">
@@ -329,16 +345,26 @@
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="tpl-form-body tpl-form-line">
+<<<<<<< HEAD
                             <form class="am-form tpl-form-line-form">
                                 <div class="am-form-group">
                                     <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
+=======
+                            <form class="am-form tpl-form-line-form" action="/Admin/Live/edit" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="lid" value="<?php echo ($list["lid"]); ?>" />
+                                <div class="am-form-group">
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" name="title" class="tpl-form-input" id="user-name"  placeholder="请输入标题文字" value="<?php echo ($list["title"]); ?>">
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                         <small>请填写标题文字10-20字左右。</small>
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
+<<<<<<< HEAD
                                     <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly/>
@@ -407,12 +433,34 @@
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
                                     <div class="am-u-sm-9">
                                         <textarea class="" rows="10" id="user-intro" placeholder="请输入文章内容"></textarea>
+=======
+                                    <label for="user-email" class="am-u-sm-3 am-form-label">视频连接 <span class="tpl-form-line-small-title">href</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" class="tpl-form-input" id="user-name" name="url" placeholder="请输入链接" value="<?php echo ($list["url"]); ?>">
+                                        <small>视频连接为必填</small>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="am-form-group">
+                                    <label for="user-intro" class="am-u-sm-3 am-form-label">视频介绍</label>
+                                    <div class="am-u-sm-9">
+                                       <!--  <textarea class="" rows="10" id="user-intro" placeholder="请输入介绍信息"></textarea> -->
+                                  <script id="editor" name="content" type="text/plain" style="width:750px;height:500px;">
+	                                           <?php echo (stripslashes(htmlspecialchars_decode($list["content"]))); ?>
+                                    </script>
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
+<<<<<<< HEAD
                                         <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+=======
+                                        <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">修改</button>
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                     </div>
                                 </div>
                             </form>

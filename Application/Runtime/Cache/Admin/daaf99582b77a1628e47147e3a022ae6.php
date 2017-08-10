@@ -20,7 +20,15 @@
     
 </head>
 
+<<<<<<< HEAD
 <body data-type="generalComponents">
+=======
+<<<<<<< HEAD
+<body data-type="index">
+=======
+<body data-type="generalComponents">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -148,7 +156,11 @@
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
+<<<<<<< HEAD
                                                    管理 列表
+=======
+                Amaze UI 列表
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -167,7 +179,15 @@
 		     </li> -->
 		     <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-wpforms"></i>
+=======
+<<<<<<< HEAD
+		               <i class="am-icon-table"></i>
+=======
+		               <i class="am-icon-wpforms"></i>
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		               <span>介绍板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -192,23 +212,55 @@
 		          </ul>
 		    </li> <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-bars"></i>
+=======
+<<<<<<< HEAD
+		               <i class="am-icon-table"></i>
+=======
+		               <i class="am-icon-bars"></i>
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		               <span>申请板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
 		          <ul class="tpl-left-nav-sub-menu">
 		               <li>
+<<<<<<< HEAD
 		                   <a href="/Admin/Place/index">
+=======
+<<<<<<< HEAD
+		                   <a href="table-font-list.html">
+=======
+		                   <a href="/Admin/Place/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>考点列表</span>
 		                       <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="/Admin/Teacher/index">
+=======
+<<<<<<< HEAD
+		                   <a href="table-images-list.html">
+=======
+		                   <a href="/Admin/Teacher/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>考官列表</span>
 		                       <i class="tpl-left-nav-content tpl-badge-success">18</i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="/Admin/Student/index">
+=======
+<<<<<<< HEAD
+		                   <a href="form-news.html">
+=======
+		                   <a href="/Admin/Student/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>考生列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
@@ -224,22 +276,54 @@
 		          </a>
 		          <ul class="tpl-left-nav-sub-menu">
 		               <li>
+<<<<<<< HEAD
 		                   <a href="/Admin/News/index">
+=======
+<<<<<<< HEAD
+		                   <a href="table-font-list.html">
+=======
+		                   <a href="/Admin/News/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>新闻资讯列表</span>
 		                       <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="/Admin/Notice/index">
+=======
+<<<<<<< HEAD
+		                   <a href="table-images-list.html">
+=======
+		                   <a href="/Admin/Notice/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>考试公告列表</span>
 		                       <i class="tpl-left-nav-content tpl-badge-success">18</i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="/Admin/Grade/index">
+=======
+<<<<<<< HEAD
+		                   <a href="form-news.html">
+=======
+		                   <a href="/Admin/Grade/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>证书录入列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
 		                   </a>
+<<<<<<< HEAD
 			               <a href="/Admin/Live/index">
+=======
+<<<<<<< HEAD
+			               <a href="form-amazeui.html">
+=======
+			               <a href="/Admin/Live/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 			                   <i class="am-icon-angle-right"></i>
 			                   <span>考试直播列表</span>
 			                   <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
@@ -248,6 +332,13 @@
 		          </ul>
 		    </li>
 		    <li class="tpl-left-nav-item">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-table"></i>
+=======
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-weixin"></i>
 		               <span>微信信息记录表</span>
@@ -264,22 +355,50 @@
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-group"></i>
+<<<<<<< HEAD
+=======
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
 		          <ul class="tpl-left-nav-sub-menu">
 		               <li>
+<<<<<<< HEAD
 		                   <a href="/Admin/Admin/index">
+=======
+<<<<<<< HEAD
+		                   <a href="table-font-list.html">
+=======
+		                   <a href="/Admin/Admin/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>超级管理员列表</span>
 		                       <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="/Admin/Admin/indexs">
+=======
+<<<<<<< HEAD
+		                   <a href="table-images-list.html">
+=======
+		                   <a href="/Admin/Admin/indexs">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>站长管理员列表</span>
 		                       <i class="tpl-left-nav-content tpl-badge-success">18</i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="/Admin/Admin/indexss">
+=======
+<<<<<<< HEAD
+		                   <a href="form-news.html">
+=======
+		                   <a href="/Admin/Admin/indexss">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>考点管理员列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
@@ -333,7 +452,15 @@
                         <div class="am-u-sm-12 am-u-md-6">
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
+<<<<<<< HEAD
                                     <a href="/Admin/Intro/addss" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
+=======
+<<<<<<< HEAD
+                                    <a href="/Admin/Intro/addss"><button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button></a>
+=======
+                                    <a href="/Admin/Intro/addss" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                     <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
                                     <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
                                     <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
@@ -433,6 +560,10 @@
     <script src="/Public/Admin/js/amazeui.min.js"></script>
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 </body>
 </html>
