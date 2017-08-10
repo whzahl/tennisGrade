@@ -7,10 +7,17 @@
  fixed-layout 固定头部和边栏布局
 */
 
+<<<<<<< HEAD
 html,
 body {
   height: 100%;
   overflow: hidden;
+=======
+ html,
+body {
+  /* height: 100%; */
+  overflow: hidden; 
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 }
 
 ul {
@@ -22,11 +29,19 @@ ul {
 }
 
 .admin-header {
+<<<<<<< HEAD
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1500;
+=======
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
   font-size: 1.4rem;
   margin-bottom: 0;
 }
@@ -102,6 +117,10 @@ ul {
   background: #fff;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 .admin-content,
 .admin-sidebar {
   height: 100%;
@@ -182,7 +201,11 @@ ul {
   padding: 5px 0;
   border-color: #eee;
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 .admin-content-task li:first-child {
   border-top: none;
 }

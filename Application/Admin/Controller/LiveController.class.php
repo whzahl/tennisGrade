@@ -14,6 +14,7 @@ class LiveController extends CheckController{
 
 
 	public function index(){
+<<<<<<< HEAD
 		
 		$strTitle=I('get.title');
 		if (!empty($strTitle)) {
@@ -29,10 +30,13 @@ class LiveController extends CheckController{
 		$this->count = $intCount;
 		$this->page = $show;
 		$this->list = $arrData;
+=======
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 		$this->display();
 	}
 	
 	public function add(){
+<<<<<<< HEAD
 		 $live = M('tg_live');
 	  	 $data = $live->create(); 
 	 	if(IS_POST){
@@ -131,4 +135,16 @@ class LiveController extends CheckController{
 	 	$max = pow(10, $length) - 1;
 	 	return rand($min, $max);
 	 }
+=======
+		$this->display();
+	}
+	
+	public function edit(){
+		$this->display();
+	}
+
+
+
+
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 }

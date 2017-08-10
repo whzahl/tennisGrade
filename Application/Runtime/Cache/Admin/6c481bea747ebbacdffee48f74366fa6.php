@@ -13,14 +13,24 @@
     <link rel="icon" type="image/png" href="/Public/Admin/i/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/Public/Admin/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<<<<<<< HEAD
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
+=======
+    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" /> 
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
     
 </head>
+<<<<<<< HEAD
 
 <body data-type="index">
+=======
+<body>
+	
+<body data-type="generalComponents"> 
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -143,7 +153,11 @@
                 <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
             </ul>
         </div>
+<<<<<<< HEAD
     </header>
+=======
+    </header> 
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
@@ -158,16 +172,27 @@
 		               <span>首页</span>
 		           </a>
 		      </li>
+<<<<<<< HEAD
 <!-- 		      <li class="tpl-left-nav-item">
+=======
+		      <li class="tpl-left-nav-item">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-bar-chart"></i>
 		               <span>数据表</span>
 		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
 		           </a>
+<<<<<<< HEAD
 		     </li> -->
 		     <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-table"></i>
+=======
+		     </li>
+		     <li class="tpl-left-nav-item">
+		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-wpforms"></i>
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 		               <span>介绍板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -192,7 +217,11 @@
 		          </ul>
 		    </li> <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+<<<<<<< HEAD
 		               <i class="am-icon-table"></i>
+=======
+		               <i class="am-icon-bars"></i>
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 		               <span>申请板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -224,22 +253,38 @@
 		          </a>
 		          <ul class="tpl-left-nav-sub-menu">
 		               <li>
+<<<<<<< HEAD
 		                   <a href="table-font-list.html">
+=======
+		                   <a href="/Admin/News/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>新闻资讯列表</span>
 		                       <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="table-images-list.html">
+=======
+		                   <a href="/Admin/Notice/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>考试公告列表</span>
 		                       <i class="tpl-left-nav-content tpl-badge-success">18</i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="form-news.html">
+=======
+		                   <a href="/Admin/Grade/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>证书录入列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
 		                   </a>
+<<<<<<< HEAD
 			               <a href="form-amazeui.html">
+=======
+			               <a href="/Admin/Live/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 			                   <i class="am-icon-angle-right"></i>
 			                   <span>考试直播列表</span>
 			                   <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
@@ -248,24 +293,55 @@
 		          </ul>
 		    </li>
 		    <li class="tpl-left-nav-item">
+<<<<<<< HEAD
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-table"></i>
+=======
+		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-weixin"></i>
+		               <span>微信信息记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		           </a>
+		    </li>
+		    <li class="tpl-left-nav-item">
+		           <a href="/Admin/Master/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-user-plus"></i>
+		               <span>站长记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		           </a>
+		    </li>
+		    <li class="tpl-left-nav-item">
+		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-group"></i>
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
 		          <ul class="tpl-left-nav-sub-menu">
 		               <li>
+<<<<<<< HEAD
 		                   <a href="table-font-list.html">
+=======
+		                   <a href="/Admin/Admin/index">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>超级管理员列表</span>
 		                       <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="table-images-list.html">
+=======
+		                   <a href="/Admin/Admin/indexs">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>站长管理员列表</span>
 		                       <i class="tpl-left-nav-content tpl-badge-success">18</i>
 		                   </a>
+<<<<<<< HEAD
 		                   <a href="form-news.html">
+=======
+		                   <a href="/Admin/Admin/indexss">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>考点管理员列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
@@ -273,11 +349,16 @@
 		              </li>
 		          </ul>
 		    </li>
+<<<<<<< HEAD
 <!-- 		    <li class="tpl-left-nav-item">
+=======
+		    <li class="tpl-left-nav-item">
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>
 		            <span>登录</span>
 		        </a>
+<<<<<<< HEAD
 		    </li> -->
 		</ul>
         </div>
@@ -287,6 +368,17 @@
 
 
 
+=======
+		    </li>
+		</ul>
+        </div>
+    </div>
+</div>  
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+<script src="/Public/Admin/js/amazeui.min.js"></script>
+<script src="/Public/Admin/js/iscroll.js"></script>
+<script src="/Public/Admin/js/app.js"></script>
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 
 
 
@@ -413,6 +505,7 @@
 
 
 
+<<<<<<< HEAD
 </div>
 
     <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
@@ -420,5 +513,7 @@
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
 
+=======
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
 </body>
 </html>

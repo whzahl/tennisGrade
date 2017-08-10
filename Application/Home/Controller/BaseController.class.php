@@ -17,5 +17,30 @@ class BaseController extends Controller {
     public function __construct(){
         parent::__construct();
     }
+<<<<<<< HEAD
+=======
+    public function uploadPic(){
+        $upload = new \Think\Upload();// 实例化上传类
+        $upload->maxSize   =     3145728 ;// 设置附件上传大小
+        $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+        $upload->rootPath  =      './Public/Uploads/'; // 设置附件上传根目录
+        $info =  $upload->upload();
+        if($info){
+            // 水印
+            $url = $info['upfile']['savepath'].$info['upfile']['savename'];
+            echo json_encode(array(
+                'url'=>$url,
+                'title'=>htmlspecialchars($_POST['pictitle'], ENT_QUOTES),
+                'original'=>$info['upfile']['name'],
+                'state'=>'SUCCESS',
+                'info' => $info
+            ));
+        }else{
+            echo json_encode(array(
+                'state'=>$upload->getError()
+            ));
+        }
+    }
+>>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
     
 }
