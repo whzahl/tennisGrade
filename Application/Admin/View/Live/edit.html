@@ -1,24 +1,5 @@
 <extend name="Public:base" />
 <block name="body">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.all.min.js"> </script>
-<script type="text/javascript" charset="utf-8" src="/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
-<script type="text/javascript">
-	window.onload=function(){
-		//编辑器资源文件根路径说明
-		window.UEDITOR_HOME_URL = "/Public/ueditor/";
-//编辑器的高度
-		window.UEDITOR_CONFIG.initialFrameHeight=300; 
-		//实例化编辑器
-		var ue = UE.getEditor('editor');
-	}
-</script>
-=======
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 
 
         <div class="tpl-content-wrapper" style="margin:0 20px">
@@ -35,12 +16,6 @@
                     <div class="caption font-green bold">
                         <span class="am-icon-code"></span> 表单
                     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                   
-=======
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                     <div class="tpl-portlet-input tpl-fz-ml">
                         <div class="portlet-input input-small input-inline">
                             <div class="input-icon right">
@@ -48,60 +23,20 @@
                                 <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-=======
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                 </div>
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="tpl-form-body tpl-form-line">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                            <form class="am-form tpl-form-line-form" action="/Admin/Live/edit" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="lid" value="{$list.lid}" />
-                                <div class="am-form-group">
-                                    <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" name="title" class="tpl-form-input" id="user-name"  placeholder="请输入标题文字" value="{$list.title}">
-=======
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                             <form class="am-form tpl-form-line-form">
                                 <div class="am-form-group">
                                     <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
-<<<<<<< HEAD
-=======
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                         <small>请填写标题文字10-20字左右。</small>
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                                    <label for="user-email" class="am-u-sm-3 am-form-label">视频连接 <span class="tpl-form-line-small-title">href</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" class="tpl-form-input" id="user-name" name="url" placeholder="请输入链接" value="{$list.url}">
-                                        <small>视频连接为必填</small>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">视频介绍</label>
-                                    <div class="am-u-sm-9">
-                                       <!--  <textarea class="" rows="10" id="user-intro" placeholder="请输入介绍信息"></textarea> -->
-                                  <script id="editor" name="content" type="text/plain" style="width:750px;height:500px;">
-	                                           {$list.content|htmlspecialchars_decode|stripslashes}
-                                    </script>
-=======
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                     <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly/>
@@ -170,24 +105,12 @@
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
                                     <div class="am-u-sm-9">
                                         <textarea class="" rows="10" id="user-intro" placeholder="请输入文章内容"></textarea>
-<<<<<<< HEAD
-=======
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
-<<<<<<< HEAD
                                         <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
-=======
-<<<<<<< HEAD
-                                        <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">修改</button>
-=======
-                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
                                     </div>
                                 </div>
                             </form>

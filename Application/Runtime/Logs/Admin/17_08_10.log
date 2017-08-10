@@ -1,0 +1,1488 @@
+[ 2017-08-10T14:55:21+08:00 ] 59.172.228.103 /Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003122s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000265s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 322 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 329 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 353 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.366942s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.366993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.021692s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.021764s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003979s ]
+
+[ 2017-08-10T14:55:37+08:00 ] 59.172.228.103 /Admin/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+NOTIC: [2048] Declaration of Common\Service\OrderService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_order` [ RunTime:0.0124s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_order` LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_order` ORDER BY oid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037918s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2017-08-10T14:56:13+08:00 ] 106.120.160.119 /Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000323s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000415s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 322 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 329 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 353 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2017-08-10T14:56:34+08:00 ] 101.199.108.53 /Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000331s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000419s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 322 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 329 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 353 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039943s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2017-08-10T15:00:16+08:00 ] 59.172.228.103 /Admin/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+NOTIC: [2048] Declaration of Common\Service\OrderService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_order` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_order` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_order` ORDER BY oid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000469s ]
+
+[ 2017-08-10T15:01:06+08:00 ] 59.172.228.103 /Admin/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+NOTIC: [2048] Declaration of Common\Service\OrderService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_order` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_order` LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_order` ORDER BY oid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014522s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2017-08-10T15:01:44+08:00 ] 59.172.228.103 /Admin/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+NOTIC: [2048] Declaration of Common\Service\OrderService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_order` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_order` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_order` ORDER BY oid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2017-08-10T15:02:23+08:00 ] 59.172.228.103 /Admin/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+NOTIC: [2048] Declaration of Common\Service\OrderService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_order` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_order` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_order` ORDER BY oid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2017-08-10T15:02:28+08:00 ] 59.172.228.103 /Admin/Intro/intro
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+NOTIC: [2048] Declaration of Common\Service\IntroService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\IntroService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\IntroService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/IntroController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `tg_intro` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `tg_intro` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: arrData /home/xiaoxie/tennisGrade/Application/Admin/Controller/IntroController.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014749s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000519s ]
+
+[ 2017-08-10T15:02:37+08:00 ] 59.172.228.103 /Admin/Intro/intros
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/6c481bea747ebbacdffee48f74366fa6.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/6c481bea747ebbacdffee48f74366fa6.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/6c481bea747ebbacdffee48f74366fa6.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084826s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2017-08-10T15:02:41+08:00 ] 59.172.228.103 /Admin/Intro/intro
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+NOTIC: [2048] Declaration of Common\Service\IntroService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\IntroService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\IntroService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/IntroController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `tg_intro` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tg_intro` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: arrData /home/xiaoxie/tennisGrade/Application/Admin/Controller/IntroController.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014350s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2017-08-10T15:02:44+08:00 ] 59.172.228.103 /Admin/Intro/intross
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/daaf99582b77a1628e47147e3a022ae6.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/daaf99582b77a1628e47147e3a022ae6.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/daaf99582b77a1628e47147e3a022ae6.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015962s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2017-08-10T15:02:47+08:00 ] 59.172.228.103 /Admin/Place/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_place` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_place` ORDER BY pid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2017-08-10T15:02:49+08:00 ] 59.172.228.103 /Admin/Teacher/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+NOTIC: [2048] Declaration of Common\Service\TeacherService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/TeacherController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tg_teacher` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_teacher` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/TeacherController.class.php 第 22 行.
+SQL: SELECT * FROM `tg_teacher` ORDER BY tid desc LIMIT 0,10   [ RunTime:0.0002s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tg_place` WHERE `pid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016732s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2017-08-10T15:02:51+08:00 ] 59.172.228.103 /Admin/Student/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+NOTIC: [2048] Declaration of Common\Service\StudentService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/StudentService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\StudentService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/StudentService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\StudentService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/StudentService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/StudentController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_student` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_student` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/StudentController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_student` ORDER BY sid desc LIMIT 0,10   [ RunTime:0.0002s ]
+NOTIC: [2048] Declaration of Common\Service\TeacherService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 66 行.
+SQL: SHOW COLUMNS FROM `tg_teacher` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tg_teacher` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016650s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2017-08-10T15:03:02+08:00 ] 59.172.228.103 /Admin/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+NOTIC: [2048] Declaration of Common\Service\OrderService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_order` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_order` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_order` ORDER BY oid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014387s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2017-08-10T15:03:03+08:00 ] 59.172.228.103 /Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+NOTIC: [2048] Declaration of Common\Service\UserService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\UserService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\UserService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tg_user` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_user` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/UserController.class.php 第 26 行.
+SQL: SELECT * FROM `tg_user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2017-08-10T15:03:55+08:00 ] 59.172.228.103 /Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+NOTIC: [2048] Declaration of Common\Service\UserService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\UserService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\UserService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tg_user` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_user` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/UserController.class.php 第 26 行.
+SQL: SELECT * FROM `tg_user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015755s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+
+[ 2017-08-10T15:06:46+08:00 ] 59.172.228.103 /Admin/Place/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_place` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_place` ORDER BY pid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2017-08-10T15:08:08+08:00 ] 59.172.228.103 /Admin/Place/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_place` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_place` ORDER BY pid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016824s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000510s ]
+
+[ 2017-08-10T15:08:12+08:00 ] 59.172.228.103 /Admin/Place/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_place` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_place` ORDER BY pid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016977s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000499s ]
+
+[ 2017-08-10T15:08:13+08:00 ] 59.172.228.103 /Admin/Place/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_place` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_place` ORDER BY pid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2017-08-10T15:09:05+08:00 ] 59.172.228.103 /Admin/Place/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_place` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_place` ORDER BY pid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000527s ]
+
+[ 2017-08-10T15:09:30+08:00 ] 59.172.228.103 /Admin/Intro/intro
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+NOTIC: [2048] Declaration of Common\Service\IntroService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\IntroService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\IntroService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/IntroController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `tg_intro` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tg_intro` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: arrData /home/xiaoxie/tennisGrade/Application/Admin/Controller/IntroController.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-08-10T15:09:52+08:00 ] 59.172.228.103 /Admin/Intro/intro
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+NOTIC: [2048] Declaration of Common\Service\IntroService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\IntroService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\IntroService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/IntroController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `tg_intro` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tg_intro` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: arrData /home/xiaoxie/tennisGrade/Application/Admin/Controller/IntroController.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012981s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000486s ]
+
+[ 2017-08-10T15:10:11+08:00 ] 59.172.228.103 /Admin/Intro/intro
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+NOTIC: [2048] Declaration of Common\Service\IntroService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\IntroService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\IntroService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/IntroService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/IntroController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `tg_intro` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tg_intro` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: arrData /home/xiaoxie/tennisGrade/Application/Admin/Controller/IntroController.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/a2a137c3475fea09459771819279084b.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013411s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000226s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2017-08-10T15:10:13+08:00 ] 59.172.228.103 /Admin/Intro/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/1fd60e40510e4f6c1a724d2d9815b6a9.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/1fd60e40510e4f6c1a724d2d9815b6a9.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/1fd60e40510e4f6c1a724d2d9815b6a9.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012473s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2017-08-10T15:10:18+08:00 ] 59.172.228.103 /Admin/Intro/intros
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/6c481bea747ebbacdffee48f74366fa6.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/6c481bea747ebbacdffee48f74366fa6.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/6c481bea747ebbacdffee48f74366fa6.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013933s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2017-08-10T15:10:22+08:00 ] 59.172.228.103 /Admin/Intro/intross
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/daaf99582b77a1628e47147e3a022ae6.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/daaf99582b77a1628e47147e3a022ae6.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/daaf99582b77a1628e47147e3a022ae6.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013328s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013378s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000578s ]
+
+[ 2017-08-10T15:10:27+08:00 ] 59.172.228.103 /Admin/Place/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_place` LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/PlaceController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_place` ORDER BY pid desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015943s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2017-08-10T15:10:30+08:00 ] 59.172.228.103 /Admin/Teacher/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+NOTIC: [2048] Declaration of Common\Service\TeacherService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/TeacherController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tg_teacher` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_teacher` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/TeacherController.class.php 第 22 行.
+SQL: SELECT * FROM `tg_teacher` ORDER BY tid desc LIMIT 0,10   [ RunTime:0.0002s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tg_place` WHERE `pid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016804s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+
+[ 2017-08-10T15:10:45+08:00 ] 59.172.228.103 /Admin/Teacher/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+NOTIC: [2048] Declaration of Common\Service\TeacherService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/TeacherController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tg_teacher` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_teacher` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/TeacherController.class.php 第 22 行.
+SQL: SELECT * FROM `tg_teacher` ORDER BY tid desc LIMIT 0,10   [ RunTime:0.0002s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tg_place` WHERE `pid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2017-08-10T15:10:53+08:00 ] 59.172.228.103 /Admin/Teacher/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+NOTIC: [2048] Declaration of Common\Service\TeacherService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/TeacherController.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tg_teacher` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_teacher` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/TeacherController.class.php 第 22 行.
+SQL: SELECT * FROM `tg_teacher` ORDER BY tid desc LIMIT 0,10   [ RunTime:0.0002s ]
+NOTIC: [2048] Declaration of Common\Service\PlaceService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\PlaceService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/PlaceService.class.php 第 66 行.
+SQL: SHOW COLUMNS FROM `tg_place` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tg_place` WHERE `pid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014413s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+
+[ 2017-08-10T15:10:57+08:00 ] 59.172.228.103 /Admin/Student/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+NOTIC: [2048] Declaration of Common\Service\StudentService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/StudentService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\StudentService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/StudentService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\StudentService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/StudentService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/StudentController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_student` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_student` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/StudentController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_student` ORDER BY sid desc LIMIT 0,10   [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Common\Service\TeacherService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 66 行.
+SQL: SHOW COLUMNS FROM `tg_teacher` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `tg_teacher` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018255s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2017-08-10T15:11:08+08:00 ] 59.172.228.103 /Admin/Student/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+NOTIC: [2048] Declaration of Common\Service\StudentService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/StudentService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\StudentService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/StudentService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\StudentService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/StudentService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/StudentController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_student` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_student` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/StudentController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_student` ORDER BY sid desc LIMIT 0,10   [ RunTime:0.0002s ]
+NOTIC: [2048] Declaration of Common\Service\TeacherService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 66 行.
+NOTIC: [2048] Declaration of Common\Service\TeacherService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/TeacherService.class.php 第 66 行.
+SQL: SHOW COLUMNS FROM `tg_teacher` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tg_teacher` WHERE `tid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2017-08-10T15:11:12+08:00 ] 59.172.228.103 /Admin/News/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/36087655c6ab8580337cdc45b35a926d.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/36087655c6ab8580337cdc45b35a926d.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/36087655c6ab8580337cdc45b35a926d.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028244s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2017-08-10T15:11:15+08:00 ] 59.172.228.103 /Admin/Notice/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/8bf6ffc0b643909929bdce2b422ff961.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/8bf6ffc0b643909929bdce2b422ff961.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/8bf6ffc0b643909929bdce2b422ff961.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2017-08-10T15:11:18+08:00 ] 59.172.228.103 /Admin/Grade/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/aba05c69ff0c8dc78c750cd0c96a3ac8.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/aba05c69ff0c8dc78c750cd0c96a3ac8.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/aba05c69ff0c8dc78c750cd0c96a3ac8.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015946s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2017-08-10T15:11:20+08:00 ] 59.172.228.103 /Admin/Live/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+NOTIC: [2048] Declaration of Common\Service\LiveService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/LiveService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\LiveService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/LiveService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\LiveService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/LiveService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/LiveController.class.php 第 23 行.
+SQL: SHOW COLUMNS FROM `tg_live` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_live` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/LiveController.class.php 第 28 行.
+SQL: SELECT * FROM `tg_live` ORDER BY lid desc LIMIT 0,7   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2017-08-10T15:11:32+08:00 ] 59.172.228.103 /Admin/Live/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+NOTIC: [2048] Declaration of Common\Service\LiveService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/LiveService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\LiveService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/LiveService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\LiveService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/LiveService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/LiveController.class.php 第 23 行.
+SQL: SHOW COLUMNS FROM `tg_live` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_live` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/LiveController.class.php 第 28 行.
+SQL: SELECT * FROM `tg_live` ORDER BY lid desc LIMIT 0,7   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017636s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000452s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2017-08-10T15:11:35+08:00 ] 59.172.228.103 /Admin/Live/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+NOTIC: [2048] Declaration of Common\Service\LiveService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/LiveService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\LiveService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/LiveService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\LiveService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/LiveService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/LiveController.class.php 第 23 行.
+SQL: SHOW COLUMNS FROM `tg_live` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_live` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: the_first /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: the_end /home/xiaoxie/tennisGrade/ThinkPHP/Library/Think/Page.class.php 第 141 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/LiveController.class.php 第 28 行.
+SQL: SELECT * FROM `tg_live` ORDER BY lid desc LIMIT 0,7   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018088s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2017-08-10T15:11:37+08:00 ] 59.172.228.103 /Admin/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+NOTIC: [2048] Declaration of Common\Service\OrderService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_order` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_order` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_order` ORDER BY oid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014651s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-08-10T15:11:40+08:00 ] 59.172.228.103 /Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+NOTIC: [2048] Declaration of Common\Service\UserService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\UserService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\UserService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tg_user` [ RunTime:0.0093s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_user` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/UserController.class.php 第 26 行.
+SQL: SELECT * FROM `tg_user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000535s ]
+
+[ 2017-08-10T15:11:42+08:00 ] 59.172.228.103 /Admin/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+NOTIC: [2048] Declaration of Common\Service\OrderService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_order` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_order` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_order` ORDER BY oid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2017-08-10T15:11:57+08:00 ] 59.172.228.103 /Admin/Order/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+NOTIC: [2048] Declaration of Common\Service\OrderService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\OrderService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/OrderService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_order` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_order` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/OrderController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_order` ORDER BY oid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013799s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000493s ]
+
+[ 2017-08-10T15:12:01+08:00 ] 59.172.228.103 /Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+NOTIC: [2048] Declaration of Common\Service\UserService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\UserService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\UserService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tg_user` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_user` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/UserController.class.php 第 26 行.
+SQL: SELECT * FROM `tg_user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2017-08-10T15:12:13+08:00 ] 59.172.228.103 /Admin/User/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+NOTIC: [2048] Declaration of Common\Service\UserService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\UserService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\UserService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/UserService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/UserController.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `tg_user` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_user` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/UserController.class.php 第 26 行.
+SQL: SELECT * FROM `tg_user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014398s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-08-10T15:12:15+08:00 ] 59.172.228.103 /Admin/Master/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+NOTIC: [2048] Declaration of Common\Service\MasterService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/MasterService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\MasterService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/MasterService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\MasterService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/MasterService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/MasterController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_master` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_master` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/MasterController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_master` ORDER BY mid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2017-08-10T15:12:25+08:00 ] 59.172.228.103 /Admin/Master/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+NOTIC: [2048] Declaration of Common\Service\MasterService::add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) /home/xiaoxie/tennisGrade/Application/Common/Service/MasterService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\MasterService::delete() should be compatible with Think\Model::delete($options = Array) /home/xiaoxie/tennisGrade/Application/Common/Service/MasterService.class.php 第 9 行.
+NOTIC: [2048] Declaration of Common\Service\MasterService::check() should be compatible with Think\Model::check($value, $rule, $type = 'regex') /home/xiaoxie/tennisGrade/Application/Common/Service/MasterService.class.php 第 9 行.
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/MasterController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `tg_master` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tg_master` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: arrWhere /home/xiaoxie/tennisGrade/Application/Admin/Controller/MasterController.class.php 第 21 行.
+SQL: SELECT * FROM `tg_master` ORDER BY mid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-08-10T15:12:31+08:00 ] 59.172.228.103 /Admin/Admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b682812e058c4f7cab74d08ab9eabe11.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b682812e058c4f7cab74d08ab9eabe11.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b682812e058c4f7cab74d08ab9eabe11.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+
+[ 2017-08-10T15:12:35+08:00 ] 59.172.228.103 /Admin/Admin/indexs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b314f012a7a176b87e2f9703c74f3b72.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b314f012a7a176b87e2f9703c74f3b72.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b314f012a7a176b87e2f9703c74f3b72.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047604s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2017-08-10T15:12:37+08:00 ] 59.172.228.103 /Admin/Admin/indexs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b314f012a7a176b87e2f9703c74f3b72.php 第 289 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b314f012a7a176b87e2f9703c74f3b72.php 第 296 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b314f012a7a176b87e2f9703c74f3b72.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2017-08-10T15:12:58+08:00 ] 59.172.228.103 /Admin/Admin/indexs
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b314f012a7a176b87e2f9703c74f3b72.php 第 272 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b314f012a7a176b87e2f9703c74f3b72.php 第 279 行.
+NOTIC: [8] Undefined variable: count /home/xiaoxie/tennisGrade/Application/Runtime/Cache/Admin/b314f012a7a176b87e2f9703c74f3b72.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012141s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000406s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000450s ]
+

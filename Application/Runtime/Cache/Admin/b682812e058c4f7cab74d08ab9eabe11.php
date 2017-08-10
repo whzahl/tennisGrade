@@ -17,14 +17,40 @@
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
+<script type="text/javascript"> 
+	function del(){ 
+		if(confirm("确认要删除？")){ 
+			return true;
+		} else{
+			return false;
+		}
+	} 
+</script> 
+<script type="text/javascript"> 
+	function rec(){ 
+		if(confirm("确认要发布？")){ 
+			return true;
+		} else{
+			return false;
+		}
+	} 
+</script> 
     
 </head>
 
-<<<<<<< HEAD
 <body data-type="generalComponents">
-=======
-<body data-type="index">
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
+    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
+    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" /> 
+    <link rel="stylesheet" href="/Public/Admin/css/admin.css">
+    <link rel="stylesheet" href="/Public/Admin/css/app.css">
+    <script src="/Public/Admin/js/echarts.min.js"></script>
+    
+</head>
+
+<body data-type="generalComponents">
+<body>
+	
+<body data-type="generalComponents"> 
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -148,15 +174,14 @@
             </ul>
         </div>
     </header>
+    </header>
+    </header> 
 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
-<<<<<<< HEAD
                                                    管理 列表
-=======
                 Amaze UI 列表
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -167,6 +192,8 @@
 		           </a>
 		      </li>
 <!-- 		      <li class="tpl-left-nav-item">
+<!-- 		      <li class="tpl-left-nav-item">
+		      <li class="tpl-left-nav-item">
 		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-bar-chart"></i>
 		               <span>数据表</span>
@@ -256,21 +283,29 @@
 		          </ul>
 		    </li>
 		    <li class="tpl-left-nav-item">
+		           <a href="/Admin/Order/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-balance-scale"></i>
+		               <span>订单信息记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
+		           </a>
+		    </li>
+		    <li class="tpl-left-nav-item">
 		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
-		               <i class="am-icon-weixin"></i>
-		               <span>微信信息记录表</span>
-		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		               <i class="am-icon-weixin"></i>&nbsp;
+		               <span> 微信信息记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="/Admin/Master/index" class="nav-link tpl-left-nav-link-list">
-		               <i class="am-icon-user-plus"></i>
-		               <span>站长记录表</span>
-		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		               <i class="am-icon-user-plus"></i>&nbsp;
+		               <span> 站长记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-group"></i>&nbsp;
 		               <i class="am-icon-group"></i>
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
@@ -296,6 +331,7 @@
 		          </ul>
 		    </li>
 <!-- 		    <li class="tpl-left-nav-item">
+		    <li class="tpl-left-nav-item">
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>
 		            <span>登录</span>
@@ -441,10 +477,7 @@
     <script src="/Public/Admin/js/amazeui.min.js"></script>
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
-<<<<<<< HEAD
     
-=======
 
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 </body>
 </html>
