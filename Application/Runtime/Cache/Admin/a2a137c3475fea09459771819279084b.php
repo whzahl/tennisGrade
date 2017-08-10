@@ -322,9 +322,10 @@
         </div>
     </div>
 </div>
-
-
-
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+<script src="/Public/Admin/js/amazeui.min.js"></script>
+<script src="/Public/Admin/js/iscroll.js"></script>
+<script src="/Public/Admin/js/app.js"></script>
 
 
 
@@ -395,8 +396,8 @@
 		                              <tr>
 		                                  <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
 		                                  <th class="table-id">ID</th>
-		                                  <!-- <th class="table-title">标题</th> -->
-		                                  <th class="table-type">类别</th>
+		                                  <th class="table-title">标题</th>
+		                                  <!-- <th class="table-type">类别</th> -->
 		                                  <!-- <th class="table-author am-hide-sm-only">作者</th> -->
 		                                  <th class="table-date am-hide-sm-only">修改日期</th>
 		                                  <th class="table-set">操作</th>
@@ -452,12 +453,6 @@
 
 
 
-</div>
 
-    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-    <script src="/Public/Admin/js/amazeui.min.js"></script>
-    <script src="/Public/Admin/js/iscroll.js"></script>
-    <script src="/Public/Admin/js/app.js"></script>
-    
 </body>
 </html>

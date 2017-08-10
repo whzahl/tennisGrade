@@ -46,8 +46,8 @@ class IntroController extends CheckController{
             $arrWhere['picture'] = "";
             $arrWhere['type'] = 0;
             $arrWhere['create_time'] = time();
-            $arrWhere['modify_time'] = time();
-            $arrData = D('Intro',"Service")->add($arrWhere);
+            $arrWhere['modify_time'] = time(); 
+            $arrData = D('Intro','Service')->add($arrWhere);
             if($arrData){
                 $this->success('添加成功','/Admin/Intro/intro');
             }
