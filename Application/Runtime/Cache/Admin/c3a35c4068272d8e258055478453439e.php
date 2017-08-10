@@ -17,18 +17,28 @@
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
+<script type="text/javascript"> 
+	function del(){ 
+		if(confirm("确认要删除？")){ 
+			return true;
+		} else{
+			return false;
+		}
+	} 
+</script> 
+<script type="text/javascript"> 
+	function rec(){ 
+		if(confirm("确认要发布？")){ 
+			return true;
+		} else{
+			return false;
+		}
+	} 
+</script> 
     
 </head>
 
-<<<<<<< HEAD
-<body data-type="index">
-=======
-<<<<<<< HEAD
 <body data-type="generalComponents">
-=======
-<body data-type="index">
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -156,7 +166,7 @@
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
-                Amaze UI 列表
+                                                   管理 列表
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -175,15 +185,7 @@
 		     </li> -->
 		     <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
-<<<<<<< HEAD
-		               <i class="am-icon-table"></i>
-=======
-<<<<<<< HEAD
 		               <i class="am-icon-wpforms"></i>
-=======
-		               <i class="am-icon-table"></i>
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		               <span>介绍板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -208,15 +210,7 @@
 		          </ul>
 		    </li> <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
-<<<<<<< HEAD
-		               <i class="am-icon-table"></i>
-=======
-<<<<<<< HEAD
 		               <i class="am-icon-bars"></i>
-=======
-		               <i class="am-icon-table"></i>
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		               <span>申请板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -272,80 +266,45 @@
 		          </ul>
 		    </li>
 		    <li class="tpl-left-nav-item">
+		           <a href="/Admin/Order/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-balance-scale"></i>
+		               <span>订单信息记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
+		           </a>
+		    </li>
+		    <li class="tpl-left-nav-item">
 		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
-<<<<<<< HEAD
-		               <i class="am-icon-bar-chart"></i>
-=======
-<<<<<<< HEAD
-		               <i class="am-icon-weixin"></i>
-=======
-		               <i class="am-icon-bar-chart"></i>
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
-		               <span>微信信息记录表</span>
-		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		               <i class="am-icon-weixin"></i>&nbsp;
+		               <span> 微信信息记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
-<<<<<<< HEAD
-		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
-		               <i class="am-icon-table"></i>
-=======
-<<<<<<< HEAD
 		           <a href="/Admin/Master/index" class="nav-link tpl-left-nav-link-list">
-		               <i class="am-icon-user-plus"></i>
-		               <span>站长记录表</span>
-		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		               <i class="am-icon-user-plus"></i>&nbsp;
+		               <span> 站长记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
-		               <i class="am-icon-group"></i>
-=======
-		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
-		               <i class="am-icon-table"></i>
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
+		               <i class="am-icon-group"></i>&nbsp;
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
 		          <ul class="tpl-left-nav-sub-menu">
 		               <li>
-<<<<<<< HEAD
-		                   <a href="table-font-list.html">
-=======
-<<<<<<< HEAD
 		                   <a href="/Admin/Admin/index">
-=======
-		                   <a href="table-font-list.html">
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>超级管理员列表</span>
 		                       <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 		                   </a>
-<<<<<<< HEAD
-		                   <a href="table-images-list.html">
-=======
-<<<<<<< HEAD
 		                   <a href="/Admin/Admin/indexs">
-=======
-		                   <a href="table-images-list.html">
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 		                       <i class="am-icon-angle-right"></i>
 		                       <span>站长管理员列表</span>
 		                       <i class="tpl-left-nav-content tpl-badge-success">18</i>
 		                   </a>
-<<<<<<< HEAD
-		                   <a href="form-news.html">
-=======
-<<<<<<< HEAD
 		                   <a href="/Admin/Admin/indexss">
-=======
-		                   <a href="form-news.html">
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>考点管理员列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
@@ -364,121 +323,83 @@
     </div>
 </div>
 
-
-
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+    <script src="/Public/Admin/js/amazeui.min.js"></script>
+    <script src="/Public/Admin/js/iscroll.js"></script>
+    <script src="/Public/Admin/js/app.js"></script>
 
 
 
 
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                Amaze UI 表单
+                Amaze UI 证书增加
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">表单</a></li>
-                <li class="am-active">Amaze UI 表单</li>
+                <li><a href="/Admin/Grade/index">证书列表</a></li>
+                <li class="am-active">证书增加</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
                     <div class="caption font-green bold">
-                        <span class="am-icon-code"></span> 表单
+                        <span class="am-icon-code"></span> 证书增加
                     </div>
-                    <div class="tpl-portlet-input tpl-fz-ml">
-                        <div class="portlet-input input-small input-inline">
-                            <div class="input-icon right">
-                                <i class="am-icon-search"></i>
-                                <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="tpl-form-body tpl-form-line">
-                            <form class="am-form tpl-form-line-form">
+                            <form class="am-form tpl-form-line-form" action="/Admin/Grade/add" enctype="multipart/form-data" method="post">
                                 <div class="am-form-group">
-                                    <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">成绩 <span class="tpl-form-line-small-title">Score</span></label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
-                                        <small>请填写标题文字10-20字左右。</small>
+                                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入成绩">
+                                        <small>请填写证书成绩。</small>
                                     </div>
                                 </div>
 
-                                <div class="am-form-group">
-                                    <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly/>
-                                        <small>发布时间为必填</small>
-                                    </div>
-                                </div>
+
 
                                 <div class="am-form-group">
-                                    <label for="user-phone" class="am-u-sm-3 am-form-label">作者 <span class="tpl-form-line-small-title">Author</span></label>
-                                    <div class="am-u-sm-9">
-                                        <select data-am-selected="{searchBox: 1}">
-										  <option value="a">-The.CC</option>
-										  <option value="b">夕风色</option>
-										  <option value="o">Orange</option>
-										</select>
-                                    </div>
-                                </div>
-
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-form-label">SEO关键字 <span class="tpl-form-line-small-title">SEO</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" placeholder="输入SEO关键字">
-                                    </div>
-                                </div>
-
-                                <div class="am-form-group">
-                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">封面图 <span class="tpl-form-line-small-title">Images</span></label>
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">证书图片 <span class="tpl-form-line-small-title">Images</span></label>
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
                                             <div class="tpl-form-file-img">
+                                            
                                                 <img src="/Public/Admin/images/a5.png" alt="">
                                             </div>
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                            <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
+                                            <i class="am-icon-cloud-upload"></i> 添加图片</button>
                                             <input id="doc-form-file" type="file" multiple>
                                         </div>
 
                                     </div>
                                 </div>
-
+                                
                                 <div class="am-form-group">
-                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">添加分类 <span class="tpl-form-line-small-title">Type</span></label>
+                                    <label class="am-u-sm-3 am-form-label">等级 <span class="tpl-form-line-small-title">Level</span></label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" id="user-weibo" placeholder="请添加分类用点号隔开">
-                                        <div>
-
-                                        </div>
+                                        <input type="text" placeholder="输入证书等级">
                                     </div>
                                 </div>
-
-                                <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">隐藏文章</label>
+								<div class="am-form-group">
+                                    <label for="user-phone" class="am-u-sm-3 am-form-label">状态 <span class="tpl-form-line-small-title">Status</span></label>
                                     <div class="am-u-sm-9">
-                                        <div class="tpl-switch">
-                                            <input type="checkbox" class="ios-switch bigswitch tpl-switch-btn" checked />
-                                            <div class="tpl-switch-btn-view">
-                                                <div>
-                                                </div>
-                                            </div>
-                                        </div>
-
+                                        <select  name="status">
+                                          <option value="0">请选择状态</option>
+										  <option value="0">未通过</option>
+										  <option value="1">已通过</option>
+										  <option value="2">审核中</option>
+										</select>
                                     </div>
                                 </div>
+                               
 
-                                <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
-                                    <div class="am-u-sm-9">
-                                        <textarea class="" rows="10" id="user-intro" placeholder="请输入文章内容"></textarea>
-                                    </div>
-                                </div>
 
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
-                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                        <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
                                     </div>
                                 </div>
                             </form>
@@ -492,12 +413,7 @@
 
 
 
-</div>
 
-    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-    <script src="/Public/Admin/js/amazeui.min.js"></script>
-    <script src="/Public/Admin/js/iscroll.js"></script>
-    <script src="/Public/Admin/js/app.js"></script>
 
 </body>
 </html>

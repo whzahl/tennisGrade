@@ -39,18 +39,6 @@
 </head>
 
 <body data-type="generalComponents">
-    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
-    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" /> 
-    <link rel="stylesheet" href="/Public/Admin/css/admin.css">
-    <link rel="stylesheet" href="/Public/Admin/css/app.css">
-    <script src="/Public/Admin/js/echarts.min.js"></script>
-    
-</head>
-
-<body data-type="generalComponents">
-<body>
-	
-<body data-type="generalComponents"> 
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -174,14 +162,11 @@
             </ul>
         </div>
     </header>
-    </header>
-    </header> 
 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
                                                    管理 列表
-                Amaze UI 列表
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -192,8 +177,6 @@
 		           </a>
 		      </li>
 <!-- 		      <li class="tpl-left-nav-item">
-<!-- 		      <li class="tpl-left-nav-item">
-		      <li class="tpl-left-nav-item">
 		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-bar-chart"></i>
 		               <span>数据表</span>
@@ -306,7 +289,6 @@
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-group"></i>&nbsp;
-		               <i class="am-icon-group"></i>
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -331,7 +313,6 @@
 		          </ul>
 		    </li>
 <!-- 		    <li class="tpl-left-nav-item">
-		    <li class="tpl-left-nav-item">
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>
 		            <span>登录</span>
@@ -350,25 +331,25 @@
 
  <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                Amaze UI 文字列表
+                Amaze UI 考试直播列表
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
                 <li><a href="#">Amaze UI CSS</a></li>
-                <li class="am-active">文字列表</li>
+                <li class="am-active">考试直播列表</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
                     <div class="caption font-green bold">
-                        <span class="am-icon-code"></span> 列表
+                        <span class="am-icon-code"></span> 直播列表
                     </div>
-                    <div class="tpl-portlet-input tpl-fz-ml">
+                    <!-- <div class="tpl-portlet-input tpl-fz-ml">
                         <div class="portlet-input input-small input-inline">
                             <div class="input-icon right">
                                 <i class="am-icon-search"></i>
                                 <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
                 </div>
@@ -672,6 +653,5 @@
     <script src="/Public/Admin/js/iscroll.js"></script>
     <script src="/Public/Admin/js/app.js"></script>
     
-
 </body>
 </html>

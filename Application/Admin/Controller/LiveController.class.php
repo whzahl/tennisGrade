@@ -55,7 +55,7 @@ class LiveController extends CheckController{
 	  	 $data = $live->create(); 
 	 	if(IS_POST){
 			$data['create_time'] = time();
-			$arrData = $live->data($data)->add();
+			$arrData = $live->data($data)->save();
 			if($arrData){
 			$this->success('修改成功！','/Admin/Live/index');
 			}else {

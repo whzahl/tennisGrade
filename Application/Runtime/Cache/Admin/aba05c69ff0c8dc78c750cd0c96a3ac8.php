@@ -39,18 +39,6 @@
 </head>
 
 <body data-type="generalComponents">
-    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
-    <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" /> 
-    <link rel="stylesheet" href="/Public/Admin/css/admin.css">
-    <link rel="stylesheet" href="/Public/Admin/css/app.css">
-    <script src="/Public/Admin/js/echarts.min.js"></script>
-    
-</head>
-
-<body data-type="generalComponents">
-<body>
-	
-<body data-type="generalComponents"> 
 
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
@@ -174,14 +162,11 @@
             </ul>
         </div>
     </header>
-    </header>
-    </header> 
 
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
                                                    管理 列表
-                Amaze UI 列表
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -192,8 +177,6 @@
 		           </a>
 		      </li>
 <!-- 		      <li class="tpl-left-nav-item">
-<!-- 		      <li class="tpl-left-nav-item">
-		      <li class="tpl-left-nav-item">
 		           <a href="chart.html" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-bar-chart"></i>
 		               <span>数据表</span>
@@ -306,7 +289,6 @@
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-group"></i>&nbsp;
-		               <i class="am-icon-group"></i>
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -331,7 +313,6 @@
 		          </ul>
 		    </li>
 <!-- 		    <li class="tpl-left-nav-item">
-		    <li class="tpl-left-nav-item">
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>
 		            <span>登录</span>
@@ -343,32 +324,35 @@
 </div>
 
 
-
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+    <script src="/Public/Admin/js/amazeui.min.js"></script>
+    <script src="/Public/Admin/js/iscroll.js"></script>
+    <script src="/Public/Admin/js/app.js"></script>
 
 
 
 
  <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                Amaze UI 文字列表
+                Amaze UI 证书查询列表
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
                 <li><a href="#">Amaze UI CSS</a></li>
-                <li class="am-active">文字列表</li>
+                <li class="am-active">证书查询列表</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
                     <div class="caption font-green bold">
-                        <span class="am-icon-code"></span> 列表
+                        <span class="am-icon-code"></span> 证书查询列表
                     </div>
-                    <div class="tpl-portlet-input tpl-fz-ml">
+                    <!-- <div class="tpl-portlet-input tpl-fz-ml">
                         <div class="portlet-input input-small input-inline">
                             <div class="input-icon right">
                                 <i class="am-icon-search"></i>
                                 <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
                 </div>
@@ -414,31 +398,33 @@
 		                              <tr>
 		                                  <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
 		                                  <th class="table-id">ID</th>
-		                                  <th class="table-title">标题</th>
-		                                  <th class="table-type">类别</th>
-		                                  <th class="table-author am-hide-sm-only">作者</th>
-		                                  <th class="table-date am-hide-sm-only">修改日期</th>
+		                                  <th class="table-id">微信登录id</th>
+		                                  <th class="table-id">成绩</th>
+		                                  <th class="table-type">等级</th>
+		                                  <th class="table-type">状态</th>
+		                                  <th class="table-date am-hide-sm-only">上传时间</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
 		                          </thead>
 		                          <tbody>
-		                              <tr>
+		                          <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
 		                                  <td><input type="checkbox"></td>
-		                                  <td>5</td>
-		                                  <td><a href="#">Business management</a></td>
-		                                  <td>default</td>
-		                                  <td class="am-hide-sm-only">测试1号</td>
-		                                  <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
+		                                  <td><?php echo ($vo["gid"]); ?></td>
+		                                  <td><a href="#"><?php echo ($vo["id"]); ?></a></td>
+		                                  <td><?php echo ($vo["score"]); ?></td>
+		                                  <td class="am-hide-sm-only"><?php echo ($vo["level"]); ?></td>
+		                                  <td class="am-hide-sm-only"><?php echo ($vo["status"]); ?></td>
+		                                  <td class="am-hide-sm-only"><?php echo date('Y-m-d',$vo['create_time']);?></td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
-		                                              <a href="/Admin/Grade/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+		                                              <a href="/Admin/Grade/edit?gid=<?php echo ($vo["gid"]); ?>" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
 		                                              <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
-		                                              <a href="/Admin/Grade/delete"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></a>
+		                                              <a href="/Admin/Grade/delete?gid=<?php echo ($vo["gid"]); ?>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</a>
 		                                          </div>
 		                                      </div>
 		                                  </td>
-		                              </tr>
+		                              </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 		                          </tbody>
 		                      </table>
 		                      <div class="am-cf">
@@ -473,11 +459,7 @@
 
 </div>
 
-    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-    <script src="/Public/Admin/js/amazeui.min.js"></script>
-    <script src="/Public/Admin/js/iscroll.js"></script>
-    <script src="/Public/Admin/js/app.js"></script>
     
-
+    
 </body>
 </html>
