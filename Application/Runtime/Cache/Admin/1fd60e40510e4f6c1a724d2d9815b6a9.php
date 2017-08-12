@@ -15,6 +15,7 @@
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
+    <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
 <script type="text/javascript"> 
@@ -322,10 +323,11 @@
         </div>
     </div>
 </div>
+
 <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-<script src="/Public/Admin/js/amazeui.min.js"></script>
-<script src="/Public/Admin/js/iscroll.js"></script>
-<script src="/Public/Admin/js/app.js"></script>
+    <script src="/Public/Admin/js/amazeui.min.js"></script>
+    <script src="/Public/Admin/js/iscroll.js"></script>
+    <script src="/Public/Admin/js/app.js"></script>
 
 
 <script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.config.js"></script>
@@ -347,8 +349,8 @@
                 新增委员会简介
             </div>
             <ol class="am-breadcrumb">
-                <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
-                <li><a href="/Admin/Index/index">介绍板块</a></li>
+                <li><a href="" class="am-icon-home">首页</a></li>
+                <li><a href="">介绍板块</a></li>
                 <li class="am-active">新增委员会简介</li>
             </ol>
             <div class="tpl-portlet-components">
@@ -372,7 +374,7 @@
                                     <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="tpl-form-input" id="user-name" name="title" placeholder="请输入标题文字">
-                                        <small>请填写标题文字10-20字左右。</small>
+                                        <!-- <small>请填写标题文字</small> -->
                                     </div>
                                 </div>
 
@@ -387,8 +389,8 @@
                                 <div class="am-form-group">
                                     <label for="user-phone" class="am-u-sm-3 am-form-label">发布状态 <span class="tpl-form-line-small-title">status</span></label>
                                     <div class="am-u-sm-9">
-                                        <select data-am-selected="{searchBox: 1}" name="status">
-										  <option value="1">已发布</option>
+                                        <select name="status" data-am-selected>
+										  <option value="1" selected>已发布</option>
 										  <option value="0">未发布</option>
 										  <option value="2">删除</option>
 										</select>
@@ -451,7 +453,7 @@
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
                                         <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
-                                        <a href="" onclick="javascript:history.go(-1)"><button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-warning ">返回</button></a>
+                                        <a href="" onclick="javascript:history.go(-1)"><button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-warning ">返回</button></a>
                                     </div>
                                 </div>
                             </form>
@@ -461,6 +463,7 @@
                 </div>
             </div>
         </div>
+
 
 
 

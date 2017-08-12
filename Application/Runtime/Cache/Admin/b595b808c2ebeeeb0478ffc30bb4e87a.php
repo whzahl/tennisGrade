@@ -323,8 +323,10 @@
     </div>
 </div>
 
-
-
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+    <script src="/Public/Admin/js/amazeui.min.js"></script>
+    <script src="/Public/Admin/js/iscroll.js"></script>
+    <script src="/Public/Admin/js/app.js"></script>
 
 
 
@@ -1113,12 +1115,7 @@
 
 
 
-</div>
 
-    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-    <script src="/Public/Admin/js/amazeui.min.js"></script>
-    <script src="/Public/Admin/js/iscroll.js"></script>
-    <script src="/Public/Admin/js/app.js"></script>
-    
+
 </body>
 </html>

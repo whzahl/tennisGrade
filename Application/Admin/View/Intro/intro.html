@@ -78,37 +78,23 @@
 		                          <tbody>
 		                              <tr>
 		                                  <td><input type="checkbox"></td>
-		                                  <td>5</td>
+		                                  <td>{$list.inid}</td>
 		                                  <!-- <td><a href="#">Business management</a></td> -->
-		                                  <td>default</td>
+		                                  <td>{$list.title}</td>
 		                                  <!-- <td class="am-hide-sm-only">测试1号</td> -->
-		                                  <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
+		                                  <td class="am-hide-sm-only">{$list.modify_time|date="Y-m-d",###}</td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
-		                                              <a href="/Admin/Intro/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+		                                              <a href="/Admin/Intro/edit?inid={$list.inid}" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
 		                                              <!-- <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
-		                                              <a href="/Admin/Intro/delete" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-trash-o"></span> 删除</a>
+		                                              <!-- <a href="/Admin/Intro/delete" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-trash-o"></span> 删除</a> -->
 		                                          </div>
 		                                      </div>
 		                                  </td>
 		                              </tr>
 		                          </tbody>
 		                      </table>
-		                      <!-- <div class="am-cf">
-		
-		                          <div class="am-fr">
-		                              <ul class="am-pagination tpl-pagination">
-		                                  <li class="am-disabled"><a href="#">«</a></li>
-		                                  <li class="am-active"><a href="#">1</a></li>
-		                                  <li><a href="#">2</a></li>
-		                                  <li><a href="#">3</a></li>
-		                                  <li><a href="#">4</a></li>
-		                                  <li><a href="#">5</a></li>
-		                                  <li><a href="#">»</a></li>
-		                              </ul>
-		                          </div>
-		                      </div> -->
 		                      <hr>
 		
 		                  </form>

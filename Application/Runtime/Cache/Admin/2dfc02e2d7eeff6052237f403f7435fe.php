@@ -15,8 +15,27 @@
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
+    <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
+<script type="text/javascript"> 
+	function del(){ 
+		if(confirm("确认要删除？")){ 
+			return true;
+		} else{
+			return false;
+		}
+	} 
+</script> 
+<script type="text/javascript"> 
+	function rec(){ 
+		if(confirm("确认要发布？")){ 
+			return true;
+		} else{
+			return false;
+		}
+	} 
+</script> 
     
 </head>
 
@@ -148,7 +167,7 @@
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
-                Amaze UI 列表
+                                                   管理 列表
            </div>
            <div class="tpl-left-nav-list">
 		   <ul class="tpl-left-nav-menu">
@@ -248,22 +267,29 @@
 		          </ul>
 		    </li>
 		    <li class="tpl-left-nav-item">
+		           <a href="/Admin/Order/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-balance-scale"></i>
+		               <span>订单信息记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
+		           </a>
+		    </li>
+		    <li class="tpl-left-nav-item">
 		           <a href="/Admin/User/index" class="nav-link tpl-left-nav-link-list">
-		               <i class="am-icon-weixin"></i>
-		               <span>微信信息记录表</span>
-		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		               <i class="am-icon-weixin"></i>&nbsp;
+		               <span> 微信信息记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="/Admin/Master/index" class="nav-link tpl-left-nav-link-list">
-		               <i class="am-icon-user-plus"></i>
-		               <span>站长记录表</span>
-		               <i class="tpl-left-nav-content tpl-badge-danger">12</i>
+		               <i class="am-icon-user-plus"></i>&nbsp;
+		               <span> 站长记录表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger"><?php echo ($count); ?></i>
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
-		               <i class="am-icon-group"></i>
+		               <i class="am-icon-group"></i>&nbsp;
 		               <span>管理员板块</span>
 		               <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
 		          </a>
@@ -298,20 +324,63 @@
     </div>
 </div>
 
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+    <script src="/Public/Admin/js/amazeui.min.js"></script>
+    <script src="/Public/Admin/js/iscroll.js"></script>
+    <script src="/Public/Admin/js/app.js"></script>
 
 
-
-
-
-
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/Public/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script>
+	window.onload = function (){
+		//编辑器资源文件根路径说明
+		window.UEDITOR_HOME_URL = "/Public/ueditor/";
+		//编辑器的高度
+		window.UEDITOR_CONFIG.initialFrameHeight=300; 
+		//实例化编辑器
+		var ue = UE.getEditor('editor');
+	}
+</script>
+<script>
+ function PreviewImage(imgFile)
+ {
+    var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+    filextension=filextension.toLowerCase();
+    if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))
+    {
+        alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+        imgFile.focus();
+    }
+    else
+    {
+        var path;
+        if(document.all)//IE
+        {
+            imgFile.select();
+            path = document.selection.createRange().text;
+            document.getElementById("imgPreview").innerHTML="";
+            document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果      
+        }
+        else//FF
+        {
+            path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+            //path = imgFile.files[0].getAsDataURL();// FF 3.0
+            document.getElementById("imgPreview").innerHTML = "<img id='img1' style='max-height:500px;max-width:500px' src='"+path+"'/>";
+            //document.getElementById("img1").src = path;
+        }
+    }
+ }
+ </script>
         <div class="tpl-content-wrapper" style="margin:0 20px">
-            <div class="tpl-content-page-title">
-                Amaze UI 表单
+             <div class="tpl-content-page-title">
+                新增新闻
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">表单</a></li>
-                <li class="am-active">Amaze UI 表单</li>
+                <li><a href="#">内容板块</a></li>
+                <li class="am-active">新增新闻</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
@@ -329,24 +398,38 @@
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="tpl-form-body tpl-form-line">
-                            <form class="am-form tpl-form-line-form">
+                            <form class="am-form tpl-form-line-form" method="post" action="/Admin/News/add" enctype="multipart/form-data">
                                 <div class="am-form-group">
-                                    <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">主标题 <span class="tpl-form-line-small-title">Maintitle</span></label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
-                                        <small>请填写标题文字10-20字左右。</small>
+                                        <input type="text" class="tpl-form-input" id="user-name" name="main_title" placeholder="请输入标题文字">
+                                        <!-- <small>请填写标题文字10-20字左右。</small> -->
+                                    </div>
+                                </div>
+                                <div class="am-form-group">
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">副标题 <span class="tpl-form-line-small-title">Subtitle</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" class="tpl-form-input" id="user-name" name="sub_title" placeholder="请输入标题文字">
+                                        <small>非必填项</small>
+                                    </div>
+                                </div>
+                                <div class="am-form-group">
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">关键字 <span class="tpl-form-line-small-title">Keyword</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" class="tpl-form-input" id="user-name" name="keyword" placeholder="请输入标题文字">
+                                        <!-- <small>请填写标题文字10-20字左右。</small> -->
                                     </div>
                                 </div>
 
-                                <div class="am-form-group">
+                                <!-- <div class="am-form-group">
                                     <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly/>
                                         <small>发布时间为必填</small>
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="am-form-group">
+                                <!-- <div class="am-form-group">
                                     <label for="user-phone" class="am-u-sm-3 am-form-label">作者 <span class="tpl-form-line-small-title">Author</span></label>
                                     <div class="am-u-sm-9">
                                         <select data-am-selected="{searchBox: 1}">
@@ -355,41 +438,49 @@
 										  <option value="o">Orange</option>
 										</select>
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="am-form-group">
+                                <!-- <div class="am-form-group">
                                     <label class="am-u-sm-3 am-form-label">SEO关键字 <span class="tpl-form-line-small-title">SEO</span></label>
                                     <div class="am-u-sm-9">
                                         <input type="text" placeholder="输入SEO关键字">
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="am-form-group">
-                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">封面图 <span class="tpl-form-line-small-title">Images</span></label>
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">封面图 <span class="tpl-form-line-small-title">Picture</span></label>
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
                                             <div class="tpl-form-file-img">
-                                                <img src="/Public/Admin/images/a5.png" alt="">
+                                            	<div id="imgPreview">
+	                                            	<?php if(empty($$list["picture"])): ?><img src="/Public/Admin/images/none.jpg" alt="">
+	                                            	<?php else: ?>
+	                                            		<img src="<?php echo ($list["picture"]); ?>" alt="" id="img0"/>
+	                                            		<input type="hidden" name="picture" value="<?php echo ($list["picture"]); ?>" /><?php endif; ?>
+                                            	</div>
                                             </div>
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
                                             <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
-                                            <input id="doc-form-file" type="file" multiple>
+                                            <input id="doc-form-file" type="file" name="picture" onchange='PreviewImage(this)' multiple>
                                         </div>
 
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
-                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">添加分类 <span class="tpl-form-line-small-title">Type</span></label>
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">选择分类 <span class="tpl-form-line-small-title">Type</span></label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" id="user-weibo" placeholder="请添加分类用点号隔开">
+                                        <select name="type" data-am-selected>
+                                        	<option value="0" selected>热点类</option>
+                                        	<option value="1">普通类</option>
+                                        </select>
                                         <div>
 
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="am-form-group">
+                                <!-- <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">隐藏文章</label>
                                     <div class="am-u-sm-9">
                                         <div class="tpl-switch">
@@ -401,18 +492,19 @@
                                         </div>
 
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
                                     <div class="am-u-sm-9">
-                                        <textarea class="" rows="10" id="user-intro" placeholder="请输入文章内容"></textarea>
+                                        <script id="editor" type="text/plain" style="width:1024px;height:500px;" name="content"></script>
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
-                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                        <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                        <a href="" onclick="javascript:history.go(-1)"><button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-warning ">返回</button></a>
                                     </div>
                                 </div>
                             </form>
@@ -426,12 +518,7 @@
 
 
 
-</div>
 
-    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-    <script src="/Public/Admin/js/amazeui.min.js"></script>
-    <script src="/Public/Admin/js/iscroll.js"></script>
-    <script src="/Public/Admin/js/app.js"></script>
 
 </body>
 </html>

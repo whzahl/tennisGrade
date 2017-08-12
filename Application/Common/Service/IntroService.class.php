@@ -44,8 +44,8 @@ class IntroService extends BaseService{
 	 *  编辑一条数据
 	 */
 	public function edit($arrWhere){
-		$result = M('tg_intro')->data($arrWhere)->save();
-		return $result;
+	    $result = M('tg_intro')->data($arrWhere)->save();
+	    return $result;
 	}
 	
 	/**

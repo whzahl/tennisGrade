@@ -15,6 +15,7 @@
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
+    <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
 <script type="text/javascript"> 
@@ -322,10 +323,11 @@
         </div>
     </div>
 </div>
+
 <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-<script src="/Public/Admin/js/amazeui.min.js"></script>
-<script src="/Public/Admin/js/iscroll.js"></script>
-<script src="/Public/Admin/js/app.js"></script>
+    <script src="/Public/Admin/js/amazeui.min.js"></script>
+    <script src="/Public/Admin/js/iscroll.js"></script>
+    <script src="/Public/Admin/js/app.js"></script>
 
 
 
@@ -406,37 +408,23 @@
 		                          <tbody>
 		                              <tr>
 		                                  <td><input type="checkbox"></td>
-		                                  <td>5</td>
+		                                  <td><?php echo ($list["inid"]); ?></td>
 		                                  <!-- <td><a href="#">Business management</a></td> -->
-		                                  <td>default</td>
+		                                  <td><?php echo ($list["title"]); ?></td>
 		                                  <!-- <td class="am-hide-sm-only">测试1号</td> -->
-		                                  <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
+		                                  <td class="am-hide-sm-only"><?php echo (date("Y-m-d",$list["modify_time"])); ?></td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
-		                                              <a href="/Admin/Intro/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+		                                              <a href="/Admin/Intro/edit?inid=<?php echo ($list["inid"]); ?>" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
 		                                              <!-- <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
-		                                              <a href="/Admin/Intro/delete" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-trash-o"></span> 删除</a>
+		                                              <!-- <a href="/Admin/Intro/delete" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-trash-o"></span> 删除</a> -->
 		                                          </div>
 		                                      </div>
 		                                  </td>
 		                              </tr>
 		                          </tbody>
 		                      </table>
-		                      <!-- <div class="am-cf">
-		
-		                          <div class="am-fr">
-		                              <ul class="am-pagination tpl-pagination">
-		                                  <li class="am-disabled"><a href="#">«</a></li>
-		                                  <li class="am-active"><a href="#">1</a></li>
-		                                  <li><a href="#">2</a></li>
-		                                  <li><a href="#">3</a></li>
-		                                  <li><a href="#">4</a></li>
-		                                  <li><a href="#">5</a></li>
-		                                  <li><a href="#">»</a></li>
-		                              </ul>
-		                          </div>
-		                      </div> -->
 		                      <hr>
 		
 		                  </form>
@@ -454,13 +442,6 @@
 
 
 
-<<<<<<< Updated upstream
-=======
-    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-    <script src="/Public/Admin/js/amazeui.min.js"></script>
-    <script src="/Public/Admin/js/iscroll.js"></script>
-    <script src="/Public/Admin/js/app.js"></script>
-    
->>>>>>> Stashed changes
+
 </body>
 </html>

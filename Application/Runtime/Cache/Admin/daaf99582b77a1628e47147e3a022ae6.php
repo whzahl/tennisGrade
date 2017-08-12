@@ -15,6 +15,7 @@
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
+    <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
 <script type="text/javascript"> 
@@ -323,20 +324,22 @@
     </div>
 </div>
 
-
-
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+    <script src="/Public/Admin/js/amazeui.min.js"></script>
+    <script src="/Public/Admin/js/iscroll.js"></script>
+    <script src="/Public/Admin/js/app.js"></script>
 
 
 
 
  <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                Amaze UI 文字列表
+                考试协议
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">Amaze UI CSS</a></li>
-                <li class="am-active">文字列表</li>
+                <li><a href="#">介绍板块</a></li>
+                <li class="am-active">考试协议</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
@@ -359,34 +362,34 @@
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
                                     <a href="/Admin/Intro/addss" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
-                                    <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
+                                   <!--  <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
                                     <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
                                 </div>
                             </div>
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
-                            <div class="am-form-group">
-                                <select data-am-selected="{btnSize: 'sm'}">
-					              <option value="option1">所有类别</option>
-					              <option value="option2">IT业界</option>
-					              <option value="option3">数码产品</option>
-					              <option value="option3">笔记本电脑</option>
-					              <option value="option3">平板电脑</option>
-					              <option value="option3">只能手机</option>
-					              <option value="option3">超极本</option>
-					            </select>
-                            </div>
+                            <!-- <div class="am-form-group">
+                             <select data-am-selected="{btnSize: 'sm'}">
+				                <option value="option1">所有类别</option>
+				                <option value="option2">IT业界</option>
+				                <option value="option3">数码产品</option>
+				                <option value="option3">笔记本电脑</option>
+				                <option value="option3">平板电脑</option>
+				                <option value="option3">只能手机</option>
+				                <option value="option3">超极本</option>
+				            </select>
+                            </div> -->
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
                             <div class="am-input-group am-input-group-sm">
                                 <input type="text" class="am-form-field">
                                 <span class="am-input-group-btn">
-						           <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>
-						        </span>
-		                   </div>
-		                </div>
-		          </div>
+					              <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>
+					            </span>
+			                </div>
+			            </div>
+                  </div>
 		          <div class="am-g">
 		              <div class="am-u-sm-12">
 		                  <form class="am-form">
@@ -396,8 +399,8 @@
 		                                  <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
 		                                  <th class="table-id">ID</th>
 		                                  <th class="table-title">标题</th>
-		                                  <th class="table-type">类别</th>
-		                                  <th class="table-author am-hide-sm-only">作者</th>
+		                                  <!-- <th class="table-type">类别</th> -->
+		                                  <!-- <th class="table-author am-hide-sm-only">作者</th> -->
 		                                  <th class="table-date am-hide-sm-only">修改日期</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
@@ -405,37 +408,23 @@
 		                          <tbody>
 		                              <tr>
 		                                  <td><input type="checkbox"></td>
-		                                  <td>5</td>
-		                                  <td><a href="#">Business management</a></td>
-		                                  <td>default</td>
-		                                  <td class="am-hide-sm-only">测试1号</td>
-		                                  <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
+		                                  <td><?php echo ($list["inid"]); ?></td>
+		                                  <!-- <td><a href="#">Business management</a></td> -->
+		                                  <td><?php echo ($list["title"]); ?></td>
+		                                  <!-- <td class="am-hide-sm-only">测试1号</td> -->
+		                                  <td class="am-hide-sm-only"><?php echo (date("Y-m-d",$list["modify_time"])); ?></td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
-		                                              <a href="/Admin/Intro/editss" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
-		                                              <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
-		                                              <a href="/Admin/Intro/delete"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></a>
+		                                              <a href="/Admin/Intro/editss?inid=<?php echo ($list["inid"]); ?>" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+		                                              <!-- <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
+		                                              <!-- <a href="/Admin/Intro/delete" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-trash-o"></span> 删除</a> -->
 		                                          </div>
 		                                      </div>
 		                                  </td>
 		                              </tr>
 		                          </tbody>
 		                      </table>
-		                      <div class="am-cf">
-		
-		                          <div class="am-fr">
-		                              <ul class="am-pagination tpl-pagination">
-		                                  <li class="am-disabled"><a href="#">«</a></li>
-		                                  <li class="am-active"><a href="#">1</a></li>
-		                                  <li><a href="#">2</a></li>
-		                                  <li><a href="#">3</a></li>
-		                                  <li><a href="#">4</a></li>
-		                                  <li><a href="#">5</a></li>
-		                                  <li><a href="#">»</a></li>
-		                              </ul>
-		                          </div>
-		                      </div>
 		                      <hr>
 		
 		                  </form>
@@ -452,12 +441,7 @@
 
 
 
-</div>
 
-    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-    <script src="/Public/Admin/js/amazeui.min.js"></script>
-    <script src="/Public/Admin/js/iscroll.js"></script>
-    <script src="/Public/Admin/js/app.js"></script>
-    
+
 </body>
 </html>

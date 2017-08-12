@@ -4,12 +4,12 @@
 
  <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                Amaze UI 文字列表
+                新闻列表
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">Amaze UI CSS</a></li>
-                <li class="am-active">文字列表</li>
+                <li><a href="#">内容板块</a></li>
+                <li class="am-active">新闻列表</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
@@ -32,14 +32,14 @@
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
                                     <a href="/Admin/News/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
-                                    <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
+                                    <!-- <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
                                     <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
                                 </div>
                             </div>
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
-                            <div class="am-form-group">
+                            <!-- <div class="am-form-group">
                              <select data-am-selected="{btnSize: 'sm'}">
 				                <option value="option1">所有类别</option>
 				                <option value="option2">IT业界</option>
@@ -49,7 +49,7 @@
 				                <option value="option3">只能手机</option>
 				                <option value="option3">超极本</option>
 				            </select>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
                             <div class="am-input-group am-input-group-sm">
@@ -70,32 +70,49 @@
 		                                  <th class="table-id">ID</th>
 		                                  <th class="table-title">标题</th>
 		                                  <th class="table-type">类别</th>
-		                                  <th class="table-author am-hide-sm-only">作者</th>
 		                                  <th class="table-date am-hide-sm-only">修改日期</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
 		                          </thead>
 		                          <tbody>
-		                              <tr>
-		                                  <td><input type="checkbox"></td>
-		                                  <td>5</td>
-		                                  <td><a href="#">Business management</a></td>
-		                                  <td>default</td>
-		                                  <td class="am-hide-sm-only">测试1号</td>
-		                                  <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
-		                                  <td>
-		                                      <div class="am-btn-toolbar">
-		                                          <div class="am-btn-group am-btn-group-xs">
-		                                              <a href="/Admin/News/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
-		                                              <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
-		                                              <a href="/Admin/News/delete"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></a>
-		                                          </div>
-		                                      </div>
-		                                  </td>
-		                              </tr>
+		                              <volist name="list" id="vo">
+			                              <tr>
+			                                  <td><input type="checkbox"></td>
+			                                  <td>{$vo.nid}</td>
+			                                  <td><a href="#">{$vo.main_title}</a></td>
+			                                  <td>
+			                                  	<if condition = "$vo.type eq 0">
+			                                  		热点类
+			                                  	</if>
+			                                  	<if condition = "$vo.type eq 1">
+			                                  		普通类
+			                                  	</if>
+			                                  </td>
+			                                  <td class="am-hide-sm-only">{$vo.modify_time|date='Y-m-d',###}</td>
+			                                  <td>
+			                                      <div class="am-btn-toolbar">
+			                                          <div class="am-btn-group am-btn-group-xs">
+			                                              <a href="/Admin/News/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+			                                              <!-- <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
+			                                              <a href="/Admin/News/delete" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 删除</a>
+			                                          </div>
+			                                      </div>
+			                                  </td>
+			                              </tr>
+		                              </volist>
 		                          </tbody>
 		                      </table>
-		                      <div class="am-cf">
+		                      <div class="row">
+                                <div class="col-sm-12">
+                                	<div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
+	                                	<ul class="pagination">
+	                                		{$page}
+	                                	</ul>
+	                                	<div style="float:right;line-height:76px;margin-right:10px;">总共&nbsp;{$count}&nbsp;人</div>
+                                	</div>
+                                </div>
+                                </div>
+		                      <!-- <div class="am-cf">
 		
 		                          <div class="am-fr">
 		                              <ul class="am-pagination tpl-pagination">
@@ -108,7 +125,7 @@
 		                                  <li><a href="#">»</a></li>
 		                              </ul>
 		                          </div>
-		                      </div>
+		                      </div> -->
 		                      <hr>
 		
 		                  </form>

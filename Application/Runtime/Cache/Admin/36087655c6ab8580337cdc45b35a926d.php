@@ -15,6 +15,7 @@
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
+    <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
 <script type="text/javascript"> 
@@ -323,20 +324,22 @@
     </div>
 </div>
 
-
-
+<script src="/Public/Admin/js/jquery-2.1.1.js"></script>
+    <script src="/Public/Admin/js/amazeui.min.js"></script>
+    <script src="/Public/Admin/js/iscroll.js"></script>
+    <script src="/Public/Admin/js/app.js"></script>
 
 
 
 
  <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                Amaze UI 文字列表
+                新闻列表
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">Amaze UI CSS</a></li>
-                <li class="am-active">文字列表</li>
+                <li><a href="#">内容板块</a></li>
+                <li class="am-active">新闻列表</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
@@ -359,14 +362,14 @@
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
                                     <a href="/Admin/News/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
-                                    <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
+                                    <!-- <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
                                     <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
                                 </div>
                             </div>
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
-                            <div class="am-form-group">
+                            <!-- <div class="am-form-group">
                              <select data-am-selected="{btnSize: 'sm'}">
 				                <option value="option1">所有类别</option>
 				                <option value="option2">IT业界</option>
@@ -376,7 +379,7 @@
 				                <option value="option3">只能手机</option>
 				                <option value="option3">超极本</option>
 				            </select>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
                             <div class="am-input-group am-input-group-sm">
@@ -397,32 +400,43 @@
 		                                  <th class="table-id">ID</th>
 		                                  <th class="table-title">标题</th>
 		                                  <th class="table-type">类别</th>
-		                                  <th class="table-author am-hide-sm-only">作者</th>
 		                                  <th class="table-date am-hide-sm-only">修改日期</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
 		                          </thead>
 		                          <tbody>
-		                              <tr>
-		                                  <td><input type="checkbox"></td>
-		                                  <td>5</td>
-		                                  <td><a href="#">Business management</a></td>
-		                                  <td>default</td>
-		                                  <td class="am-hide-sm-only">测试1号</td>
-		                                  <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
-		                                  <td>
-		                                      <div class="am-btn-toolbar">
-		                                          <div class="am-btn-group am-btn-group-xs">
-		                                              <a href="/Admin/News/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
-		                                              <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
-		                                              <a href="/Admin/News/delete"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></a>
-		                                          </div>
-		                                      </div>
-		                                  </td>
-		                              </tr>
+		                              <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+			                                  <td><input type="checkbox"></td>
+			                                  <td><?php echo ($vo["nid"]); ?></td>
+			                                  <td><a href="#"><?php echo ($vo["main_title"]); ?></a></td>
+			                                  <td>
+			                                  	<?php if($vo["type"] == 0): ?>热点类<?php endif; ?>
+			                                  	<?php if($vo["type"] == 1): ?>普通类<?php endif; ?>
+			                                  </td>
+			                                  <td class="am-hide-sm-only"><?php echo (date('Y-m-d',$vo["modify_time"])); ?></td>
+			                                  <td>
+			                                      <div class="am-btn-toolbar">
+			                                          <div class="am-btn-group am-btn-group-xs">
+			                                              <a href="/Admin/News/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+			                                              <!-- <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
+			                                              <a href="/Admin/News/delete"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></a>
+			                                          </div>
+			                                      </div>
+			                                  </td>
+			                              </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 		                          </tbody>
 		                      </table>
-		                      <div class="am-cf">
+		                      <div class="row">
+                                <div class="col-sm-12">
+                                	<div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
+	                                	<ul class="pagination">
+	                                		<?php echo ($page); ?>
+	                                	</ul>
+	                                	<div style="float:right;line-height:76px;margin-right:10px;">总共&nbsp;<?php echo ($count); ?>&nbsp;人</div>
+                                	</div>
+                                </div>
+                                </div>
+		                      <!-- <div class="am-cf">
 		
 		                          <div class="am-fr">
 		                              <ul class="am-pagination tpl-pagination">
@@ -435,7 +449,7 @@
 		                                  <li><a href="#">»</a></li>
 		                              </ul>
 		                          </div>
-		                      </div>
+		                      </div> -->
 		                      <hr>
 		
 		                  </form>
@@ -452,12 +466,7 @@
 
 
 
-</div>
 
-    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
-    <script src="/Public/Admin/js/amazeui.min.js"></script>
-    <script src="/Public/Admin/js/iscroll.js"></script>
-    <script src="/Public/Admin/js/app.js"></script>
-    
+
 </body>
 </html>

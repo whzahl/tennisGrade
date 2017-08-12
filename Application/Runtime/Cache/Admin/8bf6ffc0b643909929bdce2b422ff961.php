@@ -15,6 +15,7 @@
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
+    <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
 <script type="text/javascript"> 
@@ -323,7 +324,6 @@
     </div>
 </div>
 
-
 <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
     <script src="/Public/Admin/js/amazeui.min.js"></script>
     <script src="/Public/Admin/js/iscroll.js"></script>
@@ -453,9 +453,7 @@
 
 
 
-</div>
 
-    
-    
+
 </body>
 </html>
