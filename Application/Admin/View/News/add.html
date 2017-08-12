@@ -123,12 +123,13 @@
                                         <div class="am-form-group am-form-file">
                                             <div class="tpl-form-file-img">
                                             	<div id="imgPreview">
-	                                            	<empty name="$list.picture">
+                                            	<!-- 不添加图片则不显示图片，添加才显示 -->
+	                                            	<!-- <empty name="$list.picture">
 	                                            		<img src="/Public/Admin/images/none.jpg" alt="">
 	                                            	<else />
 	                                            		<img src="{$list.picture}" alt="" id="img0"/>
 	                                            		<input type="hidden" name="picture" value="{$list.picture}" />
-	                                            	</empty>
+	                                            	</empty> -->
                                             	</div>
                                             </div>
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
