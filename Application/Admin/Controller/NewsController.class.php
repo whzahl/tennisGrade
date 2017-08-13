@@ -14,12 +14,13 @@ class NewsController extends CheckController{
 
 
 	public function index(){
+	    //选取状态为发布的新闻打印在index页面
+	    $arrWhere['status'] = 1;
 	    $intCount = D('News','Service')->count($arrWhere);
-	    $Page = new \Think\Page($intCount,1);// 实例化分页类 传入总记录数和每页显示的记录数
+	    $Page = new \Think\Page($intCount,2);// 实例化分页类 传入总记录数和每页显示的记录数
 	    $show = $Page->show();// 分页显示输出
 	    $first = $Page->firstRow;
 	    $list = $Page->listRows;
-	    var_dump($first,$list);
 	    $arrData = D('News','Service')->findAll($arrWhere,$first,$list);
 	    $this->count = $intCount;
 	    $this->page = $show;
@@ -107,7 +108,17 @@ class NewsController extends CheckController{
 	    $this->list = $arrData;
 		$this->display();
 	}
-	
+	public function delete(){
+	    $arrWhere['nid'] = I('get.nid');
+	    $arrWhere['status'] = 2;
+	    $arrData = D('News','Service')->edit($arrWhere);
+	    if (!$arrData){
+	        $this->error('删除失败');
+	    }
+	    else {
+	        redirect('/Admin/News/index');
+	    }
+	}
 }
 
 

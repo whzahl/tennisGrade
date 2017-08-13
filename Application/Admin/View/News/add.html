@@ -84,9 +84,9 @@
                                     </div>
                                 </div>
                                 <div class="am-form-group">
-                                    <label for="user-name" class="am-u-sm-3 am-form-label">关键字 <span class="tpl-form-line-small-title">Keyword</span></label>
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">关键字 <span class="tpl-form-line-small-title">Keywords</span></label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" class="tpl-form-input" id="user-name" name="keyword" placeholder="请输入标题文字">
+                                        <input type="text" class="tpl-form-input" id="user-name" name="keywords" placeholder="请输入标题文字">
                                         <!-- <small>请填写标题文字10-20字左右。</small> -->
                                     </div>
                                 </div>
@@ -147,12 +147,18 @@
                                         	<option value="0" selected>热点类</option>
                                         	<option value="1">普通类</option>
                                         </select>
-                                        <div>
-
-                                        </div>
                                     </div>
                                 </div>
-
+								
+								<div class="am-form-group">
+                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">选择发布状态 <span class="tpl-form-line-small-title">Status</span></label>
+                                    <div class="am-u-sm-9">
+                                        <select name="status" data-am-selected>
+                                        	<option value="0">未发布</option>
+                                        	<option value="1" selected>发布</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <!-- <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">隐藏文章</label>
                                     <div class="am-u-sm-9">
@@ -168,7 +174,7 @@
                                 </div> -->
 
                                 <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
+                                    <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容 <span class="tpl-form-line-small-title">Content</span></label>
                                     <div class="am-u-sm-9">
                                         <script id="editor" type="text/plain" style="width:1024px;height:500px;" name="content"></script>
                                     </div>

@@ -1,6 +1,61 @@
 <extend name="Public:base" />
 <block name="body">
+<script type="text/javascript"> 
+function previewImage(file,imgNum)
+{
+  var MAXWIDTH  = 300; 
+  var MAXHEIGHT = 300;
+  var div = document.getElementById('preview'+imgNum);
+  if (file.files && file.files[0])
+  {
+      div.innerHTML ='<img id=imghead'+imgNum+'>';
+      var img = document.getElementById('imghead'+imgNum+'');
+      img.onload = function(){
+        var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+        img.width  =  rect.width;
+        img.height =  rect.height;
+//         img.style.marginLeft = rect.left+'px';
+        img.style.marginTop = rect.top+'px';
+      }
+      var reader = new FileReader();
+      reader.onload = function(evt){img.src = evt.target.result;}
+      reader.readAsDataURL(file.files[0]);
+  }
+  else //
+  {
+    var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+    file.select();
+    var src = document.selection.createRange().text;
+    div.innerHTML = '<img id=imghead'+imgNum+'>';
+    var img = document.getElementById('imghead2');
+    img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+    var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+    status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+    div.innerHTML = "<div id=divhead"+imgNum+" style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+  }
+}
+function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+    var param = {top:0, left:0, width:width, height:height};
+    if( width>maxWidth || height>maxHeight )
+    {
+        rateWidth = width / maxWidth;
+        rateHeight = height / maxHeight;
 
+        if( rateWidth > rateHeight )
+        {
+            param.width =  maxWidth;
+            param.height = Math.round(height / rateWidth);
+        }else
+        {
+            param.width = Math.round(width / rateHeight);
+            param.height = maxHeight;
+        }
+    }
+    param.left = Math.round((maxWidth - param.width) / 2);
+    param.top = Math.round((maxHeight - param.height) / 2);
+    return param;
+}
+</script> 
 
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
@@ -25,24 +80,26 @@
                                 <div class="am-form-group">
                                     <label for="user-name" class="am-u-sm-3 am-form-label">成绩 <span class="tpl-form-line-small-title">Score</span></label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入成绩">
+                                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入成绩" name="score">
                                         <small>请填写证书成绩。</small>
                                     </div>
                                 </div>
-
-
 
                                 <div class="am-form-group">
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">证书图片 <span class="tpl-form-line-small-title">Images</span></label>
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
-                                            <div class="tpl-form-file-img">
-                                            
-                                                <img src="/Public/Admin/images/a5.png" alt="">
+                                            <div class="tpl-form-file-img"  id="preview1" >
+                                            <empty name="list['idcard_picture']">
+                                	<img src="/Public/Admin/images/person.jpg" id="imghead1" height="200" width="200" style="display:none;"/>
+                                	<else />
+								    <img src="{$list.idcard_picture}" id="imghead1" height="200" width="200" />
+									<!-- <input type="hidden" name="idcard_picture" value="{$list.idcard_picture}"> -->
+									</empty>
                                             </div>
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
                                             <i class="am-icon-cloud-upload"></i> 添加图片</button>
-                                            <input id="doc-form-file" type="file" multiple>
+                                            <input  id="st18" type="file" onchange="previewImage(this,1)" name="picture" multiple>
                                         </div>
 
                                     </div>
@@ -51,14 +108,20 @@
                                 <div class="am-form-group">
                                     <label class="am-u-sm-3 am-form-label">等级 <span class="tpl-form-line-small-title">Level</span></label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" placeholder="输入证书等级">
+                                       <select data-am-selected="{btnSize: 'sm'}" name="level"> 
+							                <option value="option1">请选择等级</option>
+							                <option value="全国青少年二级">全国青少年二级</option>
+							                <option value="华东地区一级">华东地区一级</option>
+							                <option value="华北地区三级">华北地区三级</option>
+							                
+							            </select>
                                     </div>
                                 </div>
 								<div class="am-form-group">
                                     <label for="user-phone" class="am-u-sm-3 am-form-label">状态 <span class="tpl-form-line-small-title">Status</span></label>
                                     <div class="am-u-sm-9">
-                                        <select  name="status">
-                                          <option value="0">请选择状态</option>
+                                        <select  data-am-selected="{btnSize: 'sm'}" name="status">
+                                          <option value="option1">请选择状态</option>
 										  <option value="0">未通过</option>
 										  <option value="1">已通过</option>
 										  <option value="2">审核中</option>

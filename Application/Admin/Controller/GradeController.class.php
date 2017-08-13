@@ -35,6 +35,18 @@ class GradeController extends CheckController{
 	     $grade = M('tg_grade');
 	  	 $data = $grade->create(); 
 	 	if(IS_POST){
+	 		$upload = new \Think\Upload();// 实例化上传类
+	 		$upload->maxSize   =     3145728 ;// 设置附件上传大小
+	 		$upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+	 		$upload->rootPath  =      './Public/Uploads/'; // 设置附件上传根目录
+	 		 
+	 		// 上传文件
+	 		$info   =    $upload->uploadOne($_FILES['picture']);
+	 		if(!$info) {// 上传错误提示错误信息
+	 			$this->error($upload->getError());
+	 		}else{
+ 			$arrImage = $_FILES['picture']['name'];
+ 			$data['picture'] = '/Public/Uploads/'.$info['savepath'].$info['savename'];
 			$data['create_time'] = time();
 			$arrData = $grade->data($data)->add();
 			if($arrData){
@@ -42,7 +54,7 @@ class GradeController extends CheckController{
 			}else {
 			$this->error('添加失败！');
 			}
-			
+	 		}
 		}else{
 			$this->display();
 		}
@@ -70,7 +82,18 @@ class GradeController extends CheckController{
 		}
 	}
 
-
+	public function delete(){
+	
+		$arrWhere['gid'] =I('get.gid');
+	
+		$arrData = D('Grade','Service')->delete($arrWhere);
+		if($arrData){
+			$this->success('删除成功！','/Admin/Grade/index');
+		}else {
+			$this->error('删除失败！');
+		}
+		$this->display();
+	}
 
 
 }

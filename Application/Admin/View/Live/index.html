@@ -1,6 +1,14 @@
 <extend name="Public:base" />
 <block name="body">
-
+<style>
+.line{
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+</style>
 
  <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
@@ -31,10 +39,8 @@
                         <div class="am-u-sm-12 am-u-md-6">
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
-                                    <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
-                                    <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
-                                    <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                    <a href="/Admin/Live/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -55,20 +61,21 @@
                             <div class="am-input-group am-input-group-sm">
                                 <input type="text" class="am-form-field">
                                 <span class="am-input-group-btn">
-            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>
-          </span>
+                                  <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>
+                                 </span>
                             </div>
                         </div>
                     </div>
                     <div class="am-g">
                         <div class="tpl-table-images">
+                        <volist name="list" id="vo">
                             <div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
                                 <div class="tpl-table-images-content">
-                                    <div class="tpl-table-images-content-i-time">发布时间：2016-09-12</div>
+                                    <div class="tpl-table-images-content-i-time">发布时间：{:date('Y-m-d',$vo['create_time'])}</div>
                                     <div class="tpl-i-title">
-                                        “你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！
+                                        {$vo.title}
                                     </div>
-                                    <a href="javascript:;" class="tpl-table-images-content-i">
+                                    <a href="{$vo.url}" class="tpl-table-images-content-i">
                                         <div class="tpl-table-images-content-i-info">
                                             <span class="ico">
                                     <img src="/Public/Admin/images/user02.png" alt="">追逐
@@ -79,230 +86,29 @@
                                         <img src="/Public/Admin/images/a1.png" alt="">
                                     </a>
                                     <div class="tpl-table-images-content-block">
-                                        <div class="tpl-i-font">
-                                            你最喜欢的艺术作品，告诉大家它们的------名图画，色彩，交织，撞色，线条雕塑装置当代古代现代作品的照片。
-                                        </div>
-                                        <div class="tpl-i-more">
-                                            <ul>
-                                                <li><span class="am-icon-qq am-text-warning"> 100+</span></li>
-                                                <li><span class="am-icon-weixin am-text-success"> 235+</span></li>
-                                                <li><span class="am-icon-github font-green"> 600+</span></li>
-                                            </ul>
+                                        <div class="tpl-i-font line">
+                                            {$vo.content|htmlspecialchars_decode|stripslashes}
                                         </div>
                                         <div class="am-btn-toolbar">
                                             <div class="am-btn-group am-btn-group-xs tpl-edit-content-btn">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-edit"></span> 编辑</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                                
+                                                <a href="/Admin/Live/edit?lid={$vo.lid}" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-edit"></span> 编辑</a>
+                                              
+                                                <a href="/Admin/Live/delete?lid={$vo.lid}" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
-                                <div class="tpl-table-images-content">
-                                    <div class="tpl-table-images-content-i-time">发布时间：2016-09-12</div>
-                                    <div class="tpl-i-title">
-                                        “你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！
-                                    </div>
-                                    <a href="javascript:;" class="tpl-table-images-content-i">
-                                        <div class="tpl-table-images-content-i-info">
-                                            <span class="ico">
-                                    <img src="/Public/Admin/images/user02.png" alt="">追逐
-                                 </span>
-
-                                        </div>
-                                        <span class="tpl-table-images-content-i-shadow"></span>
-                                        <img src="/Public/Admin/images/a1.png" alt="">
-                                    </a>
-                                    <div class="tpl-table-images-content-block">
-                                        <div class="tpl-i-font">
-                                            你最喜欢的艺术作品，告诉大家它们的------名图画，色彩，交织，撞色，线条雕塑装置当代古代现代作品的照片。
-                                        </div>
-                                        <div class="tpl-i-more">
-                                            <ul>
-                                                <li><span class="am-icon-qq am-text-warning"> 100+</span></li>
-                                                <li><span class="am-icon-weixin am-text-success"> 235+</span></li>
-                                                <li><span class="am-icon-github font-green"> 600+</span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="am-btn-toolbar">
-                                            <div class="am-btn-group am-btn-group-xs tpl-edit-content-btn">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-edit"></span> 编辑</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
-                                <div class="tpl-table-images-content">
-                                    <div class="tpl-table-images-content-i-time">发布时间：2016-09-12</div>
-                                    <div class="tpl-i-title">
-                                        “你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！
-                                    </div>
-                                    <a href="javascript:;" class="tpl-table-images-content-i">
-                                        <div class="tpl-table-images-content-i-info">
-                                            <span class="ico">
-                                    <img src="/Public/Admin/images/user02.png" alt="">追逐
-                                 </span>
-
-                                        </div>
-                                        <span class="tpl-table-images-content-i-shadow"></span>
-                                        <img src="/Public/Admin/images/a1.png" alt="">
-                                    </a>
-                                    <div class="tpl-table-images-content-block">
-                                        <div class="tpl-i-font">
-                                            你最喜欢的艺术作品，告诉大家它们的------名图画，色彩，交织，撞色，线条雕塑装置当代古代现代作品的照片。
-                                        </div>
-                                        <div class="tpl-i-more">
-                                            <ul>
-                                                <li><span class="am-icon-qq am-text-warning"> 100+</span></li>
-                                                <li><span class="am-icon-weixin am-text-success"> 235+</span></li>
-                                                <li><span class="am-icon-github font-green"> 600+</span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="am-btn-toolbar">
-                                            <div class="am-btn-group am-btn-group-xs tpl-edit-content-btn">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-edit"></span> 编辑</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
-                                <div class="tpl-table-images-content">
-                                    <div class="tpl-table-images-content-i-time">发布时间：2016-09-12</div>
-                                    <div class="tpl-i-title">
-                                        “你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！
-                                    </div>
-                                    <a href="javascript:;" class="tpl-table-images-content-i">
-                                        <div class="tpl-table-images-content-i-info">
-                                            <span class="ico">
-                                    <img src="/Public/Admin/images/user02.png" alt="">追逐
-                                 </span>
-
-                                        </div>
-                                        <span class="tpl-table-images-content-i-shadow"></span>
-                                        <img src="/Public/Admin/images/a1.png" alt="">
-                                    </a>
-                                    <div class="tpl-table-images-content-block">
-                                        <div class="tpl-i-font">
-                                            你最喜欢的艺术作品，告诉大家它们的------名图画，色彩，交织，撞色，线条雕塑装置当代古代现代作品的照片。
-                                        </div>
-                                        <div class="tpl-i-more">
-                                            <ul>
-                                                <li><span class="am-icon-qq am-text-warning"> 100+</span></li>
-                                                <li><span class="am-icon-weixin am-text-success"> 235+</span></li>
-                                                <li><span class="am-icon-github font-green"> 600+</span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="am-btn-toolbar">
-                                            <div class="am-btn-group am-btn-group-xs tpl-edit-content-btn">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-edit"></span> 编辑</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
-                                <div class="tpl-table-images-content">
-                                    <div class="tpl-table-images-content-i-time">发布时间：2016-09-12</div>
-                                    <div class="tpl-i-title">
-                                        “你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！
-                                    </div>
-                                    <a href="javascript:;" class="tpl-table-images-content-i">
-                                        <div class="tpl-table-images-content-i-info">
-                                            <span class="ico">
-                                    <img src="/Public/Admin/images/user02.png" alt="">追逐
-                                 </span>
-
-                                        </div>
-                                        <span class="tpl-table-images-content-i-shadow"></span>
-                                        <img src="/Public/Admin/images/a1.png" alt="">
-                                    </a>
-                                    <div class="tpl-table-images-content-block">
-                                        <div class="tpl-i-font">
-                                            你最喜欢的艺术作品，告诉大家它们的------名图画，色彩，交织，撞色，线条雕塑装置当代古代现代作品的照片。
-                                        </div>
-                                        <div class="tpl-i-more">
-                                            <ul>
-                                                <li><span class="am-icon-qq am-text-warning"> 100+</span></li>
-                                                <li><span class="am-icon-weixin am-text-success"> 235+</span></li>
-                                                <li><span class="am-icon-github font-green"> 600+</span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="am-btn-toolbar">
-                                            <div class="am-btn-group am-btn-group-xs tpl-edit-content-btn">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-edit"></span> 编辑</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
-                                <div class="tpl-table-images-content">
-                                    <div class="tpl-table-images-content-i-time">发布时间：2016-09-12</div>
-                                    <div class="tpl-i-title">
-                                        “你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！
-                                    </div>
-                                    <a href="javascript:;" class="tpl-table-images-content-i">
-                                        <div class="tpl-table-images-content-i-info">
-                                            <span class="ico">
-                                    <img src="/Public/Admin/images/user02.png" alt="">追逐
-                                 </span>
-
-                                        </div>
-                                        <span class="tpl-table-images-content-i-shadow"></span>
-                                        <img src="/Public/Admin/images/a1.png" alt="">
-                                    </a>
-                                    <div class="tpl-table-images-content-block">
-                                        <div class="tpl-i-font">
-                                            你最喜欢的艺术作品，告诉大家它们的------名图画，色彩，交织，撞色，线条雕塑装置当代古代现代作品的照片。
-                                        </div>
-                                        <div class="tpl-i-more">
-                                            <ul>
-                                                <li><span class="am-icon-qq am-text-warning"> 100+</span></li>
-                                                <li><span class="am-icon-weixin am-text-success"> 235+</span></li>
-                                                <li><span class="am-icon-github font-green"> 600+</span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="am-btn-toolbar">
-                                            <div class="am-btn-group am-btn-group-xs tpl-edit-content-btn">
-                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-edit"></span> 编辑</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </volist>
+                           
                             <div class="am-u-lg-12">
                                 <div class="am-cf">
 
                                     <div class="am-fr">
-                                        <ul class="am-pagination tpl-pagination">
-                                            <li class="am-disabled"><a href="#">«</a></li>
-                                            <li class="am-active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li><a href="#">»</a></li>
-                                        </ul>
+                                         <ul class="am-pagination tpl-pagination">
+		                                  {$page}
+		                              </ul>
                                     </div>
                                 </div>
                                 <hr>
