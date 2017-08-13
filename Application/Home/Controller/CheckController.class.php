@@ -18,12 +18,12 @@ class CheckController extends BaseController {
         parent::__construct();
         
         // 获取登录的Session
-        $session = $_SESSION['User'];
+        $session = $_SESSION['userInfo'];
         
         // 判断是否登录
         if(!$session){
         	//	跳转登录界面
-           	$this->redirect('https://open.weixin.qq.com/connect/qrconnect?appid=wx97cea69a39e328a5&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect');
+           	$this->redirect('https://open.weixin.qq.com/connect/qrconnect?appid=wx97cea69a39e328a5&redirect_uri=http%3A%2F%2Ftennis.laigl.com%2Fweixinlogin.php&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect');
 /*         $arrSession = $_SESSION['User'];
         
         // 判断是否登录

@@ -1,4 +1,27 @@
 <extend name="Public:base" />
+<block name="js">
+<script>
+function changeStatus(status){
+	if(status == 0){
+		window.open('/Admin/News/index?status=0',"_self");
+	}
+	else{
+		if(status == 1){
+			window.open('/Admin/News/index?status=1',"_self");
+		}
+		else{
+			window.open('/Admin/News/index?status=2',"_self");
+		}
+	}
+}
+$(document).ready(function(){
+ 	var statusVal = $("#showStatus").val();
+ 	if(statusVal == "2"){
+ 		$("#editButton,#deleteButton").css("display","none");
+ 	}
+})
+</script>
+</block>
 <block name="body">
 
 
@@ -28,28 +51,41 @@
                 </div>
                 <div class="tpl-block">
                     <div class="am-g">
-                        <div class="am-u-sm-12 am-u-md-6">
+                        <div class="am-u-sm-12 am-u-md-2">
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
                                     <a href="/Admin/News/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
-                                    <!-- <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
-                                    <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
+                                    <!-- <a href="/Admin/News/index?status=0" type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 未发布</a>
+                                    <a href="/Admin/News/index?status=2"  class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 已删除</a> -->
+                                    <!-- <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
                                 </div>
                             </div>
                         </div>
-                        <div class="am-u-sm-12 am-u-md-3">
-                            <!-- <div class="am-form-group">
-                             <select data-am-selected="{btnSize: 'sm'}">
-				                <option value="option1">所有类别</option>
-				                <option value="option2">IT业界</option>
-				                <option value="option3">数码产品</option>
-				                <option value="option3">笔记本电脑</option>
-				                <option value="option3">平板电脑</option>
-				                <option value="option3">只能手机</option>
-				                <option value="option3">超极本</option>
+                        <div class="am-u-sm-12 am-u-md-7">
+                            <div class="am-form-group">
+                            <input type="hidden" value="{$list1.status}" id="showStatus" />
+                            <select data-am-selected onchange="changeStatus(this.options[this.options.selectedIndex].value)">
+                            	 <if condition="$list1.status eq 1">
+	                                 <option value="1" selected>已发布</option>
+		                         <else />
+		                             <option value="1">已发布</option>
+                                </if>
+								<if condition="$list1.status eq 0">
+									<option value="0" selected>未发布</option>
+								<else />
+									<option value="0">未发布</option>
+								</if>
+                            	
+                            	<if condition="$list1.status eq 2">
+                            		<option value="2" selected>已删除</option>
+                            	<else />
+                            		<option value="2">已删除</option>
+                            	</if> 
+                            	 <!-- <option value="1" >已发布</option>
+                            	  <option value="0" >未发布</option>
+                            	   <option value="2" >已删除</option> -->
 				            </select>
-                            </div> -->
+                            </div>
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
                             <div class="am-input-group am-input-group-sm">
@@ -70,6 +106,7 @@
 		                                  <th class="table-id">ID</th>
 		                                  <th class="table-title">标题</th>
 		                                  <th class="table-type">类别</th>
+		                                  <th class="table-type">状态</th>
 		                                  <th class="table-date am-hide-sm-only">修改日期</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
@@ -81,20 +118,31 @@
 			                                  <td>{$vo.nid}</td>
 			                                  <td><a href="#">{$vo.main_title}</a></td>
 			                                  <td>
-			                                  	<if condition = "$vo.type eq 0">
+			                                  	<if condition="$vo.type eq 0">
 			                                  		热点类
 			                                  	</if>
-			                                  	<if condition = "$vo.type eq 1">
+			                                  	<if condition="$vo.type eq 1">
 			                                  		普通类
+			                                  	</if>
+			                                  </td>
+			                                  <td id="status-style">
+			                                  	<if condition="$vo.status eq 1">
+			                                  		已发布
+			                                  	</if>
+			                                  	<if condition="$vo.status eq 0">
+			                                  		未发布
+			                                  	</if>
+			                                  	<if condition="$vo.status eq 2">
+			                                  		已删除
 			                                  	</if>
 			                                  </td>
 			                                  <td class="am-hide-sm-only">{$vo.modify_time|date='Y-m-d',###}</td>
 			                                  <td>
 			                                      <div class="am-btn-toolbar">
 			                                          <div class="am-btn-group am-btn-group-xs">
-			                                              <a href="/Admin/News/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+			                                              <a href="/Admin/News/edit?nid={$vo.nid}" class="am-btn am-btn-default am-btn-xs am-text-secondary" id="editButton" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
 			                                              <!-- <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
-			                                              <a href="/Admin/News/delete" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 删除</a>
+			                                              <a href="/Admin/News/delete?nid={$vo.nid}" class="am-btn am-btn-default am-btn-xs am-text-secondary" id="deleteButton" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 删除</a>
 			                                          </div>
 			                                      </div>
 			                                  </td>
