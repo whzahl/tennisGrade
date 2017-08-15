@@ -1,0 +1,92 @@
+body{
+    background-color: #d9a4ed;
+    font-size: 18px;
+    font-family:微软雅黑;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+/*header start*/
+.header-part1{
+    padding:10px 0;
+}
+.wrap{
+    width: 1200px;
+    margin:0 auto;
+}
+.header{
+    width: 100%;
+    background-color: #fff;
+}
+.h-p1-left{
+    display: inline-block;
+}
+.h-p1-right{
+    display: inline-block;
+}
+.h-p1-right ul{
+    display: inline-block;
+    /*background-color: #d9a4ed;*/
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    vertical-align: middle;
+    margin:0 30px;
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+    /*-webkit-box-shadow: 3px 6px 6px #957d9e;*/
+    /*-moz-box-shadow:3px 6px 6px #957d9e;*/
+    /*box-shadow: 3px 6px 6px #957d9e;*/
+}
+
+.h-p1-right li{
+    display: inline-block;
+    list-style-type: none;
+    font-size:20px;
+    padding:0 10px;
+}
+.h-p1-right button{
+    display: inline-block;
+}
+.header-part2{
+    width: 100%;
+}
+.header-part2 img{
+    width: 100%;
+    min-width: 1200px;
+}
+/*header end*/
+
+/*footer start*/
+.footer{
+    /*预留170px的margin-top让头部和尾部撑满整个屏幕*/
+    margin-top: 170px;
+    width: 100%;
+    background-color: #fff;
+    font-size: 12px;
+}
+.footer-part{
+    width: 1200px;
+    margin:0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-part ul{
+    margin:0;
+    padding:0;
+}
+.footer-part li{
+    display: inline-block;
+    margin:0 40px;
+    margin-bottom: 20px;
+}
+/*footer end*/

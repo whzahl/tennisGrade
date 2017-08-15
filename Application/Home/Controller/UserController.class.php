@@ -17,7 +17,7 @@ class UserController extends CheckController {
 		parent::__construct();
 	}
 	
-    public function index(){
+    public function user(){
         $this->display();
     }
 }
