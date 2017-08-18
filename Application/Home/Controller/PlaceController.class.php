@@ -14,7 +14,7 @@ class PlaceController extends CheckController{
 
 
     public function index(){
-    	
+        $this->display();
     } 
 
 

@@ -8,29 +8,29 @@
         $(".user-pt1-ct-pt1-ks").css("background-color","#ca98df")
             .click(function () {
                 $(this).css("background-color","#ca98df").siblings().css("background-color","#dadada");
-                $(".ks").show();
-                $(".kg").hide();
-                $(".kd").hide();
+                $(".ks").css("display","block");
+                $(".kg").css("display","none");
+                $(".kd").css("display","none");
             });
         $(".user-pt1-ct-pt1-kg").click(function () {
             $(this).css("background-color","#ca98df").siblings().css("background-color","#dadada");
-            $(".ks").hide();
-            $(".kg").show();
-            $(".kd").hide();
+            $(".ks").css("display","none");
+            $(".kg").css("display","block");
+            $(".kd").css("display","none");
         })
         $(".user-pt1-ct-pt1-kd").click(function () {
             $(this).css("background-color","#ca98df").siblings().css("background-color","#dadada");
-            $(".ks").hide();
-            $(".kg").hide();
-            $(".kd").show();
+            $(".ks").css("display","none");
+            $(".kg").css("display","none");
+            $(".kd").css("display","block");
         })
     })
 </script>
 </block>
 <block name="body">
-<div class="user-part1">
+<div class="common-part1">
     <div class="wrap1">
-        <div class="user-top-bg">
+        <div class="common-top-bg">
         </div>
     </div>
     <div class="wrap2">
@@ -40,7 +40,7 @@
                 <div class="user-pt1-ct-pt1-kg user-pt1-ct-pt1-common">考官申请信息</div>
                 <div class="user-pt1-ct-pt1-kd user-pt1-ct-pt1-common">考点申请信息</div>
             </div>
-            <div class="ks">
+            <div class="ks" style="display: block">
                 <div class="user-pt1-ct-pt2">
                     <p>基本信息</p>
                     <table class="table">
@@ -82,7 +82,7 @@
                     </table>
                 </div>
             </div>
-            <div class="kg">
+            <div class="kg" style="display: none">
                 <div class="user-pt1-ct-pt2">
                     <p>基本信息</p>
                     <table class="table">
@@ -170,7 +170,7 @@
                     </table>
                 </div>
             </div>
-            <div class="kd">
+            <div class="kd" style="display: none">
                 <div class="user-pt1-ct-pt2">
                         <p style="display: inline-block;">考点管理信息</p>
                         <a class="am-badge am-badge-success">申请新考点</a>
