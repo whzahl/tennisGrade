@@ -16,11 +16,11 @@ class IndexController extends BaseController {
 	public function __construct(){
 		parent::__construct();
 	}
-	
-   
+
     public function index(){
     	$this->display();
     }
+
     public function test1(){
     	$test = M('tg_weixintest');
     	$data = $_SESSION['userInfo'];
@@ -39,6 +39,7 @@ class IndexController extends BaseController {
     	}
     	
     }
+
     public function test(){
     	echo $_SESSION['userInfo']['unionid'];
     	$this->display();

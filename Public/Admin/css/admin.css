@@ -7,23 +7,12 @@
  fixed-layout 固定头部和边栏布局
 */
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
-html,
-body {
-  height: 100%;
-  overflow: hidden;
-<<<<<<< HEAD
-=======
-=======
+
+
  html,
 body {
   /* height: 100%; */
-  overflow: hidden; 
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
+  overflow: hidden;
 }
 
 ul {
@@ -35,25 +24,11 @@ ul {
 }
 
 .admin-header {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1500;
-<<<<<<< HEAD
-=======
-=======
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 900;
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
   font-size: 1.4rem;
   margin-bottom: 0;
 }
@@ -129,13 +104,6 @@ ul {
   background: #fff;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 .admin-content,
 .admin-sidebar {
   height: 100%;
@@ -216,15 +184,7 @@ ul {
   padding: 5px 0;
   border-color: #eee;
 }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
- 
->>>>>>> a4786106b76b85bd3f020073a24921128a17a5f5
->>>>>>> 4c36806443c7b6efc35369462805073c0d17896c
 .admin-content-task li:first-child {
   border-top: none;
 }

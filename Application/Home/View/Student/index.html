@@ -1,0 +1,242 @@
+<extend name="Public:base" />
+<block name="js">
+    <script>
+        function PreviewImage(imgFile)
+        {
+            var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+            filextension=filextension.toLowerCase();
+            if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))
+            {
+                alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+                imgFile.focus();
+            }
+            else
+            {
+                var path;
+                if(document.all)//IE
+                {
+                    imgFile.select();
+                    path = document.selection.createRange().text;
+                    document.getElementById("imgPreview").innerHTML="";
+                    document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+                }
+                else//FF
+                {
+                    path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+                    //path = imgFile.files[0].getAsDataURL();// FF 3.0
+                    document.getElementById("imgPreview").innerHTML = "<img id='img1' style='max-height:300px;max-width:200px;' src='"+path+"'/>";
+                    //document.getElementById("img1").src = path;
+                }
+            }
+        }
+        function changeSubmitBt(){
+            if($("#i-agree").is(':checked')){
+                $(".my-bt-submit").css("background-color","#d9a4ed").removeClass("am-disabled");;
+            }
+            else {
+                $(".my-bt-submit").css({"background-color":"gray","cursor":""}).addClass("am-disabled");
+            }
+        }
+    </script>
+</block>
+<block name="body">
+    <div class="common-part1">
+        <div class="wrap1">
+            <div class="common-top-bg"></div>
+        </div>
+        <div class="wrap2">
+            <div class="student-pt1-ct">
+                <div class="student-pt1-ct-pt1">
+                    <p>考生申请</p>
+                    <img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">
+                    <p>Candidates application</p>
+                    <div class="ks-gz">
+                        <img src="/Public/Home/images/Student/question.jpg" alt="">
+                        <a href="#">等级考试规则</a>
+                    </div>
+                </div>
+                <div class="student-pt1-ct-pt2">
+                    <label><span style="color: #ff0000;">*</span>选择通关等级</label>
+                    <br>
+                    <div class="red-ball-part common-ball">
+                        <p>红色球:</p>
+                        <ul>
+                            <li><img src="/Public/Home/images/Student/red_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/red_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/red_ball.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="orange-ball-part common-ball">
+                        <p>橙色球:</p>
+                        <ul>
+                            <li><img src="/Public/Home/images/Student/orange_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/orange_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/orange_ball.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="green-ball-part common-ball">
+                        <p>绿色球:</p>
+                        <ul>
+                            <li><img src="/Public/Home/images/Student/green_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/green_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/green_ball.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="yellow-ball-part common-ball">
+                        <p>标准球:</p>
+                        <ul>
+                            <li><img src="/Public/Home/images/Student/yellow_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/yellow_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/yellow_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/yellow_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/yellow_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/yellow_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/yellow_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/yellow_ball.jpg" alt=""></li>
+                            <li><img src="/Public/Home/images/Student/yellow_ball.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="student-pt1-ct-pt3">
+                    <p><label>带<span>*</span>的选项为必填选项</label></p>
+                    <form class="am-form" method="post" enctype="multipart/form-data" action="/Home/Student/index">
+                        <fieldset>
+                            <input type="hidden" name="level"/>
+                            <div class="am-form-group">
+                                <label for="sname"><span>*</span>姓名:</label>
+                                <div class="form-input-box input-width-01">
+                                    <input type="text" name="sname" id="sname" class="am-form-field am-radius" placeholder="请输入姓名" />
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="sex"><span>*</span>姓别:</label>
+                                <div class="form-input-box input-width-02">
+                                    <select name="sex" id="sex" class="am-form-field am-radius">
+                                        <option value="1" selected>男</option>
+                                        <option value="0">女</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                    <label for="age"><span>*</span>年龄:</label>
+                                    <div class="form-input-box input-width-01">
+                                        <input type="text" name="age" id="age" class="am-form-field am-radius" placeholder="请输入年龄" />
+                                    </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="birthday"><span>*</span>出生年月日:</label>
+                                <div class="form-input-box">
+                                    <div style="width: 200px;display: inline-block;vertical-align: middle;">
+                                        <div class="am-input-group am-datepicker-date am-radius" data-am-datepicker="{format: 'yyyy-mm-dd'}">
+                                        <span class="am-input-group-btn am-datepicker-add-on"  style="border-radius: 5px 0 0 5px;">
+                                            <button style="background-color: #fff;border-radius: 5px 0 0 5px" class="am-btn am-btn-default" type="button"><span class="am-icon-calendar"></span> </button>
+                                        </span>
+                                            <input style="background-color: #fff;border-radius: 0 5px 5px 0;width: 200px" type="text" class="am-form-field" name="birthday" id="birthday" placeholder="选择出生日期" readonly >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="cretype"><span>*</span>证件类型:</label>
+                                <div class="form-input-box input-width-03">
+                                    <select name="cretype" id="cretype" class="am-form-field am-radius">
+                                        <option value="1" selected>身份证</option>
+                                        <option value="0">其他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="creid"><span>*</span>证件号:</label>
+                                <div class="form-input-box input-width-01">
+                                    <input type="text" name="creid" id="creid" class="am-form-field am-radius" placeholder="请输入证件号" />
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="picture"><span>*</span>个人照片:</label>
+                                <div class="form-input-box form-input-picture">
+                                    <div class="am-form-group am-form-file">
+                                        <button style="background-color:#d9a4ed;border-color:#d9a4ed;" type="button" class="am-btn am-btn-danger am-btn-sm">
+                                            <i class="am-icon-cloud-upload"></i> 添加个人照片</button>
+                                        <span style="color: #ff0000;font-size: 14px;">*点击按钮上传一张一寸蓝底照片</span>
+                                        <input id="doc-form-file" type="file" name="picture" onchange='PreviewImage(this)' multiple>
+                                    </div>
+                                </div>
+                                <div class="tpl-form-file-img">
+                                    <div id="imgPreview" style="margin-left: 220px;">
+                                        <!-- 不添加图片则不显示图片，添加才显示 -->
+                                        <!-- <empty name="$list.picture">
+                                            <img src="/Public/Admin/images/none.jpg" alt="">
+                                        <else />
+                                            <img src="{$list.picture}" alt="" id="img0"/>
+                                            <input type="hidden" name="picture" value="{$list.picture}" />
+                                        </empty> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="phone"><span>*</span>联系电话:</label>
+                                <div class="form-input-box input-width-01">
+                                    <input style="display: inline-block;width: 65%;" type="text" name="phone" id="phone" class="am-form-field am-radius" placeholder="请输入联系电话" />
+                                    <button type="button" class="am-btn am-btn-default my-bt-check">发送验证码</button>
+                                </div>
+                                <input style="margin-top: 10px;margin-left: 220px;width: 350px;" type="text" class="am-form-field am-radius" id="check-code" placeholder="请输入验证码">
+                            </div>
+                            <div class="am-form-group">
+                                <label for="email">E-mail:</label>
+                                <div class="form-input-box input-width-01">
+                                    <input type="text" name="email" id="email" class="am-form-field am-radius" placeholder="请输入邮箱" />
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="school">在读学校:</label>
+                                <div class="form-input-box input-width-01">
+                                    <input type="text" name="school" id="school" class="am-form-field am-radius" placeholder="请输入在读学校" />
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label><span>*</span>选择考点区域:</label>
+                                <div class="form-input-box input-width-01">
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="province">
+                                        <option value="省份">省份</option>
+                                    </select>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="city">
+                                        <option value="市" class="my-input-place">市</option>
+                                    </select>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="area">
+                                        <option value="区" class="my-input-place">区</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label><span>*</span>考试地点:</label>
+                                <div class="form-input-box input-width-04">
+                                    <select style="display: inline-block;width: 40%" class="am-radius" name="pname">
+                                        <option value="请选择考试地点">请选择考试地点</option>
+                                    </select>
+                                    <select style="display: inline-block;width: 55%" class="am-radius" name="time">
+                                        <option value="请选择考试地点">请选择考试时间</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label><span>*</span>选择陪考:</label>
+                                <div class="form-input-box input-width-03">
+                                    <select class="am-radius" name="pname">
+                                        <option value="请选择陪考">请选择陪考</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+
+
+                </div>
+                <div class="student-pt1-ct-pt4">
+                    <input type="checkbox" id="i-agree" onchange="changeSubmitBt()">我同意<a class="i-agree-a">考生申请协议</a>
+                    <br>
+                    <button type="submit" class="am-btn am-radius my-bt-submit am-disabled">提交表单信息</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
