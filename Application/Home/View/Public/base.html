@@ -6,14 +6,29 @@
           <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>全国网球等级考试平台</title>
+    <link rel="icon" type="image/png" href="\Public\Home\images\common\title_icon.png">
     <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css">
     <link rel="stylesheet" href="/Public/Home/css/main.css">
     <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
     <script src="/Public/Admin/js/amazeui.min.js"></script>
+    <script src="/Public/Home/js/alertMessage.js"></script>
+    <script src="/Public/Home/js/common.js"></script>
 </head>
 <block name="js"></block>
 <body>
+<div id="loading" style="display: none;width: 50px;height: 50px; margin: auto;  position: fixed;  top: 0;  bottom: 0;  right: 0;  left: 0;z-index: 1000;">
+    <div>
+        <img style="width: 50px;height: 50px;" src="/Public/Home/images/common/loading.gif" alt="">
+    </div>
+</div>
+<!--滑动900px之后显示-->
+<div style="position: fixed;right: 200px;bottom: 80px;width: 60px" data-am-widget="gotop" class="am-gotop am-gotop-fixed" >
+    <a href="#top" title="">
+        <!--<img style="max-width: 60px;" class="am-gotop-icon-custom" src="/Public/Home/images/common/rocket.png" width="100px"/>-->
+        <img style="max-width: 60px;" class="am-gotop-icon-custom" src="/Public/Home/images/common/go_top.png" width="100px"/>
+    </a>
+</div>
 <div class="header">
     <div class="header-part1">
         <div class="wrap">
@@ -24,13 +39,23 @@
                 <ul>
                     <li><a href="/Home/Index/index">首页</a></li>
                     <li><a href="#">平台简介</a></li>
-                    <li><a href="#">考试介绍</a></li>
+                    <li id="intro-a"><a href="/Home/Intro/index">考试介绍</a></li>
                     <li><a href="/Home/Student/index">考级报名</a></li>
                     <li><a href="/Home/Teacher/index">考官申请</a></li>
                     <li><a href="/Home/Place/index">考点申办</a></li>
                     <li><a href="#">视频中心</a></li>
                 </ul>
                 <button class="btn btn-success btn-lg">登录</button>
+            </div>
+            <div class="intro">
+                <ul>
+                    <li><a href="/Home/Intro/index">考级简介</a></li>
+                    <li><a href="#">考级内容</a></li>
+                    <li><a href="#">证书样板</a></li>
+                    <li><a href="#">考点协议</a></li>
+                    <li><a href="#">考官协议</a></li>
+                    <li><a href="#">报名协议</a></li>
+                </ul>
             </div>
         </div>
     </div>

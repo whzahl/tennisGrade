@@ -1,10 +1,10 @@
 body{
     background-color: #d9a4ed;
     font-size: 18px;
-    font-family:微软雅黑;
     margin: 0;
     padding: 0;
 }
+
 a{
     text-decoration: none;
 }
@@ -16,6 +16,19 @@ a:focus {
 }
 li{
     list-style-type: none;
+}
+.padding-7-8{
+    padding:70px 80px;
+}
+.padding-8-9{
+    padding:80px 90px;
+}
+.padding-9-8{
+    padding:90px 80px;
+}
+.check-alert{
+    border-radius: 5px;  text-align: center;  background-color: rgba(221,51,76,0.8);  border-color: #dd514c;
+    width: 500px;  height: 50px;  margin: auto;  position: fixed;  top: 0;  bottom: 0;  right: 0;  left: 0;  z-index:500;
 }
 .common-part1{
     width: 100%;
@@ -32,6 +45,17 @@ li{
     background: url("/Public/Home/images/user/top_bg.png");
     background-size: 1275px 118px;
 }
+.common-pt1-ct-pt1{
+    text-align: center;
+}
+.common-pt1-ct-pt1 p{
+    margin:0;
+    font-size: 20px;
+    line-height: 10px;
+}
+.p-line{
+    width: 25%;
+}
 .wrap1{
     height: 118px;
     width: 1275px;
@@ -45,6 +69,10 @@ li{
     z-index: 200;
     background-color: #fff;
 }
+.width-full{
+    width:100%;
+    margin:0 auto;
+}
 /*header start*/
 .header-part1{
     padding:10px 0;
@@ -52,6 +80,10 @@ li{
 .wrap{
     width: 1200px;
     position: relative;
+    margin:0 auto;
+}
+.center-container{
+    width:100%;
     margin:0 auto;
 }
 .header{
@@ -95,6 +127,30 @@ li{
 .header-part2 img{
     width: 100%;
     min-width: 1200px;
+}
+.intro{
+    color: #0e90d2;
+    display: none;
+    /*margin-top: 45px;*/
+    background-color: #d9a4ed;
+    width: 100px;
+    padding: 8px 0;
+    position: absolute;
+    top: 45px;
+    left:507px;
+    z-index:500;
+    border-radius: 10px;
+    text-align: center;
+}
+.intro ul{
+    margin:0;
+    padding:0;
+}
+.intro li{
+    font-size: 20px;
+    display: block;
+    line-height: 30px;
+    border-bottom: #FFFFFF;
 }
 /*header end*/
 
@@ -165,22 +221,19 @@ li{
 /*user end*/
 
 /*Student start*/
+.selected-img{
+    width: 35px;
+    height:35px;
+    position: absolute;
+    top: 50px;
+    left: 13px;
+}
 .student-pt1-ct{
     padding:50px 140px;
     box-shadow:2px 6px 10px gray;
     border-radius: 0 0 5px 5px ;
 }
-.student-pt1-ct-pt1{
-    text-align: center;
-}
-.student-pt1-ct-pt1 p{
-    margin:0;
-    font-size: 20px;
-    line-height: 10px;
-}
-.p-line{
-    width: 25%;
-}
+
 .ks-gz{
     float: right;
 }
@@ -196,11 +249,12 @@ li{
     margin-top: 60px;
 }
 .student-pt1-ct-pt2 li{
+    position: relative;
     display: inline-block;
     padding-right: 50px;
     cursor: pointer;
 }
-.student-pt1-ct-pt2 li img{
+.ball{
     width: 120%;
 }
 .student-pt1-ct-pt2 ul{
@@ -297,3 +351,175 @@ li{
     /*border:0.1rem solid #FFFFFF;*/
 /*}*/
 /*Place end*/
+
+/*intro Start*/
+.intro-pt1-ct-pt2{
+    padding-top: 80px;
+}
+/*intro End*/
+
+/*home Start*/
+.home-pt1-ct{
+    padding:20px 90px;
+}
+.home-pt1-ct-pt1 img{
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+}
+.home-pt1-ct-pt1 a{
+    color: #FFFFFF;
+}
+.home-pt1-ct-pt1 ul{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.home-pt1-ct-pt1 li{
+    display: inline-block;
+    padding-right: 51px;
+    padding-left: 51px;
+    border-right:1px solid #FFFFFF;
+}
+.home-pt2{
+    background-color: #FFFFFF;
+}
+.home-pt2-ct{
+    padding:58px 30px;
+}
+.home-pt2-ct-pt1,.home-pt2-ct-pt2{
+    display: inline-block;
+}
+.home-pt2-ct-pt1{
+    padding-right: 8px;
+    margin-left: 70px;
+}
+.home-pt2-ct-common-title{
+    border-bottom:1px solid #000000;
+    padding: 10px 0;
+}
+.home-pt2-ct-common-title-left,.home-pt2-ct-common-title-right{
+    display: inline-block;
+}
+.home-pt2-ct-common-title-left h1{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom:0;
+}
+.home-pt2-ct-common-title-left{
+    padding-left: 8px;
+    line-height: 18px;
+}
+.home-pt2-ct-pt1-title-border{
+    border-left:8px solid #8bc34a;
+}
+.home-pt2-ct-pt2-title-border{
+    border-left:8px solid #ff7864;
+}
+.home-pt2-ct-common-title-left p{
+    font-size: 12px;
+    margin:0;
+}
+.home-pt2-ct-common-title-right{
+    float: right;
+}
+.home-pt2-ct-common-title-right a{
+    font-size: 12px;
+    padding:4px 14px;
+    color: gray;
+    display: inline-block;
+    border:1px solid gray;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.home-pt2-ct-common-list{
+    padding-right: 10px;
+    font-size: 16px;
+}
+.home-pt2-ct-common-list ul{
+    padding-left: 10px;
+}
+.home-pt2-ct-common-list li{
+    overflow: hidden;
+    padding:5px 0;
+    border-bottom:1px dashed #000000;
+}
+.home-pt2-ct-common-list p{
+    width: 420px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+
+}
+/*.home-pt2-ct-pt2-list-p p{*/
+    /*width: 380px;*/
+    /*display: inline-block;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*-ms-text-overflow: ellipsis;*/
+    /*text-overflow: ellipsis;*/
+    /*overflow: hidden;*/
+    /*white-space:nowrap;*/
+/*}*/
+.home-pt2-ct-common-span{
+    display: inline-block;
+    float: right;
+}
+.home-pt2-ct-pt3{
+    text-align: center;
+    width: 170px;
+}
+.home-pt2-ct-pt3-common{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding:5px 10px;
+    background-color: #d9a4ed;
+}
+.home-pt2-ct-pt3-common a{
+    color: #FFFFFF;
+}
+.home-pt2-ct-pt3-erweima{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #d9a4ed;
+}
+.home-pt2-ct-pt3-kdcx img{
+    width: 40px;
+    height: 40px;
+}
+.home-pt2-ct-pt3-erweima-box{
+    border-radius: 10px;
+    overflow: hidden;
+}
+.home-pt2-ct-pt3-erweima img{
+    width:160px;
+    height: 160px;
+}
+.home-pt2-ct-pt3{
+    position: absolute;
+    right: -160px;
+    top:76px;
+}
+.home-pt3{
+    background-color: #c695dc;
+
+}
+.home-pt3-ct{
+    padding:50px 30px;
+    text-align: center;
+}
+.home-pt3-ct-pt2-common img{
+    width: 557px;
+    height: 266px;
+}
+/*home End*/
