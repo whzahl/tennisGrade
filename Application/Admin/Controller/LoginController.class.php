@@ -11,7 +11,14 @@ class LoginController extends CheckController{
 		parent::__construct();
 	}
 	
-	
+	public function login(){
+		$str = urlencode('www.zhongaotech.com');
+		echo $str;
+		$this->display();
+	}
+	public function weixinlogin(){
+		$this->display();
+	}
 	
 }
 

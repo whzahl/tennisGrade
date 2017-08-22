@@ -13,9 +13,10 @@ class PlaceController extends CheckController{
 	}
 
 
-
-
-
-
+    public function index(){
+	    $province = M('tg_province')->select();
+	    $this->province = $province;
+        $this->display();
+    } 
 
 }

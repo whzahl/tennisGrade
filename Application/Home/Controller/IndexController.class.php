@@ -16,8 +16,33 @@ class IndexController extends BaseController {
 	public function __construct(){
 		parent::__construct();
 	}
-	
+
     public function index(){
-        $this->display();
+    	$this->display();
     }
+
+    public function test1(){
+    	$test = M('tg_weixintest');
+    	$data = $_SESSION['userInfo'];
+    	$data['time'] = time();
+    	$unionid = $data['unionid'];
+    	$intid = $test->where(array('id'=>$unionid))->find();
+    	if(!empty($intid)){
+    		$this->success('登录成功！','/Home/Index/test');
+    	}else{
+    		$id = $test->data($data)->add();
+    		if(!empty($id)){
+    			$this->success('登录成功！',U('/Home/Index/test',array('id'=>$id)));
+    		}else{
+    			$this->error('登录失败！');
+    		}
+    	}
+    	
+    }
+
+    public function test(){
+    	echo $_SESSION['userInfo']['unionid'];
+    	$this->display();
+    }
+    
 }
