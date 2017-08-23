@@ -38,6 +38,49 @@
                 $(".my-bt-submit").css({"background-color":"gray","cursor":""}).addClass("am-disabled");
             }
         }
+        $(document).ready(function () {
+            $("form").submit(function (e,checkCode) {
+                var pnameVal     = $("input[name=pnameVal]").val();
+                var addressVal   = $("input[name=addressVal]").val();
+                var pintroVal  = $("input[name=pintro]").val();
+                var managerVal     = $("input[name=manager]").val();
+                var emailrVal     = $("input[name=email]").val();
+                var pictureVal   = $("input[name='picture[]']").val();
+                var phoneVal     = $("input[name=phone]").val();
+                var telephoneVal     = $("input[name=telephone]").val();
+                var checkCodeVal = $("#check-code").val();
+                var provinceVal  = $("input[name=province]").val();
+                var cityVal      = $("input[name=city]").val();
+                var areaVal      = $("input[name=area]").val();
+                var certificateVal      = $("input[name=certificate]").val();
+                //输入是否为空
+                if (!notEmpty(pnameVal, "请输入考点名称") || !notEmpty(provinceVal,"请选择省份") ||  !notEmpty(cityVal,"请选择市") ||
+                    !notEmpty(areaVal,"请选择区") || !notEmpty(addressVal,"请输入详细地址") || !notEmpty(pintroVal,"请输入考点介绍") ||
+                    !notEmpty(managerVal,"请输入法人代表") || !notEmpty(emailrVal,"请输入邮箱") || !notEmpty(phoneVal,"请输入联系号码") ||
+                    !notEmpty(checkCodeVal,"请输入验证码") || !notEmpty(telephoneVal,"请输入场馆固定电话") || !notEmpty(pictureVal,"请上传场馆图片") ||
+                    !notEmpty(certificateVal,"请上传营业执照")
+                ) {
+                    e.preventDefault();
+                    return false;
+                }
+                //验证邮箱
+                if(!isEmail(emailrVal,"请输入正确的邮箱格式")){
+                    e.preventDefault();
+                    return false;
+                }
+                //验证联系电话
+                if(!isPhone(phoneVal,"请输入正确的手机号码格式")){
+                    e.preventDefault();
+                    return false;
+                }
+                //验证码输入是否正确
+                if(!isEqual(checkCodeVal,checkCode,"请输入正确的验证码")){
+                    e.preventDefault();
+                    return false;
+                }
+            })
+
+        })
     </script>
 </block>
 <block name="body">
@@ -47,19 +90,19 @@
         </div>
         <div class="wrap2">
             <div class="student-pt1-ct">
-                <div class="student-pt1-ct-pt1">
-                    <p>考点申请</p>
-                    <img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">
-                    <p>Candidates application</p>
-                    <!--<div class="ks-gz">-->
-                        <!--<img src="/Public/Home/images/Student/question.jpg" alt="">-->
-                        <!--<a href="#">等级考试规则</a>-->
-                    <!--</div>-->
-                </div>
-                <div class="student-pt1-ct-pt3">
-                    <p><label>带<span>*</span>的选项为必填选项</label></p>
-                    <form class="am-form" method="post" enctype="multipart/form-data" action="/Home/Place/index">
-                        <fieldset>
+                <form class="am-form" method="post" enctype="multipart/form-data" action="/Home/Place/index">
+                    <fieldset>
+                        <div class="common-pt1-ct-pt1">
+                            <p>考点申请</p>
+                            <img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">
+                            <p>Candidates application</p>
+                            <!--<div class="ks-gz">-->
+                                <!--<img src="/Public/Home/images/Student/question.jpg" alt="">-->
+                                <!--<a href="#">等级考试规则</a>-->
+                            <!--</div>-->
+                        </div>
+                        <div class="student-pt1-ct-pt3">
+                            <p><label>带<span>*</span>的选项为必填选项</label></p>
                             <input type="hidden" name="level"/>
                             <div class="am-form-group">
                                 <label for="pname"><span>*</span>考点名称:</label>
@@ -71,13 +114,16 @@
                                 <label><span>*</span>选择考点区域:</label>
                                 <div class="form-input-box input-width-01">
                                     <select style="display: inline-block;width: 30%" class="am-radius" name="province">
-                                        <option value="省份">省份</option>
+                                        <option value="省份">选择省份</option>
+                                        <volist name="province" id="vo">
+                                            <option value="{$vo.code}">{$vo.name}</option>
+                                        </volist>
                                     </select>
                                     <select style="display: inline-block;width: 30%" class="am-radius" name="city">
-                                        <option value="市" class="my-input-place">市</option>
+                                        <option value="市" class="my-input-place">选择市</option>
                                     </select>
                                     <select style="display: inline-block;width: 30%" class="am-radius" name="area">
-                                        <option value="区" class="my-input-place">区</option>
+                                        <option value="区" class="my-input-place">选择区</option>
                                     </select>
                                 </div>
                                 <input style="margin-left: 220px;width: 350px;margin-top: 10px" type="text" name="address" id="address" class="am-form-field am-radius" placeholder="请输入考点详细地址" />
@@ -116,7 +162,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label for="picture"><span>*</span>场地图片:</label>
+                                <label><span>*</span>场地图片:</label>
                                 <div class="picture-box-place-father">
                                     <div class="picture-box-place">
                                         <!--<div class="form-input-box form-input-picture">-->
@@ -174,16 +220,14 @@
                                     <div id="imgPreview4" style="margin-left: 220px;"></div>
                                 </div>
                             </div>
-                        </fieldset>
-                    </form>
-
-
-                </div>
-                <div class="student-pt1-ct-pt4">
-                    <input type="checkbox" id="i-agree" onchange="changeSubmitBt()">我同意<a class="i-agree-a">考生申请协议</a>
-                    <br>
-                    <button type="submit" class="am-btn am-radius my-bt-submit am-disabled">提交表单信息</button>
-                </div>
+                        </div>
+                        <div class="student-pt1-ct-pt4">
+                            <input type="checkbox" id="i-agree" onchange="changeSubmitBt()">我同意<a class="i-agree-a">考生申请协议</a>
+                            <br>
+                            <button type="submit" class="am-btn am-radius my-bt-submit am-disabled">提交表单信息</button>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
     </div>
