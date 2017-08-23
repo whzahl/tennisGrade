@@ -389,6 +389,7 @@ li{
 }
 .home-pt2-ct-pt1,.home-pt2-ct-pt2{
     display: inline-block;
+    width: 45%;
 }
 .home-pt2-ct-pt1{
     padding-right: 8px;
@@ -446,8 +447,11 @@ li{
     padding:5px 0;
     border-bottom:1px dashed #000000;
 }
+.home-pt2-ct-common-list a{
+    color: #505050;
+}
 .home-pt2-ct-common-list p{
-    width: 420px;
+    width: 80%;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -467,12 +471,17 @@ li{
     /*white-space:nowrap;*/
 /*}*/
 .home-pt2-ct-common-span{
+    width: 20%;
     display: inline-block;
     float: right;
+    color: #808080;
 }
 .home-pt2-ct-pt3{
     text-align: center;
-    width: 170px;
+    width: 150px;
+    position: absolute;
+    right: -90px;
+    top:100px;
 }
 .home-pt2-ct-pt3-common{
     -webkit-border-radius: 10px;
@@ -493,23 +502,19 @@ li{
     padding: 5px;
     background-color: #d9a4ed;
 }
-.home-pt2-ct-pt3-kdcx img{
-    width: 40px;
-    height: 40px;
+.home-pt2-ct-pt3-common img{
+    width: 30px;
+    height: 30px;
 }
 .home-pt2-ct-pt3-erweima-box{
     border-radius: 10px;
     overflow: hidden;
 }
 .home-pt2-ct-pt3-erweima img{
-    width:160px;
-    height: 160px;
+    width:140px;
+    height: 140px;
 }
-.home-pt2-ct-pt3{
-    position: absolute;
-    right: -160px;
-    top:76px;
-}
+
 .home-pt3{
     background-color: #c695dc;
 
@@ -518,8 +523,29 @@ li{
     padding:50px 30px;
     text-align: center;
 }
+.home-pt3-ct-pt2-common{
+    display: inline-block;
+    margin-top: 40px;
+    background-color: #fff;
+}
 .home-pt3-ct-pt2-common img{
     width: 557px;
     height: 266px;
+}
+.home-pt3-ct-pt2-common h1{
+    margin-bottom: 0;
+}
+.home-pt3-ct-pt2-video{
+    margin-right: 20px;
+}
+.home-pt3-ct h1{
+    font-size: 24px;
+    font-weight:400;
+}
+.home-pt3-ct a{
+    color: #000;
+}
+.home-pt3-ct p{
+    margin-top: 0;
 }
 /*home End*/
