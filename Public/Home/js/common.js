@@ -70,19 +70,32 @@ function isEmail(inputValue,message){
 }
 $(document).ready(function () {
     var t;
+    //简介弹出层
     $("#intro-a").mouseover(function () {
         clearTimeout(t);
         $(".intro").slideDown(100);
     });
-    $("#intro-a,.intro").mouseleave(function () {
+   /* $("#intro-a,.intro").mouseleave(function () {
        t = setTimeout(function () {
             $(".intro").slideUp(100);
         },500);
-    });
+    });*/
     $(".intro").mouseover(function () {
         clearTimeout(t);
         $(".intro").slideDown(100);
-    })
+    });
+
+    //退出弹出层
+    $("#personal-center,.login-out").mouseover(function () {
+        clearTimeout(t);
+        $(".login-out").slideDown(100);
+    });
+    $("#personal-center,.login-out").mouseleave(function () {
+        t = setTimeout(function () {
+            $(".login-out").slideUp(100);
+        },500);
+    });
+    //异步加载市、区
     $("[name=province]").change(function () {
         $.get("/Home/Base/city",{
             code : $("[name=province] option:selected").val()
@@ -96,6 +109,7 @@ $(document).ready(function () {
             }
         },"json")
     });
+    //异步加载区
     $("[name=city]").change(function () {
         $.get("/Home/Base/area",{
             code : $("[name=city] option:selected").val()
@@ -109,7 +123,23 @@ $(document).ready(function () {
             }
         },"json");
     });
-    
+
+    //异步加载考点
+    $("[name=area]").change(
+        function () {
+            $.get("/Home/Base/place",{
+                code : $("[name=area] option:selected").val()
+            },function (data) {
+                $("[name=pid]").html("<option value='考点'>选择考点</option>")
+                for (var i = 0; i < data.length; i++){
+                    var pid = data[i].pid;
+                    var pname = data[i].pname;
+                    var insetOptions = '<option value='+pid+'>'+pname+'</option>';
+                    $("[name=pid]").append(insetOptions);
+                }
+            },"json")
+        }
+    );
     //jquery1.5版本之后不触发$ajaxStart和Stop的全局方法，用$(document).AjaxStart（）可解决问题
     $(document).ajaxStart(function () {
         $("#loading").show();
