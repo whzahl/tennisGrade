@@ -29,7 +29,7 @@ function isAge(inputValue,message) {
 
 }
 function isPhone(inputValue,message){
-    var pattern = /^1[0-9]{10}$}/;//1开头，后十位为0-9的11位数字
+    var pattern = /^1[0-9]{10}$/;//1开头，后十位为0-9的11位数字
     if(pattern.test(inputValue)){
         return true;
     }
@@ -109,6 +109,7 @@ $(document).ready(function () {
             }
         },"json");
     });
+    
     //jquery1.5版本之后不触发$ajaxStart和Stop的全局方法，用$(document).AjaxStart（）可解决问题
     $(document).ajaxStart(function () {
         $("#loading").show();

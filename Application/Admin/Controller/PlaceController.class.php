@@ -19,9 +19,11 @@ class PlaceController extends CheckController{
     	$first =  $Page->firstRow;
     	$list = $Page->listRows;
     	$arrData = D('Place','Service') ->findAll($arrWhere,$first,$list);
+    	
     	$this-> count = $intCount;
     	$this-> page = $show;
-    	$this-> list = $arrData;      
+    	$this-> list = $arrData;
+
     	$this->display();
     }
 
@@ -62,7 +64,11 @@ class PlaceController extends CheckController{
     	}else{
     		$arrWhere['pid']=I('get.pid');
     		$arrData=D('Place','Service')->findOne($arrWhere);
+    		$arrPicture = explode('、', $arrData['picture']);
+//    		dump($arrPicture);
+ //   		dump($arrPicture);
     		$this->list=$arrData;
+    		$this-> list1 = $arrPicture;
     		$this->display();
     	}
     }
