@@ -69,6 +69,7 @@ function isEmail(inputValue,message){
     }
 }
 $(document).ready(function () {
+    //简介弹出层
     var t;
     $("#intro-a").mouseover(function () {
         clearTimeout(t);
@@ -82,7 +83,18 @@ $(document).ready(function () {
     $(".intro").mouseover(function () {
         clearTimeout(t);
         $(".intro").slideDown(100);
-    })
+    });
+    //退出弹出层
+    $("#personal-center,.login-out").mouseover(function () {
+        clearTimeout(t);
+        $(".login-out").slideDown(100);
+    });
+    $("#personal-center,.login-out").mouseleave(function () {
+        t = setTimeout(function () {
+            $(".login-out").slideUp(100);
+        },500);
+    });
+    //异步加载市、区
     $("[name=province]").change(function () {
         $.get("/Home/Base/city",{
             code : $("[name=province] option:selected").val()

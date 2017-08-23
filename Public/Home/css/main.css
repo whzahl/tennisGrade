@@ -97,9 +97,12 @@ li{
     width: 100%;
     background-color: #fff;
 }
+.header-part1-center{
+    text-align: center;
+}
 .h-p1-left{
     display: inline-block;
-    width: 20%;
+    width: 18%;
 
 }
 .h-p1-left img{
@@ -107,7 +110,26 @@ li{
 }
 .h-p1-right{
     display: inline-block;
-    width: 75%;
+    width: 80%;
+}
+#login,#personal-center{
+    border-radius: 5px;
+}
+#personal-center{
+    position: relative;
+}
+.h-p1-right button a{
+    color: #FFFFFF;
+}
+.login-out{
+    display: none;
+    width:80px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    position: absolute;
+    top: 44px;
+    right: 11px;
 }
 .h-p1-right ul{
     display: inline-block;
@@ -149,7 +171,7 @@ li{
     padding: 8px 0;
     position: absolute;
     top: 45px;
-    left:370px;
+    left:400px;
     z-index:500;
     border-radius: 10px;
     text-align: center;
@@ -169,7 +191,7 @@ li{
 /*footer start*/
 .footer{
     /*预留170px的margin-top让头部和尾部撑满整个屏幕*/
-    margin-top: 170px;
+    margin-top: 20px;
     width: 100%;
     background-color: #fff;
     font-size: 12px;
@@ -534,17 +556,21 @@ li{
 
 }
 .home-pt3-ct{
-    padding:50px 30px;
+    padding:50px 0;
     text-align: center;
+}
+.home-pt3-ct-pt1 img{
+    width:70%;
 }
 .home-pt3-ct-pt2-common{
     display: inline-block;
     margin-top: 40px;
     background-color: #fff;
+    width: 48%;
 }
 .home-pt3-ct-pt2-common img{
-    width: 557px;
-    height: 266px;
+    width: 100%;
+    height: 65%;
 }
 .home-pt3-ct-pt2-common h1{
     margin-bottom: 0;
@@ -561,5 +587,23 @@ li{
 }
 .home-pt3-ct p{
     margin-top: 0;
+}
+.home-pt4{
+    background-color: #fff;
+}
+.home-pt4-ct{
+    padding: 40px 0;
+}
+.home-pt4-ct-title-noborder{
+    border:none;
+}
+.am-control-thumbs li {
+    width: 12.5%; /* n 为轮播图数量 */
+}
+.home-pt2-ct-common-slider{
+    text-align: center;
+}
+.am-slider-carousel li {
+    margin-right: 5px;
 }
 /*home End*/
