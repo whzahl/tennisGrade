@@ -1,5 +1,70 @@
 <extend name="Public:base" />
 <block name="js">
+<script type="text/javascript">  
+
+var InterValObj; //timer变量，控制时间  
+var count = 90; //间隔函数，1秒执行  
+var curCount;//当前剩余秒数  
+  
+function sendMessage() {  
+	// 判断数据是否为空
+     var mobile = $("input[name='phone']").val();
+
+     if(mobile == ""){
+    	 alert("手机号码不能为空！");
+    	 return false;
+     }
+	
+  　curCount = count;  
+　　//设置button效果，开始计时  
+     $("#btnSendCode").attr("disabled", "true");  
+     $("#btnSendCode").val(curCount + " S");  
+     InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次  
+　　  //向后台发送处理数据  
+     
+     $.ajax({  
+	     　　type: "POST", //用POST方式传输  
+	     　　dataType: "json", //数据格式:JSON  
+	     　　url: '/Home/Teacher/sendSMS', //目标地址  
+	    　　 data: {mobile:mobile},  
+	    　　 error: function (XMLHttpRequest, textStatus, errorThrown) { },  
+	     　　success: function (msg){ 
+	    	 	 console.log(msg);
+	    	 	/*  console.log(msg.smsCode); */
+		    	 /* if(msg.code == 0){ */
+		    		 $("input[name='check']").val(msg.smsCode);
+		    	 /* } */
+	     　　}  
+     });  
+}  
+
+	//timer处理函数  
+	function SetRemainTime() {  
+        if (curCount == 0) {                  
+            window.clearInterval(InterValObj);//停止计时器  
+            $("#btnSendCode").removeAttr("disabled");//启用按钮  
+            $("#btnSendCode").val("获取验证码");  
+        }  
+        else {  
+            curCount--;  
+            $("#btnSendCode").val(curCount + " S");  
+        }  
+    }  
+	
+	$(document).ready(function(){
+	   $("#J-Submit").on('click',function(){
+		  /*   var check = $("input[name='check']").val(); */
+			var smsCode = $("input[name='smsCode']").val();
+			if($("input[name='phone']").val() == ""){
+				alert("请输入手机号");return false;
+			}else if(smsCode == ""){
+				 alert("请输入验证码");
+			}else{
+				 $("#validStudents").submit();
+			}
+	    })
+	})
+</script> 
     <script>
         function PreviewImage(imgFile,imgBoxId)
         {
@@ -61,7 +126,7 @@
                     e.preventDefault();
                     return false;
                 }
-                //验证手机号
+/*                 //验证手机号
                 if(!isPhone(phoneVal,"请输入正确的11位手机号码，如13345681111")){
                     e.preventDefault();
                     return false;
@@ -69,7 +134,7 @@
                 //验证码输入是否正确
                 if(!isEqual(checkCodeVal,checkCode,"请输入正确的验证码")){
                     e.preventDefault();
-                }
+                } */
             })
         })
     </script>
@@ -81,7 +146,7 @@
         </div>
         <div class="wrap2">
             <div class="student-pt1-ct">
-                <form class="am-form" method="post" enctype="multipart/form-data" action="/Home/Teacher/index">
+                <form class="am-form" method="post"  enctype="multipart/form-data" action="/Home/Teacher/add">
                     <fieldset>
                         <div class="common-pt1-ct-pt1">
 
@@ -103,7 +168,7 @@
                                 <div class="form-input-box input-width-02">
                                     <select name="sex" id="sex" class="am-form-field am-radius">
                                         <option value="1" selected>男</option>
-                                        <option value="0">女</option>
+                                        <option value="2">女</option>
                                     </select>
                                 </div>
                             </div>
@@ -117,7 +182,7 @@
                                 <label for="phone"><span>*</span>联系电话:</label>
                                 <div class="form-input-box input-width-01">
                                     <input style="display: inline-block;width: 65%;" type="text" name="phone" id="phone" class="am-form-field am-radius" placeholder="请输入联系电话" />
-                                    <button type="button" class="am-btn am-btn-default my-bt-check">发送验证码</button>
+                                    <input id="btnSendCode" type="button" class="am-btn am-btn-default my-bt-check" value="发送验证码"  onclick="sendMessage()"/>
                                 </div>
                                 <input style="margin-top: 10px;margin-left: 220px;width: 350px;" type="text" class="am-form-field am-radius" id="check-code" placeholder="请输入验证码">
                             </div>

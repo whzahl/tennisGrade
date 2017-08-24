@@ -59,7 +59,7 @@ class UserService extends BaseService{
 	 *	增加一条数据
 	 */
 	public function add($arrWhere){
-		$result = M('tg_user')->where($arrWhere)->add();
+		$result = M('tg_user')->data($arrWhere)->add();
 		return $result;
 	}
     

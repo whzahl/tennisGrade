@@ -59,7 +59,7 @@ class NoticeService extends BaseService{
 	 *	增加一条数据
 	 */
 	public function add($arrWhere){
-		$result = M('tg_notice')->where($arrWhere)->add();
+		$result = M('tg_notice')->data($arrWhere)->add();
 		return $result;
 	}
     

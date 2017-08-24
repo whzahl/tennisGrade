@@ -17,7 +17,15 @@ class UserController extends CheckController {
 		parent::__construct();
 	}
 	
+
     public function index(){
-        $this->display();
+    	$arrWhere['unionid'] = $_SESSION['userInfo']['unionid'];
+    	$arrUser = D('User','Service')->findOne($arrWhere);
+    	$this->user = $arrUser;
+    	$this->display();
     }
+    
+    
+    
+    
 }
