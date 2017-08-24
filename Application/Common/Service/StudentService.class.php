@@ -59,7 +59,7 @@ class StudentService extends BaseService{
 	 *	增加一条数据
 	 */
 	public function add($arrWhere){
-		$result = M('tg_student')->where($arrWhere)->add();
+		$result = M('tg_student')->data($arrWhere)->add();
 		return $result;
 	}
     

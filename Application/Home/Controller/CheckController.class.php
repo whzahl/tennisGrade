@@ -22,21 +22,11 @@ class CheckController extends BaseController {
        $session = $_SESSION['userInfo'];
 //
        // 判断是否登录
-       if($session){
-       	//	跳转登录界面
+       if(!$session){
+       	$this->redirect('/Home/Index/index');
+       }else{
        	$this->unionid = $session['unionid'];
-//         $arrSession = $_SESSION['User'];
-}
-//        // 判断是否登录
-//        if(!$arrSession){
-//        	//	跳转登录界面
-//           $this->redirect('/Login/index');
-//        }else{
-//            $this->uid = $arrSession['uid'];
-//            $this->uname = $arrSession['uname'];
-//        } */
-//    }
-        //gyh 便于开发前端页面 暂时注释 end--- 结束开发后恢复start-end
+       }
     }
     
 }

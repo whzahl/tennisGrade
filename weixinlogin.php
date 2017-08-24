@@ -1,41 +1,50 @@
 <?php 
-$code = isset($_GET('code')) ? $_GET['code'] :NULL;
-$state = isset($_GET('state')) ? $_GET['state'] :NULL;
-
-if(!$code || !$state){
+$code = isset($_GET['code']) ? $_GET['code'] : NULL;
+$state = isset($_GET['state']) ? $_GET['state'] : NULL;
+if (!$code || !$state) {
 	exit();
 }
 
 if ($state != 'STATE') {
 	exit();
 }
-//使用code获取access_token
-$appid = 'wx15359136cf22a1ed';
-$AppSecret = '66947dfc5e9ed296b224353a94713ccc';
-$url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=$appid&secret=$AppSecret&code=$code&grant_type=authorization_code";
 
-/* $res = getHttps($url); */
-echo '<pre/>';
-print_r($url);
-exit;
-//使用获取到的oppenID和access_token换取用户个人信息
-$urll = "https://api.weixin.qq.com/sns/userinfo?access_token=".$res['access_token']."&openid=".$res['oppenid'];
-$userInfo = getHttps($urll);
- echo '<pre/>';
- print_r($userInfo);
- exit;
- 
+$appid='wx97cea69a39e328a5' ;
+$AppSecret ='d37d2ca1a6642f3adbd659904115cc8a';
+$url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=$appid&secret=$AppSecret&code=$code&grant_type=authorization_code";
+$res = getHttps($url);
+
+
+$url1 = "https://api.weixin.qq.com/sns/userinfo?access_token=".$res['access_token']."&openid=".$res['openid']."&lang=zh_CN";
+$userInfo = getHttps($url1);
+
+
+session_start();
+$_SESSION['userInfo'] = $userInfo;
+// echo '<pre/>';
+// print_r($_SESSION['userInfo']);
+// exit;
+header("Location: http://tennis.laigl.com/Home/Login/wxlogin");
 function getHttps($url){
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); 
 	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	$res = curl_exec($ch);
+	$output = curl_exec($ch);
 	curl_close($ch);
-	//使用json转换成数组
-	$res = json_decode($res,1);
+	$res = json_decode($output,1);
 	return $res;
 }
- 
- 
+
+
+
+
+
+
+
+
+
+
+
+

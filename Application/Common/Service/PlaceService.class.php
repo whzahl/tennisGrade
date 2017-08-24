@@ -59,7 +59,7 @@ class PlaceService extends BaseService{
 	 *	增加一条数据
 	 */
 	public function add($arrWhere){
-		$result = M('tg_place')->where($arrWhere)->add();
+		$result = M('tg_place')->data($arrWhere)->add();
 		return $result;
 	}
     
