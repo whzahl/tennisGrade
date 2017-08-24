@@ -61,20 +61,12 @@
                 <if condition="($Think.session.userInfo.unionid eq NULL)">
                 <button class="btn btn-success btn-lg" onclick="abc()">登录</button>
                 <else />
-                <button class="btn btn-success btn-lg"><a href="/Home/User/index">个人中心</a></button>
+                <button id="personal-center" class="btn btn-success btn-lg">
+                    <a href="/Home/User/index">个人中心</a>
+                    <a href="" class="am-badge am-badge-warning login-out">退出</a>
+                </button>
                 </if>
             </div>
-            
-            <!--<div class="intro">-->
-                <!--<ul>-->
-                    <!--<li><a href="/Home/Intro/index">考级简介</a></li>-->
-                    <!--<li><a href="#">考级内容</a></li>-->
-                    <!--<li><a href="#">证书样板</a></li>-->
-                    <!--<li><a href="#">考点协议</a></li>-->
-                    <!--<li><a href="#">考官协议</a></li>-->
-                    <!--<li><a href="#">报名协议</a></li>-->
-                <!--</ul>-->
-            <!--</div>-->
         </div>
     </div>
     <div class="header-part2" >
