@@ -59,7 +59,7 @@ class MasterService extends BaseService{
 	 *	增加一条数据
 	 */
 	public function add($arrWhere){
-		$result = M('tg_master')->where($arrWhere)->add();
+		$result = M('tg_master')->data($arrWhere)->add();
 		return $result;
 	}
     
