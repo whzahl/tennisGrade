@@ -27,16 +27,6 @@ class CheckController extends BaseController {
        }else{
        	$this->unionid = $session['unionid'];
        }
-//        // 判断是否登录
-//        if(!$arrSession){
-//        	//	跳转登录界面
-//           $this->redirect('/Login/index');
-//        }else{
-//            $this->uid = $arrSession['uid'];
-//            $this->uname = $arrSession['uname'];
-//        } */
-//    }
-        //gyh 便于开发前端页面 暂时注释 end--- 结束开发后恢复start-end
     }
     
 }

@@ -142,7 +142,9 @@ function sendMessage() {
 <block name="body">
     <div class="common-part1">
         <div class="wrap1">
-            <div class="common-top-bg"></div>
+            <div class="common-top-bg">
+                <img src="/Public/Home/images/user/top_bg.png" alt="">
+            </div>
         </div>
         <div class="wrap2">
             <div class="student-pt1-ct">
@@ -215,7 +217,7 @@ function sendMessage() {
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label><span>*</span>现所在地:</label>
+                                <label><span>*</span>现所在考点:</label>
                                 <div class="form-input-box input-width-01">
                                     <select style="display: inline-block;width: 30%" class="am-radius" name="province">
                                         <option value="省份">选择省份</option>
@@ -230,6 +232,10 @@ function sendMessage() {
                                         <option value="区" class="my-input-place">选择区</option>
                                     </select>
                                 </div>
+                                <!--<input style="margin-top: 10px;margin-left: 220px;width: 350px;" type="text" name="pid" id="pid" class="am-form-field am-radius" placeholder="请输入所在考点" />-->
+                                <select  style="margin-top: 10px;margin-left: 220px;width: 326px;" name="pid" id="pid" class="am-radius">
+                                    <option value="选择考点">选择考点</option>
+                                </select>
                             </div>
                             <div class="am-form-group" id="certificate-div">
                                 <label for="certificate"><span>*</span>资格证书:</label>
@@ -237,11 +243,12 @@ function sendMessage() {
                                     <div class="am-form-group am-form-file">
                                         <button style="background-color:#d9a4ed;border-color:#d9a4ed;" type="button" class="am-btn am-btn-danger am-btn-sm">
                                             <i class="am-icon-cloud-upload"></i> 添加资格证书</button>
+                                        <br>
                                         <span style="color: #ff0000;font-size: 14px;">*点击按钮上传资格证书：运动员证、裁判证或毕业证</span>
                                         <input type="file" name="certificate[]" onchange='PreviewImage(this,"imgPreview2")'>
                                     </div>
                                 </div>
-                                <div class="tpl-form-file-img">
+                                <div class="tpl-form-file-img" style="margin-top: 30px">
                                     <div id="imgPreview2" style="margin-left: 220px;">
                                         <!-- 不添加图片则不显示图片，添加才显示 -->
                                         <!-- <empty name="$list.picture">
@@ -296,12 +303,13 @@ function sendMessage() {
                                 </div>
                             </div>
 
-                            <div class="am-form-group">
-                                <label for="pid"><span>*</span>所在考点:</label>
-                                <div class="form-input-box input-width-01">
-                                    <input type="text" name="pid" id="pid" class="am-form-field am-radius" placeholder="请输入所在考点" />
-                                </div>
-                            </div>
+                            <!--<div class="am-form-group">-->
+                                <!--<label for="pid"><span>*</span>所在考点:</label>-->
+                                <!--<div class="form-input-box input-width-01">-->
+                                    <!---->
+                                <!--</div>-->
+                            <!--</div>-->
+
                             <!--<div class="am-form-group">-->
                                 <!--<label><span>*</span>考试地点:</label>-->
                                 <!--<div class="form-input-box input-width-04">-->
