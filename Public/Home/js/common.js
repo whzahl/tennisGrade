@@ -75,11 +75,11 @@ $(document).ready(function () {
         clearTimeout(t);
         $(".intro").slideDown(100);
     });
-   /* $("#intro-a,.intro").mouseleave(function () {
+  $("#intro-a,.intro").mouseleave(function () {
        t = setTimeout(function () {
             $(".intro").slideUp(100);
         },500);
-    });*/
+    });
     $(".intro").mouseover(function () {
         clearTimeout(t);
         $(".intro").slideDown(100);
