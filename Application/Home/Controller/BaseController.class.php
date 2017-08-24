@@ -54,5 +54,14 @@ class BaseController extends Controller {
         $area = json_encode($area);
         echo $area;
     }
+
+    public function place(){
+        $arrWhere['area'] = I('get.code');
+//        $place = D('Place','Service')->findAll($arrWhere);
+        $place = M('tg_place')->where($arrWhere)->select();
+        $place = json_encode($place);
+        echo $place;
+
+    }
     
 }
