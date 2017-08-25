@@ -18,4 +18,28 @@ class BaseController extends Controller {
         parent::__construct();
     }
     
+    
+    public function city(){
+    	$arrWhere['provincecode'] = I('get.code');
+    	$city = M('tg_city')->where($arrWhere)->select();
+    	$city = json_encode($city);
+    	echo $city;
+    }
+    
+    public function area(){
+    	$arrWhere['citycode'] = I('get.code');
+    	$area = M('tg_area')->where($arrWhere)->select();
+    	$area = json_encode($area);
+    	echo $area;
+    }
+    
+    public function place(){
+    	$arrWhere['area'] = I('get.code');
+    	//        $place = D('Place','Service')->findAll($arrWhere);
+    	$place = M('tg_place')->where($arrWhere)->select();
+    	$place = json_encode($place);
+    	echo $place;
+    
+    }
+    
 }

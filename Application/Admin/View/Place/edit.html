@@ -1,7 +1,7 @@
 <extend name="Public:base" />
+<block name="js">
+</block>
 <block name="body">
-
-
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
                                                 考点信息修改页
@@ -50,18 +50,24 @@
                                     </div>
                                 </div>
 
-                                <div class="am-form-group">
-                                    <label for="user-phone" class="am-u-sm-3 am-form-label">考点地址 <span class="tpl-form-line-small-title">Address</span></label>
-                                    <div class="am-u-sm-9">
-                                        <select data-am-selected="{searchBox: 1}">
-										  <option value="a">-The.CC</option>
-										  <option value="b">夕风色</option>
-										  <option value="o">Orange</option>
-										</select>
-										<br>
-										<input type="text" placeholder="请输入详细地址">
-                                    </div>
+                           <div class="am-form-group">
+                                <label for="user-phone" class="am-u-sm-3 am-form-label">考点地址 <span class="tpl-form-line-small-title">Address</span></label>
+                                <div class="am-u-sm-9">
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="province">
+                                        <option value="省份">选择省份</option>
+                                        <volist name="province" id="vo">
+                                            <option value="{$vo.code}">{$vo.name}</option>
+                                        </volist>
+                                    </select>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="city">
+                                        <option value="市" class="my-input-place">选择市</option>
+                                    </select>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="area">
+                                        <option value="区" class="my-input-place">选择区</option>
+                                    </select>
+                                    <input type="text" name="address" value="{$list.address}"  id="address"  class="am-form-field am-radius" placeholder="请输入考点详细地址" />
                                 </div>
+                            </div>
                                 <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">考点具体介绍 <span class="tpl-form-line-small-title">Pintro</span></label>
                                     <div class="am-u-sm-9">

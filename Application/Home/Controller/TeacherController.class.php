@@ -48,6 +48,7 @@ class TeacherController extends CheckController{
 	    			$data['certificate'] = implode('、',$arrurl);
 	    		}
 	    		$wx = M('tg_user')->where(array('unionid'=>$str['unionid']))->find();
+	    		$data['pid'] = $arrWhere['pid'];
 	    		$data['id'] = $wx['id'];
 	    		$data['status'] = 2;
 	    		$data['create_time'] = time();

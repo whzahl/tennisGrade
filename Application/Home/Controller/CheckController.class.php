@@ -22,11 +22,11 @@ class CheckController extends BaseController {
        $session = $_SESSION['userInfo'];
 //
        // 判断是否登录
-       if(!$session){
-       	$this->redirect('/Home/Index/index');
-       }else{
-       	$this->unionid = $session['unionid'];
-       }
+//        if(!$session){
+//        	$this->redirect('/Home/Index/index');
+//        }else{
+//        	$this->unionid = $session['unionid'];
+//        }
     }
     
 }
