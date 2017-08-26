@@ -1,0 +1,149 @@
+<extend name="Public:base" />
+<block name="body">
+<script type="text/javascript"> 
+function previewImage(file,imgNum)
+{
+  var MAXWIDTH  = 300; 
+  var MAXHEIGHT = 300;
+  var div = document.getElementById('preview'+imgNum);
+  if (file.files && file.files[0])
+  {
+      div.innerHTML ='<img id=imghead'+imgNum+'>';
+      var img = document.getElementById('imghead'+imgNum+'');
+      img.onload = function(){
+        var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+        img.width  =  rect.width;
+        img.height =  rect.height;
+//         img.style.marginLeft = rect.left+'px';
+        img.style.marginTop = rect.top+'px';
+      }
+      var reader = new FileReader();
+      reader.onload = function(evt){img.src = evt.target.result;}
+      reader.readAsDataURL(file.files[0]);
+  }
+  else //
+  {
+    var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+    file.select();
+    var src = document.selection.createRange().text;
+    div.innerHTML = '<img id=imghead'+imgNum+'>';
+    var img = document.getElementById('imghead2');
+    img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+    var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+    status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+    div.innerHTML = "<div id=divhead"+imgNum+" style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+  }
+}
+function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+    var param = {top:0, left:0, width:width, height:height};
+    if( width>maxWidth || height>maxHeight )
+    {
+        rateWidth = width / maxWidth;
+        rateHeight = height / maxHeight;
+
+        if( rateWidth > rateHeight )
+        {
+            param.width =  maxWidth;
+            param.height = Math.round(height / rateWidth);
+        }else
+        {
+            param.width = Math.round(width / rateHeight);
+            param.height = maxHeight;
+        }
+    }
+    param.left = Math.round((maxWidth - param.width) / 2);
+    param.top = Math.round((maxHeight - param.height) / 2);
+    return param;
+}
+</script> 
+
+        <div class="tpl-content-wrapper" style="margin:0 20px">
+            <div class="tpl-content-page-title">
+                Amaze UI 证书修改
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li><a href="/Admin/Grade/index">证书列表</a></li>
+                <li class="am-active">证书修改</li>
+            </ol>
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span> 证书修改
+                    </div>
+                    
+                </div>
+                <div class="tpl-block">
+                    <div class="am-g">
+                        <div class="tpl-form-body tpl-form-line">
+                            <form class="am-form tpl-form-line-form" action="/Admin/Grade/edit" enctype="multipart/form-data" method="post">
+                               <input name="gid" type="hidden" value="{$list.gid}" />
+                                <div class="am-form-group">
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">成绩 <span class="tpl-form-line-small-title">Score</span></label>
+                                    <div class="am-u-sm-9">
+                                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入成绩" name="score" value="{$list.score}">
+                                        <small>请填写证书成绩。</small>
+                                    </div>
+                                </div>
+
+                               <div class="am-form-group">
+                                <label for="user-weibo" class="am-u-sm-3 am-form-label">证书图片 <span class="tpl-form-line-small-title">Images</span></label>
+                                <div class="am-u-sm-9">
+                                    <div class="am-form-group am-form-file">
+                                        <div class="tpl-form-file-img"  id="preview1" >
+                                        <empty name="list['picture']">
+                            	<img src="/Public/Admin/images/person.jpg" id="imghead1" height="200" width="200" style="display:none;"/>
+                            	<else />
+							    <img src="{$list.picture}" id="imghead1" height="200" width="200" />
+								
+								</empty>
+                                        </div>
+                                        <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                        <i class="am-icon-cloud-upload"></i> 添加图片</button>
+                                        <input  id="st18" type="file" onchange="previewImage(this,1)" name="picture" multiple>
+                                    </div>
+
+                                </div>
+                            </div>
+                                
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">等级 <span class="tpl-form-line-small-title">Level</span></label>
+                                    <div class="am-u-sm-9">
+                                       <select data-am-selected="{btnSize: 'sm'}" name="level"> 
+							                <option value="option1">请选择等级</option>
+							                <option value="全国青少年二级" <if condition="$list.level eq '全国青少年二级'">selected</if>>全国青少年二级</option>
+							                <option value="华东地区一级" <if condition="$list.level eq '华东地区一级'">selected</if>>华东地区一级</option>
+							                <option value="华北地区三级" <if condition="$list.level eq '华北地区三级'">selected</if>>华北地区三级</option>
+							                
+							            </select>
+                                    </div>
+                                </div>
+								<div class="am-form-group">
+                                    <label for="user-phone" class="am-u-sm-3 am-form-label">状态 <span class="tpl-form-line-small-title">Status</span></label>
+                                    <div class="am-u-sm-9">
+                                        <select  data-am-selected="{btnSize: 'sm'}" name="status">
+                                          <option value="option1">请选择状态</option>
+										  <option value="0" <if condition="$list.status eq 0">selected</if>>未通过</option>
+										  <option value="1" <if condition="$list.status eq 1">selected</if>>已通过</option>
+										  <option value="2" <if condition="$list.status eq 2">selected</if>>审核中</option>
+										</select>
+                                    </div>
+                                </div>
+                               
+
+
+                                <div class="am-form-group">
+                                    <div class="am-u-sm-9 am-u-sm-push-3">
+                                        <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</block>

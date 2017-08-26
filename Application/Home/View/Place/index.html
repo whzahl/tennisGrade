@@ -1,0 +1,304 @@
+<extend name="Public:base" />
+<block name="js">
+<script type="text/javascript">  
+
+var InterValObj; //timer变量，控制时间  
+var count = 90; //间隔函数，1秒执行  
+var curCount;//当前剩余秒数  
+  
+function sendMessage() {  
+	// 判断数据是否为空
+     var mobile = $("input[name='phone']").val();
+
+     if(mobile == ""){
+    	 alert("手机号码不能为空！");
+    	 return false;
+     }
+	
+  　curCount = count;  
+　　//设置button效果，开始计时  
+     $("#btnSendCode").attr("disabled", "true");  
+     $("#btnSendCode").val(curCount + " S");  
+     InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次  
+　　  //向后台发送处理数据  
+     
+     $.ajax({  
+	     　　type: "POST", //用POST方式传输  
+	     　　dataType: "json", //数据格式:JSON  
+	     　　url: '/Admin/Live/sendSMS', //目标地址  
+	    　　 data: {mobile:mobile},  
+	    　　 error: function (XMLHttpRequest, textStatus, errorThrown) { },  
+	     　　success: function (msg){ 
+	    	 	 console.log(msg);
+	    	 	/*  console.log(msg.smsCode); */
+		    	 /* if(msg.code == 0){ */
+		    		 $("input[name='check']").val(msg.smsCode);
+		    	 /* } */
+	     　　}  
+     });  
+}  
+
+	//timer处理函数  
+	function SetRemainTime() {  
+        if (curCount == 0) {                  
+            window.clearInterval(InterValObj);//停止计时器  
+            $("#btnSendCode").removeAttr("disabled");//启用按钮  
+            $("#btnSendCode").val("获取验证码");  
+        }  
+        else {  
+            curCount--;  
+            $("#btnSendCode").val(curCount + " S");  
+        }  
+    }  
+	
+	$(document).ready(function(){
+	   $("#J-Submit").on('click',function(){
+		  /*   var check = $("input[name='check']").val(); */
+			var smsCode = $("input[name='smsCode']").val();
+			if($("input[name='phone']").val() == ""){
+				alert("请输入手机号");return false;
+			}else if(smsCode == ""){
+				 alert("请输入验证码");
+			}else{
+				 $("#validStudents").submit();
+			}
+	    })
+	})
+</script> 
+    <script>
+        function PreviewImage(imgFile,imgBoxId)
+        {
+            console.log(imgBoxId);
+            var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+            filextension=filextension.toLowerCase();
+            if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))
+            {
+                alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+                imgFile.focus();
+            }
+            else
+            {
+                var path;
+                if(document.all)//IE
+                {
+                    imgFile.select();
+                    path = document.selection.createRange().text;
+                    document.getElementById(imgBoxId).innerHTML="";
+                    document.getElementById(imgBoxId).style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+                }
+                else//FF
+                {
+                    path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+                    //path = imgFile.files[0].getAsDataURL();// FF 3.0
+                    document.getElementById(imgBoxId).innerHTML = "<img  style='max-height:300px;max-width:200px;' src='"+path+"'/>";
+                    //document.getElementById("img1").src = path;
+                }
+            }
+        }
+        function changeSubmitBt(){
+            if($("#i-agree").is(':checked')){
+                $(".my-bt-submit").css("background-color","#d9a4ed").removeClass("am-disabled");;
+            }
+            else {
+                $(".my-bt-submit").css({"background-color":"gray","cursor":""}).addClass("am-disabled");
+            }
+        }
+        $(document).ready(function () {
+            $("form").submit(function (e,checkCode) {
+                var pnameVal     = $("input[name=pname]").val();
+                var addressVal   = $("input[name=address]").val();
+                var pintroVal  = $("input[name=pintro]").val();
+                var managerVal     = $("input[name=manager]").val();
+                var emailrVal     = $("input[name=email]").val();
+                var pictureVal   = $("input[name='picture[]']").val();
+                var phoneVal     = $("input[name=phone]").val();
+                var telephoneVal     = $("input[name=telephone]").val();
+                var checkCodeVal = $("#check-code").val();
+                var provinceVal  = $("input[name=province]").val();
+                var cityVal      = $("input[name=city]").val();
+                var areaVal      = $("input[name=area]").val();
+                var certificateVal      = $("input[name=certificate]").val();
+                //输入是否为空
+                if (!notEmpty(pnameVal, "请输入考点名称") || !notEmpty(provinceVal,"请选择省份") ||  !notEmpty(cityVal,"请选择市") ||
+                    !notEmpty(areaVal,"请选择区") || !notEmpty(addressVal,"请输入详细地址") || !notEmpty(pintroVal,"请输入考点介绍") ||
+                    !notEmpty(managerVal,"请输入法人代表") || !notEmpty(emailrVal,"请输入邮箱") || !notEmpty(phoneVal,"请输入联系号码") ||
+                    !notEmpty(checkCodeVal,"请输入验证码") || !notEmpty(telephoneVal,"请输入场馆固定电话") || !notEmpty(pictureVal,"请上传场馆图片") ||
+                    !notEmpty(certificateVal,"请上传营业执照")
+                ) {
+                    e.preventDefault();
+                    return false;
+                }
+                //验证邮箱
+                if(!isEmail(emailrVal,"请输入正确的邮箱格式")){
+                    e.preventDefault();
+                    return false;
+                }
+                //验证联系电话
+                if(!isPhone(phoneVal,"请输入正确的手机号码格式")){
+                    e.preventDefault();
+                    return false;
+                }
+                //验证码输入是否正确
+               // if(!isEqual(checkCodeVal,checkCode,"请输入正确的验证码")){
+                //    e.preventDefault();
+                //    return false;
+                //}
+            })
+
+        })
+    </script>
+
+</block>
+<block name="body">
+    <div class="common-part1">
+        <div class="wrap1">
+            <div class="common-top-bg">
+                <img src="/Public/Home/images/user/top_bg.png" alt="">
+            </div>
+        </div>
+        <div class="wrap2">
+            <div class="student-pt1-ct">
+                <form class="am-form" action="/Home/Place/add" enctype="multipart/form-data" method="post" >
+                    <fieldset>
+                        <div class="common-pt1-ct-pt1">
+                            <p>考点申请</p>
+                            <img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">
+                            <p>Candidates application</p>
+                            <!--<div class="ks-gz">-->
+                                <!--<img src="/Public/Home/images/Student/question.jpg" alt="">-->
+                                <!--<a href="#">等级考试规则</a>-->
+                            <!--</div>-->
+                        </div>
+                        <div class="student-pt1-ct-pt3">
+                            <p><label>带<span>*</span>的选项为必填选项</label></p>
+                            <input type="hidden" name="level"/>
+                            <div class="am-form-group">
+                                <label for="pname"><span>*</span>考点名称:</label>
+                                <div class="form-input-box input-width-01">
+                                    <input type="text" name="pname" id="pname" class="am-form-field am-radius" placeholder="请输入考点名称" />
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label><span>*</span>选择考点区域:</label>
+                                <div class="form-input-box input-width-01">
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="province">
+                                        <option value="省份">选择省份</option>
+                                        <volist name="province" id="vo">
+                                            <option value="{$vo.code}">{$vo.name}</option>
+                                        </volist>
+                                    </select>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="city">
+                                        <option value="市" class="my-input-place">选择市</option>
+                                    </select>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="area">
+                                        <option value="区" class="my-input-place">选择区</option>
+                                    </select>
+                                </div>
+                                <input style="margin-left: 220px;width: 350px;margin-top: 10px" type="text" name="address" id="address" class="am-form-field am-radius" placeholder="请输入考点详细地址" />
+                            </div>
+
+                            <div class="am-form-group" style="height: 120px;">
+                                <label for="pintro"><span>*</span>考点介绍:</label>
+                                <div class="form-input-box input-width-01">
+                                    <textarea name="pintro" class="am-radius" rows="5" id="pintro" placeholder="请输入200字以内的考点介绍"></textarea>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="manager"><span>*</span>负责人:</label>
+                                <div class="form-input-box input-width-01">
+                                    <input type="text" name="manager" id="manager" class="am-form-field am-radius" placeholder="请输入法人代表姓名" />
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="email"><span>*</span>E-mail:</label>
+                                <div class="form-input-box input-width-01">
+                                    <input type="text" name="email" id="email" class="am-form-field am-radius" placeholder="请输入邮箱" />
+                                </div>
+                            </div>
+                           <div class="am-form-group">
+                                <label for="phone"><span>*</span>联系电话:</label>
+                                <div class="form-input-box input-width-01">
+                                    <input style="display: inline-block;width: 65%;" type="text" name="phone" id="phone" class="am-form-field am-radius" placeholder="请输入联系电话" />
+                                    
+                                     <input id="btnSendCode" type="button" class="am-btn am-btn-default my-bt-check" value="发送验证码"  onclick="sendMessage()"/>
+                                </div>
+                                <input style="margin-top: 10px;margin-left: 220px;width: 350px;" type="text" class="am-form-field am-radius" id="check-code" name="smsCode"  placeholder="请输入验证码">
+                                <input name="check" value="" type="hidden">
+                            </div> 
+                            <div class="am-form-group">
+                                <label for="telephone"><span>*</span>场馆电话:</label>
+                                <div class="form-input-box input-width-01">
+                                    <input type="text" name="telephone" id="telephone" class="am-form-field am-radius" placeholder="请输入场馆固定电话" />
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label><span>*</span>场地图片:</label>
+                                <div class="picture-box-place-father">
+                                    <div class="picture-box-place">
+                                        <!--<div class="form-input-box form-input-picture">-->
+                                            <div class="am-form-group am-form-file">
+                                                <button style="background-color:#d9a4ed;border-color:#d9a4ed;" type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                    <i class="am-icon-cloud-upload"></i> 场馆图一</button>
+                                                <!--<span style="color: #ff0000;font-size: 14px;">*点击按钮上传一张一寸蓝底照片</span>-->
+                                                <input type="file" name="picture[]" onchange='PreviewImage(this,"imgPreview1")' >
+                                            </div>
+                                        <!--</div>-->
+                                    </div>
+                                    <div class="picture-box-place">
+                                        <!--<div class="form-input-box form-input-picture">-->
+                                        <div class="am-form-group am-form-file">
+                                            <button style="background-color:#d9a4ed;border-color:#d9a4ed;" type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                <i class="am-icon-cloud-upload"></i> 场馆图二</button>
+                                            <!--<span style="color: #ff0000;font-size: 14px;">*点击按钮上传一张一寸蓝底照片</span>-->
+                                            <input type="file" name="picture[]" onchange='PreviewImage(this,"imgPreview2")'>
+                                        </div>
+                                        <!--</div>-->
+                                    </div>
+                                    <div class="picture-box-place">
+                                        <!--<div class="form-input-box form-input-picture">-->
+                                        <div class="am-form-group am-form-file">
+                                            <button style="background-color:#d9a4ed;border-color:#d9a4ed;" type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                <i class="am-icon-cloud-upload"></i> 场馆图三</button>
+                                            <!--<span style="color: #ff0000;font-size: 14px;">*点击按钮上传一张一寸蓝底照片</span>-->
+                                            <input type="file" name="picture[]" onchange='PreviewImage(this,"imgPreview3")'>
+                                        </div>
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+                                <div class="tpl-form-file-img">
+                                    <div id="imgPreview1" style="margin-left: 220px;"></div>
+                                </div>
+                                <div class="tpl-form-file-img">
+                                    <div id="imgPreview2" style="margin-left: 220px;"></div>
+                                </div>
+                                <div class="tpl-form-file-img">
+                                    <div id="imgPreview3" style="margin-left: 220px;"></div>
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label><span>*</span>营业执照:</label>
+                                <div class="form-input-box form-input-picture">
+                                    <div class="am-form-group am-form-file">
+                                        <button style="background-color:#d9a4ed;border-color:#d9a4ed;" type="button" class="am-btn am-btn-danger am-btn-sm">
+                                            <i class="am-icon-cloud-upload"></i> 营业执照</button>
+                                        <span style="color: #ff0000;font-size: 14px;">*需上传一张营业执照或者协会员证明</span>
+                                        <input type="file" name="certificate" onchange='PreviewImage(this,"imgPreview4")'/>
+                                    </div>
+                                </div>
+                                <div class="tpl-form-file-img">
+                                    <div id="imgPreview4" style="margin-left: 220px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="student-pt1-ct-pt4">
+                            <input type="checkbox" id="i-agree" onchange="changeSubmitBt()">我同意<a class="i-agree-a">考生申请协议</a>
+                            <br>
+                            <button type="submit" class="am-btn am-radius my-bt-submit am-disabled">提交表单信息</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</block>
