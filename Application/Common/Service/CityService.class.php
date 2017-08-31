@@ -39,6 +39,14 @@ class CityService extends BaseService{
 		$result = M('tg_city')->where($arrWhere)->find();
 		return $result;
 	}
+
+	/**
+	 * 	查找一条数据
+	 */
+	public function findOnes($arrWheres){
+		$result = M('tg_city')->where($arrWheres)->find();
+		return $result;
+	}
 	
 	/**
 	 *  编辑一条数据

@@ -23,6 +23,18 @@ class StudentController extends CheckController{
     		$arrWhere['tid'] = $v['tid'];
     		$arrDatas = D('Teacher','Service') ->findOne($arrWhere);
     		$arrData[$k]['tname'] = $arrDatas['tname'];
+    		$arrWhere['pid'] = $v['pid'];
+    		$arrDatass = D('Place','Service') ->findOne($arrWhere);
+    		$arrData[$k]['address'] = $arrDatass['address'];
+    		$arrWheres['code'] = $arrDatass['province'];
+    		$arrDatasss = D('Province','Service') -> findOnes($arrWheres);
+    		$arrData[$k]['province'] = $arrDatasss['name'];
+    		$arrWheres['code'] = $arrDatass['city'];
+    		$arrDatassss = D('City','Service') -> findOnes($arrWheres);
+    		$arrData[$k]['city'] = $arrDatassss['name'];
+    		$arrWheres['code'] = $arrDatass['area'];
+    		$arrDatasssss = D('Area','Service') -> findOnes($arrWheres);
+    		$arrData[$k]['area'] = $arrDatasssss['name'];
     	}
     	$this-> count = $intCount;
     	$this-> page = $show;
@@ -48,7 +60,7 @@ class StudentController extends CheckController{
     			$info   =    $upload->uploadOne($_FILES['picture']);
     			if(!$info) {// 上传错误提示错误信息
     				$this->error($upload->getError());
-    			}else{// 上传成功
+    			}else{// 上传成功  
     				$arrWhere['picture'] = '/Public/Uploads/'.$info['savepath'].$info['savename'];
     			    $arrData=D('Student','Service')->edit($arrWhere);
     			}
@@ -61,6 +73,11 @@ class StudentController extends CheckController{
     	}else{
     		$arrWhere['sid']=I('get.sid');
     		$arrData=D('Student','Service')->findOne($arrWhere);
+    		foreach ($arrData as $k=>$v){
+    			$arrWhere['tid'] = $v['tid'];
+    			$arrDatas=D('Teacher','Service')->findOne($arrWhere);
+    			$arrData[$k]['tname'] = $arrDatas['tname'];
+    		}
     		$this->list=$arrData;
     		$this->display();
     	}

@@ -35,16 +35,32 @@ class VideoController extends CheckController{
 		 $live = M('tg_live');
 	  	 $data = $live->create(); 
 	 	if(IS_POST){
-			$data['create_time'] = time();
+	 		$upload= new \Think\Uploads();// 实例化上传类
+	 		$upload->maxSize=100048000;// 设置附件上传大小 100M
+	 		$upload->exts=array();// 设置附件上传类型
+	 		$upload->rootPath=$root_path.'/'; // 设置附件上传根目录
+	 		$upload->savePath=''; // 设置附件上传（子）目录
+	 		$upload->subName='';
+	 		$upload->saveName='uniqid';
+	 		$info=$upload->upload();
+	 		//dump($info);exit;
+	 		if(!$info) {// 上传失败
+	 			$this->error ( $upload->getErrorMsg());
+	 		}
+	 		if($info['videofile']['savename']!=''){
+	 			$_POST['videourl']='/Uploads/Video/'.$info['videofile']['savename'];
+	 		}
+	 		if($info['imgfile']['savename']!=''){
+	 			$_POST['imgurl']='/Uploads/Video/'.$info['imgfile']['savename'];
+	 		}
+		}else{
+		    $data['create_time'] = time();
 			$arrData = $live->data($data)->add();
 			if($arrData){
 			$this->success('添加成功！','/Admin/Live/index');
 			}else {
 			$this->error('添加失败！');
 			}
-			
-		}else{
-			$this->display();
 		}
 		
 	}

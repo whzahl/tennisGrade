@@ -417,7 +417,9 @@ li{
     margin-right: 8px;
 }
 .home-pt1-ct-pt1 a{
+    font-size: 20px;
     color: #FFFFFF;
+    font-weight:bold;
 }
 .home-pt1-ct-pt1 ul{
     text-align: center;
@@ -426,7 +428,7 @@ li{
 }
 .home-pt1-ct-pt1 li{
     display: inline-block;
-    padding-right: 51px;
+    padding-right: 130px;
     padding-left: 51px;
     border-right:1px solid #FFFFFF;
 }
@@ -527,12 +529,21 @@ li{
     float: right;
     color: #808080;
 }
+/*absolute布局*/
+/*.home-pt2-ct-pt3{*/
+    /*text-align: center;*/
+    /*width: 150px;*/
+    /*position: absolute;*/
+    /*right: -138px;*/
+    /*top:60px;*/
+/*}*/
+/*fixed布局*/
 .home-pt2-ct-pt3{
     text-align: center;
     width: 150px;
-    position: absolute;
-    right: -138px;
-    top:100px;
+    position: fixed;
+    right: 50px;
+    top:300px;
 }
 .home-pt2-ct-pt3-common{
     -webkit-border-radius: 10px;
@@ -552,6 +563,13 @@ li{
     margin-bottom: 20px;
     padding: 5px;
     background-color: #d9a4ed;
+}
+.home-pt2-ct-pt3-erweima span{
+    display: inline-block;
+    margin-top: 8px;
+    padding: 0 10px;
+    border-top:1px solid gray;
+    color: #505050;
 }
 .home-pt2-ct-pt3-common img{
     width: 30px;
@@ -612,15 +630,21 @@ li{
 .home-pt4-ct-title-noborder{
     border:none;
 }
-.am-control-thumbs li {
-    width: 12.5%; /* n 为轮播图数量 */
-}
+多图滚动的样式
+/*.am-control-thumbs li {*/
+    /*width: 12.5%; !* n 为轮播图数量 *!*/
+/*}*/
 .home-pt2-ct-common-slider{
     text-align: center;
 }
-.am-slider-carousel li {
-    margin-right: 5px;
-}
+/*.home-pt2-ct-common-slider img{*/
+    /*width: 125px;*/
+    /*height: 166px;*/
+/*}*/
+/*多图滚动的样式*/
+/*.am-slider-carousel li {*/
+    /*margin-right: 5px;*/
+/*}*/
 .home-pt4-ct-pt1-title-border{
     border-left: 8px solid #ffe367;
 }
@@ -698,3 +722,26 @@ li{
     color: #505050;
 }
 /*News End*/
+/*live Start*/
+.live-pt1-ct-pt2{
+    margin-top: 40px;
+}
+.live-pt1-ct-pt2 ul{
+    margin: 0;
+    padding: 0;
+}
+.live-pt1-ct-pt2 li{
+    display: inline-block;
+    margin: 10px 5px;
+    text-align: center;
+    overflow: hidden;
+}
+.live-pt1-ct-pt2 img{
+    width: 250px;
+    height: 200px;
+    border:1px solid #505050;
+}
+.live-pt1-ct-pt2 p{
+    font-size: 14px;
+}
+/*live End*/

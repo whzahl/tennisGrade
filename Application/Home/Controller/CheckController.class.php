@@ -18,7 +18,7 @@ class CheckController extends BaseController {
         parent::__construct();
         
         // 获取登录的Session
-        //gyh 便于开发前端页面 暂时注释 start--- 结束开发后恢复start-end
+
        $session = $_SESSION['userInfo'];
 //
        // 判断是否登录
@@ -27,6 +27,7 @@ class CheckController extends BaseController {
 //        }else{
 //        	$this->unionid = $session['unionid'];
 //        }
+
     }
     
 }

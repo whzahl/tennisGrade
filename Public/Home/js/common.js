@@ -68,6 +68,26 @@ function isEmail(inputValue,message){
         return false;
     }
 }
+// function isAgeConformsWithLevel(inputValue,ageValue,message) {
+//     if(ageValue <= 8 && inputValue !== "TG-R1"){
+//         showAlertDiv(message,"style1");
+//         return false;
+//     }
+//     //注意是字母O不是数字0
+//     if (ageValue >=9 && ageValue <= 10 && inputValue !== "TG-O1"){
+//         showAlertDiv(message,"style1");
+//         return false;
+//     }
+//     if (ageValue >=9 && ageValue <= 10 && inputValue !== "TG1"){
+//         showAlertDiv(message,"style1");
+//         return false;
+//     }
+//     if (ageValue>11 && inputValue !== "TG-Y1"){
+//         showAlertDiv(message,"style1");
+//         return false;
+//     }
+//     return true;
+// }
 $(document).ready(function () {
     var t;
     //简介弹出层
@@ -95,7 +115,7 @@ $(document).ready(function () {
             $(".login-out").slideUp(100);
         },500);
     });
-    //异步加载市、区
+    //异步加载市
     $("[name=province]").change(function () {
         $.get("/Home/Base/city",{
             code : $("[name=province] option:selected").val()
@@ -130,12 +150,30 @@ $(document).ready(function () {
             $.get("/Home/Base/place",{
                 code : $("[name=area] option:selected").val()
             },function (data) {
-                $("[name=pid]").html("<option value='考点'>选择考点</option>")
+                $("[name=pid]").html("<option value='考点'>选择考点</option>");
                 for (var i = 0; i < data.length; i++){
                     var pid = data[i].pid;
                     var pname = data[i].pname;
                     var insetOptions = '<option value='+pid+'>'+pname+'</option>';
                     $("[name=pid]").append(insetOptions);
+                }
+            },"json")
+        }
+    );
+    //异步加载考官
+    $("[name=pid]").change(
+        function () {
+            // console.log($("[name=pid] option:selected").val());
+            $.get("/Home/Base/teacher",{
+                pid : $("[name=pid] option:selected").val()
+            },function (data) {
+                // console.log($("[name=pid] option:selected").val());
+                $("[name=id]").html("<option value='陪考'>选择陪考</option>");
+                for (var i = 0; i < data.length; i++){
+                    var tid = data[i].tid;
+                    var tname = data[i].tname;
+                    var insetOptions = '<option value='+tid+'>'+tname+'</option>';
+                    $("[name=tid]").append(insetOptions);
                 }
             },"json")
         }
