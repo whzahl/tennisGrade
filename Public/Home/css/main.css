@@ -38,8 +38,19 @@ li{
     padding:90px 80px;
 }
 .check-alert{
-    border-radius: 5px;  text-align: center;  background-color: rgba(221,51,76,0.8);  border-color: #dd514c;
-    width: 500px;  height: 50px;  margin: auto;  position: fixed;  top: 0;  bottom: 0;  right: 0;  left: 0;  z-index:500;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(221,51,76,0.8);
+    border-color: #dd514c;
+    width: 500px;
+    height: 50px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index:500;
 }
 .common-part1{
     width: 100%;
@@ -544,6 +555,7 @@ li{
     position: fixed;
     right: 50px;
     top:300px;
+    z-index:1000;
 }
 .home-pt2-ct-pt3-common{
     -webkit-border-radius: 10px;
