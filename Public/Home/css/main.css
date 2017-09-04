@@ -745,3 +745,15 @@ li{
     font-size: 14px;
 }
 /*live End*/
+
+/*query Start*/
+.query-common-part1{
+    height: 1000px;
+    padding: 50px 50px;
+    box-shadow: 2px 6px 10px gray;
+    border-radius: 0 0 5px 5px;
+}
+.form-input-box1{
+    width: 100%;
+}
+/*query End*/
