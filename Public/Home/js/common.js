@@ -88,6 +88,16 @@ function isEmail(inputValue,message){
 //     }
 //     return true;
 // }
+
+function appendChild(targetName,data,code,name) {
+    for (var i = 0; i < data.length; i++){
+        var code1 = data[i][code];
+        var name1 = data[i][name];
+        var insetOptions = '<option value='+code1+'>'+name1+'</option>';
+        targetName.append(insetOptions);
+    }
+}
+
 $(document).ready(function () {
     var t;
     //简介弹出层
@@ -95,7 +105,7 @@ $(document).ready(function () {
         clearTimeout(t);
         $(".intro").slideDown(100);
     });
-  $("#intro-a,.intro").mouseleave(function () {
+    $("#intro-a,.intro").mouseleave(function () {
        t = setTimeout(function () {
             $(".intro").slideUp(100);
         },500);
@@ -122,13 +132,9 @@ $(document).ready(function () {
             //获取被选中option的value
             code : $("[name=province] option:selected").val()
         }, function (data) {
-            $("[name=city]").html("<option value='市'>选择市</option>");
-            for (var i = 0; i < data.length; i++){
-                var code = data[i].code;
-                var name = data[i].name;
-                var insetOptions = '<option value='+code+'>'+name+'</option>';
-                $("[name=city]").append(insetOptions);
-            }
+            var $targetName = $("[name=city]");
+            $targetName.html("<option value='市'>选择市</option>");
+            appendChild($targetName,data,'code','name');
         },"json")
     });
     //异步加载区
@@ -174,13 +180,9 @@ $(document).ready(function () {
             //请求成功后调用的回调函数
             //两个参数:data,由服务器返回并根据datatype参数进行处理之后的数据；textStatus,描述状态的字符串
             success:function (data,textStatus) {
-                $("[name=area]").html("<option value='区'>选择区</option>");
-                for (var i = 0; i < data.length; i++){
-                    var code = data[i].code;
-                    var name = data[i].name;
-                    var insetOptions = '<option value='+code+'>'+name+'</option>';
-                    $("[name=area]").append(insetOptions);
-                }
+                var $targetName = $("[name=area]");
+                $targetName.html("<option value='区'>选择区</option>");
+                appendChild($targetName,data,'code','name');
             },
             //请求失败时调用的函数
             //三个参数XMLHttpRequest对象、错误信息、捕获的错误对象（可选）
@@ -225,14 +227,10 @@ $(document).ready(function () {
                 }
                 if (xmlhttp.readyState === 4 && xmlhttp.status === 200 ){
                     $("#loading").hide();
+                    var $targetName = $("[name=pid]");
                     var data = JSON.parse(xmlhttp.responseText);
-                    $("[name=pid]").html("<option value='考点'>选择考点</option>");
-                    for (var i = 0; i < data.length; i++){
-                        var pid = data[i].pid;
-                        var pname = data[i].pname;
-                        var insetOptions = '<option value='+pid+'>'+pname+'</option>';
-                        $("[name=pid]").append(insetOptions);
-                    }
+                    $targetName.html("<option value='考点'>选择考点</option>");
+                    appendChild($targetName,data,'pid','pname');
                 }
             }
             //open方式初始化XMLHttpRequest对象，指定相关参数
@@ -244,18 +242,12 @@ $(document).ready(function () {
     //异步加载考官
     $("[name=pid]").change(
         function () {
-            // console.log($("[name=pid] option:selected").val());
             $.get("/Home/Base/teacher",{
                 pid : $("[name=pid] option:selected").val()
             },function (data) {
-                // console.log($("[name=pid] option:selected").val());
-                $("[name=id]").html("<option value='陪考'>选择陪考</option>");
-                for (var i = 0; i < data.length; i++){
-                    var tid = data[i].tid;
-                    var tname = data[i].tname;
-                    var insetOptions = '<option value='+tid+'>'+tname+'</option>';
-                    $("[name=tid]").append(insetOptions);
-                }
+                var $targetName = $("[name=tid]");
+                $targetName.html("<option value='陪考'>选择陪考</option>");
+                appendChild($targetName,data,'tid','tname');
             },"json")
         }
     );

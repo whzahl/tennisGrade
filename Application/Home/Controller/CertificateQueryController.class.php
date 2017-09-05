@@ -20,5 +20,6 @@ class CertificateQueryController extends BaseController {
     public function index(){
         $province = M('tg_province')->select();
         $this->province = $province;
-        $this->display();    }
+        $this->display();
+    }
 }
