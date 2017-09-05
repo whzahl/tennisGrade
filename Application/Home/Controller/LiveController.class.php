@@ -13,6 +13,8 @@ class LiveController extends BaseController{
 	}
 
     public function index(){
+    	$arrData = D('Live','Service')-> findAll($arrWhere);
+    	$this-> list = $arrData;
         $this->display();
     }
 
