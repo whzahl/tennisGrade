@@ -251,6 +251,22 @@ $(document).ready(function () {
             },"json")
         }
     );
+    //异步加载陪考
+    $("[name=pid]").change(
+        function () {
+            $.get("/Home/Base/teacher",{
+                code : $("[name=pid] option:selected").val()
+            },function (data) {
+                $("[name=tid]").html("<option value='陪考'>选择陪考</option>")
+                for (var i = 0; i < data.length; i++){
+                    var tid = data[i].tid;
+                    var tname = data[i].tname;
+                    var insetOptions = '<option value='+tid+'>'+tname+'</option>';
+                    $("[name=tid]").append(insetOptions);
+                }
+            },"json")
+        }
+    );
     //jquery1.5版本之后不触发$ajaxStart和Stop的全局方法，用$(document).AjaxStart（）可解决问题
     //Ajax调用开始时显示GIF图，结束时隐藏
     $(document).ajaxStart(function () {

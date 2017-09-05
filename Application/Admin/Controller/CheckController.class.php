@@ -17,17 +17,18 @@ class CheckController extends BaseController {
     public function __construct(){
         parent::__construct();
         
-//         // 获取登录的Session
-//         $arrSession = $_SESSION['User'];
-        
+        // 获取登录的Session
+//         $arrSession = $_SESSION['Type'];
 //         // 判断是否登录
 //         if(!$arrSession){
 //         	//	跳转登录界面
-//            $this->redirect('/Login/index'); 	
+//            $this->redirect('Admin/Login/login'); 	
 //         }else{
 //             $this->uid = $arrSession['uid'];
 //             $this->uname = $arrSession['uname'];
 //         }
+//         $_SESSION['btype'] = $type;
+//         $this->btype=$_SESSION['btype'];
     }
     
 }

@@ -68,4 +68,14 @@ class BaseController extends Controller {
         $teacher = D('Teacher','Service')->findAll($arrWhere);
         $this->ajaxReturn($teacher,"json");
     }
+
+//     public function teacher(){
+//     	$arrWhere['pid'] = I('get.pid');
+//     	//        $place = D('Place','Service')->findAll($arrWhere);
+//     	$teacher = M('tg_teacher')->where($arrWhere)->select();
+//     	$teacher = json_encode($teacher);
+//     	echo $teacher;
+    
+//     }
+
 }
