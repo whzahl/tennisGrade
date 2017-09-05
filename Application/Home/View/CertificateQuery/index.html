@@ -1,0 +1,35 @@
+<extend name="Public:base" />
+<block name="js"></block>
+<block name="body">
+    <div class="common-part1">
+        <div class="wrap1">
+            <div class="common-top-bg">
+                <img src="/Public/Home/images/user/top_bg.png" alt="">
+            </div>
+        </div>
+        <div class="wrap2">
+            <div class="query-common-part1">
+                <form class="am-form" action="" method="post">
+                    <fieldset>
+                        <div class="am-form-group">
+                            <div class="form-input-box1">
+                                <select style="display: inline-block;width: 20%" class="am-radius" name="province">
+                                    <option value="省份">选择省份</option>
+                                    <volist name="province" id="vo">
+                                        <option value="{$vo.code}">{$vo.name}</option>
+                                    </volist>
+                                </select>
+                                <select style="display: inline-block;width: 20%" class="am-radius" name="city">
+                                    <option value="市" class="my-input-place">选择市</option>
+                                </select>
+                                <select style="display: inline-block;width: 20%" class="am-radius" name="area">
+                                    <option value="区" class="my-input-place">选择区</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</block>
