@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>微信登录/支付</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+
+</head>
+
+<body>
+
+微信登录：<a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx73a44bbd78e9cf99&redirect_uri=http%3A%2F%2Ftennis.laigl.com%2Fwecharlogin.php&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect">
+          <img src="https://open.weixin.qq.com/zh_CN/htmledition/res/assets/res-design-download/icon24_appwx_logo.png">
+          </a>
+
+<form action="/Home/Wxpay/js_api_call" method="post">
+<input name="price" value="0.01" type="hidden">
+<input type="submit" value="支付">
+</form>
+
+
+</body>
+</html>

@@ -14,6 +14,9 @@ class TeacherController extends CheckController{
 
 
     public function index(){
+    	if (!empty($_SESSION['Type']['uid'])) {
+    		$arrWhere['pid'] = $_SESSION['Type']['uid'];
+    	}
     	$intCount = D('Teacher','Service') ->count($arrWhere);
     	$Page = new \Think\Page($intCount,10);
     	$show =  $Page ->show();
