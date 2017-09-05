@@ -7,28 +7,18 @@
 // | 2016-7-2
 // +----------------------------------------------------------------------
 /**
- *	用户登录检测类
- *	所有的需要用户登录才可以访问和操作的Controller都得继承
+ *	考点查询
  */
 namespace Home\Controller;
 use Home\Controller\BaseController;
-class CheckController extends BaseController {
-    
+
+class PlaceQueryController extends BaseController{
     public function __construct(){
         parent::__construct();
-        
-        // 获取登录的Session
-
-       $session = $_SESSION['userInfo'];
-//
-       // 判断是否登录
-        //gyh 便于开发前端页面 暂时注释 start---
-//       if(!$session){
-//       	$this->redirect('/Home/Index/index');
-//       }else{
-//       	$this->unionid = $session['unionid'];
-//       }
-        //结束开发后恢复end
     }
-    
+    public function index(){
+        $province = M('tg_province')->select();
+        $this->province = $province;
+        $this->display();
+    }
 }
