@@ -14,6 +14,29 @@
                     <img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">
                     <p>Test site live broadcast</p>
                 </div>
+                <div style="margin-top: 30px;"></div>
+                <form class="am-form" action="" method="post">
+                    <fieldset>
+                        <div class="am-form-group query-group">
+                            <div class="form-input-box1">
+                                <select style="display: inline-block;width: 15%" class="am-radius" name="province">
+                                    <option value="省份">选择省份</option>
+                                    <volist name="province" id="vo">
+                                        <option value="{$vo.code}">{$vo.name}</option>
+                                    </volist>
+                                </select>
+                                <select style="display: inline-block;width: 15%" class="am-radius" name="city">
+                                    <option value="市" class="my-input-place">选择市</option>
+                                </select>
+                                <select style="display: inline-block;width: 15%" class="am-radius" name="area">
+                                    <option value="区" class="my-input-place">选择区</option>
+                                </select>
+                                <input style="width: 20%;padding-right: 33px;display: inline-block;float: right;" type="text" placeholder="查询考点名称" class="am-form-field am-radius">
+                                <img class="search-img" src="/Public/Home/images/common/search.png" alt="">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
                 <div class="live-pt1-ct-pt2">
                     <ul>
                         <li>

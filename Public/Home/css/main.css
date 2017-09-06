@@ -642,9 +642,9 @@ li{
 .home-pt4-ct-title-noborder{
     border:none;
 }
-多图滚动的样式
+/*多图滚动的样式*/
 /*.am-control-thumbs li {*/
-    /*width: 12.5%; !* n 为轮播图数量 *!*/
+    /*width: 12.5%; !* 100%/n ,n为轮播图数量 *!*/
 /*}*/
 .home-pt2-ct-common-slider{
     text-align: center;
@@ -751,7 +751,7 @@ li{
 .live-pt1-ct-pt2 img{
     width: 250px;
     height: 200px;
-    border:1px solid #505050;
+    /*border:1px solid #505050;*/
 }
 .live-pt1-ct-pt2 p{
     font-size: 14px;
@@ -795,5 +795,9 @@ li{
     overflow: hidden;
     white-space: nowrap;
 }
-
+.query-bt{
+    width: 200px;
+    background-color: #d9a4ed;
+    margin-left: 200px;
+}
 /*query End*/

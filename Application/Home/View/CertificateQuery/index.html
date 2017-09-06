@@ -12,20 +12,22 @@
                 <form class="am-form" action="" method="post">
                     <fieldset>
                         <div class="am-form-group">
-                            <div class="form-input-box1">
-                                <select style="display: inline-block;width: 20%" class="am-radius" name="province">
-                                    <option value="省份">选择省份</option>
-                                    <volist name="province" id="vo">
-                                        <option value="{$vo.code}">{$vo.name}</option>
-                                    </volist>
-                                </select>
-                                <select style="display: inline-block;width: 20%" class="am-radius" name="city">
-                                    <option value="市" class="my-input-place">选择市</option>
-                                </select>
-                                <select style="display: inline-block;width: 20%" class="am-radius" name="area">
-                                    <option value="区" class="my-input-place">选择区</option>
-                                </select>
-                            </div>
+                            <label style="width: 200px" for="cretype">证件类型</label>
+                            <select name="cretype" class="am-radius" style="display: inline-block;width: 20%;">
+                                <option value="1">中国居民身份证</option>
+                                <option value="0">其他</option>
+                            </select>
+                        </div>
+                        <div class="am-form-group">
+                            <label style="width: 200px" for="sname">姓名</label>
+                            <input type="text" name="sname" class="am-radius" style="display: inline-block;width: 30%;" placeholder="请输入姓名">
+                        </div>
+                        <div class="am-form-group">
+                            <label style="width: 200px" for="creid">证件号</label>
+                            <input type="text" name="creid" class="am-radius" style="display: inline-block;width: 30%;" placeholder="请输入证件号">
+                        </div>
+                        <div class="am-form-group">
+                            <button type="submit" class="am-btn am-radius query-bt">查询</button>
                         </div>
                     </fieldset>
                 </form>
