@@ -1,4 +1,4 @@
-<extend name="Public:base" />
+<extend name="Public:base1" />
 <block name="js">
 <script type="text/javascript">  
 
@@ -65,7 +65,7 @@ function sendMessage() {
 	    })
 	})
 </script> 
-    <script>
+<script>
         function PreviewImage(imgFile,imgBoxId)
         {
             var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
@@ -140,14 +140,7 @@ function sendMessage() {
     </script>
 </block>
 <block name="body">
-    <div class="common-part1">
-        <div class="wrap1">
-            <div class="common-top-bg">
-                <img src="/Public/Home/images/user/top_bg.png" alt="">
-            </div>
-        </div>
-        <div class="wrap2">
-            <div class="student-pt1-ct">
+    <div class="student-pt1-ct">
                 <form class="am-form" method="post"  enctype="multipart/form-data" action="/Home/Teacher/add">
                     <fieldset>
                         <div class="common-pt1-ct-pt1">
@@ -338,6 +331,4 @@ function sendMessage() {
                 </fieldset>
                 </form>
             </div>
-        </div>
-    </div>
 </block>

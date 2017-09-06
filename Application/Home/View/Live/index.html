@@ -1,70 +1,61 @@
-<extend name="Public:base" />
+<extend name="Public:base1" />
 <block name="js"></block>
 <block name="body">
-    <div class="common-part1">
-        <div class="wrap1">
-            <div class="common-top-bg">
-                <img src="/Public/Home/images/user/top_bg.png" alt="">
-            </div>
+    <div class="intro-pt1-ct padding-7-8">
+        <div class="common-pt1-ct-pt1">
+            <p>直播列表</p>
+            <img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">
+            <p>Test site live broadcast</p>
         </div>
-        <div class="wrap2">
-            <div class="intro-pt1-ct padding-7-8">
-                <div class="common-pt1-ct-pt1">
-                    <p>直播列表</p>
-                    <img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">
-                    <p>Test site live broadcast</p>
+        <div style="margin-top: 30px;"></div>
+        <form class="am-form" action="" method="post">
+            <fieldset>
+                <div class="am-form-group query-group">
+                    <div class="form-input-box1">
+                        <select style="display: inline-block;width: 15%" class="am-radius" name="province">
+                            <option value="省份">选择省份</option>
+                            <volist name="province" id="vo">
+                                <option value="{$vo.code}">{$vo.name}</option>
+                            </volist>
+                        </select>
+                        <select style="display: inline-block;width: 15%" class="am-radius" name="city">
+                            <option value="市" class="my-input-place">选择市</option>
+                        </select>
+                        <select style="display: inline-block;width: 15%" class="am-radius" name="area">
+                            <option value="区" class="my-input-place">选择区</option>
+                        </select>
+                        <input style="width: 20%;padding-right: 33px;display: inline-block;float: right;" type="text" placeholder="查询考点名称" class="am-form-field am-radius">
+                        <img class="search-img" src="/Public/Home/images/common/search.png" alt="">
+                    </div>
                 </div>
-                <div style="margin-top: 30px;"></div>
-                <form class="am-form" action="" method="post">
-                    <fieldset>
-                        <div class="am-form-group query-group">
-                            <div class="form-input-box1">
-                                <select style="display: inline-block;width: 15%" class="am-radius" name="province">
-                                    <option value="省份">选择省份</option>
-                                    <volist name="province" id="vo">
-                                        <option value="{$vo.code}">{$vo.name}</option>
-                                    </volist>
-                                </select>
-                                <select style="display: inline-block;width: 15%" class="am-radius" name="city">
-                                    <option value="市" class="my-input-place">选择市</option>
-                                </select>
-                                <select style="display: inline-block;width: 15%" class="am-radius" name="area">
-                                    <option value="区" class="my-input-place">选择区</option>
-                                </select>
-                                <input style="width: 20%;padding-right: 33px;display: inline-block;float: right;" type="text" placeholder="查询考点名称" class="am-form-field am-radius">
-                                <img class="search-img" src="/Public/Home/images/common/search.png" alt="">
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-                <div class="live-pt1-ct-pt2">
-                    <ul>
-                        <li>
-                            <a href="#"><img src="/Public/Home/images/live/live01.jpg" alt=""></a>
-                            <p>武汉市武汉体育学院网球俱乐部</p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/Public/Home/images/live/live02.jpg" alt=""></a>
-                            <p>武汉市武汉体育学院网球俱乐部</p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/Public/Home/images/live/live03.jpg" alt=""></a>
-                            <p>武汉市武汉体育学院网球俱乐部</p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/Public/Home/images/live/live04.jpg" alt=""></a>
-                            <p>武汉市武汉体育学院网球俱乐部</p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="/Public/Home/images/live/live05.jpg" alt=""></a>
-                            <p>武汉市武汉体育学院网球俱乐部</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="live-pt1-ct-pt3">
-                <!--分页-->
-                </div>
-            </div>
+            </fieldset>
+        </form>
+        <div class="live-pt1-ct-pt2">
+            <ul>
+                <li>
+                    <a href="#"><img src="/Public/Home/images/live/live01.jpg" alt=""></a>
+                    <p>武汉市武汉体育学院网球俱乐部</p>
+                </li>
+                <li>
+                    <a href="#"><img src="/Public/Home/images/live/live02.jpg" alt=""></a>
+                    <p>武汉市武汉体育学院网球俱乐部</p>
+                </li>
+                <li>
+                    <a href="#"><img src="/Public/Home/images/live/live03.jpg" alt=""></a>
+                    <p>武汉市武汉体育学院网球俱乐部</p>
+                </li>
+                <li>
+                    <a href="#"><img src="/Public/Home/images/live/live04.jpg" alt=""></a>
+                    <p>武汉市武汉体育学院网球俱乐部</p>
+                </li>
+                <li>
+                    <a href="#"><img src="/Public/Home/images/live/live05.jpg" alt=""></a>
+                    <p>武汉市武汉体育学院网球俱乐部</p>
+                </li>
+            </ul>
+        </div>
+        <div class="live-pt1-ct-pt3">
+        <!--分页-->
         </div>
     </div>
 </block>

@@ -95,11 +95,14 @@ li{
 }
 .wrap2{
     width: 954px;
+    min-height: 800px;
     position: relative;
     top: -112px;
     margin:0 auto;
     z-index: 200;
     background-color: #fff;
+    box-shadow:2px 6px 10px gray;
+    border-radius: 0 0 5px 5px ;
 }
 
 .width-full{
@@ -290,8 +293,6 @@ li{
 }
 .student-pt1-ct{
     padding:50px 50px;
-    box-shadow:2px 6px 10px gray;
-    border-radius: 0 0 5px 5px ;
 }
 
 .ks-gz{
@@ -762,8 +763,6 @@ li{
 .query-common-part1{
     padding: 50px 50px;
     min-height: 600px;
-    box-shadow: 2px 6px 10px gray;
-    border-radius: 0 0 5px 5px;
 }
 .query-group{
     position: relative;
