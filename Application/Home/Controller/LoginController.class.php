@@ -13,9 +13,12 @@ class LoginController extends CheckController{
 	
 	public function wxlogin(){
 		$str = $_SESSION['userInfo'];
+// 		dump($str);
+// 		exit();
 		$arrWhere['unionid'] = $str['unionid'];
 		$arrData = D('User','Service')->check($arrWhere);
 		session('userInfo', array(
+		'id' => $arrData['id'],
 		'unionid' => $arrData['unionid']
 		));
 		if ($arrData) {
@@ -35,7 +38,7 @@ class LoginController extends CheckController{
 			$arrWhere['city'] = $str['city'];
 			$arrDatas = D('User','Service')->add($arrWhere);
 			session('userInfo', array(
-			'unionid' => $arrDatas
+			'id' => $arrDatas
 			));
 			if ($arrDatas) {
 				$this->redirect('/Home/User/index');

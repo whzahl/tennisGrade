@@ -18,6 +18,14 @@ class IndexController extends CheckController {
 	}
 	
     public function index(){
+//     	$type=I('get.type');
+//     	$pid = I('get.pid');
+//     	$pdata = M('tg_place')->where(array('pid'=>$pid))->find();
+//     	session('Type',array(
+//     	'type' => $type,
+//     	'uid' => $pid,
+//     	'uname'=>$pdata['pname']
+//     	));
         $this->display();
     }
 }
