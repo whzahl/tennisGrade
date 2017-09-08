@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d7d9db3-3c7d-42b2-b3e9-fb8e64a1682f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/CertificateQuery/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/CertificateQuery/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Intro/content.html" afterPath="$PROJECT_DIR$/Application/Home/View/Intro/content.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Intro/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Intro/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Live/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Live/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/News/content.html" afterPath="$PROJECT_DIR$/Application/Home/View/News/content.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/News/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/News/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Place/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Place/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Student/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Student/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Teacher/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Teacher/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/User/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/User/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/css/main.css" afterPath="$PROJECT_DIR$/Public/Home/css/main.css" />
-    </list>
+    <list default="true" id="2d7d9db3-3c7d-42b2-b3e9-fb8e64a1682f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +170,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -393,15 +378,15 @@
       <workItem from="1503824554333" duration="120000" />
       <workItem from="1504055120851" duration="3484000" />
       <workItem from="1504458178992" duration="6579000" />
-      <workItem from="1504656516806" duration="3934000" />
+      <workItem from="1504656516806" duration="4525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24785000" />
+    <option name="totallyTimeSpent" value="25376000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14583333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
