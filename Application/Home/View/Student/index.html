@@ -1,5 +1,7 @@
 <extend name="Public:base1" />
 <block name="js">
+<script src="/Public/Home/js/ajaxQuery.js"></script>
+<script src="/Public/Home/js/formValidation.js"></script>
 <script type="text/javascript">  
 
 var InterValObj; //timer变量，控制时间  
@@ -11,8 +13,7 @@ function sendMessage() {
      var mobile = $("input[name='phone']").val();
 
      if(mobile == ""){
-    	 alert("手机号码不能为空！");
-    	 return false;
+         showAlertDiv("手机号码不能为空！","style1");
      }
 	
   　curCount = count;  
@@ -56,9 +57,10 @@ function sendMessage() {
 		  /*   var check = $("input[name='check']").val(); */
 			var smsCode = $("input[name='smsCode']").val();
 			if($("input[name='phone']").val() == ""){
-				alert("请输入手机号");return false;
+                showAlertDiv("请输入手机号","style1");
+				return false;
 			}else if(smsCode == ""){
-				 alert("请输入验证码");
+                showAlertDiv("请输入验证码","style1");
 			}else{
 				 $("#validStudents").submit();
 			}
