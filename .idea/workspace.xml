@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d7d9db3-3c7d-42b2-b3e9-fb8e64a1682f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Student/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Student/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/css/main.css" afterPath="$PROJECT_DIR$/Public/Home/css/main.css" />
-    </list>
+    <list default="true" id="2d7d9db3-3c7d-42b2-b3e9-fb8e64a1682f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,26 +13,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Student/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4077">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-              <folding>
-                <marker date="1504461262407" expanded="true" signature="3097:3130" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state relative-caret-position="162">
+              <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,63 +30,58 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/Home/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="756" column="16" lean-forward="false" selection-start-line="756" selection-start-column="16" selection-end-line="756" selection-end-column="16" />
+            <state relative-caret-position="567">
+              <caret line="765" column="1" lean-forward="false" selection-start-line="765" selection-start-column="1" selection-end-line="765" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/Home/js/common.js">
+      <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Intro/content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="120" column="33" lean-forward="true" selection-start-line="120" selection-start-column="33" selection-end-line="120" selection-end-column="33" />
-              <folding>
-                <element signature="e#3584#3591#0" expanded="false" />
-                <element signature="e#4305#5853#0" expanded="false" />
-                <element signature="e#5906#5922#0" expanded="false" />
-                <element signature="e#6592#7897#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TeacherQueryController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/TeacherQueryController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/StudentController.class.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Intro/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="47" />
+            <state relative-caret-position="27">
+              <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlaceQueryController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/PlaceQueryController.class.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Live/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CertificateQueryController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CertificateQueryController.class.php">
+      <file leaf-file-name="content.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/News/content.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/News/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -110,27 +90,31 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-147">
+              <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/CertificateQuery/index.html">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/User/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+            <state relative-caret-position="501">
+              <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#block#1;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="1" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,16 +135,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Public/Home/js/common.js" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Live/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/CertificateQuery.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Student/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/PlaceQueryController.class.php" />
-        <option value="$PROJECT_DIR$/Public/Home/css/main.css" />
-        <option value="$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/CertificateQuery/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/CertificateQueryController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/TeacherQueryController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Public/base1.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Student/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Teacher/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Place/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/CertificateQuery/index.html" />
+        <option value="$PROJECT_DIR$/Public/Home/css/main.css" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Intro/content.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Intro/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Live/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/News/content.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/News/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/User/index.html" />
       </list>
     </option>
   </component>
@@ -202,8 +194,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,27 +210,7 @@
               <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
               <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Common" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Common" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Service" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
@@ -279,7 +249,39 @@
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Live" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="News" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Place" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="PlaceQuery" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
@@ -295,7 +297,23 @@
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Teacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="TeacherQuery" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="User" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
@@ -326,6 +344,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -342,7 +362,6 @@
         </RuleState>
       </list>
     </option>
->>>>>>> 8f20e22bcc88bfac45865ef7f2d231e8420ffb72
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -359,11 +378,12 @@
       <workItem from="1503824554333" duration="120000" />
       <workItem from="1504055120851" duration="3484000" />
       <workItem from="1504458178992" duration="6579000" />
+      <workItem from="1504656516806" duration="4525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20851000" />
+    <option name="totallyTimeSpent" value="25376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -391,7 +411,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
->>>>>>> 8f20e22bcc88bfac45865ef7f2d231e8420ffb72
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -402,13 +421,49 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CertificateQueryController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/CertificateQuery/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding>
+            <element signature="n#div#0;n#block#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#3;n#block#1;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -417,10 +472,9 @@
         <state relative-caret-position="7182">
           <caret line="266" column="29" lean-forward="true" selection-start-line="266" selection-start-column="29" selection-end-line="266" selection-end-column="29" />
           <folding>
-            <element signature="e#3584#3591#0" expanded="false" />
-            <element signature="e#4305#5853#0" expanded="false" />
-            <element signature="e#5906#5922#0" expanded="false" />
-            <element signature="e#6592#7897#0" expanded="false" />
+            <marker date="1504656589340" expanded="true" signature="8290:8608" ph="{...}" />
+            <marker date="1504656589340" expanded="true" signature="8290:8626" ph="{...}" />
+            <marker date="1504656589340" expanded="true" signature="8344:8594" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -454,7 +508,12 @@
         <state relative-caret-position="297">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <marker date="1504461262407" expanded="true" signature="3097:3130" ph="..." />
+            <element signature="n#script#0;n#block#0;n#!!top" expanded="false" />
+            <element signature="e#1103#1444#0" expanded="false" />
+            <element signature="e#1478#1818#0" expanded="false" />
+            <element signature="n#script#1;n#block#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#block#1;n#!!top" expanded="false" />
+            <marker date="1504658010342" expanded="true" signature="3094:3127" ph="..." />
           </folding>
         </state>
       </provider>
@@ -487,9 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4968">
           <caret line="184" column="41" lean-forward="false" selection-start-line="184" selection-start-column="41" selection-end-line="184" selection-end-column="41" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#3;n#block#1;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -498,10 +554,9 @@
         <state relative-caret-position="6588">
           <caret line="244" column="27" lean-forward="true" selection-start-line="244" selection-start-column="27" selection-end-line="245" selection-end-column="21" />
           <folding>
-            <element signature="e#3584#3591#0" expanded="false" />
-            <element signature="e#4305#5853#0" expanded="false" />
-            <element signature="e#5906#5922#0" expanded="false" />
-            <element signature="e#6592#7897#0" expanded="false" />
+            <marker date="1504656589340" expanded="true" signature="8290:8608" ph="{...}" />
+            <marker date="1504656589340" expanded="true" signature="8290:8626" ph="{...}" />
+            <marker date="1504656589340" expanded="true" signature="8344:8594" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -510,9 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4968">
           <caret line="184" column="41" lean-forward="false" selection-start-line="184" selection-start-column="41" selection-end-line="184" selection-end-column="41" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#3;n#block#1;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -521,10 +573,9 @@
         <state relative-caret-position="5184">
           <caret line="192" column="7" lean-forward="true" selection-start-line="152" selection-start-column="4" selection-end-line="192" selection-end-column="7" />
           <folding>
-            <element signature="e#3584#3591#0" expanded="false" />
-            <element signature="e#4305#5853#0" expanded="false" />
-            <element signature="e#5906#5922#0" expanded="false" />
-            <element signature="e#6592#7897#0" expanded="false" />
+            <marker date="1504656589340" expanded="true" signature="8290:8608" ph="{...}" />
+            <marker date="1504656589340" expanded="true" signature="8290:8626" ph="{...}" />
+            <marker date="1504656589340" expanded="true" signature="8344:8594" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -533,9 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#3;n#block#1;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -556,14 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Live/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CheckController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -580,14 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4239">
-          <caret line="157" column="24" lean-forward="false" selection-start-line="157" selection-start-column="24" selection-end-line="157" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -600,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,17 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4968">
           <caret line="184" column="41" lean-forward="false" selection-start-line="184" selection-start-column="41" selection-end-line="184" selection-end-column="41" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#3;n#block#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Intro/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,14 +650,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CertificateQuery.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CertificateQuery.class.php" />
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/BaseController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -656,63 +669,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/Home/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="120" column="33" lean-forward="true" selection-start-line="120" selection-start-column="33" selection-end-line="120" selection-end-column="33" />
+        <state relative-caret-position="3510">
+          <caret line="130" column="33" lean-forward="false" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
           <folding>
-            <element signature="e#3584#3591#0" expanded="false" />
-            <element signature="e#4305#5853#0" expanded="false" />
-            <element signature="e#5906#5922#0" expanded="false" />
-            <element signature="e#6592#7897#0" expanded="false" />
+            <marker date="1504656589340" expanded="true" signature="8290:8608" ph="{...}" />
+            <marker date="1504656589340" expanded="true" signature="8290:8626" ph="{...}" />
+            <marker date="1504656589340" expanded="true" signature="8344:8594" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/StudentController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Student/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4077">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <marker date="1504461262407" expanded="true" signature="3097:3130" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/CertificateQuery/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="756" column="16" lean-forward="false" selection-start-line="756" selection-start-column="16" selection-end-line="756" selection-end-column="16" />
+        <state relative-caret-position="351">
+          <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -741,15 +711,169 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/WxpayController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4131">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-327">
+          <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/base1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="89" column="35" lean-forward="false" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+          <folding>
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Student/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding>
+            <element signature="n#script#0;n#block#0;n#!!top" expanded="false" />
+            <element signature="e#1103#1444#0" expanded="false" />
+            <element signature="e#1478#1818#0" expanded="false" />
+            <element signature="n#script#1;n#block#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#block#1;n#!!top" expanded="false" />
+            <marker date="1504658010342" expanded="true" signature="3094:3127" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Teacher/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding>
+            <element signature="n#script#0;n#block#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#block#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#block#1;n#!!top" expanded="false" />
+            <marker date="1504658433020" expanded="true" signature="3094:3127" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Place/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding>
+            <element signature="n#block#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#block#1;n#!!top" expanded="false" />
+            <marker date="1504658482924" expanded="true" signature="3122:3155" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/CertificateQuery/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding>
+            <element signature="n#div#0;n#block#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="765" column="1" lean-forward="false" selection-start-line="765" selection-start-column="1" selection-end-line="765" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Intro/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Intro/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Live/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/News/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/News/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        <state relative-caret-position="162">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-147">
+          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/User/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <element signature="n#div#0;n#block#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
