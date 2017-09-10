@@ -1,4 +1,10 @@
-body{
+/*当浏览器宽度小于等于1400时隐藏主页中的微信二维码*/
+@media screen and (max-width: 1400px){
+    .home-pt2-ct-pt3{
+        display: none;
+    }
+}
+body {
     background-color: #d9a4ed;
     font-size: 18px;
     margin: 0;
