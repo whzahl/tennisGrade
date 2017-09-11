@@ -1,6 +1,23 @@
 <extend name="Public:base1" />
 <block name="js">
-<script src="/Public/Home/js/ajaxFyQuery.js"></script>
+    <script src="/Public/Home/js/ajaxFyQuery.js"></script>
+    <script>
+        $(function () {
+            var $targetCityName = $("[name=city]");
+            var $targetAreaName = $("[name=area]");
+            var $targetTidName = $("[name=tid]");
+            $("[name=province]").change(function () {
+                loadData('/Home/Base/city',{code : $("[name=province] option:selected").val()}, cityQuery);
+                loadData('/Home/AjaxFyQuery/ajaxFy',{page:pageFy,key:keyFy,db:'Place'});
+            });
+            $targetCityName.change(function () {
+                loadData('/Home/Base/area',{code: $("[name=city] option:selected").val()},areaQuery);
+            });
+            $targetAreaName.change(function () {
+                loadData('/Home/Base/teacher',{pid : $("[name=pid] option:selected").val()},teacherQuery)
+            })
+        })
+    </script>
 </block>
 <block name="body">
     <div class="query-common-part1">
@@ -23,7 +40,7 @@
                                     <option value="区" class="my-input-place">选择区</option>
                                 </select>
                                 <select style="display: inline-block;width: 15%" class="am-radius" name="tid">
-                                    <option value="考官">请选择考官</option>
+                                    <option value="考官">选择考官</option>
                                 </select>
                                 <input style="width: 20%;padding-right: 33px;display: inline-block;float: right;" type="text" placeholder="查询考官姓名" class="am-form-field am-radius">
                                 <img class="search-img" src="/Public/Home/images/common/search.png" alt="">

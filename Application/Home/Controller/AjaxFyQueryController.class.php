@@ -9,4 +9,26 @@ class AjaxFyQueryController extends BaseController{
         parent::__construct();
     }
 
+    public function ajaxFy(){
+        $db = I('get.db');//目标数据表
+        $page = I('get.page');//第几页
+        $num = I('get.num');//每页数据
+        $code = I('get.code');
+        $name = I('get.name');
+        $skip = ($page-1)*$num;
+
+        $arrWhere[$name] = array('like','%'.$code.'%');
+        $arrData = D($db,'Service')->findAll($arrWhere, $skip, $num);
+//        $arrData[0]['sum'] = D($db,'Service')->count($arrWhere);
+        $this->ajaxReturn($arrData,'json');
+    }
+
+    public function amount(){
+        $db = I('get.db');
+        $code = I('get.code');
+        $name = I('get.name');
+        $arrWhere[$name] = $code;
+        $amount = D($db,'Service')->count($arrWhere);
+        $this->ajaxReturn($amount,'json');
+    }
 }

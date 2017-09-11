@@ -1,6 +1,38 @@
 <extend name="Public:base1" />
 <block name="js">
-<script src="/Public/Home/js/ajaxFyQuery.js"></script>
+    <script src="/Public/Home/js/ajaxFyQuery.js"></script>
+    <script>
+        $(function () {
+            var $targetCityName = $("[name=city]");
+            var $targetAreaName = $("[name=area]");
+            var $targetTidName = $("[name=tid]");
+            $("[name=province]").change(function () {
+                keyFy = $("[name=province] option:selected").val();
+//                查询总页数
+                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:'province', db: 'Place'},amount);
+//                查询city
+                loadData('/Home/Base/city',{code : keyFy}, cityQuery);
+//                查询考点数据
+                loadData('/Home/AjaxFyQuery/ajaxFy',{
+                    page:pageFy,//第几页
+                    name:'province',//查询字段名
+                    code:keyFy,//查询字段值
+                    db:'Place',//查询数据表
+                    num:listNum//每页几条数据
+                },insertPlace);
+                appendFyDom($(".am-pagination"));
+            });
+
+            $targetCityName.change(function () {
+                loadData('/Home/Base/area',{code: $("[name=city] option:selected").val()},areaQuery);
+
+            });
+
+            $targetAreaName.change(function () {
+//                loadData('/Home/Base/teacher',{pid : $("[name=pid] option:selected").val()},teacherQuery)
+            })
+        })
+    </script>
 </block>
 <block name="body">
     <div class="query-common-part1">
@@ -31,103 +63,103 @@
             </div>
         </div>
         <div class="query-place-pt1-ct-pt2 query-common">
-            <ul>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place01.jpg" alt="">
-                    </a>
-                    <p>洪山区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place02.jpg" alt="">
-                    </a>
-                    <p>青山区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place03.jpg" alt="">
-                    </a>
-                    <p>蔡甸区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place04.jpg" alt="">
-                    </a>
-                    <p>黄陂区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place01.jpg" alt="">
-                    </a>
-                    <p>洪山区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place02.jpg" alt="">
-                    </a>
-                    <p>青山区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place03.jpg" alt="">
-                    </a>
-                    <p>蔡甸区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place04.jpg" alt="">
-                    </a>
-                    <p>黄陂区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place01.jpg" alt="">
-                    </a>
-                    <p>洪山区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place02.jpg" alt="">
-                    </a>
-                    <p>青山区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place03.jpg" alt="">
-                    </a>
-                    <p>蔡甸区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place04.jpg" alt="">
-                    </a>
-                    <p>黄陂区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place01.jpg" alt="">
-                    </a>
-                    <p>洪山区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place02.jpg" alt="">
-                    </a>
-                    <p>青山区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place03.jpg" alt="">
-                    </a>
-                    <p>蔡甸区乒乓球俱乐部</p>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="/Public/Home/images/common/place04.jpg" alt="">
-                    </a>
-                    <p>黄陂区乒乓球俱乐部</p>
-                </li>
+            <ul id="place-insert">
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place01.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>洪山区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place02.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>青山区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place03.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>蔡甸区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place04.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>黄陂区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place01.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>洪山区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place02.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>青山区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place03.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>蔡甸区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place04.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>黄陂区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place01.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>洪山区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place02.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>青山区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place03.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>蔡甸区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place04.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>黄陂区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place01.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>洪山区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place02.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>青山区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place03.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>蔡甸区乒乓球俱乐部</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="">-->
+                        <!--<img src="/Public/Home/images/common/place04.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>黄陂区乒乓球俱乐部</p>-->
+                <!--</li>-->
             </ul>
         </div>
         <div class="query-common-pt2-ct">
@@ -135,39 +167,47 @@
                 class="am-pagination am-pagination-default"
             >
 
-                <li class="am-pagination-first ">
-                    <a href="#" class="">第一页</a>
-                </li>
+                <!--<li class="am-pagination-first ">-->
+                    <!--<a href="#" class="">第一页</a>-->
+                <!--</li>-->
 
-                <li class="am-pagination-prev ">
-                    <a href="#" class="">上一页</a>
-                </li>
-
-
-                <li class="">
-                    <a href="#" class="">1</a>
-                </li>
-                <li class="am-active">
-                    <a href="#" class="am-active">2</a>
-                </li>
-                <li class="">
-                    <a href="#" class="">3</a>
-                </li>
-                <li class="">
-                    <a href="#" class="">4</a>
-                </li>
-                <li class="">
-                    <a href="#" class="">5</a>
-                </li>
+                <!--<li class="am-pagination-prev ">-->
+                    <!--<a href="#" class="">上一页</a>-->
+                <!--</li>-->
 
 
-                <li class="am-pagination-next ">
-                    <a href="#" class="">下一页</a>
-                </li>
+                <!--<li class="">-->
+                    <!--<a href="#" class="">1</a>-->
+                <!--</li>-->
+                <!--<li class="am-active">-->
+                    <!--<a href="#" class="am-active">2</a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<a href="#" class="">3</a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<a href="#" class="">4</a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<a href="#" class="">5</a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<a href="#" class="">6</a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<a href="#" class="">7</a>-->
+                <!--</li>-->
+                <!--<li class="">-->
+                    <!--<a href="#" class="">8</a>-->
+                <!--</li>-->
+                <!--<li class="am-pagination-next ">-->
+                    <!--<a href="#" class="">下一页</a>-->
+                <!--</li>-->
 
-                <li class="am-pagination-last ">
-                    <a href="#" class="">最末页</a>
-                </li>
+                <!--<li class="am-pagination-last ">-->
+                    <!--<a href="#" class="">最末页</a>-->
+                <!--</li>-->
+                <!--<span>共10页</span>-->
             </ul>
 
         </div>
