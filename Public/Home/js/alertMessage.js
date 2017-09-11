@@ -1,3 +1,5 @@
+//引用在所有前端页面
+
 //基于AmazeUi
 //使用前引入AmazeUi的css和js
 //两种样式，调用方法showAlertDiv（"请输入正确的手机号码！","style1"），showAlertDiv（"请输入正确的手机号码！","style2"）
