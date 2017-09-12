@@ -6,6 +6,15 @@
             var $targetCityName = $("[name=city]");
             var $targetAreaName = $("[name=area]");
             var $targetTidName = $("[name=tid]");
+
+//            初始查询
+            loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: 'Place'},amount);
+            loadData('/Home/AjaxFyQuery/initQuery',{
+                db:'Place',//查询数据表
+                num:listNum//每页几条数据
+            },insertPlace);
+            appendFyDom($(".am-pagination"));
+
             $("[name=province]").change(function () {
                 keyFy = $("[name=province] option:selected").val();
 //                查询总页数

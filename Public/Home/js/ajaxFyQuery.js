@@ -59,23 +59,23 @@ function amount(data) {
 // 动态添加分页组件的方法
 function appendFyDom(el) {
     el.html("");
-    var first = '<li class="am-pagination-first ">'+
+    var first = '<li class="am-pagination-first my-fy-list">'+
                     '<a href="#" class="">第一页</a>'+
                 '</li>';
-    var prev = '<li class="am-pagination-prev ">'+
+    var prev = '<li class="am-pagination-prev my-fy-list">'+
                     '<a href="#" class="">上一页</a>'+
                 '</li>';
-    var next = '<li class="am-pagination-next ">'+
+    var next = '<li class="am-pagination-next my-fy-list">'+
                     '<a href="#" class="">下一页</a>'+
                 '</li>';
-    var last = '<li class="am-pagination-last ">'+
+    var last = '<li class="am-pagination-last my-fy-list">'+
                     '<a href="#" class="">最末页</a>'+
                 '</li>';
     var sumPage = '<span>共'+maxPageFy+'页</span>';
     el.append(first);
     el.append(prev);
     for (var i = 1; i <= maxPageFy; i++){
-        var list = '<li class="">'+
+        var list = '<li class="my-fy-list">'+
                         '<a href="#" class="">'+i+'</a>'+
                    '</li>';
         el.append(list);
@@ -83,7 +83,7 @@ function appendFyDom(el) {
     el.append(next);
     el.append(last);
     el.append(sumPage);
-    
+
 }
 
 // 下一页

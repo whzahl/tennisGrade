@@ -14,11 +14,15 @@ class PlaceService extends BaseService{
 /**
 	 *	统计
 	 */
-	public function count($arrWhere){
+	public function countWhere($arrWhere){
 		$result = M('tg_place')->where($arrWhere)->count();
 		return $result;
 	}
-	
+
+	public function countAll(){
+	    $result = M('tg_place')->count();
+        return $result;
+    }
 	public function check($arrWhere){
 		$result = M('tg_place')->where($arrWhere)->find();
 		return $result;

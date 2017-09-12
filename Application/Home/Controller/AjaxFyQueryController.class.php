@@ -9,6 +9,18 @@ class AjaxFyQueryController extends BaseController{
         parent::__construct();
     }
 
+    public function initQuery(){
+        $db = I('get.db');//目标数据表
+        $num = I('get.num');//每页数据
+        $arrData = D($db,'Service')->findAll($arrWhere, $skip, $num);
+        $this->ajaxReturn($arrData,'json');
+    }
+
+    Public function initAmount(){
+        $db = I('get.db');//目标数据表
+        $arrData = D($db,'Service')->countAll();
+        $this->ajaxReturn($arrData,'json');
+    }
     public function ajaxFy(){
         $db = I('get.db');//目标数据表
         $page = I('get.page');//第几页
@@ -28,7 +40,7 @@ class AjaxFyQueryController extends BaseController{
         $code = I('get.code');
         $name = I('get.name');
         $arrWhere[$name] = $code;
-        $amount = D($db,'Service')->count($arrWhere);
+        $amount = D($db,'Service')->countWhere($arrWhere);
         $this->ajaxReturn($amount,'json');
     }
 }
