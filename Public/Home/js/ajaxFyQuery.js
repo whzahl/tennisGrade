@@ -4,7 +4,7 @@ var pageFy = 1;                                     //第几页
 var maxPageFy = 1;                                  //最大页
 var keyFy;                                          //分页查询关键字
 var listNum = 2;                                    //每页显示的数据量
-var maxListNum = 8;                                 //每页八个按钮（上一页、下一页、首页、末页不包含在内）
+var maxListNum = 2;                                 //每页八个按钮（上一页、下一页、首页、末页不包含在内）
 var btGroup = Math.ceil(maxPageFy/maxListNum);      //按钮组数
 var currentBtGroup = 1;                             //当前按钮组，默认为第一组
 
@@ -78,11 +78,11 @@ function appendFyDom(el) {
     var last = '<li class="am-pagination-last my-fy-list">'+
                     '<a href="javascript:" class="">最末页</a>'+
                 '</li>';
-    var sumPage = '<span>共'+maxPageFy+'页</span>';
+    var sumPage = '<span class="sum-fy">共'+maxPageFy+'页</span>';
     el.append(first);
     el.append(prev);
     for (var i = 1; i <= maxPageFy; i++){
-        var list = '<li class="my-fy-list">'+
+        var list = '<li class="am-pagination-bts my-fy-list">'+
                         '<a href="javascript:targetPage('+i+');" class="">'+i+'</a>'+
                    '</li>';
         el.append(list);
@@ -90,31 +90,47 @@ function appendFyDom(el) {
     el.append(next);
     el.append(last);
     el.append(sumPage);
-
+    // 分页组件中所有的li元素
     var $list = $(".my-fy-list");
+    // 分页组件中所有数字按钮元素
+    var $bts = $(".am-pagination-bts");
 
     // 将当前页设置为active状态
     $($list.get(pageFy+1)).addClass("am-active");
 
     // 首页index=0,上一页index=1
     // 其他index=pageFy+1
-    // 末页index=pageFy+3,下一页index=pageFy+2，
+    // 末页index=pageFy+3,下一页index=pageFy+2
+
+    // 当前按钮组的第一个按钮数字=maxListNum*(currentBtGroup-1)+1,在$bts中的index=(maxListNum*(currentBtGroup-1)+1)-1
+    var btsFirstIndex = (maxListNum*(currentBtGroup-1)+1)-1;
+    // 当前按钮组的最后一个按钮数字=maxListNum*currentBtGroup，在$bts中的index=(maxListNum*currentBtGroup)-1
+    var btsLastIndex = (maxListNum*currentBtGroup)-1;
+    // 隐藏除了当前currentBtGroup的其他按钮
+    $($bts.get(btsFirstIndex)).prevAll().css("display","none");
+    $($bts.get(btsLastIndex)).nextAll().css("display","none");
 
     // 第一页时隐藏首页、上一页
-    if (pageFy === 1){
-        $($list.get(0)).css("display","none");
-        $($list.get(1)).css("display","none");
+    if (pageFy !== 1){
+        $($list.get(0)).css("display","inline-block");
+        $($list.get(1)).css("display","inline-block");
     }
     //最后一页时隐藏最末页、下一页
-    if (pageFy === maxPageFy){
-        $($list.get(maxPageFy+2)).css("display","none");
-        $($list.get(maxPageFy+3)).css("display","none");
+    if (pageFy !== maxPageFy){
+        $($list.get(maxPageFy+2)).css("display","inline-block");
+        $($list.get(maxPageFy+3)).css("display","inline-block");
     }
 
+    // 显示总页数span
+    $(".sum-fy").css('display','inline-block');
 }
 
 // 下一页
 function nextPage() {
+
+    if (pageFy === maxListNum*currentBtGroup){
+        currentBtGroup++;
+    }
     pageFy++;
     loadData('/Home/AjaxFyQuery/ajaxFy',{
         page:pageFy,//第几页
@@ -128,6 +144,9 @@ function nextPage() {
 
 // 上一页
 function prevPage() {
+    if (pageFy === maxListNum*(currentBtGroup-1)+1){
+        currentBtGroup--;
+    }
     pageFy--;
     loadData('/Home/AjaxFyQuery/ajaxFy',{
         page:pageFy,//第几页
