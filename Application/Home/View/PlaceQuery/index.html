@@ -16,12 +16,13 @@
             appendFyDom($(".am-pagination"));
 
             $("[name=province]").change(function () {
+                //查询关键字：省份编码
                 keyFy = $("[name=province] option:selected").val();
-//                查询总页数
+                //查询总页数
                 loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:'province', db: 'Place'},amount);
-//                查询city
+                //查询city
                 loadData('/Home/Base/city',{code : keyFy}, cityQuery);
-//                查询考点数据
+                //查询考点数据
                 loadData('/Home/AjaxFyQuery/ajaxFy',{
                     page:pageFy,//第几页
                     name:'province',//查询字段名
