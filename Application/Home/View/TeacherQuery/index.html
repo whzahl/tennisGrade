@@ -9,116 +9,41 @@
             var $inputQuery = $(".form-input-box1 input");
             //定义查询数据库的对应的Service名
             dbName = 'Teacher';
+            insertFun = insertTeacher;
+            listNum = 4;
             //初始查询
             loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: dbName},amount);
             loadData('/Home/AjaxFyQuery/initQuery',{
                 db:dbName,//查询数据表
                 num:listNum//每页几条数据
-            },insertPlace);
+            },insertFun);
             appendFyDom($(".am-pagination"));
 
             $("[name=province]").change(function () {
-                //查询关键字：省份编码,其对应的字段名
-                keyName = 'province';
-                keyFy = $("[name=province] option:selected").val();
-                //初始化查询参数，将pageFy和currentBtGroup设置为1
-                initPage();
-                //查询总页数
-                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
+                ajaxQuery('province',$("[name=province] option:selected").val(),insertFun);
                 //查询city
                 loadData('/Home/Base/city',{code : keyFy}, cityQuery);
-                //查询考点数据
-                loadData('/Home/AjaxFyQuery/ajaxFy',{
-                    page:pageFy,//第几页
-                    name:keyName,//查询字段名
-                    code:keyFy,//查询字段值
-                    db:dbName,//查询数据表
-                    num:listNum//每页几条数据
-                },insertPlace);
-                //添加分页组件
-                appendFyDom($(".am-pagination"));
             });
 
             $targetCityName.change(function () {
-                //查询关键字：市编码，其对应的字段名
-                keyName = 'city';
-                keyFy = $("[name=city] option:selected").val();
-                //初始化查询参数，将pageFy和currentBtGroup设置为1
-                initPage();
-                //查询总页数
-                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
+                ajaxQuery('city',$("[name=city] option:selected").val(),insertFun);
                 //查询area
                 loadData('/Home/Base/area',{code: keyFy},areaQuery);
-                //查询考点数据
-                loadData('/Home/AjaxFyQuery/ajaxFy',{
-                    page:pageFy,//第几页
-                    name:keyName,//查询字段名
-                    code:keyFy,//查询字段值
-                    db:dbName,//查询数据表
-                    num:listNum//每页几条数据
-                },insertPlace);
-                //添加分页组件
-                appendFyDom($(".am-pagination"));
             });
 
             $targetAreaName.change(function () {
-                //查询关键字：市编码，其对应的字段名
-                keyName = 'area';
-                keyFy = $("[name=area] option:selected").val();
-                //初始化查询参数，将pageFy和currentBtGroup设置为1
-                initPage();
-                //查询总页数
-                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
-                //查询考点数据
-                loadData('/Home/AjaxFyQuery/ajaxFy',{
-                    page:pageFy,//第几页
-                    name:keyName,//查询字段名
-                    code:keyFy,//查询字段值
-                    db:dbName,//查询数据表
-                    num:listNum//每页几条数据
-                },insertPlace);
-                //添加分页组件
-                appendFyDom($(".am-pagination"));
-            })
+                ajaxQuery('area',$("[name=area] option:selected").val(),insertFun);
+////                查询考官
+//                loadData('/Home/Base/teacher',{code:keyFy},teacherQuery);
+            });
 
             $(".search-img").click(function () {
-                //查询关键字：市编码，其对应的字段名
-                keyName = 'pname';
-                keyFy = $inputQuery.val();
-                //初始化查询参数，将pageFy和currentBtGroup设置为1
-                initPage();
-                //查询总页数
-                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
-                //查询考点数据
-                loadData('/Home/AjaxFyQuery/ajaxFy',{
-                    page:pageFy,//第几页
-                    name:keyName,//查询字段名
-                    code:keyFy,//查询字段值
-                    db:dbName,//查询数据表
-                    num:listNum//每页几条数据
-                },insertPlace);
-                //添加分页组件
-                appendFyDom($(".am-pagination"));
-            })
+                ajaxQuery('tname',$inputQuery.val(),insertFun);
+            });
+
             $inputQuery.keydown(function (e) {
                 if(e.keyCode === 13){
-                    //查询关键字：市编码，其对应的字段名
-                    keyName = 'pname';
-                    keyFy = $inputQuery.val();
-                    //初始化查询参数，将pageFy和currentBtGroup设置为1
-                    initPage();
-                    //查询总页数
-                    loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
-                    //查询考点数据
-                    loadData('/Home/AjaxFyQuery/ajaxFy',{
-                        page:pageFy,//第几页
-                        name:keyName,//查询字段名
-                        code:keyFy,//查询字段值
-                        db:dbName,//查询数据表
-                        num:listNum//每页几条数据
-                    },insertPlace);
-                    //添加分页组件
-                    appendFyDom($(".am-pagination"));
+                    ajaxQuery('tname',$inputQuery.val(),insertFun);
                     return false;
                 }
             })
@@ -158,80 +83,22 @@
             </div>
         </div>
         <div class="query-teacher-pt1-ct-pt2 query-common">
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people01.jpg" alt="">
-                    </a>
-                    <p>李娜</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people02.jpg" alt="">
-                    </a>
-                    <p>汪涵</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people03.jpg" alt="">
-                    </a>
-                    <p>赵丽颖</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people04.jpg" alt="">
-                    </a>
-                    <p>何润东</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people01.jpg" alt="">
-                    </a>
-                    <p>李娜</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people02.jpg" alt="">
-                    </a>
-                    <p>汪涵</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people03.jpg" alt="">
-                    </a>
-                    <p>赵丽颖</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people04.jpg" alt="">
-                    </a>
-                    <p>何润东</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people01.jpg" alt="">
-                    </a>
-                    <p>李娜</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people02.jpg" alt="">
-                    </a>
-                    <p>汪涵</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people03.jpg" alt="">
-                    </a>
-                    <p>赵丽颖</p>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/Public/Home/images/home/people04.jpg" alt="">
-                    </a>
-                    <p>何润东</p>
-                </li>
+            <ul id="teacher-insert">
+                <!--<li>-->
+                    <!--<a href="#">-->
+                        <!--<img src="/Public/Home/images/home/people04.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>何润东</p>-->
+                <!--</li>-->
             </ul>
+        </div>
+        <div class="query-common-pt2-ct">
+            <ul data-am-widget="pagination"
+                class="am-pagination am-pagination-default"
+            >
+
+            </ul>
+
         </div>
     </div>
 </block>

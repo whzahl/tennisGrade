@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2d7d9db3-3c7d-42b2-b3e9-fb8e64a1682f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Service/TeacherService.class.php" afterPath="$PROJECT_DIR$/Application/Common/Service/TeacherService.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/css/main.css" afterPath="$PROJECT_DIR$/Public/Home/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/ajaxFyQuery.js" afterPath="$PROJECT_DIR$/Public/Home/js/ajaxFyQuery.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,48 +19,32 @@
   <component name="ComposerSettings" doNotAsk="true" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ajaxFyQuery.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ajaxFyQuery.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/Home/js/ajaxFyQuery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="124" column="47" lean-forward="false" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
+            <state relative-caret-position="7146">
+              <caret line="287" column="44" lean-forward="true" selection-start-line="287" selection-start-column="44" selection-end-line="287" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TeacherService.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Common/Service/TeacherService.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1863">
-              <caret line="192" column="44" lean-forward="false" selection-start-line="192" selection-start-column="44" selection-end-line="192" selection-end-column="44" />
-              <folding>
-                <marker date="1505180434729" expanded="true" signature="143:1707" ph="{...}" />
-                <marker date="1505180434729" expanded="true" signature="650:1353" ph="{...}" />
-                <marker date="1505180434729" expanded="true" signature="1056:1275" ph="{&quot;name&quot;: 'province'...}" />
-                <marker date="1505180434729" expanded="true" signature="1404:1522" ph="{...}" />
-                <marker date="1505180434729" expanded="true" signature="1573:1696" ph="{...}" />
-                <marker date="1505180434729" expanded="true" signature="1750:9561" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="1787:9552" ph="..." />
-                <marker date="1505180434729" expanded="false" signature="1829:3456" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="1879:3441" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="1942:3422" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="1973:3398" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="2037:3366" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="2095:3335" ph="..." />
-                <marker date="1505180434729" expanded="false" signature="2144:2176" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="2211:2524" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="2349:2482" ph="..." />
-                <marker date="1505180434729" expanded="false" signature="2573:2605" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="2636:2768" ph="..." />
-                <marker date="1505180434729" expanded="false" signature="2817:2849" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="2880:3012" ph="..." />
-                <marker date="1505180434729" expanded="false" signature="3060:3126" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="3514:7758" ph="..." />
-                <marker date="1505180434729" expanded="false" signature="3549:7743" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="7800:9541" ph="..." />
-                <marker date="1505180434729" expanded="true" signature="7845:9525" ph="..." />
-              </folding>
+            <state relative-caret-position="891">
+              <caret line="33" column="83" lean-forward="false" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,18 +52,8 @@
       <file leaf-file-name="AjaxFyQueryController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/AjaxFyQueryController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
+            <state relative-caret-position="1053">
               <caret line="42" column="56" lean-forward="false" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -84,18 +62,28 @@
       <file leaf-file-name="BaseController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/BaseController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="40" />
+            <state relative-caret-position="663">
+              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GradeService.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Common/Service/GradeService.class.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="798">
+              <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Home/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="797" column="17" lean-forward="false" selection-start-line="797" selection-start-column="17" selection-end-line="797" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -154,12 +142,13 @@
         <option value="$PROJECT_DIR$/Public/Home/js/formValidation.js" />
         <option value="$PROJECT_DIR$/Public/Home/js/alertMessage.js" />
         <option value="$PROJECT_DIR$/Public/Home/js/common.js" />
-        <option value="$PROJECT_DIR$/Public/Home/css/main.css" />
         <option value="$PROJECT_DIR$/Public/Home/js/ajaxQuery.js" />
-        <option value="$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/AjaxFyQueryController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html" />
+        <option value="$PROJECT_DIR$/Application/Common/Service/TeacherService.class.php" />
         <option value="$PROJECT_DIR$/Public/Home/js/ajaxFyQuery.js" />
+        <option value="$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html" />
+        <option value="$PROJECT_DIR$/Public/Home/css/main.css" />
       </list>
     </option>
   </component>
@@ -177,7 +166,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -201,8 +190,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,6 +222,13 @@
               <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tennisGrade" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tennisGrade" type="b2602c69:ProjectViewProjectNode" />
@@ -374,19 +370,20 @@
       <workItem from="1504656516806" duration="4525000" />
       <workItem from="1504942351129" duration="14665000" />
       <workItem from="1505088482472" duration="21331000" />
-      <workItem from="1505176378535" duration="4829000" />
+      <workItem from="1505176378535" duration="4930000" />
+      <workItem from="1505262018878" duration="6489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66201000" />
+    <option name="totallyTimeSpent" value="72791000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1828125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12135417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17135416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -420,18 +417,11 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/StudentController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
@@ -710,14 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21627">
-          <caret line="801" column="1" lean-forward="false" selection-start-line="801" selection-start-column="1" selection-end-line="801" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Home/js/ajaxQuery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -741,22 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/BaseController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Common/Service/GradeService.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -767,50 +733,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/AjaxFyQueryController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
+        <state relative-caret-position="1053">
           <caret line="42" column="56" lean-forward="false" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/BaseController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Service/TeacherService.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/TeacherQuery/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="797" column="17" lean-forward="false" selection-start-line="797" selection-start-column="17" selection-end-line="797" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/ajaxFyQuery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7146">
+          <caret line="287" column="44" lean-forward="true" selection-start-line="287" selection-start-column="44" selection-end-line="287" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/PlaceQuery/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1863">
-          <caret line="192" column="44" lean-forward="false" selection-start-line="192" selection-start-column="44" selection-end-line="192" selection-end-column="44" />
-          <folding>
-            <marker date="1505180434729" expanded="true" signature="143:1707" ph="{...}" />
-            <marker date="1505180434729" expanded="true" signature="650:1353" ph="{...}" />
-            <marker date="1505180434729" expanded="true" signature="1056:1275" ph="{&quot;name&quot;: 'province'...}" />
-            <marker date="1505180434729" expanded="true" signature="1404:1522" ph="{...}" />
-            <marker date="1505180434729" expanded="true" signature="1573:1696" ph="{...}" />
-            <marker date="1505180434729" expanded="true" signature="1750:9561" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="1787:9552" ph="..." />
-            <marker date="1505180434729" expanded="false" signature="1829:3456" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="1879:3441" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="1942:3422" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="1973:3398" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="2037:3366" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="2095:3335" ph="..." />
-            <marker date="1505180434729" expanded="false" signature="2144:2176" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="2211:2524" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="2349:2482" ph="..." />
-            <marker date="1505180434729" expanded="false" signature="2573:2605" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="2636:2768" ph="..." />
-            <marker date="1505180434729" expanded="false" signature="2817:2849" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="2880:3012" ph="..." />
-            <marker date="1505180434729" expanded="false" signature="3060:3126" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="3514:7758" ph="..." />
-            <marker date="1505180434729" expanded="false" signature="3549:7743" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="7800:9541" ph="..." />
-            <marker date="1505180434729" expanded="true" signature="7845:9525" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/ajaxFyQuery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="124" column="47" lean-forward="false" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
+        <state relative-caret-position="891">
+          <caret line="33" column="83" lean-forward="false" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
           <folding />
         </state>
       </provider>

@@ -793,6 +793,10 @@ li{
     width: 230px;
     height: 150px;
 }
+#place-insert img{
+    width: 230px;
+    height: 150px;
+}
 .query-common p{
     font-size: 12px;
     margin-top: 10px;
@@ -807,5 +811,9 @@ li{
 }
 .query-common-pt2-ct{
     text-align: center;
+}
+#teacher-insert img{
+    width: 130px;
+    height: 162px;
 }
 /*query End*/

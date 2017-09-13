@@ -9,10 +9,28 @@ var listNum = 2;                                    //每页显示的数据量
 var maxListNum = 2;                                 //每页maxListNum个按钮（上一页、下一页、首页、末页不包含在内）
 var btGroup;                                        //按钮组数
 var currentBtGroup = 1;                             //当前按钮组，默认为第一组
+var insertFun;
 
-// $(document).ready(function () {
-//     $(".am-pagination-next a").click(nextPage());
-// });
+function ajaxQuery(name,code,fun) {
+    //查询关键字：省份编码,其对应的字段名
+    keyName = name;
+    keyFy = code;
+    //初始化查询参数，将pageFy和currentBtGroup设置为1
+    initPage();
+    //查询总页数
+    loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
+    //查询考点数据
+    loadData('/Home/AjaxFyQuery/ajaxFy',{
+        page:pageFy,//第几页
+        name:keyName,//查询字段名
+        code:keyFy,//查询字段值
+        db:dbName,//查询数据表
+        num:listNum//每页几条数据
+    },fun);
+    //添加分页组件
+    appendFyDom($(".am-pagination"));
+}
+
 // el:目标元素；option：ajax参数
 function loadData(url, data, fun){
     $.ajax({
@@ -50,7 +68,13 @@ function insertPlace(data) {
 }
 
 function insertTeacher(data) {
-
+    var $targetName = $("#teacher-insert");
+    if (maxPageFy !== 0){
+        appendList($targetName,data,'tid','tname','picture');
+    }
+    else{
+        $targetName.text("暂无数据...");
+    }
 }
 
 function insertLive(data) {
@@ -167,7 +191,7 @@ function nextPage() {
             code:keyFy,//查询字段值
             db:dbName,//查询数据表
             num:listNum//每页几条数据
-        },insertPlace);
+        },insertFun);
         appendFyDom($(".am-pagination"));
     }
 }
@@ -185,7 +209,7 @@ function prevPage() {
             code:keyFy,//查询字段值
             db:dbName,//查询数据表
             num:listNum//每页几条数据
-        },insertPlace);
+        },insertFun);
         appendFyDom($(".am-pagination"));
     }
 }
@@ -201,7 +225,7 @@ function targetPage(target) {
         code:keyFy,//查询字段值
         db:dbName,//查询数据表
         num:listNum//每页几条数据
-    },insertPlace);
+    },insertFun);
     appendFyDom($(".am-pagination"));
 }
 
@@ -215,7 +239,7 @@ function firstPage() {
         code:keyFy,//查询字段值
         db:dbName,//查询数据表
         num:listNum//每页几条数据
-    },insertPlace);
+    },insertFun);
     appendFyDom($(".am-pagination"));
 }
 
@@ -229,7 +253,7 @@ function lastPage() {
         code:keyFy,//查询字段值
         db:dbName,//查询数据表
         num:listNum//每页几条数据
-    },insertPlace);
+    },insertFun);
     appendFyDom($(".am-pagination"));
 }
 

@@ -15,12 +15,12 @@ class TeacherService extends BaseService{
 	 *	统计
 	 */
     public function countWhere($arrWhere){
-        $result = M('tg_place')->where($arrWhere)->count();
+        $result = M('tg_teacher')->where($arrWhere)->count();
         return $result;
     }
 
     public function countAll(){
-        $result = M('tg_place')->count();
+        $result = M('tg_teacher')->count();
         return $result;
     }
 	

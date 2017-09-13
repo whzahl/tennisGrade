@@ -2,26 +2,6 @@
 <block name="js">
     <script src="/Public/Home/js/ajaxFyQuery.js"></script>
     <script>
-        function ajaxQuery(name,code,fun) {
-            //查询关键字：省份编码,其对应的字段名
-            keyName = name;
-            keyFy = code;
-            //初始化查询参数，将pageFy和currentBtGroup设置为1
-            initPage();
-            //查询总页数
-            loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
-            //查询考点数据
-            loadData('/Home/AjaxFyQuery/ajaxFy',{
-                page:pageFy,//第几页
-                name:keyName,//查询字段名
-                code:keyFy,//查询字段值
-                db:dbName,//查询数据表
-                num:listNum//每页几条数据
-            },fun);
-            //添加分页组件
-            appendFyDom($(".am-pagination"));
-        }
-
         $(function () {
             var $targetCityName = $("[name=city]");
             var $targetAreaName = $("[name=area]");
@@ -29,127 +9,38 @@
             var $inputQuery = $(".form-input-box1 input");
             //定义查询数据库的对应的Service名
             dbName = 'Place';
+            insertFun = insertPlace;
             //初始查询
             loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: dbName},amount);
             loadData('/Home/AjaxFyQuery/initQuery',{
                 db:dbName,//查询数据表
                 num:listNum//每页几条数据
-            },insertPlace);
+            },insertFun);
             appendFyDom($(".am-pagination"));
 
             $("[name=province]").change(function () {
-//                //查询关键字：省份编码,其对应的字段名
-//                keyName = 'province';
-//                keyFy = $("[name=province] option:selected").val();
-//                //初始化查询参数，将pageFy和currentBtGroup设置为1
-//                initPage();
-//                //查询总页数
-//                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
-//                //查询考点数据
-//                loadData('/Home/AjaxFyQuery/ajaxFy',{
-//                page:pageFy,//第几页
-//                name:keyName,//查询字段名
-//                code:keyFy,//查询字段值
-//                db:dbName,//查询数据表
-//                num:listNum//每页几条数据
-//            },insertPlace);
-//                //添加分页组件
-//                appendFyDom($(".am-pagination"));
-
-
-                ajaxQuery('province',$("[name=province] option:selected").val(),insertPlace);
+                ajaxQuery('province',$("[name=province] option:selected").val(),insertFun);
                 //查询city
                 loadData('/Home/Base/city',{code : keyFy}, cityQuery);
             });
 
             $targetCityName.change(function () {
-//                //查询关键字：市编码，其对应的字段名
-//                keyName = 'city';
-//                keyFy = $("[name=city] option:selected").val();
-//                //初始化查询参数，将pageFy和currentBtGroup设置为1
-//                initPage();
-//                //查询总页数
-//                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
-//                //查询考点数据
-//                loadData('/Home/AjaxFyQuery/ajaxFy',{
-//                page:pageFy,//第几页
-//                name:keyName,//查询字段名
-//                code:keyFy,//查询字段值
-//                db:dbName,//查询数据表
-//                num:listNum//每页几条数据
-//            },insertPlace);
-//                //添加分页组件
-//                appendFyDom($(".am-pagination"));
-                ajaxQuery('city',$("[name=city] option:selected").val(),insertPlace);
+                ajaxQuery('city',$("[name=city] option:selected").val(),insertFun);
                 //查询area
                 loadData('/Home/Base/area',{code: keyFy},areaQuery);
             });
 
             $targetAreaName.change(function () {
-//                //查询关键字：市编码，其对应的字段名
-//                keyName = 'area';
-//                keyFy = $("[name=area] option:selected").val();
-//                //初始化查询参数，将pageFy和currentBtGroup设置为1
-//                initPage();
-//                //查询总页数
-//                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
-//                //查询考点数据
-//                loadData('/Home/AjaxFyQuery/ajaxFy',{
-//                    page:pageFy,//第几页
-//                    name:keyName,//查询字段名
-//                    code:keyFy,//查询字段值
-//                    db:dbName,//查询数据表
-//                    num:listNum//每页几条数据
-//                },insertPlace);
-//                //添加分页组件
-//                appendFyDom($(".am-pagination"));
-
-                ajaxQuery('area',$("[name=area] option:selected").val(),insertPlace);
+                ajaxQuery('area',$("[name=area] option:selected").val(),insertFun);
             });
 
             $(".search-img").click(function () {
-//                //查询关键字：市编码，其对应的字段名
-//                keyName = 'pname';
-//                keyFy = $inputQuery.val();
-//                //初始化查询参数，将pageFy和currentBtGroup设置为1
-//                initPage();
-//                //查询总页数
-//                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
-//                //查询考点数据
-//                loadData('/Home/AjaxFyQuery/ajaxFy',{
-//                    page:pageFy,//第几页
-//                    name:keyName,//查询字段名
-//                    code:keyFy,//查询字段值
-//                    db:dbName,//查询数据表
-//                    num:listNum//每页几条数据
-//                },insertPlace);
-//                //添加分页组件
-//                appendFyDom($(".am-pagination"));
-
-                ajaxQuery('pname',$inputQuery.val(),insertPlace);
+                ajaxQuery('pname',$inputQuery.val(),insertFun);
             });
 
             $inputQuery.keydown(function (e) {
                 if(e.keyCode === 13){
-//                    //查询关键字：市编码，其对应的字段名
-//                    keyName = 'pname';
-//                    keyFy = $inputQuery.val();
-//                    //初始化查询参数，将pageFy和currentBtGroup设置为1
-//                    initPage();
-//                    //查询总页数
-//                    loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
-//                    //查询考点数据
-//                    loadData('/Home/AjaxFyQuery/ajaxFy',{
-//                        page:pageFy,//第几页
-//                        name:keyName,//查询字段名
-//                        code:keyFy,//查询字段值
-//                        db:dbName,//查询数据表
-//                        num:listNum//每页几条数据
-//                    },insertPlace);
-//                    //添加分页组件
-//                    appendFyDom($(".am-pagination"));
-
-                    ajaxQuery('pname',$inputQuery.val(),insertPlace);
+                    ajaxQuery('pname',$inputQuery.val(),insertFun);
                     return false;
                 }
             })
@@ -193,96 +84,6 @@
                     <!--</a>-->
                     <!--<p>洪山区乒乓球俱乐部</p>-->
                 <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place02.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>青山区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place03.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>蔡甸区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place04.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>黄陂区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place01.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>洪山区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place02.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>青山区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place03.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>蔡甸区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place04.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>黄陂区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place01.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>洪山区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place02.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>青山区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place03.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>蔡甸区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place04.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>黄陂区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place01.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>洪山区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place02.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>青山区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place03.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>蔡甸区乒乓球俱乐部</p>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a href="">-->
-                        <!--<img src="/Public/Home/images/common/place04.jpg" alt="">-->
-                    <!--</a>-->
-                    <!--<p>黄陂区乒乓球俱乐部</p>-->
-                <!--</li>-->
             </ul>
         </div>
         <div class="query-common-pt2-ct">
@@ -290,47 +91,6 @@
                 class="am-pagination am-pagination-default"
             >
 
-                <!--<li class="am-pagination-first ">-->
-                    <!--<a href="#" class="">第一页</a>-->
-                <!--</li>-->
-
-                <!--<li class="am-pagination-prev ">-->
-                    <!--<a href="#" class="">上一页</a>-->
-                <!--</li>-->
-
-
-                <!--<li class="">-->
-                    <!--<a href="#" class="">1</a>-->
-                <!--</li>-->
-                <!--<li class="am-active">-->
-                    <!--<a href="#" class="am-active">2</a>-->
-                <!--</li>-->
-                <!--<li class="">-->
-                    <!--<a href="#" class="">3</a>-->
-                <!--</li>-->
-                <!--<li class="">-->
-                    <!--<a href="#" class="">4</a>-->
-                <!--</li>-->
-                <!--<li class="">-->
-                    <!--<a href="#" class="">5</a>-->
-                <!--</li>-->
-                <!--<li class="">-->
-                    <!--<a href="#" class="">6</a>-->
-                <!--</li>-->
-                <!--<li class="">-->
-                    <!--<a href="#" class="">7</a>-->
-                <!--</li>-->
-                <!--<li class="">-->
-                    <!--<a href="#" class="">8</a>-->
-                <!--</li>-->
-                <!--<li class="am-pagination-next ">-->
-                    <!--<a href="#" class="">下一页</a>-->
-                <!--</li>-->
-
-                <!--<li class="am-pagination-last ">-->
-                    <!--<a href="#" class="">最末页</a>-->
-                <!--</li>-->
-                <!--<span>共10页</span>-->
             </ul>
 
         </div>
