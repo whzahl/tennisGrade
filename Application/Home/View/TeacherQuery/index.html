@@ -6,16 +6,123 @@
             var $targetCityName = $("[name=city]");
             var $targetAreaName = $("[name=area]");
             var $targetTidName = $("[name=tid]");
+            var $inputQuery = $(".form-input-box1 input");
+            //定义查询数据库的对应的Service名
+            dbName = 'Teacher';
+            //初始查询
+            loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: dbName},amount);
+            loadData('/Home/AjaxFyQuery/initQuery',{
+                db:dbName,//查询数据表
+                num:listNum//每页几条数据
+            },insertPlace);
+            appendFyDom($(".am-pagination"));
+
             $("[name=province]").change(function () {
-                loadData('/Home/Base/city',{code : $("[name=province] option:selected").val()}, cityQuery);
-                loadData('/Home/AjaxFyQuery/ajaxFy',{page:pageFy,key:keyFy,db:'Place'});
+                //查询关键字：省份编码,其对应的字段名
+                keyName = 'province';
+                keyFy = $("[name=province] option:selected").val();
+                //初始化查询参数，将pageFy和currentBtGroup设置为1
+                initPage();
+                //查询总页数
+                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
+                //查询city
+                loadData('/Home/Base/city',{code : keyFy}, cityQuery);
+                //查询考点数据
+                loadData('/Home/AjaxFyQuery/ajaxFy',{
+                    page:pageFy,//第几页
+                    name:keyName,//查询字段名
+                    code:keyFy,//查询字段值
+                    db:dbName,//查询数据表
+                    num:listNum//每页几条数据
+                },insertPlace);
+                //添加分页组件
+                appendFyDom($(".am-pagination"));
             });
+
             $targetCityName.change(function () {
-                loadData('/Home/Base/area',{code: $("[name=city] option:selected").val()},areaQuery);
+                //查询关键字：市编码，其对应的字段名
+                keyName = 'city';
+                keyFy = $("[name=city] option:selected").val();
+                //初始化查询参数，将pageFy和currentBtGroup设置为1
+                initPage();
+                //查询总页数
+                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
+                //查询area
+                loadData('/Home/Base/area',{code: keyFy},areaQuery);
+                //查询考点数据
+                loadData('/Home/AjaxFyQuery/ajaxFy',{
+                    page:pageFy,//第几页
+                    name:keyName,//查询字段名
+                    code:keyFy,//查询字段值
+                    db:dbName,//查询数据表
+                    num:listNum//每页几条数据
+                },insertPlace);
+                //添加分页组件
+                appendFyDom($(".am-pagination"));
             });
+
             $targetAreaName.change(function () {
-                loadData('/Home/Base/teacher',{pid : $("[name=pid] option:selected").val()},teacherQuery)
+                //查询关键字：市编码，其对应的字段名
+                keyName = 'area';
+                keyFy = $("[name=area] option:selected").val();
+                //初始化查询参数，将pageFy和currentBtGroup设置为1
+                initPage();
+                //查询总页数
+                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
+                //查询考点数据
+                loadData('/Home/AjaxFyQuery/ajaxFy',{
+                    page:pageFy,//第几页
+                    name:keyName,//查询字段名
+                    code:keyFy,//查询字段值
+                    db:dbName,//查询数据表
+                    num:listNum//每页几条数据
+                },insertPlace);
+                //添加分页组件
+                appendFyDom($(".am-pagination"));
             })
+
+            $(".search-img").click(function () {
+                //查询关键字：市编码，其对应的字段名
+                keyName = 'pname';
+                keyFy = $inputQuery.val();
+                //初始化查询参数，将pageFy和currentBtGroup设置为1
+                initPage();
+                //查询总页数
+                loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
+                //查询考点数据
+                loadData('/Home/AjaxFyQuery/ajaxFy',{
+                    page:pageFy,//第几页
+                    name:keyName,//查询字段名
+                    code:keyFy,//查询字段值
+                    db:dbName,//查询数据表
+                    num:listNum//每页几条数据
+                },insertPlace);
+                //添加分页组件
+                appendFyDom($(".am-pagination"));
+            })
+            $inputQuery.keydown(function (e) {
+                if(e.keyCode === 13){
+                    //查询关键字：市编码，其对应的字段名
+                    keyName = 'pname';
+                    keyFy = $inputQuery.val();
+                    //初始化查询参数，将pageFy和currentBtGroup设置为1
+                    initPage();
+                    //查询总页数
+                    loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
+                    //查询考点数据
+                    loadData('/Home/AjaxFyQuery/ajaxFy',{
+                        page:pageFy,//第几页
+                        name:keyName,//查询字段名
+                        code:keyFy,//查询字段值
+                        db:dbName,//查询数据表
+                        num:listNum//每页几条数据
+                    },insertPlace);
+                    //添加分页组件
+                    appendFyDom($(".am-pagination"));
+                    return false;
+                }
+            })
+
         })
     </script>
 </block>

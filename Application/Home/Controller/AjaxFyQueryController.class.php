@@ -39,7 +39,7 @@ class AjaxFyQueryController extends BaseController{
         $db = I('get.db');
         $code = I('get.code');
         $name = I('get.name');
-        $arrWhere[$name] = $code;
+        $arrWhere[$name] = array('like','%'.$code.'%');
         $amount = D($db,'Service')->countWhere($arrWhere);
         $this->ajaxReturn($amount,'json');
     }
