@@ -798,7 +798,7 @@ li{
     height: 150px;
 }
 .query-common p{
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 10px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -813,7 +813,27 @@ li{
     text-align: center;
 }
 #teacher-insert img{
-    width: 130px;
+    width: 170px;
     height: 162px;
+    padding:0 20px;
+}
+#teacher-insert p{
+    overflow: hidden;
+    width: 170px;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#teacher-insert h4{
+    margin: 10px 0;
+    font-weight: 400;
+
+}
+#insert-certificate{
+    text-align: center;
+}
+#insert-certificate img{
+    width: 600px;
+    height: 400px;
 }
 /*query End*/

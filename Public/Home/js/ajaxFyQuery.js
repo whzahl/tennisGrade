@@ -31,7 +31,7 @@ function ajaxQuery(name,code,fun) {
     appendFyDom($(".am-pagination"));
 }
 
-// el:目标元素；option：ajax参数
+
 function loadData(url, data, fun){
     $.ajax({
         type: 'GET',
@@ -60,7 +60,7 @@ function loadDataFalse(url, data, fun){
 function insertPlace(data) {
     var $targetName = $("#place-insert");
     if (maxPageFy !== 0){
-        appendList($targetName,data,'pid','pname','picture');
+        appendPlaceList($targetName,data,'pid','pname','picture');
     }
     else{
         $targetName.text("暂无数据...");
@@ -70,7 +70,7 @@ function insertPlace(data) {
 function insertTeacher(data) {
     var $targetName = $("#teacher-insert");
     if (maxPageFy !== 0){
-        appendList($targetName,data,'tid','tname','picture');
+        appendTeacherList($targetName,data,'tid','tname','picture','pid');
     }
     else{
         $targetName.text("暂无数据...");
@@ -78,10 +78,16 @@ function insertTeacher(data) {
 }
 
 function insertLive(data) {
-
+    var $targetName = $("#live-insert");
+    if (maxPageFy !== 0){
+        appendTeacherList($targetName,data,'lid','pid','picture','pid');
+    }
+    else{
+        $targetName.text("暂无数据...");
+    }
 }
 
-function appendList(targetName,data,id1,name1,img1) {
+function appendPlaceList(targetName,data,id1,name1,img1) {
     // 清空目标DOM元素，然后在填充
     targetName.html("");
     for (var i = 0; i < data.length; i++){
@@ -95,6 +101,35 @@ function appendList(targetName,data,id1,name1,img1) {
                             '</a>' +
                             '<p>' + name + '</p>' +
                         '</li>';
+        targetName.append(insertDom);
+    }
+}
+
+
+function appendTeacherList(targetName,data,id1,name1,img1,pid1) {
+    // 清空目标DOM元素，然后在填充
+    targetName.html("");
+    for (var i = 0; i < data.length; i++){
+        var link = "#";
+        var id = data[i][id1];
+        var name = data[i][name1];
+        var img = data[i][img1];
+        var pid = data[i][pid1];
+        var pname = "";
+
+        // 根据pid从Place中查询出pname
+        function returnPname(data) {
+            pname =  data[0].pname;
+        }
+        loadDataFalse('/Home/AjaxFyQuery/AssociationDb',{db:'Place',name:'pid',code:pid},returnPname);
+
+        var insertDom = '<li>'+
+            '<a href="' + link + '">' +
+            '<img src="'+ img + '" alt="">' +
+            '</a>' +
+            '<h4>' + name + '</h4>' +
+            '<p>' + pname + '</p>' +
+            '</li>';
         targetName.append(insertDom);
     }
 }

@@ -1,5 +1,52 @@
 <extend name="Public:base1" />
-<block name="js"></block>
+<block name="js">
+    <script src="/Public/Home/js/ajaxFyQuery.js"></script>
+    <script>
+        $(function () {
+            var $targetCityName = $("[name=city]");
+            var $targetAreaName = $("[name=area]");
+            var $inputQuery = $(".form-input-box1 input");
+            //定义查询数据库的对应的Service名
+            dbName = 'Live';
+            insertFun = insertLive;
+            //初始查询
+            loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: dbName},amount);
+            loadData('/Home/AjaxFyQuery/initQuery',{
+                db:dbName,//查询数据表
+                num:listNum//每页几条数据
+            },insertFun);
+            appendFyDom($(".am-pagination"));
+
+            $("[name=province]").change(function () {
+                ajaxQuery('province',$("[name=province] option:selected").val(),insertFun);
+                //查询city
+                loadData('/Home/Base/city',{code : keyFy}, cityQuery);
+            });
+
+            $targetCityName.change(function () {
+                ajaxQuery('city',$("[name=city] option:selected").val(),insertFun);
+                //查询area
+                loadData('/Home/Base/area',{code: keyFy},areaQuery);
+            });
+
+            $targetAreaName.change(function () {
+                ajaxQuery('area',$("[name=area] option:selected").val(),insertFun);
+            });
+
+            $(".search-img").click(function () {
+                ajaxQuery('pname',$inputQuery.val(),insertFun);
+            });
+
+            $inputQuery.keydown(function (e) {
+                if(e.keyCode === 13){
+                    ajaxQuery('pname',$inputQuery.val(),insertFun);
+                    return false;
+                }
+            })
+
+        })
+    </script>
+</block>
 <block name="body">
     <div class="intro-pt1-ct padding-7-8">
         <div class="common-pt1-ct-pt1">
@@ -31,7 +78,7 @@
             </fieldset>
         </form>
         <div class="live-pt1-ct-pt2">
-            <ul>
+            <ul id="live-insert">
                 <li>
                     <a href="#"><img src="/Public/Home/images/live/live01.jpg" alt=""></a>
                     <p>武汉市武汉体育学院网球俱乐部</p>

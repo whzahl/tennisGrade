@@ -18,8 +18,30 @@ class CertificateQueryController extends BaseController {
     }
 
     public function index(){
-        $province = M('tg_province')->select();
-        $this->province = $province;
         $this->display();
+    }
+
+    public function student(){
+        $arrWhere['sname'] = I('get.sname');
+        $arrWhere['creid'] = I('get.creid');
+        $arrWhere['cretype'] = I('get.cretype');
+        $arrData = D('Student','Service')->findOne($arrWhere);
+        if ($arrData){
+            $this->ajaxReturn($arrData,'json');
+        }
+        else{
+            $this->error('该用户还没有参加过考试');
+        }
+    }
+
+    public function Certificate(){
+        $arrWhere['sid'] = I('get.sid');
+        $arrData = D('Grade','Service')->findOne($arrWhere);
+        if ($arrData){
+            $this->ajaxReturn($arrData,'json');
+        }
+        else{
+            $this->error('该用户还没有参加过考试');
+        }
     }
 }

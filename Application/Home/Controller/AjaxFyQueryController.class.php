@@ -43,4 +43,12 @@ class AjaxFyQueryController extends BaseController{
         $amount = D($db,'Service')->countWhere($arrWhere);
         $this->ajaxReturn($amount,'json');
     }
+    public function AssociationDb(){
+        $db = I('get.db');
+        $code = I('get.code');
+        $name = I('get.name');
+        $arrWhere[$name] = $code;
+        $arrData = D($db,'Service')->findAll($arrWhere);
+        $this->ajaxReturn($arrData,'json');
+    }
 }
