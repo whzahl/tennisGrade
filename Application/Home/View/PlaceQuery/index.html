@@ -5,23 +5,27 @@
         $(function () {
             var $targetCityName = $("[name=city]");
             var $targetAreaName = $("[name=area]");
-            var $targetTidName = $("[name=tid]");
             var $inputQuery = $(".form-input-box1 input");
             //定义查询数据库的对应的Service名
             dbName = 'Place';
+            //ajax查询成功的回调函数
             insertFun = insertPlace;
+            //每页显示的数据量
+            listNum = 9;
+            //每页maxBtListNum个按钮（上一页、下一页、首页、末页不包含在内）
+            maxBtListNum = 8;
+            ajaxQueryUrl = '/Home/AjaxFyQuery/ajaxFy';
             //初始查询
             loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: dbName},amount);
             loadData('/Home/AjaxFyQuery/initQuery',{
                 db:dbName,//查询数据表
                 num:listNum//每页几条数据
             },insertFun);
-            appendFyDom($(".am-pagination"));
 
             $("[name=province]").change(function () {
-                ajaxQuery('province',$("[name=province] option:selected").val(),insertFun);
+                ajaxQuery(,'province',$("[name=province] option:selected").val(),insertFun);
                 //查询city
-                loadData('/Home/Base/city',{code : keyFy}, cityQuery);
+                loadData(ajaxQueryUrl,'/Home/Base/city',{code : keyFy}, cityQuery);
             });
 
             $targetCityName.change(function () {

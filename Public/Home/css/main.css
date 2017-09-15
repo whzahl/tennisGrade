@@ -756,12 +756,17 @@ li{
     overflow: hidden;
 }
 .live-pt1-ct-pt2 img{
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     /*border:1px solid #505050;*/
 }
 .live-pt1-ct-pt2 p{
     font-size: 14px;
+    width: 250px;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 /*live End*/
 
@@ -807,7 +812,6 @@ li{
 .query-bt{
     width: 200px;
     background-color: #d9a4ed;
-    margin-left: 200px;
 }
 .query-common-pt2-ct{
     text-align: center;
@@ -817,6 +821,7 @@ li{
     height: 162px;
     padding:0 20px;
 }
+
 #teacher-insert p{
     overflow: hidden;
     width: 170px;

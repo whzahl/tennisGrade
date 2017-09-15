@@ -30,7 +30,7 @@ class CertificateQueryController extends BaseController {
             $this->ajaxReturn($arrData,'json');
         }
         else{
-            $this->error('该用户还没有参加过考试');
+            $this->error('');
         }
     }
 
@@ -41,7 +41,7 @@ class CertificateQueryController extends BaseController {
             $this->ajaxReturn($arrData,'json');
         }
         else{
-            $this->error('该用户还没有参加过考试');
+            $this->error('');
         }
     }
 }

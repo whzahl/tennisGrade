@@ -6,12 +6,13 @@ var keyFy;                                          //分页查询关键字
 var keyName;                                        //关键字对应的字段名
 var dbName;                                         //查询数据库名相应的Service名
 var listNum = 2;                                    //每页显示的数据量
-var maxListNum = 2;                                 //每页maxListNum个按钮（上一页、下一页、首页、末页不包含在内）
+var maxBtListNum = 2;                               //每页maxBtListNum个按钮（上一页、下一页、首页、末页不包含在内）
 var btGroup;                                        //按钮组数
 var currentBtGroup = 1;                             //当前按钮组，默认为第一组
 var insertFun;
+var ajaxQueryUrl;
 
-function ajaxQuery(name,code,fun) {
+function ajaxQuery(ajaxQueryUrl,name,code,fun) {
     //查询关键字：省份编码,其对应的字段名
     keyName = name;
     keyFy = code;
@@ -20,15 +21,13 @@ function ajaxQuery(name,code,fun) {
     //查询总页数
     loadDataFalse('/Home/AjaxFyQuery/amount',{code: keyFy, name:keyName, db: dbName},amount);
     //查询考点数据
-    loadData('/Home/AjaxFyQuery/ajaxFy',{
+    loadData(ajaxQueryUrl,{
         page:pageFy,//第几页
         name:keyName,//查询字段名
         code:keyFy,//查询字段值
         db:dbName,//查询数据表
         num:listNum//每页几条数据
     },fun);
-    //添加分页组件
-    appendFyDom($(".am-pagination"));
 }
 
 
@@ -65,6 +64,8 @@ function insertPlace(data) {
     else{
         $targetName.text("暂无数据...");
     }
+    //添加分页组件
+    appendFyDom($(".am-pagination"));
 }
 
 function insertTeacher(data) {
@@ -75,16 +76,20 @@ function insertTeacher(data) {
     else{
         $targetName.text("暂无数据...");
     }
+    //添加分页组件
+    appendFyDom($(".am-pagination"));
 }
 
 function insertLive(data) {
     var $targetName = $("#live-insert");
     if (maxPageFy !== 0){
-        appendTeacherList($targetName,data,'lid','pid','picture','pid');
+        appendLiveList($targetName,data,'title','picture','url');
     }
     else{
         $targetName.text("暂无数据...");
     }
+    //添加分页组件
+    appendFyDom($(".am-pagination"));
 }
 
 function appendPlaceList(targetName,data,id1,name1,img1) {
@@ -116,27 +121,44 @@ function appendTeacherList(targetName,data,id1,name1,img1,pid1) {
         var img = data[i][img1];
         var pid = data[i][pid1];
         var pname = "";
-
         // 根据pid从Place中查询出pname
         function returnPname(data) {
-            pname =  data[0].pname;
+            pname =  data.pname;
+
+            var insertDom = '<li>'+
+                '<a href="' + link + '">' +
+                '<img src="'+ img + '" alt="">' +
+                '</a>' +
+                '<h4>' + name + '</h4>' +
+                '<p>' + pname + '</p>' +
+                '</li>';
+            targetName.append(insertDom);
         }
         loadDataFalse('/Home/AjaxFyQuery/AssociationDb',{db:'Place',name:'pid',code:pid},returnPname);
 
-        var insertDom = '<li>'+
-            '<a href="' + link + '">' +
-            '<img src="'+ img + '" alt="">' +
-            '</a>' +
-            '<h4>' + name + '</h4>' +
-            '<p>' + pname + '</p>' +
-            '</li>';
-        targetName.append(insertDom);
     }
 }
 
+function appendLiveList(targetName,data,title1,img1,url1) {
+    // 清空目标DOM元素，然后在填充
+    targetName.html("");
+    for (var i = 0; i < data.length; i++){
+        var link = data[i][url1];
+        var name = data[i][title1];
+        var img = data[i][img1];
+
+        var insertDom = '<li>' +
+                            '<a href="' + link + '"><img src="' + img + '" alt=""></a>' +
+                            '<p>' + name + '</p>' +
+                        '</li>';
+        targetName.append(insertDom);
+    }
+}
 function amount(data) {
+    //根据查询到的数据条数计算最大页数
     maxPageFy = Math.ceil(data/listNum);
-    btGroup = Math.ceil(maxPageFy/maxListNum);
+    // 根据最大页数计算最大按钮组数
+    btGroup = Math.ceil(maxPageFy/maxBtListNum);
 }
 
 function initPage() {
@@ -183,10 +205,10 @@ function appendFyDom(el) {
         // 其他index=pageFy+1
         // 末页index=pageFy+3,下一页index=pageFy+2
 
-        // 当前按钮组的第一个按钮数字=maxListNum*(currentBtGroup-1)+1,在$bts中的index=(maxListNum*(currentBtGroup-1)+1)-1
-        var btsFirstIndex = (maxListNum*(currentBtGroup-1)+1)-1;
-        // 当前按钮组的最后一个按钮数字=maxListNum*currentBtGroup，在$bts中的index=(maxListNum*currentBtGroup)-1
-        var btsLastIndex = (maxListNum*currentBtGroup)-1;
+        // 当前按钮组的第一个按钮数字=maxBtListNum*(currentBtGroup-1)+1,在$bts中的index=(maxBtListNum*(currentBtGroup-1)+1)-1
+        var btsFirstIndex = (maxBtListNum*(currentBtGroup-1)+1)-1;
+        // 当前按钮组的最后一个按钮数字=maxBtListNum*currentBtGroup，在$bts中的index=(maxBtListNum*currentBtGroup)-1
+        var btsLastIndex = (maxBtListNum*currentBtGroup)-1;
         // 隐藏除了当前currentBtGroup的其他按钮
         $($bts.get(btsFirstIndex)).prevAll().css("display","none");
         $($bts.get(btsLastIndex)).nextAll().css("display","none");
@@ -216,7 +238,7 @@ function appendFyDom(el) {
 // 下一页
 function nextPage() {
     if(pageFy < maxPageFy && pageFy >= 0){
-        if (pageFy === maxListNum*currentBtGroup){
+        if (pageFy === maxBtListNum*currentBtGroup){
             currentBtGroup++;
         }
         pageFy++;
@@ -227,14 +249,14 @@ function nextPage() {
             db:dbName,//查询数据表
             num:listNum//每页几条数据
         },insertFun);
-        appendFyDom($(".am-pagination"));
+        // appendFyDom($(".am-pagination"));
     }
 }
 
 // 上一页
 function prevPage() {
     if(pageFy <= maxPageFy && pageFy >= 0){
-        if (pageFy === maxListNum*(currentBtGroup-1)+1){
+        if (pageFy === maxBtListNum*(currentBtGroup-1)+1){
             currentBtGroup--;
         }
         pageFy--;
@@ -245,7 +267,7 @@ function prevPage() {
             db:dbName,//查询数据表
             num:listNum//每页几条数据
         },insertFun);
-        appendFyDom($(".am-pagination"));
+        // appendFyDom($(".am-pagination"));
     }
 }
 
@@ -261,7 +283,7 @@ function targetPage(target) {
         db:dbName,//查询数据表
         num:listNum//每页几条数据
     },insertFun);
-    appendFyDom($(".am-pagination"));
+    // appendFyDom($(".am-pagination"));
 }
 
 // 首页
@@ -275,7 +297,7 @@ function firstPage() {
         db:dbName,//查询数据表
         num:listNum//每页几条数据
     },insertFun);
-    appendFyDom($(".am-pagination"));
+    // appendFyDom($(".am-pagination"));
 }
 
 // 末页

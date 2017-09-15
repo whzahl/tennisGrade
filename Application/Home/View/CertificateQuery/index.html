@@ -54,7 +54,6 @@
                 }
                 if (data.status == 2){
                     insertDom = '<p>您的成绩正在审核中，请耐心等候</p>';
-                    alert(data.status);
                     $target.append(insertDom);
                 }
             }
@@ -75,12 +74,12 @@
 </block>
 
 <block name="body">
-    <div class="query-common-part1">
-        <form class="am-form" action="" method="post">
+    <div class="query-common-part1" style="text-align: center;">
+        <form class="am-form" action="" method="post" style="margin-left: -127px;">
             <fieldset>
                 <div class="am-form-group">
                     <label style="width: 200px" for="cretype">证件类型</label>
-                    <select name="cretype" class="am-radius" style="display: inline-block;width: 20%;">
+                    <select name="cretype" class="am-radius" style="display: inline-block;width: 30%;">
                         <option value="1">中国居民身份证</option>
                         <option value="0">其他</option>
                     </select>

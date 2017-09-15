@@ -18,7 +18,7 @@ class AjaxFyQueryController extends BaseController{
 
     Public function initAmount(){
         $db = I('get.db');//目标数据表
-        $arrData = D($db,'Service')->countAll();
+        $arrData = D($db,'Service')->count($arrWhere);
         $this->ajaxReturn($arrData,'json');
     }
     public function ajaxFy(){
@@ -40,7 +40,7 @@ class AjaxFyQueryController extends BaseController{
         $code = I('get.code');
         $name = I('get.name');
         $arrWhere[$name] = array('like','%'.$code.'%');
-        $amount = D($db,'Service')->countWhere($arrWhere);
+        $amount = D($db,'Service')->count($arrWhere);
         $this->ajaxReturn($amount,'json');
     }
     public function AssociationDb(){
@@ -48,7 +48,7 @@ class AjaxFyQueryController extends BaseController{
         $code = I('get.code');
         $name = I('get.name');
         $arrWhere[$name] = $code;
-        $arrData = D($db,'Service')->findAll($arrWhere);
+        $arrData = D($db,'Service')->findOne($arrWhere);
         $this->ajaxReturn($arrData,'json');
     }
 }
