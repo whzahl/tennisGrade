@@ -242,7 +242,7 @@ function nextPage() {
             currentBtGroup++;
         }
         pageFy++;
-        loadData('/Home/AjaxFyQuery/ajaxFy',{
+        loadData(ajaxQueryUrl,{
             page:pageFy,//第几页
             name:keyName,//查询字段名
             code:keyFy,//查询字段值
@@ -260,7 +260,7 @@ function prevPage() {
             currentBtGroup--;
         }
         pageFy--;
-        loadData('/Home/AjaxFyQuery/ajaxFy',{
+        loadData(ajaxQueryUrl,{
             page:pageFy,//第几页
             name:keyName,//查询字段名
             code:keyFy,//查询字段值
@@ -276,7 +276,7 @@ function targetPage(target) {
 
     pageFy = target;
 
-    loadData('/Home/AjaxFyQuery/ajaxFy',{
+    loadData(ajaxQueryUrl,{
         page:pageFy,//第几页
         name:keyName,//查询字段名
         code:keyFy,//查询字段值
@@ -290,7 +290,7 @@ function targetPage(target) {
 function firstPage() {
     pageFy = 1;
     currentBtGroup = 1;
-    loadData('/Home/AjaxFyQuery/ajaxFy',{
+    loadData(ajaxQueryUrl,{
         page:pageFy,//第几页
         name:keyName,//查询字段名
         code:keyFy,//查询字段值
@@ -304,7 +304,7 @@ function firstPage() {
 function lastPage() {
     pageFy = maxPageFy;
     currentBtGroup = btGroup;
-    loadData('/Home/AjaxFyQuery/ajaxFy',{
+    loadData(ajaxQueryUrl,{
         page:pageFy,//第几页
         name:keyName,//查询字段名
         code:keyFy,//查询字段值

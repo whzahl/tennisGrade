@@ -14,6 +14,8 @@
             listNum = 12;
             //每页maxBtListNum个按钮（上一页、下一页、首页、末页不包含在内）
             maxBtListNum = 8;
+            //ajax分页查询地址
+            ajaxQueryUrl = '/Home/AjaxFyQuery/ajaxFy';
             //初始查询
             loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: dbName},amount);
             loadData('/Home/AjaxFyQuery/initQuery',{
@@ -22,30 +24,30 @@
             },insertFun);
 
             $("[name=province]").change(function () {
-                ajaxQuery('province',$("[name=province] option:selected").val(),insertFun);
+                ajaxQuery(ajaxQueryUrl,'province',$("[name=province] option:selected").val(),insertFun);
                 //查询city
                 loadData('/Home/Base/city',{code : keyFy}, cityQuery);
             });
 
             $targetCityName.change(function () {
-                ajaxQuery('city',$("[name=city] option:selected").val(),insertFun);
+                ajaxQuery(ajaxQueryUrl,'city',$("[name=city] option:selected").val(),insertFun);
                 //查询area
                 loadData('/Home/Base/area',{code: keyFy},areaQuery);
             });
 
             $targetAreaName.change(function () {
-                ajaxQuery('area',$("[name=area] option:selected").val(),insertFun);
+                ajaxQuery(ajaxQueryUrl,'area',$("[name=area] option:selected").val(),insertFun);
 ////                查询考官
 //                loadData('/Home/Base/teacher',{code:keyFy},teacherQuery);
             });
 
             $(".search-img").click(function () {
-                ajaxQuery('tname',$inputQuery.val(),insertFun);
+                ajaxQuery(ajaxQueryUrl,'tname',$inputQuery.val(),insertFun);
             });
 
             $inputQuery.keydown(function (e) {
                 if(e.keyCode === 13){
-                    ajaxQuery('tname',$inputQuery.val(),insertFun);
+                    ajaxQuery(ajaxQueryUrl,'tname',$inputQuery.val(),insertFun);
                     return false;
                 }
             })

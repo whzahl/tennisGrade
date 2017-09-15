@@ -87,50 +87,52 @@
 //
 //        })
 
-$(function () {
-    var $targetCityName = $("[name=city]");
-    var $targetAreaName = $("[name=area]");
-    var $inputQuery = $(".form-input-box1 input");
-    //定义查询数据库的对应的Service名
-    dbName = 'Live';
-    //ajax查询成功的回调函数
-    insertFun = insertLive;
-    //每页显示的数据量
-    listNum = 9;
-    //每页maxBtListNum个按钮（上一页、下一页、首页、末页不包含在内）
-    maxBtListNum = 8;
-    //初始查询
-    loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: dbName},amount);
-    loadData('/Home/AjaxFyQuery/initQuery',{
-        db:dbName,//查询数据表
-        num:listNum//每页几条数据
-    },insertFun);
+        $(function () {
+            var $targetCityName = $("[name=city]");
+            var $targetAreaName = $("[name=area]");
+            var $inputQuery = $(".form-input-box1 input");
+            //定义查询数据库的对应的Service名
+            dbName = 'Live';
+            //ajax查询成功的回调函数
+            insertFun = insertLive;
+            //每页显示的数据量
+            listNum = 9;
+            //每页maxBtListNum个按钮（上一页、下一页、首页、末页不包含在内）
+            maxBtListNum = 8;
+            //ajax分页查询地址
+            ajaxQueryUrl = '/Home/AjaxFyQuery/ajaxFy';
+            //初始查询
+            loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: dbName},amount);
+            loadData('/Home/AjaxFyQuery/initQuery',{
+                db:dbName,//查询数据表
+                num:listNum//每页几条数据
+            },insertFun);
 
-    $("[name=province]").change(function () {
-        ajaxQuery('province',$("[name=province] option:selected").val(),insertFun);
-        //查询city
-        loadData('/Home/Base/city',{code : keyFy}, cityQuery);
-    });
+            $("[name=province]").change(function () {
+                ajaxQuery(ajaxQueryUrl,'province',$("[name=province] option:selected").val(),insertFun);
+                //查询city
+                loadData('/Home/Base/city',{code : keyFy}, cityQuery);
+            });
 
-    $targetCityName.change(function () {
-        ajaxQuery('city',$("[name=city] option:selected").val(),insertFun);
-        //查询area
-        loadData('/Home/Base/area',{code: keyFy},areaQuery);
-    });
+            $targetCityName.change(function () {
+                ajaxQuery(ajaxQueryUrl,'city',$("[name=city] option:selected").val(),insertFun);
+                //查询area
+                loadData('/Home/Base/area',{code: keyFy},areaQuery);
+            });
 
-    $targetAreaName.change(function () {
-        ajaxQuery('area',$("[name=area] option:selected").val(),insertFun);
-    });
+            $targetAreaName.change(function () {
+                ajaxQuery(ajaxQueryUrl,'area',$("[name=area] option:selected").val(),insertFun);
+            });
 
-    $(".search-img").click(function () {
-        ajaxQuery('title',$inputQuery.val(),insertFun);
-    });
+            $(".search-img").click(function () {
+                ajaxQuery(ajaxQueryUrl,'title',$inputQuery.val(),insertFun);
+            });
 
-    $inputQuery.keydown(function (e) {
-        if(e.keyCode === 13){
-            ajaxQuery('title',$inputQuery.val(),insertFun);
-            return false;
-        }
+            $inputQuery.keydown(function (e) {
+                if(e.keyCode === 13){
+                    ajaxQuery(ajaxQueryUrl,'title',$inputQuery.val(),insertFun);
+                    return false;
+                }
     })
 
 })
