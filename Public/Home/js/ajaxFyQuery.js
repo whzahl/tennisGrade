@@ -71,7 +71,7 @@ function insertPlace(data) {
 function insertTeacher(data) {
     var $targetName = $("#teacher-insert");
     if (maxPageFy !== 0){
-        appendTeacherList($targetName,data,'tid','tname','picture','pid');
+        appendTeacherList($targetName,data,'tid','tname','picture','pname');
     }
     else{
         $targetName.text("暂无数据...");
@@ -111,31 +111,28 @@ function appendPlaceList(targetName,data,id1,name1,img1) {
 }
 
 
-function appendTeacherList(targetName,data,id1,name1,img1,pid1) {
-    // 清空目标DOM元素，然后在填充
+function appendTeacherList(targetName,data,id1,name1,img1,pname1) {
+// 清空目标DOM元素，然后在填充
     targetName.html("");
-    for (var i = 0; i < data.length; i++){
+    console.log(data[1]);
+    for (var i = 0; i < data[0].length; i++) {
         var link = "#";
-        var id = data[i][id1];
-        var name = data[i][name1];
-        var img = data[i][img1];
-        var pid = data[i][pid1];
-        var pname = "";
-        // 根据pid从Place中查询出pname
-        function returnPname(data) {
-            pname =  data.pname;
+        var id = data[0][i][id1];
+        var name = data[0][i][name1];
+        var img = data[0][i][img1];
+        var pname = data[1][i][pname1];
+        var pid = data[0][i].pid;
+        // console.log("pid:" + pid);
+        // console.log("id:" + id);
 
-            var insertDom = '<li>'+
-                '<a href="' + link + '">' +
-                '<img src="'+ img + '" alt="">' +
-                '</a>' +
-                '<h4>' + name + '</h4>' +
-                '<p>' + pname + '</p>' +
-                '</li>';
-            targetName.append(insertDom);
-        }
-        loadDataFalse('/Home/AjaxFyQuery/AssociationDb',{db:'Place',name:'pid',code:pid},returnPname);
-
+        var insertDom = '<li>' +
+            '<a href="' + link + '">' +
+            '<img src="' + img + '" alt="">' +
+            '</a>' +
+            '<h4>' + name + '</h4>' +
+            '<p>' + pname + '</p>' +
+            '</li>';
+        targetName.append(insertDom);
     }
 }
 
