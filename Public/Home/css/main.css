@@ -850,3 +850,35 @@ li{
     height: 400px;
 }
 /*query End*/
+
+
+.teacher-intro-name,.teacher-intro-img{
+    text-align: center;
+}
+.teacher-intro-img{
+    margin-bottom: 20px;
+}
+.teacher-intro-img img{
+    width: 200px;
+    height:auto;
+}
+.teacher-intro-content{
+    padding:0 80px;
+}
+.teacher-intro-content p{
+    text-indent: 2em;
+}
+.teacher--intro-certificate p{
+    color: #d9a4ed;
+}
+.teacher-certificate-img img{
+    width: 794px;
+    height:auto;
+}
+.place-intro-img{
+    margin-top: 40px;
+}
+.place-intro-img img{
+    width: 794px;
+    height: auto;
+}
