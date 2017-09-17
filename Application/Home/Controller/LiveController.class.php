@@ -13,6 +13,10 @@ class LiveController extends BaseController{
 	}
 
     public function index(){
+
+    	$arrData = D('Live','Service')-> findAll($arrWhere);
+    	$this->list = $arrData;
+
         $province =  M('tg_province')->select();
         $this->province = $province;
         $this->display();

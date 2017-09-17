@@ -241,7 +241,7 @@
                             <eq name="pl.pay" value="1">
                              <td>
                             <button class="btn btn btn-info">已支付</button></td>
-                            <td><button class="btn btn btn-info"><a href="/Admin/Login/homelogin?pid={$pl.pid}&type=3">后台管理入口</a></button></td>
+                            <td><button class="btn btn btn-info"><a href="/Admin/Login/homelogin?pid={$pl.pid}&type=3"><span  style="color:#fff;">后台管理入口</span></a></button></td>
                             </eq>
                              <eq name="pl.pay" value="0">
                              <td><button class="btn btn btn-info"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=3&userid={$pl.pid}">立即支付</a></button>
