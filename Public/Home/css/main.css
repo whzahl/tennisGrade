@@ -1,4 +1,10 @@
-body{
+/*当浏览器宽度小于等于1400时隐藏主页中的微信二维码*/
+@media screen and (max-width: 1400px){
+    .home-pt2-ct-pt3{
+        display: none;
+    }
+}
+body {
     background-color: #d9a4ed;
     font-size: 18px;
     margin: 0;
@@ -36,6 +42,12 @@ li{
 }
 .padding-9-8{
     padding:90px 80px;
+}
+.padding-5-8{
+    padding: 50px 80px;
+}
+.padding-0-8{
+    padding:0 80px 70px 80px;
 }
 .check-alert{
     border-radius: 5px;
@@ -95,11 +107,14 @@ li{
 }
 .wrap2{
     width: 954px;
+    min-height: 800px;
     position: relative;
     top: -112px;
     margin:0 auto;
     z-index: 200;
     background-color: #fff;
+    box-shadow:2px 6px 10px gray;
+    border-radius: 0 0 5px 5px ;
 }
 
 .width-full{
@@ -183,7 +198,7 @@ li{
 }
 .header-part2 img{
     width: 100%;
-    min-width: 1200px;
+    /*min-width: 1200px;*/
 }
 #intro-a{
     position: relative;
@@ -290,8 +305,6 @@ li{
 }
 .student-pt1-ct{
     padding:50px 50px;
-    box-shadow:2px 6px 10px gray;
-    border-radius: 0 0 5px 5px ;
 }
 
 .ks-gz{
@@ -413,8 +426,9 @@ li{
 /*Place end*/
 
 /*intro Start*/
+
 .intro-pt1-ct-pt2{
-    padding-top: 80px;
+    /*padding-top: 80px;*/
 }
 /*intro End*/
 
@@ -642,9 +656,9 @@ li{
 .home-pt4-ct-title-noborder{
     border:none;
 }
-多图滚动的样式
+/*多图滚动的样式*/
 /*.am-control-thumbs li {*/
-    /*width: 12.5%; !* n 为轮播图数量 *!*/
+    /*width: 12.5%; !* 100%/n ,n为轮播图数量 *!*/
 /*}*/
 .home-pt2-ct-common-slider{
     text-align: center;
@@ -668,14 +682,15 @@ li{
 /*News Strat*/
 .News-pt1-ct-pt2{
     color: #505050;
-    padding: 60px 0;
+    /*padding: 60px 0;*/
+    padding-top: 30px;
 }
 .News-pt1-ct-pt2 li{
     border-bottom:1px dashed #808080;
     padding-top: 20px;
 }
 .News-pt1-ct-pt2 li::before{
-    content: '●';
+    content: "●";
     color: #ca98df;
 }
 .News-pt1-ct-pt2 li a{
@@ -735,9 +750,9 @@ li{
 }
 /*News End*/
 /*live Start*/
-.live-pt1-ct-pt2{
-    margin-top: 40px;
-}
+/*.live-pt1-ct-pt2{*/
+    /*margin-top: 40px;*/
+/*}*/
 .live-pt1-ct-pt2 ul{
     margin: 0;
     padding: 0;
@@ -749,12 +764,17 @@ li{
     overflow: hidden;
 }
 .live-pt1-ct-pt2 img{
-    width: 250px;
-    height: 200px;
-    border:1px solid #505050;
+    width: 200px;
+    height: 150px;
+    /*border:1px solid #505050;*/
 }
 .live-pt1-ct-pt2 p{
     font-size: 14px;
+    width: 250px;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 /*live End*/
 
@@ -762,8 +782,6 @@ li{
 .query-common-part1{
     padding: 50px 50px;
     min-height: 600px;
-    box-shadow: 2px 6px 10px gray;
-    border-radius: 0 0 5px 5px;
 }
 .query-group{
     position: relative;
@@ -778,23 +796,57 @@ li{
     right: 6px;
     top: 17px;
 }
-.query-pt1-ct-pt2 ul{
 
-}
-.query-pt1-ct-pt2 li{
+.query-common li{
     text-align: center;
     display: inline-block;
     padding: 0 10px;
 }
-.query-pt1-ct-pt2 img{
+.query-place-pt1-ct-pt2 img{
     width: 230px;
     height: 150px;
 }
-.query-pt1-ct-pt2 p{
-    font-size: 12px;
+#place-insert img{
+    width: 230px;
+    height: 150px;
+}
+.query-common p{
+    font-size: 14px;
     margin-top: 10px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+.query-bt{
+    width: 200px;
+    background-color: #d9a4ed;
+}
+.query-common-pt2-ct{
+    text-align: center;
+}
+#teacher-insert img{
+    width: 170px;
+    height: 162px;
+    padding:0 20px;
+}
+
+#teacher-insert p{
+    overflow: hidden;
+    width: 170px;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#teacher-insert h4{
+    margin: 10px 0;
+    font-weight: 400;
+
+}
+#insert-certificate{
+    text-align: center;
+}
+#insert-certificate img{
+    width: 600px;
+    height: 400px;
 }
 /*query End*/

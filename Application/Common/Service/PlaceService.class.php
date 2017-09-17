@@ -18,7 +18,7 @@ class PlaceService extends BaseService{
 		$result = M('tg_place')->where($arrWhere)->count();
 		return $result;
 	}
-	
+
 	public function check($arrWhere){
 		$result = M('tg_place')->where($arrWhere)->find();
 		return $result;

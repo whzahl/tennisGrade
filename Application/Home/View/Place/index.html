@@ -1,5 +1,7 @@
-<extend name="Public:base" />
+<extend name="Public:base1" />
 <block name="js">
+<script src="/Public/Home/js/ajaxQuery.js"></script>
+<script src="/Public/Home/js/formValidation.js"></script>
 <script type="text/javascript">  
 
 var InterValObj; //timer变量，控制时间  
@@ -150,25 +152,18 @@ function sendMessage() {
 
 </block>
 <block name="body">
-    <div class="common-part1">
-        <div class="wrap1">
-            <div class="common-top-bg">
-                <img src="/Public/Home/images/user/top_bg.png" alt="">
-            </div>
-        </div>
-        <div class="wrap2">
-            <div class="student-pt1-ct">
+    <div class="student-pt1-ct">
                 <form class="am-form" action="/Home/Place/add" enctype="multipart/form-data" method="post" >
                     <fieldset>
-                        <div class="common-pt1-ct-pt1">
-                            <p>考点申请</p>
-                            <img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">
-                            <p>Candidates application</p>
-                            <!--<div class="ks-gz">-->
-                                <!--<img src="/Public/Home/images/Student/question.jpg" alt="">-->
-                                <!--<a href="#">等级考试规则</a>-->
-                            <!--</div>-->
-                        </div>
+                        <!--<div class="common-pt1-ct-pt1">-->
+                            <!--<p>考点申请</p>-->
+                            <!--<img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">-->
+                            <!--<p>Candidates application</p>-->
+                            <!--&lt;!&ndash;<div class="ks-gz">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<img src="/Public/Home/images/Student/question.jpg" alt="">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a href="#">等级考试规则</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--</div>-->
                         <div class="student-pt1-ct-pt3">
                             <p><label>带<span>*</span>的选项为必填选项</label></p>
                             <input type="hidden" name="level"/>
@@ -299,6 +294,4 @@ function sendMessage() {
                     </fieldset>
                 </form>
             </div>
-        </div>
-    </div>
 </block>
