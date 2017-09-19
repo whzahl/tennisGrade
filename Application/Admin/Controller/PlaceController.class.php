@@ -37,7 +37,8 @@ class PlaceController extends CheckController{
     	}
     	$this-> count = $intCount;
     	$this-> page = $show;
-    	$this-> list = $arrData;
+    	$this->list = $arrData;
+
     	$this->display();
     }
 
@@ -50,10 +51,10 @@ class PlaceController extends CheckController{
     		
     		$arrImages = $_FILES['certificate'];
     		$arrWhere['create_time'] = time();
-    		dump($arrWhere);
-    		dump($arrImage);
-    		dump($arrImages);
-    		exit();
+//    		dump($arrWhere);
+//    		dump($arrImage);
+//    		dump($arrImages);
+//    		exit();
     		if (empty($arrImage)&&empty($arrImages)){
     			$strpicture = I('picture');
     			$arrWhere['picture'] = implode('、',$strpicture);

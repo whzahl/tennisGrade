@@ -1,35 +1,108 @@
-<extend name="Public:base" />
-<block name="js"></block>
+<extend name="Public:base1" />
+<block name="js">
+    <script src="/Public/Home/js/ajaxFyQuery.js"></script>
+    <script>
+        $(function () {
+            var $targetCityName = $("[name=city]");
+            var $targetAreaName = $("[name=area]");
+            var $inputQuery = $(".form-input-box1 input");
+            //定义查询数据库的对应的Service名
+            dbName = 'Teacher';
+            //ajax查询成功的回调函数
+            insertFun = insertTeacher;
+            //每页显示的数据量
+            listNum = 12;
+            //每页maxBtListNum个按钮（上一页、下一页、首页、末页不包含在内）
+            maxBtListNum = 8;
+            //ajax分页查询地址
+            ajaxQueryUrl = '/Home/AjaxFyQuery/ajaxTeacherFy';
+//            初始查询
+            loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: dbName},amount);
+            loadData('/Home/AjaxFyQuery/initTeacherQuery',{
+                db:dbName,//查询数据表
+                num:listNum//每页几条数据
+            },insertFun);
+
+            $("[name=province]").change(function () {
+                ajaxQuery(ajaxQueryUrl,'province',$("[name=province] option:selected").val(),insertFun);
+                //查询city
+                loadData('/Home/Base/city',{code : keyFy}, cityQuery);
+            });
+
+            $targetCityName.change(function () {
+                ajaxQuery(ajaxQueryUrl,'city',$("[name=city] option:selected").val(),insertFun);
+                //查询area
+                loadData('/Home/Base/area',{code: keyFy},areaQuery);
+            });
+
+            $targetAreaName.change(function () {
+                ajaxQuery(ajaxQueryUrl,'area',$("[name=area] option:selected").val(),insertFun);
+////                查询考官
+//                loadData('/Home/Base/teacher',{code:keyFy},teacherQuery);
+            });
+
+            $(".search-img").click(function () {
+                ajaxQuery(ajaxQueryUrl,'tname',$inputQuery.val(),insertFun);
+            });
+
+            $inputQuery.keydown(function (e) {
+                if(e.keyCode === 13){
+                    ajaxQuery(ajaxQueryUrl,'tname',$inputQuery.val(),insertFun);
+                    return false;
+                }
+            })
+
+        })
+    </script>
+</block>
 <block name="body">
-    <div class="common-part1">
-        <div class="wrap1">
-            <div class="common-top-bg">
-                <img src="/Public/Home/images/user/top_bg.png" alt="">
-            </div>
-        </div>
-        <div class="wrap2">
-            <div class="query-common-part1">
+    <div class="query-common-part1">
+        <div class="query-common-pt1-ct">
+            <div class="query-common-pt1-ct-pt1">
                 <form class="am-form" action="" method="post">
                     <fieldset>
-                        <div class="am-form-group">
+                        <div class="am-form-group query-group">
                             <div class="form-input-box1">
-                                <select style="display: inline-block;width: 20%" class="am-radius" name="province">
+                                <select style="display: inline-block;width: 15%" class="am-radius" name="province">
                                     <option value="省份">选择省份</option>
                                     <volist name="province" id="vo">
                                         <option value="{$vo.code}">{$vo.name}</option>
                                     </volist>
                                 </select>
-                                <select style="display: inline-block;width: 20%" class="am-radius" name="city">
+                                <select style="display: inline-block;width: 15%" class="am-radius" name="city">
                                     <option value="市" class="my-input-place">选择市</option>
                                 </select>
-                                <select style="display: inline-block;width: 20%" class="am-radius" name="area">
+                                <select style="display: inline-block;width: 15%" class="am-radius" name="area">
                                     <option value="区" class="my-input-place">选择区</option>
                                 </select>
+                                <!--<select style="display: inline-block;width: 15%" class="am-radius" name="tid">-->
+                                    <!--<option value="考官">选择考官</option>-->
+                                <!--</select>-->
+                                <input style="width: 20%;padding-right: 33px;display: inline-block;float: right;" type="text" placeholder="查询考官姓名" class="am-form-field am-radius">
+                                <img class="search-img" src="/Public/Home/images/common/search.png" alt="">
                             </div>
                         </div>
                     </fieldset>
                 </form>
             </div>
+        </div>
+        <div class="query-teacher-pt1-ct-pt2 query-common">
+            <ul id="teacher-insert">
+                <!--<li>-->
+                    <!--<a href="#">-->
+                        <!--<img src="/Public/Home/images/home/people04.jpg" alt="">-->
+                    <!--</a>-->
+                    <!--<p>何润东</p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="query-common-pt2-ct">
+            <ul data-am-widget="pagination"
+                class="am-pagination am-pagination-default"
+            >
+
+            </ul>
+
         </div>
     </div>
 </block>

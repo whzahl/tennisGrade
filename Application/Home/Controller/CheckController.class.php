@@ -20,14 +20,15 @@ class CheckController extends BaseController {
         // 获取登录的Session
 
        $session = $_SESSION['userInfo'];
-
-//        判断是否登录
-       if(!$session){
-       	$this->redirect('/Home/Index/index');
-       }else{
-       	$this->unionid = $session['unionid'];
-       }
-
+//
+       // 判断是否登录
+        //gyh 便于开发前端页面 暂时注释 start---
+//	      if(!$session){
+//	      	$this->redirect('/Home/Index/index');
+//	      }else{
+//	      	$this->unionid = $session['unionid'];
+//	      }
+        //结束开发后恢复end
     }
     
 }

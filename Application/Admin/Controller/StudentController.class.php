@@ -41,7 +41,7 @@ class StudentController extends CheckController{
     	}
     	$this-> count = $intCount;
     	$this-> page = $show;
-    	$this-> list = $arrData;
+    	$this->list = $arrData;
     	$this->display();
     }
     

@@ -1,4 +1,4 @@
-<extend name="Public:base" />
+<extend name="Public:base1" />
 <block name="js">
 <script>
     $(document).ready(function () {
@@ -28,14 +28,7 @@
 </script>
 </block>
 <block name="body">
-<div class="common-part1">
-    <div class="wrap1">
-        <div class="common-top-bg">
-            <img src="/Public/Home/images/user/top_bg.png" alt="">
-        </div>
-    </div>
-    <div class="wrap2">
-        <div class="user-pt1-ct">
+    <div class="user-pt1-ct">
             <div class="user-pt1-ct-pt1">
                 <div class="user-pt1-ct-pt1-ks user-pt1-ct-pt1-common">考生申请信息</div>
                 <div class="user-pt1-ct-pt1-kg user-pt1-ct-pt1-common">考官申请信息</div>
@@ -248,7 +241,7 @@
                             <eq name="pl.pay" value="1">
                              <td>
                             <button class="btn btn btn-info">已支付</button></td>
-                            <td><button class="btn btn btn-info"><a href="/Admin/Login/homelogin?pid={$pl.pid}&type=3">后台管理入口</a></button></td>
+                            <td><button class="btn btn btn-info"><a href="/Admin/Login/homelogin?pid={$pl.pid}&type=3"><span  style="color:#fff;">后台管理入口</span></a></button></td>
                             </eq>
                              <eq name="pl.pay" value="0">
                              <td><button class="btn btn btn-info"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=3&userid={$pl.pid}">立即支付</a></button>
@@ -265,6 +258,4 @@
                 <div class="user-pt1-ct-pt3"></div>
             </div>
         </div>
-    </div>
-</div>
 </block>

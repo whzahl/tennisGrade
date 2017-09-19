@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!--<meta name="viewport"-->
-          <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>全国网球等级考试平台</title>
     <link rel="icon" type="image/png" href="\Public\Home\images\common\title_icon.png">
@@ -62,25 +62,39 @@
                     <li><a href="/Home/Live/index">视频中心</a></li>
                 </ul>
                 <if condition="($Think.session.userInfo.unionid eq NULL)">
-                <button class="btn btn-success btn-lg" onclick="abc()">登录</button>
-                <else />
-                <button id="personal-center" class="btn btn-success btn-lg">
-                    <a href="/Home/User/index">个人中心</a>
-                    <a href="/Home/Login/logout" class="am-badge am-badge-warning login-out">退出</a>
-                </button>
+                    <button class="btn btn-success btn-lg" onclick="abc()">登录</button>
+                    <else />
+                    <button id="personal-center" class="btn btn-success btn-lg">
+                        <a href="/Home/User/index">个人中心</a>
+                        <a href="/Home/Login/logout" class="am-badge am-badge-warning login-out">退出</a>
+                    </button>
                 </if>
             </div>
         </div>
     </div>
     <div class="header-part2" >
-        <span style="position: absolute;top:40px;buttom:0px;left:40%;  background: #fff;">
+        <span style="position: absolute;top:50px;buttom:0px;left:40%;  background: #fff;">
         <div id="login_container">
-        </div> 
+        </div>
         </span>
         <img src="/Public/Home/images/common/headerimg_01.jpg" alt="" >
     </div>
 </div>
-<block name="body"></block>
+<div class="common-part1">
+    <div class="wrap1">
+        <div class="common-top-bg">
+            <img src="/Public/Home/images/user/top_bg.png" alt="">
+        </div>
+    </div>
+    <div class="wrap2">
+        <div class="common-pt1-ct-pt1" style="padding-top: 30px;">
+            <p>中文标题</p>
+            <img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">
+            <p>English Title</p>
+        </div>
+        <block name="body"></block>
+    </div>
+</div>
 <div class="footer">
     <div class="footer-part">
         <ul>
@@ -97,76 +111,76 @@
 </div>
 <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
 <script>
-function abc(){
-	var unionid =  $("input[name='unionid']").val();
-	if (unionid == ''){
-	var obj = new WxLogin({
-	    id:"login_container",
-	    appid: "wx97cea69a39e328a5",
-	    scope: "snsapi_login",
-	    redirect_uri: "http://tennis.laigl.com/weixinlogin.php",
-	    state: "STATE",
-	    style: "",
-	    href: ""
-	  });
-	}else{
-		window.location.href="/Home/Student/index";
-	}
-}
+    function abc(){
+        var unionid =  $("input[name='unionid']").val();
+        if (unionid == ''){
+            var obj = new WxLogin({
+                id:"login_container",
+                appid: "wx97cea69a39e328a5",
+                scope: "snsapi_login",
+                redirect_uri: "http://tennis.laigl.com/weixinlogin.php",
+                state: "STATE",
+                style: "",
+                href: ""
+            });
+        }else{
+            window.location.href="/Home/Student/index";
+        }
+    }
 </script>
 <script>
-function a(){
-	var unionid =  $("input[name='unionid']").val();
-	if (unionid == ''){
-	var obj = new WxLogin({
-	    id:"login_container",
-	    appid: "wx97cea69a39e328a5",
-	    scope: "snsapi_login",
-	    redirect_uri: "http://tennis.laigl.com/weixinlogin.php",
-	    state: "STATE",
-	    style: "",
-	    href: ""
-	  });
-	}else{
-		window.location.href="/Home/Student/index";
-	}
-}
+    function a(){
+        var unionid =  $("input[name='unionid']").val();
+        if (unionid == ''){
+            var obj = new WxLogin({
+                id:"login_container",
+                appid: "wx97cea69a39e328a5",
+                scope: "snsapi_login",
+                redirect_uri: "http://tennis.laigl.com/weixinlogin.php",
+                state: "STATE",
+                style: "",
+                href: ""
+            });
+        }else{
+            window.location.href="/Home/Student/index";
+        }
+    }
 </script>
 <script>
-function b(){
-	var unionid =  $("input[name='unionid']").val();
-	if (unionid == ''){
-	var obj = new WxLogin({
-	    id:"login_container",
-	    appid: "wx97cea69a39e328a5",
-	    scope: "snsapi_login",
-	    redirect_uri: "http://tennis.laigl.com/weixinlogin.php",
-	    state: "STATE",
-	    style: "",
-	    href: ""
-	  });
-	}else{
-		window.location.href="/Home/Teacher/index";
-	}
-}
+    function b(){
+        var unionid =  $("input[name='unionid']").val();
+        if (unionid == ''){
+            var obj = new WxLogin({
+                id:"login_container",
+                appid: "wx97cea69a39e328a5",
+                scope: "snsapi_login",
+                redirect_uri: "http://tennis.laigl.com/weixinlogin.php",
+                state: "STATE",
+                style: "",
+                href: ""
+            });
+        }else{
+            window.location.href="/Home/Teacher/index";
+        }
+    }
 </script>
 <script>
-function c(){
-	var unionid =  $("input[name='unionid']").val();
-	if (unionid == ''){
-	var obj = new WxLogin({
-	    id:"login_container",
-	    appid: "wx97cea69a39e328a5",
-	    scope: "snsapi_login",
-	    redirect_uri: "http://tennis.laigl.com/weixinlogin.php",
-	    state: "STATE",
-	    style: "",
-	    href: ""
-	  });
-	}else{
-		window.location.href="/Home/Place/index";
-	}
-}
+    function c(){
+        var unionid =  $("input[name='unionid']").val();
+        if (unionid == ''){
+            var obj = new WxLogin({
+                id:"login_container",
+                appid: "wx97cea69a39e328a5",
+                scope: "snsapi_login",
+                redirect_uri: "http://tennis.laigl.com/weixinlogin.php",
+                state: "STATE",
+                style: "",
+                href: ""
+            });
+        }else{
+            window.location.href="/Home/Place/index";
+        }
+    }
 </script>
 </body>
 </html>
