@@ -21,7 +21,7 @@ class LiveController extends CheckController{
 			$this->title=$strTitle;
 		}
 		$intCount = D('Live','Service')->count($arrWhere);
-		$Page = new \Think\Page($intCount,7);// 实例化分页类 传入总记录数和每页显示的记录数(7)
+		$Page = new \Think\Page($intCount,9);// 实例化分页类 传入总记录数和每页显示的记录数(7)
 		$show = $Page->show();   // 分页显示输出
 		$first = $Page->firstRow;
 		$list = $Page->listRows;

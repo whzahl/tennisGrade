@@ -17,5 +17,4 @@ class NoticeController extends BaseController{
 
 
 
-
 }

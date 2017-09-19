@@ -18,6 +18,15 @@ class IndexController extends BaseController {
 	}
 
     public function index(){
+//	    查询考试公告(最新的6条）
+        $notice = D('Notice','Service')->findAll($arrWhere,$first,6);
+        $news = D('News','Service')->findAll($arrWhere,$first,6);
+        $teacher = D('Teacher','Service')->findAll($arrWhere,$first,50);
+        $student = D('Student','Service')->findAll($arrWhere,$first,50);
+        $this->notice = $notice;
+        $this->news = $news;
+        $this->teacher = $teacher;
+        $this->student = $student;
     	$this->display();
     }
 
