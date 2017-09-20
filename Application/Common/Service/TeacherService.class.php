@@ -14,10 +14,10 @@ class TeacherService extends BaseService{
 /**
 	 *	统计
 	 */
-	public function count($arrWhere){
-		$result = M('tg_teacher')->where($arrWhere)->count();
-		return $result;
-	}
+    public function count($arrWhere){
+        $result = M('tg_teacher')->where($arrWhere)->count();
+        return $result;
+    }
 	
 	public function check($arrWhere){
 		$result = M('tg_teacher')->where($arrWhere)->find();
@@ -59,7 +59,7 @@ class TeacherService extends BaseService{
 	 *	增加一条数据
 	 */
 	public function add($arrWhere){
-		$result = M('tg_teacher')->where($arrWhere)->add();
+		$result = M('tg_teacher')->data($arrWhere)->add();
 		return $result;
 	}
     

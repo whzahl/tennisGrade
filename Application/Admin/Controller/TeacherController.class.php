@@ -14,6 +14,9 @@ class TeacherController extends CheckController{
 
 
     public function index(){
+    	if (!empty($_SESSION['Type']['uid'])) {
+    		$arrWhere['pid'] = $_SESSION['Type']['uid'];
+    	}
     	$intCount = D('Teacher','Service') ->count($arrWhere);
     	$Page = new \Think\Page($intCount,10);
     	$show =  $Page ->show();
@@ -23,11 +26,20 @@ class TeacherController extends CheckController{
     	foreach ($arrData as $k => $v){
     		$arrWhere['pid'] = $v['pid'];
     		$arrDatas = D('Place','Service') ->findOne($arrWhere);
-    		$arrData[$k]['address'] = $arrDatas['address'];
+    		$arrData[$k]['pname'] = $arrDatas['pname'];
+    		$arrWheres['code'] = $v['province'];
+    		$arrDatas = D('Province','Service') -> findOne($arrWheres);
+    		$arrData[$k]['province'] = $arrDatas['name'];
+    		$arrWheres['code'] = $v['city'];
+    		$arrDatas = D('City','Service') -> findOne($arrWheres);
+    		$arrData[$k]['city'] = $arrDatas['name'];
+    		$arrWheres['code'] = $v['area'];
+    		$arrDatas = D('Area','Service') -> findOne($arrWheres);
+    		$arrData[$k]['area'] = $arrDatas['name'];
     	}
     	$this-> count = $intCount;
     	$this-> page = $show;
-    	$this-> list = $arrData;
+    	$this->list = $arrData;
     	$this->display();
     }
  

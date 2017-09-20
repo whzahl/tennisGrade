@@ -41,6 +41,14 @@ class StudentService extends BaseService{
 	}
 	
 	/**
+	 * 	查找一条数据
+	 */
+	public function findOnes($arrWheres){
+		$result = M('tg_student')->where($arrWheres)->find();
+		return $result;
+	}
+	
+	/**
 	 *  编辑一条数据
 	 */
 	public function edit($arrWhere){
@@ -59,7 +67,7 @@ class StudentService extends BaseService{
 	 *	增加一条数据
 	 */
 	public function add($arrWhere){
-		$result = M('tg_student')->where($arrWhere)->add();
+		$result = M('tg_student')->data($arrWhere)->add();
 		return $result;
 	}
     

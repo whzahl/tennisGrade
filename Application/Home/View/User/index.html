@@ -1,4 +1,4 @@
-<extend name="Public:base" />
+<extend name="Public:base1" />
 <block name="js">
 <script>
     $(document).ready(function () {
@@ -28,13 +28,7 @@
 </script>
 </block>
 <block name="body">
-<div class="common-part1">
-    <div class="wrap1">
-        <div class="common-top-bg">
-        </div>
-    </div>
-    <div class="wrap2">
-        <div class="user-pt1-ct">
+    <div class="user-pt1-ct">
             <div class="user-pt1-ct-pt1">
                 <div class="user-pt1-ct-pt1-ks user-pt1-ct-pt1-common">考生申请信息</div>
                 <div class="user-pt1-ct-pt1-kg user-pt1-ct-pt1-common">考官申请信息</div>
@@ -45,16 +39,11 @@
                     <p>基本信息</p>
                     <table class="table">
                         <tr>
-                            <td>姓名：小谢</td>
-                            <td>性别：男</td>
-                            <td>年龄：10</td>
-                            <td>出生年月日：2007-05-01</td>
-                        </tr>
-                        <tr>
-                            <td>籍贯：福建</td>
-                            <td>现所在地：湖北</td>
-                            <td>网球等级：TG-R1</td>
-                            <td></td>
+                            <td>姓名：{$user.sname}</td>
+                            <td>性别：<eq name="user.sex" value="1">男</eq>
+                                      <eq name="user.sex" value="2">女</eq></td>
+                            <td>年龄：{$user.age}</td>
+                            <td>网球等级：{$level}</td>
                         </tr>
                     </table>
                 </div>
@@ -65,20 +54,47 @@
                             <th>级别</th>
                             <th>考点</th>
                             <th>时间</th>
-                            <th>状态</th>
+                            <th>申请状态</th>
+                            <th>支付状态</th>
+                            <th>申请退款</th>
                         </tr>
+                        <volist name="list" id="vo">
                         <tr>
-                            <td>TG-R2</td>
-                            <td>珞喻路461</td>
-                            <td>2017-10-01</td>
-                            <td>2017-10-01</td>
+                            <td>{$vo.level}</td>
+                            <td>{$vo.place}</td>
+                            <td>待定</td>
+                            <eq name="vo.status" value="0"><td>未通过</td><td>暂无支付权限</td><td>暂无退款权限</td></eq>
+                            <eq name="vo.status" value="1"><td>已通过</td>
+                            
+                             <eq name="vo.pay" value="0">
+                             <td><button class="btn btn btn-info"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=1&userid={$vo.sid}">立即支付</a></button></td>
+                             <td>暂无退款权限</td>
+                            </eq>
+                            <eq name="vo.pay" value="1">
+                              <td><button class="btn btn btn-info">已支付</button></td>
+                             <td><a href="/Home/User/sqtk?type=1&userid={$vo.sid}" class="am-badge am-badge-warning am-radius">申请退款</a></td>
+                            </eq>
+                            <eq name="vo.pay" value="2">
+                            <td><button class="btn btn btn-info">退款中</button></td>
+                            <td><a href="#" class="am-badge am-badge-warning am-radius">已申请</a></td>
+                            </eq>
+                            <eq name="vo.pay" value="3">
+                             <td><button class="btn btn btn-info">退款完成</button></td>
+                             <td><a href="#" class="am-badge am-badge-warning am-radius">已完成</a></td>
+                            </eq>
+                            </eq>
+                            </eq>
+                            <eq name="vo.status" value="2"><td>审核中</td><td>暂无支付权限</td><td>暂无退款权限</td></eq>
+                            <!-- <td><button class="btn btn btn-info"><a href="/Home/User/sqtk?type=1&userid={$vo.sid}">申请退款</a></button></td> -->
                         </tr>
-                        <tr>
+                        </volist>
+                       
+                        <!-- <tr>
                             <td>TG-R1</td>
                             <td>珞喻路461</td>
-                            <td>准备中</td>
-                            <td>已结束</td>
-                        </tr>
+                            <td>2017-10-01</td>
+                            <td>已支付 <a class="am-badge am-badge-warning am-radius">申请退款</a></td>
+                        </tr> -->
                     </table>
                 </div>
             </div>
@@ -90,39 +106,63 @@
                             <th>姓名</th>
                             <th>地区</th>
                             <th>申请状态</th>
-                            <th>支付情况</th>
+                            <th>支付状态</th>
+                            <th>申请退款</th>
                         </tr>
+                        <volist name="teacher" id="teach">
                         <tr>
-                            <td>李玉刚</td>
-                            <td>湖北省 武汉市 洪山区</td>
-                            <td>通过审核</td>
-                            <td><button class="btn btn btn-info">立即支付</button></td>
+                            <td>{$teach.tname}</td>
+                            <td>{$teach.province} {$teach.city} {$teach.area}</td>
+                            <eq name="teach.status" value="0"><td>未通过</td><td>暂不能支付</td></eq>
+                                <eq name="teach.status" value="1"><td>已通过</td>
+                                <eq name="teach.pay" value="0">
+                             <td><button class="btn btn btn-info"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=1&userid={$teach.tid}">立即支付</a></button></td>
+                             <td>暂无退款权限</td>
+                            </eq>
+                            <eq name="teach.pay" value="1">
+                              <td><button class="btn btn btn-info">已支付</button></td>
+                             <td><a href="/Home/User/sqtk?type=1&userid={$vo.sid}" class="am-badge am-badge-warning am-radius">申请退款</a></td>
+                            </eq>
+                            <eq name="teach.pay" value="2">
+                            <td><button class="btn btn btn-info">退款中</button></td>
+                            <td><a href="#" class="am-badge am-badge-warning am-radius">已申请</a></td>
+                            </eq>
+                            <eq name="teach.pay" value="3">
+                             <td><button class="btn btn btn-info">退款完成</button></td>
+                             <td><a href="#" class="am-badge am-badge-warning am-radius">已完成</a></td>
+                            </eq>
+                            </eq>
+                                </eq>
+                               <eq name="teach.status" value="2"><td>审核中</td><td>暂无支付权限</td><td>暂无退款权限</td></eq>
+                                <!--  <td><button class="btn btn btn-info"><a href="/Home/User/sqtk?type=2&userid={$teach.tid}">申请退款</a></button></td> -->
                         </tr>
+                       
+                        </volist>
                     </table>
                 </div>
-                <div class="user-pt1-ct-pt3">
+                <!-- <div class="user-pt1-ct-pt3">
                     <p>资格证书</p>
                     <table class="table">
                         <tr>
                             <td><img src="/Public/Home/images/user/zgzs.jpg" alt="" width="250px" height="180px"></td>
                         </tr>
                     </table>
-                </div>
+                </div> -->
                 <div class="user-pt1-ct-pt3">
                     <p>考官数据</p>
                     <div class="am-alert am-alert-danger" id="my-alert" style="display: none">
                         <p>开始日期应小于结束日期！</p>
                     </div>
                     <div class="am-g">
-                        <div class="am-u-sm-3">
+                        <div class="am-u-sm-4">
                             <button type="button" class="am-btn am-btn-default am-margin-right" id="my-start">开始日期</button>
                             <span id="my-startDate">2017-08-01</span>
                         </div>
-                        <div class="am-u-sm-3" style="float: left;">
+                        <div class="am-u-sm-4" style="float: left;">
                             <button type="button" class="am-btn am-btn-default am-margin-right" id="my-end">结束日期</button>
                             <span id="my-endDate">2017-08-30</span>
                         </div>
-                        <div class="am-u-sm-3 am-u-sm-offset-3">
+                        <div class="am-u-sm-4">
                             <a class="am-badge am-badge-success">三个月内</a>
                             <a class="am-badge am-badge-success">上个月</a>
                             <a class="am-badge am-badge-success">本月</a>
@@ -159,14 +199,17 @@
                         });
                     </script>
                     <table class="table table-striped" style="margin-top: 20px">
+                    
                         <tr>
-                            <th>监考人次</th>
+                            <th>陪考地点</th>
                             <th>陪考人次</th>
                         </tr>
+                        <volist name="teacher" id="teach">
                         <tr>
-                            <td>0</td>
-                            <td>0</td>
+                            <td>{$teach.province} {$teach.city} {$teach.area}</td>
+                            <td>{$teach.count}</td>
                         </tr>
+                        </volist>
                     </table>
                 </div>
             </div>
@@ -189,17 +232,30 @@
                             <th>支付状态</th>
                             <th>考点管理入口</th>
                         </tr>
+                        <volist name="place" id="pl">
                         <tr>
-                            <td>武汉体育学院网球俱乐部</td>
-                            <td>未审核</td>
-                            <td>待审核</td>
-                            <td></td>
+                            <td>{$pl.pname}</td>
+                           <eq name="pl.status" value="0"><td>未通过</td><td>暂不能支付</td><td>暂未开通</td></eq>
+                           <eq name="pl.status" value="1"><td>已通过</td>
+                           
+                            <eq name="pl.pay" value="1">
+                             <td>
+                            <button class="btn btn btn-info">已支付</button></td>
+                            <td><button class="btn btn btn-info"><a href="/Admin/Login/homelogin?pid={$pl.pid}&type=3"><span  style="color:#fff;">后台管理入口</span></a></button></td>
+                            </eq>
+                             <eq name="pl.pay" value="0">
+                             <td><button class="btn btn btn-info"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=3&userid={$pl.pid}">立即支付</a></button>
+                            </td><td>暂未开通</td>
+                            </eq>
+                           
+                           </eq>
+                           <eq name="pl.status" value="2"><td>审核中</td><td>暂无支付权限</td><td>暂未开通</td></eq>
+                            
                         </tr>
+                        </volist>
                     </table>
                 </div>
                 <div class="user-pt1-ct-pt3"></div>
             </div>
         </div>
-    </div>
-</div>
 </block>

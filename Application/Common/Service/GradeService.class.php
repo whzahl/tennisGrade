@@ -59,7 +59,7 @@ class GradeService extends BaseService{
 	 *	增加一条数据
 	 */
 	public function add($arrWhere){
-		$result = M('tg_grade')->where($arrWhere)->add();
+		$result = M('tg_grade')->data($arrWhere)->add();
 		return $result;
 	}
     

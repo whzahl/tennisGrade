@@ -73,11 +73,11 @@
 		                          <thead>
 		                              <tr>
 		                                  <!-- <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th> -->
-		                                  <th></th>
 		                                  <th class="table-id">ID</th>
 		                                  <th class="table-title">姓名</th>
 		                                  <th class="table-type">等级</th>
 		                                  <th class="table-author am-hide-sm-only">手机号码</th>
+		                                  <th class="table-author am-hide-sm-only">考点地址</th>
 		                                  <th class="table-date am-hide-sm-only">陪考</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
@@ -86,21 +86,21 @@
 		                          <volist name="list" id="vo">
 		                              <tr>
 		                                  <!-- <td><input type="checkbox"></td> -->
-		                                  <td></td>
 		                                  <td>{$vo.sid}</td>
 		                                  <td>{$vo.sname}</td>
 		                                  <td>{$vo.level}</td>
 		                                  <td>{$vo.phone}</td>
+		                                  <td>{$vo.province}{$vo.city}{$vo.area}{$vo.address}</td>
 		                                  <td>{$vo.tname}</td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
 		                                              <if condition="$vo['status'] eq 1">
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>已通过</button>
+			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><a href="/Admin/Student/shenhe?sid={$vo.sid}"><span class="am-icon-archive"></span>已通过</a></button>
 			                                            <elseif condition="$vo['status'] eq 2"/>
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>待审核</button>
+			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><a href="/Admin/Student/shenhe?sid={$vo.sid}"><span class="am-icon-archive"></span>待审核</a></button>
 			                                            <else />
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>未通过</button>
+			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><a href="/Admin/Student/shenhe?sid={$vo.sid}"><span class="am-icon-archive"></span>未通过</a></button>
 			                                            </if>
 		                                              <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><a href="/Admin/Student/edit?sid={$vo.sid}"><span class="am-icon-pencil-square-o"></span> 修改</a></button>
 		                                              <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><a href="/Admin/Student/delete?sid={$vo.sid}" onclick="return del()"><span class="am-icon-trash-o"></span> 删除</a></button>

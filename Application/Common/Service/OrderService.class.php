@@ -59,7 +59,7 @@ class OrderService extends BaseService{
 	 *	增加一条数据
 	 */
 	public function add($arrWhere){
-		$result = M('tg_order')->where($arrWhere)->add();
+		$result = M('tg_order')->data($arrWhere)->add();
 		return $result;
 	}
     

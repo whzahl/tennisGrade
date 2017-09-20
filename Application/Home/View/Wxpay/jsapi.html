@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" href="/Public/Home/css/163a54cb.main.css">
+<link rel="stylesheet" href="/Public/Home/css/frozen.css">
+<link rel="stylesheet" href="/Public/Home/font-awesome-4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/Public/Home/css/stylen.css">
+<link rel="stylesheet" type="text/css" href="/Public/Home/css/main.css">
+<link rel="stylesheet" href="/Public/Home/css/style2.css">
+<script src="/Public/Home/js/96378d40.scripts.js"></script>
+<script type="text/javascript" src="/Public/Home/js/jquery-1.7.1.min.js"></script>
+<title>支付页面</title>
+<style>
+	body{
+        margin: 0 auto;
+		}
+   /*页头*/
+    .yetou{
+	    width:100%;
+	    height:130px;
+	    /* line-height:200px; */
+	   display:-webkit-flex; 
+    	
+    }
+   .header{
+	    width:100%;
+	    height:30px;
+	    background-color:#0498E5;
+    }
+    .headert{
+    	 width:100%;
+    	  height: 28px;	
+    	 border:0; 
+	   
+    }
+    .header tr{
+		height: 28px;		
+		border-right:0px solid aliceblue;
+		border-bottom:0px solid aliceblue;
+	}
+	.header td{	
+		font-size:14px;
+		width:33%;
+		color:#ffffff;
+		padding-bottom:23px;
+		
+	}
+  .ui-checkbox-s {
+    margin-right: 10px;
+  }
+
+  .ui-radio input:before {
+    width: 16px;
+    height: 16px;
+  }
+
+  .ui-radio {
+    vertical-align: text-top;
+  }
+
+  .ui-list-radio >label,
+  .ui-list-checkbox >label {
+    width: 70px;
+  }
+
+  .ui-list-radio p {
+    margin-left: 99px;
+  }
+
+  .ui-radio input:checked:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #18b4ed;
+    border-radius: 7px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+  }
+
+  .ui-radio input {
+    margin-left: -2px;
+  }
+
+  .ui-form-item input,
+  .ui-form-item textarea {
+    padding-left: 99px;
+  }
+
+  .ui-form-item:first-child label:first-child {
+    left: 15px;
+  }
+    
+</style> 
+<script type="text/javascript">
+	var order_sn = "{$res['order_sn']}";
+	//调用微信JS api 支付
+	function jsApiCall() {
+		WeixinJSBridge
+				.invoke(
+				'getBrandWCPayRequest',
+				<?php echo $jsApiParameters; ?>,
+				function(res) {
+					//如果支付成功
+					if (res.err_msg == 'get_brand_wcpay_request:ok') {
+						//支付成功后跳转的地址
+						location.href = 'http://tennis.laigl.com/Home/Wxpay/successs';
+					} else if (res.err_msg == 'get_brand_wcpay_request:cancel') {
+						location.href = 'http://tennis.laigl.com/Home/Wxpay/errors';
+					} else if (res.err_msg == 'get_brand_wcpay_request:fail') {
+						location.href = 'http://tennis.laigl.com/Home/Wxpay/errors';
+					} else {
+						location.href = 'http://tennis.laigl.com/Home/Wxpay/errors';
+					}
+				});
+	}
+	function callpay() {
+		if (typeof WeixinJSBridge == "undefined") {
+			if (document.addEventListener) {
+				document.addEventListener('WeixinJSBridgeReady', jsApiCall,
+						false);
+			} else if (document.attachEvent) {
+				document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+				document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+			}
+		} else {
+			jsApiCall();
+		}
+	}
+</script> 
+<!--顶部-->
+</head><body> 
+
+ <div class="ui-poptips ui-poptips-warn" style="display:none"> 
+   <div class="ui-poptips-cnt">
+    <i></i>温馨提示内容
+  </div> 
+</div> 
+
+     
+<div class="inner">
+	<div class="lists">
+		<div class="storey" style="background-color: #FFF; width: 100%;">
+			<ul class="st_nav">
+				<li class="st_1"><a href="javascript:void(0);" style="margin-left: 10px;">订单信息</a></li>
+				<li class="st_2"></li>
+			</ul>
+
+			<div style="width: 100%">
+				<p
+					style="font-size: 18px; width: 100%; height: 50px; margin: 20px 0 0 10px;">商品名称:{$res['order_title']}</p>
+				<div style="width: 100%; height: 50px; background-color: #fa3d39;">
+					<p
+						style="font-size: 16px; width: 100%; height: 50px; line-height: 50px; color: #fff; margin-left: 10px;">
+						应支付金额<span style="float: right; margin-right: 20px;">{$res['order_amount']}元</span>
+					</p>
+				</div>
+			</div>
+			<ul class="st_nav" style="margin-top: 20px;">
+				<li class="st_1"><a href="javascript:void(0);" style="margin-left: 10px;">选择支付方式</a></li>
+				<li class="st_2"></li>
+			</ul>
+			<div class="bankClass">
+				<span style="width: 100%; margin-top: -30px;">
+					<p class="btn-pay" style="border: 1px solid green; background-color: green; height: 40px; line-height: 40px; text-align: center; font-size: 20px; color: #fff; margin-top: 50px;"
+						onclick="callpay();">微信支付</p>
+				</span>
+				<div style="clear: both"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</block>

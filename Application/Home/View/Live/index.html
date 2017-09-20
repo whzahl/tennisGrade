@@ -1,12 +1,215 @@
-<extend name="Public:base" />
-<block name="js"></block>
-<block name="body">
-    <div class="common-part1">
-        <div class="wrap1">
-            <div class="common-top-bg">
-                <img src="/Public/Home/images/user/top_bg.png" alt="">
-            </div>
-        </div>
+<extend name="Public:base1"/>
+<block name="js">
+    <script src="/Public/Home/js/ajaxFyQuery.js"></script>
+    <script>
+        //        $(function () {
+        //            var $targetCityName = $("[name=city]");
+        //            var $targetAreaName = $("[name=area]");
+        //            var $inputQuery = $(".form-input-box1 input");
+        //            //定义查询数据库的对应的Service名
+        //            //首先根据省市区code通过PlaceService查询对应考点的pid，然后在根据考点的pid通过LiveService查询Live的数据
+        //            dbName = 'Live';
+        //            //ajax查询成功的回调函数
+        //            insertFun = insertLive;
+        //            //每页显示的数据量
+        //            listNum = 12;
+        //            //每页maxBtListNum个按钮（上一页、下一页、首页、末页不包含在内）
+        //            maxBtListNum = 5;
+        //            //初始查询
+        //            loadDataFalse('/Home/AjaxFyQuery/initAmount',{db: dbName},amount);
+        //            loadData('/Home/AjaxFyQuery/initQuery',{
+        //                db:dbName,//查询数据表
+        //                num:listNum//每页几条数据
+        //            },insertFun);
+        //            function LiveAjaxQuery(options) {
+        //                $.ajax({
+        //                    type:"GET",
+        //                    url:"/Home/Live/live",
+        //                    dataType:"json",
+        //                    data:options,
+        ////                    async:false,
+        //                    success:function (data) {
+        //                        var $targetName = $("#live-insert");
+        //                        $targetName.html("");
+        //                        //保存总数据量
+        //                        var sum = 0;
+        //                        for (var i = 0; i < data.length; i++){
+        //                            for (var j = 0; j < data[i].length; j++){
+        //                                var title = data[i][j].title;
+        //                                var img = data[i][j].picture;
+        //                                var link = data[i][j].url;
+        //                                alert(link);
+        //                                sum++;
+        //
+        //                                var insertDom = '<li>' +
+        //                                    '<a href="' + link + '"><img src="' + img + '" alt=""></a>' +
+        //                                    '<p>' + title + '</p>' +
+        //                                    '</li>';
+        //                                $targetName.append(insertDom);
+        //                            }
+        //                        }
+        //                        if (sum === 0){
+        //                            $targetName.html("暂无数据...");
+        //                        }
+        //                        amount(sum);
+        //                        //添加分页组件
+        //                        appendFyDom($(".am-pagination"));
+        //                    }
+        //                })
+        //
+        //            }
+        //            $("[name=province]").change(function () {
+        //                LiveAjaxQuery({name:'province',code:$("[name=province] option:selected").val()});
+        //                //查询city
+        //                loadData('/Home/Base/city',{code : $("[name=province] option:selected").val()}, cityQuery);
+        //            });
+        //
+        //            $targetCityName.change(function () {
+        //                LiveAjaxQuery({name:'city',code:$("[name=city] option:selected").val()});
+        //                //查询area
+        //                loadData('/Home/Base/area',{code: $("[name=city] option:selected").val()},areaQuery);
+        //            });
+        //
+        //            $targetAreaName.change(function () {
+        //                LiveAjaxQuery({name:'area',code:$("[name=area] option:selected").val()});
+        //            });
+        //
+        //            $(".search-img").click(function () {
+        //                ajaxQuery('title',$inputQuery.val(),insertFun);
+        //            });
+        //
+        //            $inputQuery.keydown(function (e) {
+        //                if(e.keyCode === 13){
+        //                    ajaxQuery('title',$inputQuery.val(),insertFun);
+        //                    return false;
+        //                }
+        //            })
+        //
+        //        })
 
+        $(function () {
+            var $targetCityName = $("[name=city]");
+            var $targetAreaName = $("[name=area]");
+            var $inputQuery = $(".form-input-box1 input");
+            //定义查询数据库的对应的Service名
+            dbName = 'Live';
+            //ajax查询成功的回调函数
+            insertFun = insertLive;
+            //每页显示的数据量
+            listNum = 9;
+            //每页maxBtListNum个按钮（上一页、下一页、首页、末页不包含在内）
+            maxBtListNum = 8;
+            //ajax分页查询地址
+            ajaxQueryUrl = '/Home/AjaxFyQuery/ajaxFy';
+            //初始查询
+            loadDataFalse('/Home/AjaxFyQuery/initAmount', {db: dbName}, amount);
+            loadData('/Home/AjaxFyQuery/initQuery', {
+                db: dbName,//查询数据表
+                num: listNum//每页几条数据
+            }, insertFun);
+
+            $("[name=province]").change(function () {
+                ajaxQuery(ajaxQueryUrl, 'province', $("[name=province] option:selected").val(), insertFun);
+                //查询city
+                loadData('/Home/Base/city', {code: keyFy}, cityQuery);
+            });
+
+            $targetCityName.change(function () {
+                ajaxQuery(ajaxQueryUrl, 'city', $("[name=city] option:selected").val(), insertFun);
+                //查询area
+                loadData('/Home/Base/area', {code: keyFy}, areaQuery);
+            });
+
+            $targetAreaName.change(function () {
+                ajaxQuery(ajaxQueryUrl, 'area', $("[name=area] option:selected").val(), insertFun);
+            });
+
+            $(".search-img").click(function () {
+                ajaxQuery(ajaxQueryUrl, 'title', $inputQuery.val(), insertFun);
+            });
+
+            $inputQuery.keydown(function (e) {
+                if (e.keyCode === 13) {
+                    ajaxQuery(ajaxQueryUrl, 'title', $inputQuery.val(), insertFun);
+                    return false;
+                }
+            })
+
+        })
+    </script>
+</block>
+<block name="body">
+
+<!--<<<<<<< HEAD-->
+    <!--<div class="common-part1">-->
+        <!--<div class="wrap1">-->
+            <!--<div class="common-top-bg">-->
+                <!--<img src="/Public/Home/images/user/top_bg.png" alt="">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="wrap2">-->
+            <!--<div class="intro-pt1-ct padding-7-8">-->
+                <!--<div class="common-pt1-ct-pt1">-->
+                    <!--<p>直播列表</p>-->
+                    <!--<img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">-->
+                    <!--<p>Test site live broadcast</p>-->
+                <!--</div>-->
+                <!--<div class="live-pt1-ct-pt2">-->
+                    <!--<ul>-->
+                      <!--<volist name="list" id="vo">-->
+                        <!--<li>-->
+                            <!--<a href="{$vo.url}"><img src="{$vo.picture}" alt=""></a>-->
+                            <!--<p>{$vo.title}</p>-->
+                        <!--</li>-->
+                      <!--</volist>-->
+                    <!--</ul>-->
+<!--=======-->
+
+    <div class="intro-pt1-ct padding-0-8">
+        <!--<div class="common-pt1-ct-pt1">-->
+            <!--<p>直播列表</p>-->
+            <!--<img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">-->
+            <!--<p>Test site live broadcast</p>-->
+        <!--</div>-->
+        <div style="margin-top: 30px;"></div>
+        <form class="am-form" action="" method="post">
+            <fieldset>
+                <div class="am-form-group query-group">
+                    <div class="form-input-box1">
+                        <select style="display: inline-block;width: 15%" class="am-radius" name="province">
+                            <option value="省份">选择省份</option>
+                            <volist name="province" id="vo">
+                                <option value="{$vo.code}">{$vo.name}</option>
+                            </volist>
+                        </select>
+                        <select style="display: inline-block;width: 15%" class="am-radius" name="city">
+                            <option value="市" class="my-input-place">选择市</option>
+                        </select>
+                        <select style="display: inline-block;width: 15%" class="am-radius" name="area">
+                            <option value="区" class="my-input-place">选择区</option>
+                        </select>
+                        <input style="width: 20%;padding-right: 33px;display: inline-block;float: right;" type="text"
+                               placeholder="查询考点名称" class="am-form-field am-radius">
+                        <img class="search-img" src="/Public/Home/images/common/search.png" alt="">
+                    </div>
+<!--&gt;>>>>>> f8f87f08dc6bf06a5391fd78de3ebf53a407eca2-->
+                </div>
+            </fieldset>
+        </form>
+        <div class="live-pt1-ct-pt2">
+            <ul id="live-insert">
+                <!--<li>-->
+                <!--<a href="#"><img src="/Public/Home/images/live/live05.jpg" alt=""></a>-->
+                <!--<p>武汉市武汉体育学院网球俱乐部</p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="live-pt1-ct-pt3">
+            <ul data-am-widget="pagination"
+                class="am-pagination am-pagination-default"
+            >
+
+            </ul>
+        </div>
     </div>
 </block>

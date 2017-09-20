@@ -1,0 +1,105 @@
+<extend name="Public:base1" />
+<block name="js">
+    <script>
+        function loadData(url, data, fun){
+            $.ajax({
+                type: 'GET',
+                url: url,
+                data: data,
+                dataType: 'json',
+                async:false,
+                success:function (data) {
+                    fun(data);
+                }
+            })
+        }
+
+        function queryStudent() {
+            loadData('/Home/CertificateQuery/student',{
+                sname:$("[name=sname]").val(),
+                creid:$("[name=creid]").val(),
+                cretype:$("[name=cretype] option:selected").val()
+            },queryCertificate);
+            return false;
+        }
+
+        function queryCertificate(data) {
+            if (typeof(data.sid) !== "undefined"){
+                loadData('/Home/CertificateQuery/Certificate',{
+                    sid:data.sid
+                },appendCertificate)
+            }
+            else {
+                showAlertDiv("该用户不存在","style1");
+                return false;
+            }
+        }
+
+        function appendCertificate(data) {
+            if (typeof (data.sid) !== "undefined"){
+                var $target = $("#insert-certificate");
+                $target.html("");
+                var insertDom;
+                //返回的data.status是字符串型不能用全等来与数字比较
+                if (data.status == 0){
+                    insertDom =  '<p>您的分数为：' + data.score + '</p>' +
+                        '<p>很抱歉您没有通过考试，请再接再厉！</p>';
+                    $target.append(insertDom);
+                }
+                if (data.status == 1){
+                    insertDom = '<p>您的分数为：' + data.score + '</p>' +
+                        '<p>恭喜您通过考试！</p>' +
+                        '<img src="' + data.picture + '" > ';
+                    $target.append(insertDom);
+                }
+                if (data.status == 2){
+                    insertDom = '<p>您的成绩正在审核中，请耐心等候</p>';
+                    $target.append(insertDom);
+                }
+            }
+            else {
+                showAlertDiv("您还没有参加过考试","style1");
+                return false;
+            }
+        }
+
+        $(function () {
+            $("#query-bt").click(
+                function () {
+                    queryStudent();
+                }
+            )
+        })
+    </script>
+</block>
+
+<block name="body">
+    <div class="query-common-part1" style="text-align: center;">
+        <form class="am-form" action="" method="post" style="margin-left: -127px;">
+            <fieldset>
+                <div class="am-form-group">
+                    <label style="width: 200px" for="cretype">证件类型</label>
+                    <select name="cretype" class="am-radius" style="display: inline-block;width: 30%;">
+                        <option value="1">中国居民身份证</option>
+                        <option value="0">其他</option>
+                    </select>
+                </div>
+                <div class="am-form-group">
+                    <label style="width: 200px" for="sname">姓名</label>
+                    <input type="text" name="sname" class="am-radius" style="display: inline-block;width: 30%;" placeholder="请输入姓名">
+                </div>
+                <div class="am-form-group">
+                    <label style="width: 200px" for="creid">证件号</label>
+                    <input type="text" name="creid" class="am-radius" style="display: inline-block;width: 30%;" placeholder="请输入证件号">
+                </div>
+            </fieldset>
+        </form>
+        <div class="am-form-group">
+            <button id="query-bt"  class="am-btn am-radius query-bt">查询</button>
+        </div>
+        <div id="insert-certificate">
+
+        </div>
+    </div>
+
+</block>

@@ -44,15 +44,38 @@ class BaseController extends Controller {
     public function city(){
         $arrWhere['provincecode'] = I('get.code');
         $city = M('tg_city')->where($arrWhere)->select();
-        $city = json_encode($city);
-        echo $city;
+        $this->ajaxReturn($city,"json");
     }
 
     public function area(){
         $arrWhere['citycode'] = I('get.code');
         $area = M('tg_area')->where($arrWhere)->select();
-        $area = json_encode($area);
-        echo $area;
+        //thinkphp内置的方法
+        $this->ajaxReturn($area,"json");
+//        php原生方法
+//        $area = json_encode($area);
+//        echo $area;
     }
+
+    public function place(){
+        $arrWhere['area'] = I('get.code');
+        $place = D('Place','Service')->findAll($arrWhere);
+        $this->ajaxReturn($place,"json");
+    }
+
+    public function teacher(){
+        $arrWhere['pid'] = I('get.pid');
+        $teacher = D('Teacher','Service')->findAll($arrWhere);
+        $this->ajaxReturn($teacher,"json");
+    }
+
+//     public function teacher(){
+//     	$arrWhere['pid'] = I('get.pid');
+//     	//        $place = D('Place','Service')->findAll($arrWhere);
+//     	$teacher = M('tg_teacher')->where($arrWhere)->select();
+//     	$teacher = json_encode($teacher);
+//     	echo $teacher;
     
+//     }
+
 }
