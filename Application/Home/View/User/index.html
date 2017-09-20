@@ -67,7 +67,7 @@
                             <eq name="vo.status" value="1"><td>已通过</td>
                             
                              <eq name="vo.pay" value="0">
-                             <td><button class="btn btn btn-info"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=1&userid={$vo.sid}">立即支付</a></button></td>
+                             <td><button class="btn btn-info btn-xs"><a style="color: white" href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=1&userid={$vo.sid}">立即支付</a></button></td>
                              <td>暂无退款权限</td>
                             </eq>
                             <eq name="vo.pay" value="1">
