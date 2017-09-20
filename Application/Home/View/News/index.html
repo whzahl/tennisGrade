@@ -10,6 +10,15 @@
         <div class="News-pt1-ct-pt2">
             <div class="News-pt1-ct-pt2-content">
                 <ul>
+
+                    <!--<volist name="list" id="vo">-->
+                        <!--<li><a href="/Home/News/content?nid={$vo.nid}">{$vo.main_title}</a>-->
+                            <!--<p>-->
+                                <!--{$vo.content}-->
+                            <!--</p>-->
+                        <!--</li>-->
+                    <!--</volist>-->
+
                     <li><a href="/Home/News/content">温网男单决赛H2H:费德勒6-1西里奇 去年救3赛点</a>
                         <p>
                             北京时间7月15日 2017年温网男单半决赛落幕，费德勒和西里奇战胜各自对手，成功会师决赛。两人之前有
@@ -58,6 +67,11 @@
         </div>
         <div class="News-pt1-ct-pt3">
             <!--分页-->
+            <div class="am-fr">
+                <ul class="am-pagination tpl-pagination">
+                    {$page}
+                </ul>
+            </div>
         </div>
     </div>
 </block>

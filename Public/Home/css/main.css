@@ -695,9 +695,15 @@ li{
 }
 .News-pt1-ct-pt2 li a{
     color: #505050;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .News-pt1-ct-pt2 li p{
     font-size: 16px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .content-content-pt1-ct-pt2-header-top p::before{
