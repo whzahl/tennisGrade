@@ -73,11 +73,11 @@
 		                          <thead>
 		                              <tr>
 		                                  <!-- <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th> -->
-		                                  <th></th>
 		                                  <th class="table-id">ID</th>
 		                                  <th class="table-title">姓名</th>
 		                                  <th class="table-type">等级</th>
 		                                  <th class="table-author am-hide-sm-only">手机号码</th>
+		                                  <th class="table-author am-hide-sm-only">考点地址</th>
 		                                  <th class="table-date am-hide-sm-only">陪考</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
@@ -86,11 +86,11 @@
 		                          <volist name="list" id="vo">
 		                              <tr>
 		                                  <!-- <td><input type="checkbox"></td> -->
-		                                  <td></td>
 		                                  <td>{$vo.sid}</td>
 		                                  <td>{$vo.sname}</td>
 		                                  <td>{$vo.level}</td>
 		                                  <td>{$vo.phone}</td>
+		                                  <td>{$vo.province}{$vo.city}{$vo.area}{$vo.address}</td>
 		                                  <td>{$vo.tname}</td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">

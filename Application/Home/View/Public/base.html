@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="\Public\Home\images\common\title_icon.png">
     <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css">
+    <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <link rel="stylesheet" href="/Public/Home/css/main.css">
     <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
     <script src="/Public/Admin/js/amazeui.min.js"></script>
@@ -23,7 +24,7 @@
     </div>
 </div>
 <!--滑动900px之后显示-->
-<div style="position: fixed;right: 200px;bottom: 80px;width: 60px;z-index: 1100;" data-am-widget="gotop" class="am-gotop am-gotop-fixed" >
+<div style="position: fixed;right: 5%;bottom: 80px;width: 60px;z-index: 1100;" data-am-widget="gotop" class="am-gotop am-gotop-fixed" >
     <a href="#top" title="">
         <!--<img style="max-width: 60px;" class="am-gotop-icon-custom" src="/Public/Home/images/common/rocket.png" width="100px"/>-->
         <img style="max-width: 60px;" class="am-gotop-icon-custom" src="/Public/Home/images/common/go_top.png" width="100px"/>
@@ -39,6 +40,23 @@
             <div class="h-p1-right">
                 <ul>
                     <li><a href="/Home/Index/index">首页</a></li>
+
+                    <!--模板赋值-->
+                    <!--<li><a href="/Home/Intro/content?inid=">平台简介</a></li>-->
+                    <!--<li id="intro-a">-->
+                        <!--<a href="/Home/Intro/content?inid=">考试介绍</a>-->
+                        <!--<div class="intro">-->
+                            <!--<ul>-->
+                                <!--<li><a href="/Home/Intro/content?inid=">考级简介</a></li>-->
+                                <!--<li><a href="/Home/Intro/content?inid=">考级内容</a></li>-->
+                                <!--<li><a href="/Home/Intro/content?inid=">证书样板</a></li>-->
+                                <!--<li><a href="/Home/Intro/content?inid=">考点协议</a></li>-->
+                                <!--<li><a href="/Home/Intro/content?inid=">考官协议</a></li>-->
+                                <!--<li><a href="/Home/Intro/content?inid=">报名协议</a></li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</li>-->
+
                     <li><a href="/Home/Intro/content">平台简介</a></li>
                     <li id="intro-a">
                         <a href="/Home/Intro/index">考试介绍</a>
@@ -53,12 +71,22 @@
                             </ul>
                         </div>
                     </li>
+                    <if condition="($Think.session.userInfo.unionid eq NULL)">
+                        <li><a href="#" onclick="a()">考级报名</a></li>
+                        <li><a href="#" onclick="b()">考官申请</a></li>
+                        <li><a href="#" onclick="c()">考点申办</a></li>
+                        <else />
+                        <li><a href="/Home/Student/index">考级报名</a></li>
+                        <li><a href="/Home/Teacher/index">考官申请</a></li>
+                        <li><a href="/Home/Place/index">考点申办</a></li>
+                    </if>
+
                     <!--<li><a href="#" onclick="a()">考级报名</a></li>-->
-                    <li><a href="/Home/Student/index">考级报名</a></li>
+                    <!--<li><a href="/Home/Student/index">考级报名</a></li>-->
                     <!--<li><a href="#" onclick="b()">考官申请</a></li>-->
-                    <li><a href="/Home/Teacher/index">考官申请</a></li>
+                    <!--<li><a href="/Home/Teacher/index">考官申请</a></li>-->
                     <!--<li><a href="#" onclick="c()">考点申办</a></li>-->
-                    <li><a href="/Home/Place/index">考点申办</a></li>
+                    <!--<li><a href="/Home/Place/index">考点申办</a></li>-->
                     <li><a href="/Home/Live/index">视频中心</a></li>
                 </ul>
                 <if condition="($Think.session.userInfo.unionid eq NULL)">
@@ -73,7 +101,7 @@
         </div>
     </div>
     <div class="header-part2" >
-        <span style="position: absolute;top:50px;buttom:0px;left:40%;  background: #fff;">
+        <span style="position: absolute;top:40px;buttom:0px;left:40%;  background: #fff;">
         <div id="login_container">
         </div> 
         </span>

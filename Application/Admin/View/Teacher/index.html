@@ -75,9 +75,9 @@
 		                                  <!-- <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th> -->
 		                                  <th class="table-id">ID</th>
 		                                  <th class="table-title">姓名</th>
-		                                  <th class="table-type">手机号码</th>
-		                                  <th class="table-author am-hide-sm-only">地址</th>
+		                                  <th class="table-author am-hide-sm-only">考点名称</th>
 		                                  <th class="table-date am-hide-sm-only">考点地址</th>
+		                                  <th class="table-type">手机号码</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
 		                          </thead>
@@ -88,9 +88,9 @@
 		                                  <td></td>
 		                                  <td>{$vo.tid}</td>
 		                                  <td>{$vo.tname}</td>
+		                                  <td>{$vo.pname}</td>
+		                                  <td>{$vo.province}{$vo.city}{$vo.area}{$vo.address}</td>
 		                                  <td>{$vo.phone}</td>
-		                                  <td>{$vo.address}</td>
-		                                  <td>{$vo.address}</td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">

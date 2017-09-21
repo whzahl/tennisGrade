@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css" />
     <link rel="stylesheet" href="/Public/Admin/css/admin.css">
     <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
+    <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
     <script src="/Public/Admin/js/echarts.min.js"></script>
+    <script src="/Public/Admin/js/common.js"></script>
 <script type="text/javascript"> 
 	function del(){ 
 		if(confirm("确认要删除？")){ 
@@ -341,6 +343,11 @@
 			                   <span>考试直播列表</span>
 			                   <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
 			               </a>
+			               <a href="/Admin/Video/index">
+			                   <i class="am-icon-angle-right"></i>
+			                   <span>考试视频列表</span>
+			                   <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
+			               </a>
 		              </li>
 		          </ul>
 		    </li>
@@ -366,6 +373,13 @@
 		           </a>
 		    </li>
 		    <li class="tpl-left-nav-item">
+		           <a href="/Admin/Admin/index" class="nav-link tpl-left-nav-link-list">
+		               <i class="am-icon-user-plus"></i>&nbsp;
+		               <span>管理员列表</span>
+		               <i class="tpl-left-nav-content tpl-badge-danger">{$count}</i>
+		           </a>
+		    </li>
+		   <!--  <li class="tpl-left-nav-item">
 		           <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 		               <i class="am-icon-group"></i>&nbsp;
 		               <span>管理员板块</span>
@@ -390,7 +404,7 @@
 		                   </a>
 		              </li>
 		          </ul>
-		    </li>
+		    </li> -->
 <!-- 		    <li class="tpl-left-nav-item">
 		        <a href="login.html" class="nav-link tpl-left-nav-link-list">
 		            <i class="am-icon-key"></i>

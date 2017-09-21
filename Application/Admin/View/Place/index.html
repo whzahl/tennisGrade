@@ -37,20 +37,21 @@
                                     <!-- <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
                                 </div>
                             </div>
-                        </div>
+                        </div> 
+                        <form action="/Admin/Place/index" method="get">
                         <div class="am-u-sm-12 am-u-md-3">
                             <div class="am-form-group">
-                             <select data-am-selected="{btnSize: 'sm'}">
+                             <select name="status" data-am-selected="{btnSize: 'sm'}">
 				                <option value="option1">请选择类别</option>
-				                <option value="option2">已通过</option>
-				                <option value="option3">待审核</option>
-				                <option value="option3">未通过</option>
+				                <option value="1">已通过</option>
+				                <option value="2">待审核</option>
+				                <option value="0">未通过</option>
 				            </select>
                             </div>
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
                             <div class="am-form-group">
-                             <select data-am-selected="{btnSize: 'sm'}">
+                             <select name="pname" data-am-selected="{btnSize: 'sm'}">
 				                <option value="option1">请选择考点</option>
 				                <option value="option2">0</option>
 				                <option value="option3">1</option>
@@ -66,6 +67,7 @@
 					            </span>
 			                </div>
 			            </div>
+			            </form>
                   </div>
 		          <div class="am-g">
 		              <div class="am-u-sm-12">
@@ -91,7 +93,7 @@
 		                                  <td>{$vo.pid}</td>
 		                                  <td>{$vo.pname}</td>
 		                                  <td>{$vo.manager}</td>
-		                                  <td>{$vo.pid}</td>
+		                                  <td>{$vo.province}{$vo.city}{$vo.area}{$vo.address}</td>
 		                                  <td>{$vo.phone}</td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">

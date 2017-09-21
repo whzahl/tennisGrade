@@ -1,7 +1,38 @@
 <extend name="Public:base" />
+<block name="js">
+ <script>
+ function PreviewImage(imgFile,imgBoxId)
+ {
+     console.log(imgBoxId);
+     var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+     filextension=filextension.toLowerCase();
+     if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))
+     {
+         alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+         imgFile.focus();
+     }
+     else
+     {
+         var path;
+         if(document.all)//IE
+         {
+             imgFile.select();
+             path = document.selection.createRange().text;
+             document.getElementById(imgBoxId).innerHTML="";
+             document.getElementById(imgBoxId).style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+         }
+         else//FF
+         {
+             path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+             //path = imgFile.files[0].getAsDataURL();// FF 3.0
+             document.getElementById(imgBoxId).innerHTML = "<img  style='max-height:300px;max-width:200px;' src='"+path+"'/>";
+             //document.getElementById("img1").src = path;
+         }
+     }
+ }
+    </script>
+</block>
 <block name="body">
-
-
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
                                                 考点信息修改页
@@ -50,18 +81,24 @@
                                     </div>
                                 </div>
 
-                                <div class="am-form-group">
-                                    <label for="user-phone" class="am-u-sm-3 am-form-label">考点地址 <span class="tpl-form-line-small-title">Address</span></label>
-                                    <div class="am-u-sm-9">
-                                        <select data-am-selected="{searchBox: 1}">
-										  <option value="a">-The.CC</option>
-										  <option value="b">夕风色</option>
-										  <option value="o">Orange</option>
-										</select>
-										<br>
-										<input type="text" placeholder="请输入详细地址">
-                                    </div>
+                           <div class="am-form-group">
+                                <label for="user-phone" class="am-u-sm-3 am-form-label">考点地址 <span class="tpl-form-line-small-title">Address</span></label>
+                                <div class="am-u-sm-9">
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="province">
+                                        <option value="省份">选择省份</option>
+                                        <volist name="province" id="vo">
+                                            <option value="{$vo.code}">{$vo.name}</option>
+                                        </volist>
+                                    </select>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="city">
+                                        <option value="市" class="my-input-place">选择市</option>
+                                    </select>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" name="area">
+                                        <option value="区" class="my-input-place">选择区</option>
+                                    </select>
+                                    <input type="text" name="address" value="{$list.address}"  id="address"  class="am-form-field am-radius" placeholder="请输入考点详细地址" />
                                 </div>
+                            </div>
                                 <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">考点具体介绍 <span class="tpl-form-line-small-title">Pintro</span></label>
                                     <div class="am-u-sm-9">
@@ -91,43 +128,44 @@
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
                                         <div style="float:left;">
-                                            <div class="tpl-form-file-img" style="width:150px;">
+                                            <div class="tpl-form-file-img" style="width:150px;" id="imgPreview1">
                                                 <empty name="list1['0']">
 			                                	<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">
 			                                	<else />
 												<img src="{$list1.0}" class="ml50 mt20" style="width:112px;height:107px;">
-												<input type="hidden" name="picture[]" value="{$list1.0}">
+												<input type="hidden" name="picture[]" value="{$list1.0}" >
 												</empty>
                                             </div>
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
                                             <i class="am-icon-cloud-upload"></i> 场馆图片1</button>
-                                            <input id="doc-form-file" type="file" name="picture" multiple>
+                                            <!-- <input id="doc-form-file" type="file" name="picture[]" onchange='PreviewImage(this,"imgPreview1")'> -->
+                                            <input type="file" name="picture[]" onchange='PreviewImage(this,"imgPreview1")' >
                                          </div>
                                          <div style="float:left;">
-                                            <div class="tpl-form-file-img" style="width:150px;">
+                                            <div class="tpl-form-file-img" style="width:150px;" id="imgPreview2">
                                                 <empty name="list1['1']">
 			                                	<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">
 			                                	<else />
 												<img src="{$list1.1}" class="ml50 mt20" style="width:112px;height:107px;">
-												<input type="hidden" name="picture[]" value="{$list1.1}">
+												<input type="hidden" name="picture[]" value="{$list1.1}" >
 												</empty>
                                             </div>
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
                                             <i class="am-icon-cloud-upload"></i> 场馆图片2</button>
-                                            <input id="doc-form-file" type="file" name="picture" multiple>
+                                            <input  type="file" name="picture[]" onchange='PreviewImage(this,"imgPreview2")'>
                                          </div>
                                          <div style="float:left;">
-                                            <div class="tpl-form-file-img" style="width:150px;">
+                                            <div class="tpl-form-file-img" style="width:150px;" id="imgPreview3">
                                                 <empty name="list1['2']">
 			                                	<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">
 			                                	<else />
 												<img src="{$list1.2}" class="ml50 mt20" style="width:112px;height:107px;">
-												<input type="hidden" name="picture[]" value="{$list1.2}">
+												<input type="hidden" name="picture[]" value="{$list1.2}" >
 												</empty>
                                             </div>
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
                                             <i class="am-icon-cloud-upload"></i> 场馆图片3</button>
-                                            <input id="doc-form-file" type="file" name="picture" multiple>
+                                            <input  type="file" name="picture[]" onchange='PreviewImage(this,"imgPreview3")'>
                                          </div>
                                         </div>
                                     </div>
@@ -136,23 +174,23 @@
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">营业执照 <span class="tpl-form-line-small-title">Certificate</span></label>
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
-                                            <div class="tpl-form-file-img">
+                                            <div class="tpl-form-file-img" id="imgPreview4">
                                                 <empty name="list['certificate']">
 			                                	<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">
 			                                	<else />
 												<img src="{$list.certificate}" class="ml50 mt20" style="width:133px;height:107px;">
-												<input type="hidden" name="picture" value="{$list.certificate}">
+												<input type="hidden" name="certificate" value="{$list.certificate}" >
 												</empty>
                                             </div>
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
                                             <i class="am-icon-cloud-upload"></i> 修改营业执照图片</button>
-                                            <input id="doc-form-file" type="file" name="certificate" multiple>
+                                            <input type="file" name="certificate" onchange='PreviewImage(this,"imgPreview4")"'>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
-                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">修改</button>
+                                        <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">修改</button>
                                         <a href=""  class="am-btn am-btn-primary tpl-btn-bg-color-success " onclick ="javascript:history.go(-1);" style="margin-left:20px;">返回</a>
                                     </div>
                                 </div>

@@ -57,10 +57,9 @@
                                 <div class="am-form-group">
                                     <label for="user-phone" class="am-u-sm-3 am-form-label">证件类型 <span class="tpl-form-line-small-title">Cretype</span></label>
                                     <div class="am-u-sm-9">
-                                        <select data-am-selected="{searchBox: 1}">
-										  <option value="a">-The.CC</option>
-										  <option value="b">夕风色</option>
-										  <option value="o">Orange</option>
+                                        <select name="cretype" value="{$cretype}">
+										  <option value="1">身份证</option>
+										  <option value="0">其他</option>
 										</select>
 										<input type="text" name="creid"  value="{$list.creid}"  placeholder="请输入证件号">
                                     </div>
@@ -123,7 +122,7 @@
                                 <div class="am-form-group">
                                     <label for="user-phone" class="am-u-sm-3 am-form-label">等级<span class="tpl-form-line-small-title">Level</span></label>
                                     <div class="am-u-sm-9">
-                                        <select data-am-selected="{searchBox: 1}">
+                                        <select name="level" value="{$level}">
 										  <option value="a">-The.CC</option>
 										  <option value="b">夕风色</option>
 										  <option value="o">Orange</option>
@@ -133,7 +132,8 @@
                                 <div class="am-form-group">
                                     <label for="user-phone" class="am-u-sm-3 am-form-label">陪考<span class="tpl-form-line-small-title">Tname</span></label>
                                     <div class="am-u-sm-9">
-                                        <select data-am-selected="{searchBox: 1}">
+                                        <select name="tname" value={$tname}>
+										  <option value="">请选择陪考</option>
 										  <option value="a">-The.CC</option>
 										  <option value="b">夕风色</option>
 										  <option value="o">Orange</option>
@@ -148,7 +148,7 @@
                                     </div>
                                 </div>
                             </form>
-
+<div style="height:100px;"></div>
                         </div>
                     </div>
                 </div>

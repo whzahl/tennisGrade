@@ -67,25 +67,25 @@
                             <eq name="vo.status" value="1"><td>已通过</td>
                             
                              <eq name="vo.pay" value="0">
-                             <td><button class="btn btn btn-info"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=1&userid={$vo.sid}">立即支付</a></button></td>
+                             <td><button class="btn btn btn-info btn-xs"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=1&userid={$vo.sid}">立即支付</a></button></td>
                              <td>暂无退款权限</td>
                             </eq>
                             <eq name="vo.pay" value="1">
-                              <td><button class="btn btn btn-info">已支付</button></td>
+                              <td><button class="btn btn btn-info btn-xs">已支付</button></td>
                              <td><a href="/Home/User/sqtk?type=1&userid={$vo.sid}" class="am-badge am-badge-warning am-radius">申请退款</a></td>
                             </eq>
                             <eq name="vo.pay" value="2">
-                            <td><button class="btn btn btn-info">退款中</button></td>
+                            <td><button class="btn btn btn-info btn-xs">退款中</button></td>
                             <td><a href="#" class="am-badge am-badge-warning am-radius">已申请</a></td>
                             </eq>
                             <eq name="vo.pay" value="3">
-                             <td><button class="btn btn btn-info">退款完成</button></td>
+                             <td><button class="btn btn btn-info btn-xs">退款完成</button></td>
                              <td><a href="#" class="am-badge am-badge-warning am-radius">已完成</a></td>
                             </eq>
                             </eq>
                             </eq>
                             <eq name="vo.status" value="2"><td>审核中</td><td>暂无支付权限</td><td>暂无退款权限</td></eq>
-                            <!-- <td><button class="btn btn btn-info"><a href="/Home/User/sqtk?type=1&userid={$vo.sid}">申请退款</a></button></td> -->
+                            <!-- <td><button class="btn btn btn-info btn-xs"><a href="/Home/User/sqtk?type=1&userid={$vo.sid}">申请退款</a></button></td> -->
                         </tr>
                         </volist>
                        
@@ -116,25 +116,25 @@
                             <eq name="teach.status" value="0"><td>未通过</td><td>暂不能支付</td></eq>
                                 <eq name="teach.status" value="1"><td>已通过</td>
                                 <eq name="teach.pay" value="0">
-                             <td><button class="btn btn btn-info"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=1&userid={$teach.tid}">立即支付</a></button></td>
+                             <td><button class="btn btn btn-info btn-xs"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=1&userid={$teach.tid}">立即支付</a></button></td>
                              <td>暂无退款权限</td>
                             </eq>
                             <eq name="teach.pay" value="1">
-                              <td><button class="btn btn btn-info">已支付</button></td>
+                              <td><button class="btn btn btn-info btn-xs">已支付</button></td>
                              <td><a href="/Home/User/sqtk?type=1&userid={$vo.sid}" class="am-badge am-badge-warning am-radius">申请退款</a></td>
                             </eq>
                             <eq name="teach.pay" value="2">
-                            <td><button class="btn btn btn-info">退款中</button></td>
+                            <td><button class="btn btn btn-info btn-xs">退款中</button></td>
                             <td><a href="#" class="am-badge am-badge-warning am-radius">已申请</a></td>
                             </eq>
                             <eq name="teach.pay" value="3">
-                             <td><button class="btn btn btn-info">退款完成</button></td>
+                             <td><button class="btn btn btn-info btn-xs">退款完成</button></td>
                              <td><a href="#" class="am-badge am-badge-warning am-radius">已完成</a></td>
                             </eq>
                             </eq>
                                 </eq>
                                <eq name="teach.status" value="2"><td>审核中</td><td>暂无支付权限</td><td>暂无退款权限</td></eq>
-                                <!--  <td><button class="btn btn btn-info"><a href="/Home/User/sqtk?type=2&userid={$teach.tid}">申请退款</a></button></td> -->
+                                <!--  <td><button class="btn btn btn-info btn-xs"><a href="/Home/User/sqtk?type=2&userid={$teach.tid}">申请退款</a></button></td> -->
                         </tr>
                        
                         </volist>
@@ -241,10 +241,10 @@
                             <eq name="pl.pay" value="1">
                              <td>
                             <button class="btn btn btn-info">已支付</button></td>
-                            <td><button class="btn btn btn-info"><a href="/Admin/Login/homelogin?pid={$pl.pid}&type=3"><span  style="color:#fff;">后台管理入口</span></a></button></td>
+                            <td><button class="btn btn btn-info btn-xs"><a href="/Admin/Login/homelogin?pid={$pl.pid}&type=3"><span  style="color:#fff;">后台管理入口</span></a></button></td>
                             </eq>
                              <eq name="pl.pay" value="0">
-                             <td><button class="btn btn btn-info"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=3&userid={$pl.pid}">立即支付</a></button>
+                             <td><button class="btn btn btn-info btn-xs"><a href="/Home/Wxpay/weixinpay?id={$_SESSION['userInfo']['id']}&type=3&userid={$pl.pid}">立即支付</a></button>
                             </td><td>暂未开通</td>
                             </eq>
                            

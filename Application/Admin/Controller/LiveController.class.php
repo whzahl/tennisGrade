@@ -14,14 +14,14 @@ class LiveController extends CheckController{
 
 
 	public function index(){
-		
+		   
 		$strTitle=I('get.title');
 		if (!empty($strTitle)) {
 			$arrWhere['title'] = array('like','%'.$strTitle.'%');
 			$this->title=$strTitle;
 		}
 		$intCount = D('Live','Service')->count($arrWhere);
-		$Page = new \Think\Page($intCount,7);// 实例化分页类 传入总记录数和每页显示的记录数(7)
+		$Page = new \Think\Page($intCount,9);// 实例化分页类 传入总记录数和每页显示的记录数(7)
 		$show = $Page->show();   // 分页显示输出
 		$first = $Page->firstRow;
 		$list = $Page->listRows;
@@ -33,17 +33,29 @@ class LiveController extends CheckController{
 	}
 	
 	public function add(){
-		 $live = M('tg_live');
-	  	 $data = $live->create(); 
+	     $grade = M('tg_live');
+	  	 $data = $grade->create(); 
 	 	if(IS_POST){
+	 		$upload = new \Think\Upload();// 实例化上传类
+	 		$upload->maxSize   =     3145728 ;// 设置附件上传大小
+	 		$upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+	 		$upload->rootPath  =      './Public/Uploads/'; // 设置附件上传根目录
+	 		 
+	 		// 上传文件
+	 		$info   =    $upload->uploadOne($_FILES['picture']);
+	 		if(!$info) {// 上传错误提示错误信息
+	 			$this->error($upload->getError());
+	 		}else{
+ 			$arrImage = $_FILES['picture']['name'];
+ 			$data['picture'] = '/Public/Uploads/'.$info['savepath'].$info['savename'];
 			$data['create_time'] = time();
-			$arrData = $live->data($data)->add();
+			$arrData = $grade->data($data)->add();
 			if($arrData){
 			$this->success('添加成功！','/Admin/Live/index');
 			}else {
 			$this->error('添加失败！');
 			}
-			
+	 		}
 		}else{
 			$this->display();
 		}

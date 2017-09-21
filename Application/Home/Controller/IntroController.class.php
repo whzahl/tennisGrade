@@ -16,7 +16,12 @@ class IntroController extends BaseController{
 	    $this->display();
     }
 
-
+    public function content(){
+	    $arrWhere['inid'] = I('get.inid');
+	    $arrData = D('Intro','Service')->findOne($arrWhere);
+	    $this->list = $arrData;
+	    $this->display();
+    }
 
 
 
