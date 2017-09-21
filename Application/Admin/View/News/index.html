@@ -116,7 +116,7 @@ $(document).ready(function(){
 			                              <tr>
 			                                  <td><input type="checkbox"></td>
 			                                  <td>{$vo.nid}</td>
-			                                  <td><a href="#">{$vo.main_title}</a></td>
+			                                  <td><a href="/Admin/News/edit?nid={$vo.nid}">{$vo.main_title}</a></td>
 			                                  <td>
 			                                  	<if condition="$vo.type eq 0">
 			                                  		热点类
@@ -150,18 +150,14 @@ $(document).ready(function(){
 		                              </volist>
 		                          </tbody>
 		                      </table>
-		                      <div class="row">
-                                <div class="col-sm-12">
-                                	<div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
-	                                	<!-- <div style="text-align:center;"> -->
-		                                	<ul class="pagination">
-		                                		{$page}
-		                                	</ul>
-		                                	<div style="float:right;line-height:76px;margin-right:10px;">总共&nbsp;{$count}&nbsp;条</div>
-	                                	<!-- </div> -->
-                                	</div>
-                                </div>
-                                </div>
+							  <div class="am-cf">
+
+								  <div class="am-fr">
+									  <ul class="am-pagination tpl-pagination">
+										  {$page}
+									  </ul>
+								  </div>
+							  </div>
 		                      <!-- <div class="am-cf">
 		
 		                          <div class="am-fr">

@@ -15,6 +15,10 @@ class StudentController extends CheckController{
     public function index(){
         $province = M('tg_province')->select();
         $this->province = $province;
+        $chTitle = '考生报名';
+        $enTitle = 'Candidates Application';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
 	    $this->display();
     }
 

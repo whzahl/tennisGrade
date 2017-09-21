@@ -19,6 +19,10 @@ class PlaceQueryController extends BaseController{
     public function index(){
         $province = M('tg_province')->select();
         $this->province = $province;
+        $chTitle = '考点查询';
+        $enTitle = 'Test Sites Query';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
         $this->display();
     }
 }

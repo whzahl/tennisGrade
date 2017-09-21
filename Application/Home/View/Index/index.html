@@ -39,25 +39,25 @@
                     <p>Examination notice</p>
                 </div>
                 <div class="home-pt2-ct-common-title-right">
-                    <a href="">更多详情&gt;&gt;</a>
+                    <a href="/Home/Notice/index">更多详情&gt;&gt;</a>
                 </div>
             </div>
             <div class="home-pt2-ct-common-list home-pt2-ct-pt1-list-p">
                 <ul>
                     <!--模板输出-->
-                    <!--<volist name="notice" id="vo">-->
-                        <!--<li>-->
-                            <!--<a href="/Home/Notice/content?noid={$vo.noid}"><p><span>【考试公告】</span>{vo.title}</p></a>-->
-                            <!--<span class="home-pt2-ct-common-span">[{:date('Y-m-d',$vo['create_time'])}]</span>-->
-                        <!--</li>-->
-                    <!--</volist>-->
+                    <volist name="notice" id="vo">
+                        <li>
+                            <a href="/Home/Notice/content?noid={$vo.noid}"><p><span>【考试公告】</span>{$vo.title}</p></a>
+                            <span class="home-pt2-ct-common-span">[{:date('Y.m.d',$vo['create_time'])}]</span>
+                        </li>
+                    </volist>
 
-                    <li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网球-ITN分级大奖赛</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
-                    <li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网球-ITN分级</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
-                    <li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网球-ITN分级大</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
-                    <li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网球-ITN分级大奖赛</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
-                    <li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网赛</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
-                    <li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网大奖赛</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
+                    <!--<li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网球-ITN分级大奖赛</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
+                    <!--<li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网球-ITN分级</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
+                    <!--<li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网球-ITN分级大</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
+                    <!--<li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网球-ITN分级大奖赛</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
+                    <!--<li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网赛</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
+                    <!--<li><a href="#"><p><span>【考试公告】</span>TELOON2016武汉网大奖赛</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
                 </ul>
             </div>
         </div>
@@ -74,19 +74,19 @@
             <div class="home-pt2-ct-common-list home-pt2-ct-pt2-list-p">
                 <ul>
                     <!--模板输出-->
-                    <!--<volist name="news" id="vo">-->
-                        <!--<li>-->
-                            <!--<a href="/Home/News/content?nid={$vo.nid}"><p>{$vo.main_title}</p></a>-->
-                            <!--<span class="home-pt2-ct-common-span">[{:date('Y-m-d',$vo.create_time)}]</span>-->
-                        <!--</li>-->
-                    <!--</volist>-->
+                    <volist name="news" id="vo">
+                        <li>
+                            <a href="/Home/News/content?nid={$vo.nid}"><p>{$vo.main_title}</p></a>
+                            <span class="home-pt2-ct-common-span">[{$vo.create_time|date="Y.m.d",###}]</span>
+                        </li>
+                    </volist>
 
-                    <li><a href="#"><p>TELOON2016武汉网球-ITN分级大奖赛【总决赛】</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
-                    <li><a href="#"><p>通用网球技术水平标准等级对照表</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
-                    <li><a href="#"><p>什么是ITN？ITN如何进行测试？</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
-                    <li><a href="#"><p>ITN网球分级赛信任制准则</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
-                    <li><a href="#"><p>CTAJ精英赛（天龙杯－武汉体院站）短式网球甲组单打组单打组单打</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
-                    <li><a href="#"><p>TELOON2016武汉网球-ITN分级大奖赛</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>
+                    <!--<li><a href="#"><p>TELOON2016武汉网球-ITN分级大奖赛【总决赛】</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
+                    <!--<li><a href="#"><p>通用网球技术水平标准等级对照表</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
+                    <!--<li><a href="#"><p>什么是ITN？ITN如何进行测试？</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
+                    <!--<li><a href="#"><p>ITN网球分级赛信任制准则</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
+                    <!--<li><a href="#"><p>CTAJ精英赛（天龙杯－武汉体院站）短式网球甲组单打组单打组单打</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
+                    <!--<li><a href="#"><p>TELOON2016武汉网球-ITN分级大奖赛</p></a><span class="home-pt2-ct-common-span">[2017.07.10]</span></li>-->
                 </ul>
             </div>
         </div>

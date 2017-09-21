@@ -15,6 +15,10 @@ class TeacherController extends CheckController{
     public function index(){
         $province = M('tg_province')->select();
         $this->province = $province;
+        $chTitle = '考官申请';
+        $enTitle = 'Examiner Application';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
         $this->display();
     }
 

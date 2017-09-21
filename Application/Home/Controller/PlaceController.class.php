@@ -16,6 +16,10 @@ class PlaceController extends CheckController{
     public function index(){
 	    $province = M('tg_province')->select();
 	    $this->province = $province;
+        $chTitle = '考点申请';
+        $enTitle = 'Test Sites Application';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
         $this->display();
     } 
     public function add(){
