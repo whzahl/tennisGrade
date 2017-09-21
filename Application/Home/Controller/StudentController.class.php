@@ -39,8 +39,8 @@ class StudentController extends CheckController{
     			}
     			$strLevel = I('level');
     			$data['level'] = implode('、',$strLevel);
-    			//    		$wx = M('tg_user')->where($_SESSION['userInfo']['unionid'])->select();  从微信登录表里找到对应微信主键
-    			$wx = M('tg_user')->where(array('unionid'=>'o_vIF1FGUba-wAN9DyQ9jDoUAEu8'))->find();
+                $wx = M('tg_user')->where($_SESSION['userInfo']['unionid'])->select();  //从微信登录表里找到对应微信主键
+//    			$wx = M('tg_user')->where(array('unionid'=>'o_vIF1FGUba-wAN9DyQ9jDoUAEu8'))->find();
     			$data['id'] = $wx['id'];
     			$data['status'] = 2;
     			$data['create_time'] = time();

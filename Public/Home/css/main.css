@@ -259,8 +259,17 @@ li{
 .user-pt1-ct{
     padding: 96px 83px;
 }
+.user-pt1-ct a{
+    color: #FFFFFF;
+}
 .user-pt1-ct p{
     font-size: 20px;
+}
+.user-pt1-ct button{
+    color: #FFFFFF;
+}
+.user-pt1-ct table button{
+    margin-top: -5px;
 }
 .user-pt1-ct-pt1{
     margin-bottom: 30px;
@@ -433,6 +442,9 @@ li{
 /*intro End*/
 
 /*home Start*/
+.home-pt1{
+    background-color: #d9a4ed;
+}
 .home-pt1-ct{
     padding:20px 90px;
 }
@@ -567,7 +579,7 @@ li{
     text-align: center;
     width: 150px;
     position: fixed;
-    right: 50px;
+    right: 0px;
     top:300px;
     z-index:1000;
 }
