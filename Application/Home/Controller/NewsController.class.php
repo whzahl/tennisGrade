@@ -26,12 +26,20 @@ class NewsController extends BaseController{
         $this->page = $show;
         $this->list = $arrData;
 
+        $chTitle = '新闻列表';
+        $enTitle = 'News List';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
         $this->display();
     }
 
     public function content(){
 	    $arrWhere['nid'] = I('get.nid');
 	    $arrData = D('News','Service')->findOne($arrWhere);
+        $chTitle = '新闻内容';
+        $enTitle = 'News Content';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
 	    $this->list = $arrData;
     }
 	

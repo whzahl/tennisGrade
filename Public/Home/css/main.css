@@ -124,6 +124,7 @@ li{
 /*header start*/
 .header-part1{
     padding:10px 0;
+    background-color: #fff;
 }
 
 .center-container{
@@ -132,7 +133,7 @@ li{
 }
 .header{
     width: 100%;
-    background-color: #fff;
+    background-color: #d9a4ed;
 }
 .header-part1-center{
     text-align: center;
