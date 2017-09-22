@@ -96,10 +96,10 @@ function appendPlaceList(targetName,data,id1,name1,img1) {
     // 清空目标DOM元素，然后在填充
     targetName.html("");
     for (var i = 0; i < data.length; i++){
-        var link = "#";
         var id = data[i][id1];
+        var link = "/Home/PlaceQuery/content?pid="+id;
         var name = data[i][name1];
-        var img = data[i][img1];
+        var img = data[i][img1].split('、',1).toString();
         var insertDom = '<li>'+
                             '<a href="' + link + '">' +
                                 '<img src="'+ img + '" alt="">' +
@@ -114,16 +114,13 @@ function appendPlaceList(targetName,data,id1,name1,img1) {
 function appendTeacherList(targetName,data,id1,name1,img1,pname1) {
 // 清空目标DOM元素，然后在填充
     targetName.html("");
-    console.log(data[1]);
     for (var i = 0; i < data[0].length; i++) {
-        var link = "#";
         var id = data[0][i][id1];
+        var link = "/Home/TeacherQuery/content?tid="+id;
         var name = data[0][i][name1];
         var img = data[0][i][img1];
         var pname = data[1][i][pname1];
         var pid = data[0][i].pid;
-        // console.log("pid:" + pid);
-        // console.log("id:" + id);
 
         var insertDom = '<li>' +
             '<a href="' + link + '">' +

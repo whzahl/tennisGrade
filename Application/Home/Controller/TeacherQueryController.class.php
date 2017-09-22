@@ -28,4 +28,17 @@ class TeacherQueryController extends BaseController{
         $this->display();
     }
 
+    public function content(){
+        $arrWhere['tid'] = I('get.tid');
+        $arrData = D('Teacher','Service')->findOne($arrWhere);
+        $certificate = explode('、',$arrData['certificate']);
+        $this->list = $arrData;
+        $this->certificate = $certificate;
+        $chTitle = '考官详情';
+        $enTitle = 'Examiner Details';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
+        $this->display();
+    }
+
 }

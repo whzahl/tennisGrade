@@ -125,6 +125,12 @@
 </div>
 <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
 <script>
+function addStyle() {
+//    var el = $("#login_container");
+//    el.css({'padding':'200px','backgroundColor':'gray'});
+    $('body').css('backgroundColor','#FDFCF9');
+}
+
 function abc(){
 	var unionid =  $("input[name='unionid']").val();
 	if (unionid == ''){
@@ -137,6 +143,7 @@ function abc(){
 	    style: "",
 	    href: ""
 	  });
+        addStyle();
 	}else{
 		window.location.href="/Home/Student/index";
 	}

@@ -59,12 +59,14 @@ class BaseController extends Controller {
 
     public function place(){
         $arrWhere['area'] = I('get.code');
+        $arrWhere['status'] = 1;
         $place = D('Place','Service')->findAll($arrWhere);
         $this->ajaxReturn($place,"json");
     }
 
     public function teacher(){
         $arrWhere['pid'] = I('get.pid');
+        $arrWhere['status'] = 1;
         $teacher = D('Teacher','Service')->findAll($arrWhere);
         $this->ajaxReturn($teacher,"json");
     }

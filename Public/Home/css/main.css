@@ -23,6 +23,15 @@ a:focus {
 li{
     list-style-type: none;
 }
+
+#login_container{
+    position: fixed;
+    top: 250px;
+    z-index: 1200;
+    background-color: #fff;
+    border:1px solid #d6e9c6;
+
+}
 /*.my-a-bt{*/
     /*font-size: 16px;*/
     /*color: #FFFFFF;*/
@@ -887,8 +896,8 @@ li{
     margin-bottom: 20px;
 }
 .teacher-intro-img img{
-    width: 200px;
-    height:auto;
+    width: 160px;
+    height: 200px;
 }
 .teacher-intro-content{
     padding:0 80px;
@@ -900,6 +909,8 @@ li{
     color: #d9a4ed;
 }
 .teacher-certificate-img img{
+    display: inline-block;
+    padding-top: 40px;
     width: 794px;
     height:auto;
 }

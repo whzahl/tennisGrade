@@ -91,7 +91,7 @@ function sendMessage() {
                 {
                     path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
                     //path = imgFile.files[0].getAsDataURL();// FF 3.0
-                    document.getElementById("imgPreview").innerHTML = "<img id='img1' style='max-height:300px;max-width:200px;' src='"+path+"'/>";
+                    document.getElementById("imgPreview").innerHTML = "<img id='img1' style='width: 200px;height: auto;' src='"+path+"'/>";
                     //document.getElementById("img1").src = path;
                 }
 

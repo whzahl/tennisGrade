@@ -25,4 +25,18 @@ class PlaceQueryController extends BaseController{
         $this->enTitle = $enTitle;
         $this->display();
     }
+
+    public function content(){
+        $arrWhere['pid'] = I('get.pid');
+        $arrData = D('Place','Service')->findOne($arrWhere);
+        $picture = explode('、',$arrData['picture']);
+        $chTitle = '考点详情';
+        $enTitle = 'Test Sites Details';
+        $this->list = $arrData;
+        $this->picture = $picture;
+
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
+        $this->display();
+    }
 }
