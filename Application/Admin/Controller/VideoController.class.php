@@ -25,8 +25,8 @@ class VideoController extends CheckController{
 		$first = $Page->firstRow;
 		$list = $Page->listRows;
 		$arrData = D('Video','Service')->findAll($arrWhere,$first,$list);
-		dump($arrData);
-		dump($arrData);
+//		dump($arrData);
+//		dump($arrData);
 		$this->count = $intCount;
 		$this->page = $show;
 		$this->list = $arrData;

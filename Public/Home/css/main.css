@@ -26,10 +26,12 @@ li{
 
 #login_container{
     position: fixed;
-    top: 250px;
+    top: 20%;
     z-index: 1200;
-    background-color: #fff;
-    border:1px solid #d6e9c6;
+    background-color: #d9a4ed;
+    border:1px solid rgba(245,245,245,0.23);
+    box-shadow: 6px 6px 10px gray;
+    /*border:1px solid #d6e9c6;*/
 
 }
 /*.my-a-bt{*/
@@ -611,6 +613,7 @@ li{
     margin-bottom: 20px;
     padding: 5px;
     background-color: #d9a4ed;
+    border:1px solid rgba(245,245,245,0.23);
 }
 .home-pt2-ct-pt3-erweima span{
     display: inline-block;
