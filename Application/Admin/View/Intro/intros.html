@@ -8,7 +8,7 @@
             </div>
             <ol class="am-breadcrumb">
                 <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">介绍板块</a></li>
+                <li class="am-active">介绍板块</li>
                 <li class="am-active">考试简介</li>
             </ol>
             <div class="tpl-portlet-components">
@@ -76,23 +76,27 @@
 		                              </tr>
 		                          </thead>
 		                          <tbody>
-		                              <tr>
-		                                  <td><input type="checkbox"></td>
-		                                  <td>{$list.inid}</td>
-		                                  <!-- <td><a href="#">Business management</a></td> -->
-		                                  <td>{$list.title}</td>
-		                                  <!-- <td class="am-hide-sm-only">测试1号</td> -->
-		                                  <td class="am-hide-sm-only">{$list.modify_time|date="Y-m-d",###}</td>
-		                                  <td>
-		                                      <div class="am-btn-toolbar">
-		                                          <div class="am-btn-group am-btn-group-xs">
-		                                              <a href="/Admin/Intro/edits?inid={$list.inid}" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
-		                                              <!-- <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
-		                                              <!-- <a href="/Admin/Intro/delete" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-trash-o"></span> 删除</a> -->
-		                                          </div>
-		                                      </div>
-		                                  </td>
-		                              </tr>
+									  <volist name="list" id="vo">
+										  <tr>
+
+											  <td><input type="checkbox"></td>
+											  <td>{$vo.inid}</td>
+											  <!-- <td><a href="#">Business management</a></td> -->
+											  <td>{$vo.title}</td>
+											  <!-- <td class="am-hide-sm-only">测试1号</td> -->
+											  <td class="am-hide-sm-only">{$vo.modify_time|date="Y-m-d",###}</td>
+											  <td>
+												  <div class="am-btn-toolbar">
+													  <div class="am-btn-group am-btn-group-xs">
+														  <a href="/Admin/Intro/edits?inid={$vo.inid}" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+														  <!-- <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
+														  <!-- <a href="/Admin/Intro/delete" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-trash-o"></span> 删除</a> -->
+													  </div>
+												  </div>
+											  </td>
+										  </tr>
+									  </volist>
+
 		                          </tbody>
 		                      </table>
 		                      <hr>

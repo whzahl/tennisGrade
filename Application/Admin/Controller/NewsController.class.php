@@ -15,9 +15,13 @@ class NewsController extends CheckController{
 
 	public function index(){
 	    //选取状态为发布的新闻打印在index页面
-	    $arrWhere['status'] = I('get.status');
+        $arrWhere['status'] = 1;
+        $status = I('get.status');
+        if ($status != ''){
+            $arrWhere['status'] = I('get.status');
+        }
 	    $intCount = D('News','Service')->count($arrWhere);
-	    $Page = new \Think\Page($intCount,2);// 实例化分页类 传入总记录数和每页显示的记录数
+	    $Page = new \Think\Page($intCount,10);// 实例化分页类 传入总记录数和每页显示的记录数
 	    $show = $Page->show();// 分页显示输出
 	    $first = $Page->firstRow;
 	    $list = $Page->listRows;

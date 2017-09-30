@@ -74,6 +74,10 @@ class UserController extends CheckController {
     	$this->list = $arrData;
     	$this->teacher = $arrTeach;
     	$this->place = $arrPlace;
+        $chTitle = '用户中心';
+        $enTitle = 'User Center';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
     	$this->display();
     }
     

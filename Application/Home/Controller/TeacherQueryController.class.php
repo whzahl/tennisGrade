@@ -21,6 +21,24 @@ class TeacherQueryController extends BaseController{
     public function index(){
         $province = M('tg_province')->select();
         $this->province = $province;
-        $this->display();    }
+        $chTitle = '考官查询';
+        $enTitle = 'Examiner Query';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
+        $this->display();
+    }
+
+    public function content(){
+        $arrWhere['tid'] = I('get.tid');
+        $arrData = D('Teacher','Service')->findOne($arrWhere);
+        $certificate = explode('、',$arrData['certificate']);
+        $this->list = $arrData;
+        $this->certificate = $certificate;
+        $chTitle = '考官详情';
+        $enTitle = 'Examiner Details';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
+        $this->display();
+    }
 
 }

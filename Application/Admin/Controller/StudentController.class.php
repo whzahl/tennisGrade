@@ -75,8 +75,8 @@ class StudentController extends CheckController{
     		}
     	}else{
     		$arrWhere['sid']=I('get.sid');
-    		$arrData=D('Student','Service')->findOne($arrWhere);
-    		foreach ($arrData as $k=>$v){
+                $arrData=D('Student','Service')->findOne($arrWhere);
+                foreach ($arrData as $k=>$v){
     			$arrWhere['tid'] = $v['tid'];
     			$arrDatas=D('Teacher','Service')->findOne($arrWhere);
     			$arrData[$k]['tname'] = $arrDatas['tname'];
@@ -89,7 +89,9 @@ class StudentController extends CheckController{
 
     public function delete(){
     	$arrWhere['sid'] = I('get.sid');
-    	$arrData = D('Place','Service') ->delete($arrWhere);
+        //？？？？什么东西？Place?
+//    	$arrData = D('Place','Service') ->delete($arrWhere);
+    	$arrData = D('Student','Service') ->delete($arrWhere);
     	if ($arrData) {
     		$this->success('删除成功','/Admin/Student/index');
     	} else {

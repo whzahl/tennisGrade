@@ -33,7 +33,7 @@
                                 <div class="am-btn-group am-btn-group-xs">
                                     <!-- <a href="/Admin/Place/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a> -->
                                     <!-- <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button> -->
-                                    <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
+                                    <button type="button" class="am-btn am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
                                     <!-- <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
                                 </div>
                             </div>
@@ -99,14 +99,14 @@
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
 		                                                <if condition="$vo['status'] eq 1">
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>已通过</button>
+			                                            <button type="button" class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>已通过</button>
 			                                            <elseif condition="$vo['status'] eq 2"/>
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>待审核</button>
+			                                            <button type="button" class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>待审核</button>
 			                                            <else />
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>未通过</button>
+			                                            <button type="button" class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>未通过</button>
 			                                            </if>
-		                                              <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><a href="/Admin/Place/edit?pid={$vo.pid}"><span class="am-icon-pencil-square-o"></span> 修改</a></button>
-		                                              <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><a href="/Admin/Place/delete?pid={$vo.pid}"   onclick="return del()"><span class="am-icon-trash-o"></span> 删除</a></button>
+		                                              <a style="background-color:#fff;color:#3bb4f2;" href="/Admin/Place/edit?pid={$vo.pid}" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 修改</a>
+		                                              <a href="/Admin/Place/delete?pid={$vo.pid}" class="am-btn am-btn-default am-btn-xs am-text-danger" onclick="return del()"><span class="am-icon-trash-o"></span> 删除</a>
 		                                          </div>
 		                                      </div>
 		                                  </td>

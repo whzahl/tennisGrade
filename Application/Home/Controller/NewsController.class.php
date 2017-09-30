@@ -17,7 +17,7 @@ class NewsController extends BaseController{
         $arrWhere['status'] = 1;
 
         $intCount = D('News','Service')->count($arrWhere);
-        $Page = new \Think\Page($intCount,2);// 实例化分页类 传入总记录数和每页显示的记录数
+        $Page = new \Think\Page($intCount,10);// 实例化分页类 传入总记录数和每页显示的记录数
         $show = $Page->show();// 分页显示输出
         $first = $Page->firstRow;
         $list = $Page->listRows;
@@ -41,6 +41,7 @@ class NewsController extends BaseController{
         $this->chTitle = $chTitle;
         $this->enTitle = $enTitle;
 	    $this->list = $arrData;
+	    $this->display();
     }
 	
 	
