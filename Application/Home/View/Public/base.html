@@ -72,9 +72,9 @@
                         <!--</div>-->
                     <!--</li>-->
                     <if condition="($Think.session.userInfo.unionid eq NULL)">
-                        <li><a href="#" onclick="a()">考级报名</a></li>
-                        <li><a href="#" onclick="b()">考官申请</a></li>
-                        <li><a href="#" onclick="c()">考点申办</a></li>
+                        <li><a href="#" onclick="abc()">考级报名</a></li>
+                        <li><a href="#" onclick="abc()">考官申请</a></li>
+                        <li><a href="#" onclick="abc()">考点申办</a></li>
                         <else />
                         <li><a href="/Home/Student/index">考级报名</a></li>
                         <li><a href="/Home/Teacher/index">考官申请</a></li>
@@ -131,7 +131,18 @@ function addStyle() {
     $('body').css('backgroundColor','#FDFCF9');
 }
 
+function addCloseBt() {
+    var el = $("#login_container");
+    var closeImg =  '<img style="width: 25px;height: auto;" ' +
+                    'src = "/Public/Home/images/common/close.png"  class="close-bt" >';
+    el.append(closeImg);
+    $(".close-bt").click(function () {
+        el.hide();
+    })
+}
+
 function abc(){
+    $("#login_container").show();
 	var unionid =  $("input[name='unionid']").val();
 	if (unionid == ''){
 	var obj = new WxLogin({
@@ -144,8 +155,7 @@ function abc(){
 	    href: ""
 	  });
         addStyle();
-	}else{
-		window.location.href="/Home/Student/index";
+        addCloseBt();
 	}
 }
 </script>

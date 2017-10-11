@@ -75,6 +75,13 @@ li{
     left: 0;
     z-index:500;
 }
+.close-bt{
+    display: inline-block;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    cursor: pointer;
+}
 .common-part1{
     width: 100%;
     background-color: #f5f5f5;
