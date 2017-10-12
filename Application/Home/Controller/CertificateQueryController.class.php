@@ -19,7 +19,7 @@ class CertificateQueryController extends BaseController {
 
     public function index(){
         $chTitle = '证书查询';
-        $enTitle = 'certificate Query';
+        $enTitle = 'Certificate Query';
         $this->chTitle = $chTitle;
         $this->enTitle = $enTitle;
         $this->display();

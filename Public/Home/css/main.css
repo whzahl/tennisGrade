@@ -211,6 +211,7 @@ li{
 }
 .h-p1-right button{
     display: inline-block;
+    outline-color: #FFFFFF;
 }
 .header-part2{
     width: 100%;
@@ -667,7 +668,7 @@ li{
     margin-bottom: 0;
 }
 .home-pt3-ct-pt2-video{
-    margin-right: 20px;
+    margin-right: 1%;
 }
 .home-pt3-ct h1{
     font-size: 24px;
