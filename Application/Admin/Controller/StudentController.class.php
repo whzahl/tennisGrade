@@ -5,6 +5,7 @@
 
 namespace Admin\Controller;
 use Admin\Controller\CheckController;
+//header('Content-Type:text/html; charset=utf-8');
 
 class StudentController extends CheckController{
       
@@ -22,6 +23,7 @@ class StudentController extends CheckController{
     	$first =  $Page->firstRow;
     	$list = $Page->listRows;
     	$arrData = D('Student','Service') ->findAll($arrWhere,$first,$list);
+    	var_dump($arrData);
     	foreach ($arrData as $k => $v){
     		$arrWhere['tid'] = $v['tid'];
     		$arrDatas = D('Teacher','Service') ->findOne($arrWhere);
@@ -74,17 +76,22 @@ class StudentController extends CheckController{
     			$this->error('修改失败');
     		}
     	}else{
-    		$arrWhere['sid']=I('get.sid');
+//    		    $arrWhere['sid']=I('get.sid');
+//                $arrData=D('Student','Service')->findOne($arrWhere);
+//                foreach ($arrData as $k=>$v){
+//    			$arrWhere['tid'] = $v['tid'];
+//    			$arrDatas=D('Teacher','Service')->findOne($arrWhere);
+//    			$arrData[$k]['tname'] = $arrDatas['tname'];
+
+                $arrWhere['sid']=I('get.sid');
                 $arrData=D('Student','Service')->findOne($arrWhere);
-                foreach ($arrData as $k=>$v){
-    			$arrWhere['tid'] = $v['tid'];
-    			$arrDatas=D('Teacher','Service')->findOne($arrWhere);
-    			$arrData[$k]['tname'] = $arrDatas['tname'];
+                $arrData1 = D('Teacher','Service')->findOne($arrData['tid']);
+                $arrData['tname'] = $arrData1['tname'];
     		}
+
     		$this->list=$arrData;
     		$this->display();
     	}
-    }
 
 
     public function delete(){

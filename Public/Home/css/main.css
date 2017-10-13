@@ -227,26 +227,38 @@ li{
     color: #0e90d2;
     display: none;
     background-color: #d9a4ed;
-    width: 100px;
-    padding: 8px 0;
+    width: 110%;
+    padding: 5% 0;
     position: absolute;
-    top: 45px;
-    left: -5px;
+    top: 100%;
+    left: -4%;
     z-index:500;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 0 -1px 5px gray;
+}
+.arrow{
+    position: absolute;
+    margin: -14% 0 0 39%;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 10px solid #d9a4ed;
 }
 .intro ul{
     height: 180px;
     margin:0;
     padding:0;
+    padding-bottom: 10px;
 }
 .intro li{
-
-    font-size: 20px;
+    font-size: 18px;
     display: block;
     line-height: 30px;
-    border-bottom: #FFFFFF;
+}
+.intro li:last-child{
+    border:none;
 }
 /*header end*/
 
