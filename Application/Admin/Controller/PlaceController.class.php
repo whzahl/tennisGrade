@@ -86,6 +86,7 @@ class PlaceController extends CheckController{
     			}else{// 上传成功
     				$arrWhere['picture'] = '/Public/Uploads/'.$info['savepath'].$info['savename'];
     			}
+
     			
     			$arrData=D('Place','Service')->edit($arrWhere);
     		}elseif (!empty($arrImage)&&!empty($arrImages)){  //营业执照和场地照片都改变

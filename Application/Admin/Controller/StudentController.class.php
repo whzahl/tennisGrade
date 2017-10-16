@@ -23,7 +23,6 @@ class StudentController extends CheckController{
     	$first =  $Page->firstRow;
     	$list = $Page->listRows;
     	$arrData = D('Student','Service') ->findAll($arrWhere,$first,$list);
-    	var_dump($arrData);
     	foreach ($arrData as $k => $v){
     		$arrWhere['tid'] = $v['tid'];
     		$arrDatas = D('Teacher','Service') ->findOne($arrWhere);
