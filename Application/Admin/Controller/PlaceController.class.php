@@ -122,19 +122,32 @@ class PlaceController extends CheckController{
     		$arrWhere['pid']=I('get.pid');
     		$arrData=D('Place','Service')->findOne($arrWhere);
             //获取省市区的code,根据code从数据库中查询他们的名字,放在arrData中返回
+
+            //查询字段code
             $provinceCode['code'] = $arrData['province'];
-            $areaCode['code'] = $arrData['area'];
             $cityCode['code'] = $arrData['city'];
+            $areaCode['code'] = $arrData['area'];
+
+            //查询结果
             $provinceData = (D('Province','Service')->findOne($provinceCode));
             $areaData = D('Area','Service')->findOne($areaCode);
             $cityData = D('City','Service')->findOne($cityCode);
+//            结果存入数组arrData
             $arrData['provinceName'] = $provinceData['name'];
             $arrData['areaName'] = $areaData['name'];
             $arrData['cityName'] = $cityData['name'];
 
+//            查询province code 为$provinceCode['code']的city
+//            查询citycode 为$cityCode['code']的city
+            $arrWhereCity['provincecode'] = $provinceCode['code'];
+            $arrWhereArea['citycode'] = $cityCode['code'];
+            $arrCity = D('City','Service')->findAll($arrWhereCity);
+            $arrArea = D('Area','Service')->findAll($arrWhereArea);
             $arrPicture = explode('、', $arrData['picture']);
     		$this->list=$arrData;
     		$this-> list1 = $arrPicture;
+    		$this->arrCity = $arrCity;
+    		$this->arrArea = $arrArea;
     		$this->display();
     	}
     }

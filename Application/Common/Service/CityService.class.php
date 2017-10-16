@@ -28,7 +28,7 @@ class CityService extends BaseService{
 	 *  查找多个数据
 	 */
 	public function findAll($arrWhere,$first,$list){
-		$result = M('tg_city')->where($arrWhere)->order('gid desc')->limit($first,$list)->select();
+		$result = M('tg_city')->where($arrWhere)->limit($first,$list)->select();
 		return $result;
 	}
 	

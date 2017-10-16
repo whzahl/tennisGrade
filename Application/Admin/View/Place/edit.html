@@ -86,16 +86,23 @@
                                 <label for="user-phone" class="am-u-sm-3 am-form-label">考点地址 <span class="tpl-form-line-small-title">Address</span></label>
                                 <div class="am-u-sm-9">
                                     <select style="display: inline-block;width: 30%" class="am-radius" data-am-selected="{maxHeight: 300}" name="province">
-                                        <option value="省份">{$list.provinceName}</option>
+                                        <option value="{$list.province}">{$list.provinceName}</option>
                                         <volist name="province" id="vo">
                                             <option value="{$vo.code}">{$vo.name}</option>
                                         </volist>
+
                                     </select>
                                     <select style="display: inline-block;width: 30%" class="am-radius" data-am-selected="{maxHeight: 300}" name="city">
-                                        <option value="市" class="my-input-place">{$list.cityName}</option>
+                                        <option value="{$list.city}" class="my-input-place">{$list.cityName}</option>
+                                        <volist name="arrCity" id="vo">
+                                            <option value="{$vo.code}">{$vo.name}</option>
+                                        </volist>
                                     </select>
                                     <select style="display: inline-block;width: 30%" class="am-radius" data-am-selected="{maxHeight: 300}" name="area">
-                                        <option value="区" class="my-input-place">{$list.areaName}</option>
+                                        <option value="{$list.area}" class="my-input-place">{$list.areaName}</option>
+                                        <volist name="arrArea" id="vo">
+                                            <option value="{$vo.code}">{$vo.name}</option>
+                                        </volist>
                                     </select>
                                     <input style="margin-top: 10px;" type="text" name="address" value="{$list.address}"  id="address"  class="am-form-field am-radius" placeholder="请输入考点详细地址" />
                                 </div>
