@@ -120,9 +120,18 @@ class PlaceController extends CheckController{
     		$this->province = $province;
     		$arrWhere['pid']=I('get.pid');
     		$arrData=D('Place','Service')->findOne($arrWhere);
-    		$arrPicture = explode('、', $arrData['picture']);
-//    		dump($arrPicture);
- //   		dump($arrPicture);
+            //获取省市区的code,根据code从数据库中查询他们的名字,放在arrData中返回
+            $provinceCode['code'] = $arrData['province'];
+            $areaCode['code'] = $arrData['area'];
+            $cityCode['code'] = $arrData['city'];
+            $provinceData = (D('Province','Service')->findOne($provinceCode));
+            $areaData = D('Area','Service')->findOne($areaCode);
+            $cityData = D('City','Service')->findOne($cityCode);
+            $arrData['provinceName'] = $provinceData['name'];
+            $arrData['areaName'] = $areaData['name'];
+            $arrData['cityName'] = $cityData['name'];
+
+            $arrPicture = explode('、', $arrData['picture']);
     		$this->list=$arrData;
     		$this-> list1 = $arrPicture;
     		$this->display();

@@ -85,19 +85,19 @@
                            <div class="am-form-group">
                                 <label for="user-phone" class="am-u-sm-3 am-form-label">考点地址 <span class="tpl-form-line-small-title">Address</span></label>
                                 <div class="am-u-sm-9">
-                                    <select style="display: inline-block;width: 30%" class="am-radius" name="province">
-                                        <option value="省份">选择省份</option>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" data-am-selected="{maxHeight: 300}" name="province">
+                                        <option value="省份">{$list.provinceName}</option>
                                         <volist name="province" id="vo">
                                             <option value="{$vo.code}">{$vo.name}</option>
                                         </volist>
                                     </select>
-                                    <select style="display: inline-block;width: 30%" class="am-radius" name="city">
-                                        <option value="市" class="my-input-place">选择市</option>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" data-am-selected="{maxHeight: 300}" name="city">
+                                        <option value="市" class="my-input-place">{$list.cityName}</option>
                                     </select>
-                                    <select style="display: inline-block;width: 30%" class="am-radius" name="area">
-                                        <option value="区" class="my-input-place">选择区</option>
+                                    <select style="display: inline-block;width: 30%" class="am-radius" data-am-selected="{maxHeight: 300}" name="area">
+                                        <option value="区" class="my-input-place">{$list.areaName}</option>
                                     </select>
-                                    <input type="text" name="address" value="{$list.address}"  id="address"  class="am-form-field am-radius" placeholder="请输入考点详细地址" />
+                                    <input style="margin-top: 10px;" type="text" name="address" value="{$list.address}"  id="address"  class="am-form-field am-radius" placeholder="请输入考点详细地址" />
                                 </div>
                             </div>
                                 <div class="am-form-group">
