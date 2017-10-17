@@ -27,6 +27,7 @@ li{
 #login_container{
     position: fixed;
     top: 20%;
+    left:40%;
     z-index: 1200;
     background-color: #d9a4ed;
     border:1px solid rgba(245,245,245,0.23);
