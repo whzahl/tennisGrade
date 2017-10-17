@@ -63,8 +63,10 @@ class NewsController extends CheckController{
 	        }
 	        
 	    }
-	    
-		$this->display();
+	    else{
+            $this->display();
+        }
+
 	}
 	
 	public function edit(){
@@ -75,6 +77,8 @@ class NewsController extends CheckController{
 	        $arrWhere['modify_time'] = time();
 	        $arrWhere['aid'] = 1;
 	        $arrImage = $_FILES['picture']['name'];
+//	        dump($arrImage);
+//	        exit();
 	        if(empty($arrImage)){
 	            $arrData = D('News','Service')->edit($arrWhere);
 	            if($arrData){
@@ -108,10 +112,13 @@ class NewsController extends CheckController{
 	            }
 	        }
 	    }
-	    $arrWhere['nid'] = I('get.nid');
-	    $arrData = D('News','Service')->findOne($arrWhere);
-	    $this->list = $arrData;
-		$this->display();
+	    else{
+            $arrWhere['nid'] = I('get.nid');
+            $arrData = D('News','Service')->findOne($arrWhere);
+            $this->list = $arrData;
+            $this->display();
+        }
+
 	}
 	public function delete(){
 	    $arrWhere['nid'] = I('get.nid');
