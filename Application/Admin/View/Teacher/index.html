@@ -94,13 +94,25 @@
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
-		                                              <if condition="$vo['status'] eq 1">
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>已通过</button>
-			                                            <elseif condition="$vo['status'] eq 2"/>
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>待审核</button>
-			                                            <else />
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>未通过</button>
-			                                            </if>
+		                                              <!--<if condition="$vo['status'] eq 1">-->
+			                                            <!--&lt;!&ndash;<button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>已通过</button>&ndash;&gt;-->
+			                                            <!--&lt;!&ndash;<elseif condition="$vo['status'] eq 2"/>&ndash;&gt;-->
+			                                            <!--&lt;!&ndash;<button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>待审核</button>&ndash;&gt;-->
+			                                            <!--&lt;!&ndash;<else />&ndash;&gt;-->
+			                                            <!--&lt;!&ndash;<button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>未通过</button>&ndash;&gt;-->
+														  <!---->
+
+			                                            <!--</if>-->
+													  <if condition="$vo['status'] eq 1">
+														  <a style="color: #6AA433;" class="am-btn am-btn-default am-btn-xs" href="/Admin/Teacher/check?tid={$vo.tid}"><span class="am-icon-archive"></span>已通过</a>
+														  <!--<button type="button" class="am-btn am-btn-default am-btn-xs"><span class="am-icon-archive"></span>已通过</button>-->
+														  <elseif condition="$vo['status'] eq 2"/>
+														  <a style="color: #dd514c;" class="am-btn am-btn-default am-btn-xs" href="/Admin/Teacher/check?tid={$vo.tid}"><span class="am-icon-archive"></span>待审核</a>
+														  <!--<button type="button" class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>待审核</button>-->
+														  <else />
+														  <a style="color: #d9d9d9;" class="am-btn am-btn-default am-btn-xs" href="/Admin/Teacher/check?tid={$vo.tid}"><span class="am-icon-archive"></span>未通过</a>
+														  <!--<button type="button" class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>未通过</button>-->
+													  </if>
 		                                              <a style="background-color:#fff;color:#3bb4f2;" href="/Admin/Teacher/edit?tid={$vo.tid}" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 修改</a>
 		                                              <a  class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" href="/Admin/Teacher/delete?tid={$vo.tid}" onclick="return del()"><span class="am-icon-trash-o"></span> 删除</a>
 		                                          </div>

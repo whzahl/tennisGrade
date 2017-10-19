@@ -49,10 +49,22 @@ class TeacherController extends CheckController{
     		$arrWhere=I('post.');
     		$arrImage = $_FILES['picture']['name'];
     		$arrImages = $_FILES['certificate']['name'];
+//            dump($arrImage);
+//            dump($arrImages);
     		$arrWhere['create_time'] = time();
-    		if (empty($arrImage)){
+
+    		//下面的代码逻辑有问题
+    		//下面的代码逻辑有问题
+    		//下面的代码逻辑有问题
+    		//下面的代码逻辑有问题
+    		//下面的代码逻辑有问题
+    		//下面的代码逻辑有问题
+    		//下面的代码逻辑有问题
+
+    		if (empty($arrImage) && empty($arrImages)){
     			$arrData=D('Teacher','Service')->edit($arrWhere);
-    		}else{
+    		}
+    		else{
     			$upload = new \Think\Upload();// 实例化上传类
     			$upload->maxSize   =     3145728 ;// 设置附件上传大小
     			$upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
@@ -62,28 +74,92 @@ class TeacherController extends CheckController{
     			$info   =    $upload->uploadOne($_FILES['picture']);
     			$info1   =    $upload->uploadOne($_FILES['certificate']);
     			if(!$info) {// 上传错误提示错误信息
-    				$this->error($upload->getError());
-    			}else{// 上传成功
+//                    $this->error($upload->getError());
+                }
+    			else{// 上传成功
     				$arrWhere['picture'] = '/Public/Uploads/'.$info['savepath'].$info['savename'];
     			}
     			if(!$info1) {// 上传错误提示错误信息
-    				$this->error($upload->getError());
-    			}else{// 上传成功
-    				$arrWhere['certificate'] = '/Public/Uploads/'.$info['savepath'].$info['savename'];
+//    				$this->error($upload->getError());
     			}
+    			else{// 上传成功
+    				$arrWhere['certificate'] = '/Public/Uploads/'.$info1['savepath'].$info1['savename'];
+    			}
+//                dump($arrWhere);
+//                exit();
     			$arrData=D('Teacher','Service')->edit($arrWhere);
     		}
     		if ($arrData){
-    			$this->success('修改成功','/Admin/Place/index');
+    			$this->success('修改成功','/Admin/Teacher/index');
     		}else {
     			$this->error('修改失败');
     		}
     	}else{
     		$arrWhere['tid']=I('get.tid');
     		$arrData=D('Teacher','Service')->findOne($arrWhere);
+    		$arrData['certificate'] = explode("、",$arrData['certificate'])[0];
     		$this->list=$arrData;
     		$this->display();
     	}
+    }
+
+    public function check(){
+        if(IS_POST){
+            $arrWhere=I('post.');
+            $arrImage = $_FILES['picture']['name'];
+            $arrImages = $_FILES['certificate']['name'];
+//            dump($arrImage);
+//            dump($arrImages);
+            $arrWhere['create_time'] = time();
+
+            //下面的代码逻辑有问题
+            //下面的代码逻辑有问题
+            //下面的代码逻辑有问题
+            //下面的代码逻辑有问题
+            //下面的代码逻辑有问题
+            //下面的代码逻辑有问题
+            //下面的代码逻辑有问题
+
+            if (empty($arrImage) && empty($arrImages)){
+                $arrData=D('Teacher','Service')->edit($arrWhere);
+            }
+            else{
+                $upload = new \Think\Upload();// 实例化上传类
+                $upload->maxSize   =     3145728 ;// 设置附件上传大小
+                $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+                $upload->rootPath  =      './Public/Uploads/'; // 设置附件上传根目录
+
+                // 上传文件
+                $info   =    $upload->uploadOne($_FILES['picture']);
+                $info1   =    $upload->uploadOne($_FILES['certificate']);
+                if(!$info) {// 上传错误提示错误信息
+//                    $this->error($upload->getError());
+                }
+                else{// 上传成功
+                    $arrWhere['picture'] = '/Public/Uploads/'.$info['savepath'].$info['savename'];
+                }
+                if(!$info1) {// 上传错误提示错误信息
+//    				$this->error($upload->getError());
+                }
+                else{// 上传成功
+                    $arrWhere['certificate'] = '/Public/Uploads/'.$info1['savepath'].$info1['savename'];
+                }
+//                dump($arrWhere);
+//                exit();
+                $arrData=D('Teacher','Service')->edit($arrWhere);
+            }
+            if ($arrData){
+                $this->success('修改成功','/Admin/Teacher/index');
+            }else {
+                $this->error('修改失败');
+            }
+        }else{
+            $arrWhere['tid']=I('get.tid');
+            $arrData=D('Teacher','Service')->findOne($arrWhere);
+            $arrData['certificate'] = explode("、",$arrData['certificate'])[0];
+            $this->list=$arrData;
+            $this->display();
+        }
     }
 
     public function delete(){

@@ -1,0 +1,248 @@
+<extend name="Public:base" />
+<block name="js">
+    <script>
+        $(document).ready(function () {
+            $(".no-image").width(200);
+            $(".imgPreview").css({'text-align':'center'});
+            $(".imgPreview img").css({'display':'inline-block'});
+        });
+        function PreviewImage(imgFile,imgBoxId)
+        {
+            console.log(imgBoxId);
+            var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+            filextension=filextension.toLowerCase();
+            if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))
+            {
+                alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+                imgFile.focus();
+            }
+            else
+            {
+                var path;
+                if(document.all)//IE
+                {
+                    imgFile.select();
+                    path = document.selection.createRange().text;
+                    document.getElementById(imgBoxId).innerHTML="";
+                    document.getElementById(imgBoxId).style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+                }
+                else//FF
+                {
+                    path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+                    //path = imgFile.files[0].getAsDataURL();// FF 3.0
+                    document.getElementById(imgBoxId).innerHTML = "<img  style='max-height:300px;max-width:300px;' src='"+path+"'/>";
+                    //document.getElementById("img1").src = path;
+                }
+            }
+        }
+    </script>
+</block>
+<block name="body">
+
+
+    <div class="tpl-content-wrapper" style="margin:0 20px">
+        <div class="tpl-content-page-title">
+            考官申请信息审核
+        </div>
+        <ol class="am-breadcrumb">
+            <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
+            <li class="am-active">申请板块</li>
+            <li class="am-active">考官信息审核</li>
+        </ol>
+        <div class="tpl-portlet-components">
+            <div class="portlet-title">
+                <div class="caption font-green bold">
+                    <span class="am-icon-font-awesome"></span> 考官信息审核
+                </div>
+                <!--                     <div class="tpl-portlet-input tpl-fz-ml">
+                                        <div class="portlet-input input-small input-inline">
+                                            <div class="input-icon right">
+                                                <i class="am-icon-search"></i>
+                                                <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
+                                        </div>
+                                    </div> -->
+            </div>
+            <div class="tpl-block">
+                <div class="am-g">
+                    <div class="tpl-form-body tpl-form-line">
+                        <form class="am-form tpl-form-line-form"  action="/Admin/Teacher/edit" method="post"  enctype="multipart/form-data">
+                            <input name="tid" type="hidden"  value="{$list.tid}" >
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label">姓名<span class="tpl-form-line-small-title">Tname</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" name="tname" value="{$list.tname}" placeholder="请输入姓名">
+                                    <!-- <small>请填写标题文字10-20字左右。</small> -->
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label">性别<span class="tpl-form-line-small-title">Sex</span></label>
+                                <div class="am-u-sm-9">
+                                    <if condition="$list.sex eq 1">
+                                        <input name="sex" type="radio" value="1" checked="checked" /><span style="color:#888;font-size:16px;margin-right:100px;">男</span>
+                                        <input name="sex" type="radio" value="0"  /><span style="color:#888;font-size:16px;">女</span>
+                                        <else />
+                                        <input name="sex" type="radio" value="1" /><span style="color:#888;font-size:16px;margin-right:100px;">男</span>
+                                        <input name="sex" type="radio" value="0" checked="checked"  /><span style="color:#888;font-size:16px;">女</span>
+                                    </if>
+
+
+                                    <!-- <small>发布时间为必填</small> -->
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label">身份证号码<span class="tpl-form-line-small-title">Idcard</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" name="idcard" value="{$list.idcard}" placeholder="请输入身份证号码">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label">手机号码<span class="tpl-form-line-small-title">Phone</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" name="phone" value="{$list.phone}" placeholder="请输入手机号码">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="user-weibo" class="am-u-sm-3 am-form-label">个人照片<span class="tpl-form-line-small-title">Picture</span></label>
+                                <div class="am-u-sm-9">
+                                    <div class="am-form-group am-form-file">
+                                        <!--<div class="tpl-form-file-img">-->
+                                        <!--<empty name="list['picture']">-->
+                                        <!--<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">-->
+                                        <!--<else />-->
+                                        <!--<img src="{$list.picture}" class="ml50 mt20" style="width:103px;height:107px;">-->
+                                        <!--<input type="hidden" name="picture" value="{$list.picture}">-->
+                                        <!--</empty>-->
+                                        <!--</div>-->
+
+                                        <div class="tpl-form-file-img imgPreview" style="width:200px;" id="imgPreview3">
+                                            <empty name="list['picture']">
+                                                <img src="/Public/Admin/images/2.jpg" class="ml50 mt20 no-image">
+                                                <else />
+                                                <img src="{$list.picture}" class="ml50 mt20">
+                                                <input type="hidden" name="picture" value="{$list.picture}" >
+                                            </empty>
+                                        </div>
+
+
+                                        <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                            <i class="am-icon-cloud-upload"></i> 添加个人图片</button>
+                                        <input  type="file" name="picture" onchange='PreviewImage(this,"imgPreview3")'>
+                                        <!--<input id="doc-form-file" type="file" name="picture" multiple>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label">自我介绍<span class="tpl-form-line-small-title">Tintro</span></label>
+                                <div class="am-u-sm-9">
+                                    <textarea class="" rows="10" name="tintro" value="{$list.tintro}"  placeholder="请输入自我介绍">{$list.tintro|htmlspecialchars_decode|stripslashes}</textarea>
+                                </div>
+                            </div>
+
+                            <!--<div class="am-form-group">-->
+                            <!--<label class="am-u-sm-3 am-form-label">居住地址</label>-->
+                            <!--<div class="am-u-sm-9">-->
+                            <!--<input  type="text" placeholder="请输入居住地址"/>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <div class="am-form-group">
+                                <label for="user-weibo" class="am-u-sm-3 am-form-label">资格证书图片<span class="tpl-form-line-small-title">Picture</span></label>
+                                <div class="am-u-sm-9">
+                                    <div class="am-form-group am-form-file">
+                                        <!--<div class="tpl-form-file-img">-->
+                                        <!--<empty name="list['certificate']">-->
+                                        <!--<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">-->
+                                        <!--<else />-->
+                                        <!--<img src="{$list.certificate}" class="ml50 mt20" style="width:103px;height:107px;">-->
+                                        <!--<input type="hidden" name="certificate" value="{$list.certificate}">-->
+                                        <!--</empty>-->
+                                        <!--</div>-->
+                                        <div class="tpl-form-file-img imgPreview"  style="width:300px;" id="imgPreview4">
+                                            <empty name="list['certificate']">
+                                                <img src="/Public/Admin/images/2.jpg" class="ml50 mt20 no-image">
+                                                <else />
+                                                <img src="{$list.certificate}" class="ml50 mt20">
+                                                <input type="hidden" name="certificate" value="{$list.certificate}" >
+                                            </empty>
+                                        </div>
+
+                                        <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                            <i class="am-icon-cloud-upload"></i> 添加资格证书图片</button>
+                                        <input type="file" name="certificate" onchange='PreviewImage(this,"imgPreview4")'>
+                                        <!--<input id="doc-form-file" type="file" name="certificate" multiple>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--<div class="am-form-group">-->
+                            <!--<label class="am-u-sm-3 am-form-label">考点地址</label>-->
+                            <!--<div class="am-u-sm-9">-->
+                            <!--<input  type="text" placeholder="请输入考点地址"/>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--                                <div class="am-form-group">
+                                                                <label for="user-weibo" class="am-u-sm-3 am-form-label">添加分类 <span class="tpl-form-line-small-title">Type</span></label>
+                                                                <div class="am-u-sm-9">
+                                                                    <input type="text" id="user-weibo" placeholder="请添加分类用点号隔开">
+                                                                    <div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="am-form-group">
+                                                                <label for="user-intro" class="am-u-sm-3 am-form-label">隐藏文章</label>
+                                                                <div class="am-u-sm-9">
+                                                                    <div class="tpl-switch">
+                                                                        <input type="checkbox" class="ios-switch bigswitch tpl-switch-btn" checked />
+                                                                        <div class="tpl-switch-btn-view">
+                                                                            <div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div> -->
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label" style="font-weight: bolder;">审核 <span class="tpl-form-line-small-title">Check</span></label>
+                                <div class="am-u-sm-9">
+                                    <select name="status" data-am-selected>
+                                        <if condition="$list.status eq 0">
+                                            <option value="0" selected>未通过</option>
+                                            <else />
+                                            <option value="0">未通过</option>
+                                        </if>
+                                        <if condition="$list.status eq 1">
+                                            <option value="1" selected>已通过</option>
+                                            <else />
+                                            <option value="1">已通过</option>
+                                        </if>
+                                        <if condition="$list.status eq 2">
+                                            <option value="2" selected>审核中</option>
+                                            <else />
+                                            <option value="2">审核中</option>
+                                        </if>
+                                        <!--<option value="0">未通过</option>-->
+                                        <!--<option value="1">已通过</option>-->
+                                        <!--<option value="2" selected>审核中</option>-->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">修改</button>
+                                    <a href=""  class="am-btn am-btn-primary tpl-btn-bg-color-warning " onclick ="javascript:history.go(-1);return false;" >返回</a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</block>
