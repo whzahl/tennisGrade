@@ -17,9 +17,10 @@ class WxpayController extends BaseController {
     public function __construct(){
         parent::__construct();
     }
-    
+
+    //支付入口方法
     public function weixinpay(){
-        //判断该报名用户是否有未支付的订单存在，存在取出他的信息，不存在就创建新的订单
+        //判断该报名用户是否有未支付的订单存在，存在取出他的信息，不存在就创建新的订单 start
         $arrWhere = I('get.');
         $where = array(
             'id' => $arrWhere['id'],
@@ -38,12 +39,15 @@ class WxpayController extends BaseController {
         if($data){
             $order_sn = $data['oid'];
         }
+        //判断该报名用户是否有未支付的订单存在，存在取出他的信息，不存在就创建新的订单 end
 
 //        凡姐的代码
 //    	$order_sn = I('get.order_sn');
 
 //    	dump(I('get.order_sn'));
 //    	exit();
+
+//        订单为空，增加新的订单
     	if(empty($order_sn)){
     		//    添加订单
     		$type = I('get.type');
@@ -105,7 +109,9 @@ class WxpayController extends BaseController {
     			);
     		}
     		 
-    	}else{
+    	}
+//    	不为空就通过查询到的订单号读取他的信息
+    	else{
     		$arrWhere['oid'] = $order_sn;
     		$result = M('tg_order')->where(array('oid'=>$arrWhere['oid']))->find();
     		$res = array(
@@ -115,7 +121,8 @@ class WxpayController extends BaseController {
     		);
     	
     	}
-    	
+
+//    	引入第三方类库
     	vendor('Weixinpay.WxPayPubHelper');
     	//使用统一支付接口
     	$unifiedOrder = new \UnifiedOrder_pub();
