@@ -63,8 +63,9 @@ class UserController extends CheckController {
     	//考点信息
     	$arrWherep['id'] = $_SESSION['userInfo']['id'];
     	$arrPlace= M('tg_place')->where($arrWherep)->order('create_time desc')->select();
-    	//dump($arrData);
-    	
+//    	dump($arrPlace);
+//    	dump($arrWherep['id']);
+//    	exit();
     	if(empty($arrUser)){
     		$this->user = $arrUsers['0'];
     	}else {

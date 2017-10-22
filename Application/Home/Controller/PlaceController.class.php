@@ -49,8 +49,8 @@ class PlaceController extends CheckController{
     			}
     			$data['picture'] = implode('、',$arrurl);
     		}
-//    		$wx = M('tg_user')->where($_SESSION['userInfo']['unionid'])->select();
-    		$wx = M('tg_user')->where(array('unionid'=>'o_vIF1FGUba-wAN9DyQ9jDoUAEu8'))->find();
+    		$wx = M('tg_user')->where("unionid='%s'", $_SESSION['userInfo']['unionid'])->find();
+//    		$wx = M('tg_user')->where(array('unionid'=>'o_vIF1FGUba-wAN9DyQ9jDoUAEu8'))->find();
  //   		dump($wx);
  //   		dump($wx['id']);
   //  		exit();

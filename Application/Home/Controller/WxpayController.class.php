@@ -19,8 +19,31 @@ class WxpayController extends BaseController {
     }
     
     public function weixinpay(){
-    	
-    	$order_sn = I('get.order_sn');
+        //判断该报名用户是否有未支付的订单存在，存在取出他的信息，不存在就创建新的订单
+        $arrWhere = I('get.');
+        $where = array(
+            'id' => $arrWhere['id'],
+            'status' => 0
+        );
+        if($arrWhere['type'] == 1){
+            $where['sid'] = $arrWhere['userid'];
+        }
+        if($arrWhere['type'] == 2){
+            $where['tid'] = $arrWhere['userid'];
+        }
+        if($arrWhere['type'] == 3){
+            $where['pid'] = $arrWhere['userid'];
+        }
+        $data = D('Order','Service')->findOne($where);
+        if($data){
+            $order_sn = $data['oid'];
+        }
+
+//        凡姐的代码
+//    	$order_sn = I('get.order_sn');
+
+//    	dump(I('get.order_sn'));
+//    	exit();
     	if(empty($order_sn)){
     		//    添加订单
     		$type = I('get.type');
@@ -46,7 +69,8 @@ class WxpayController extends BaseController {
     					'order_amount' => $arrOrder['price'],
     					'order_title' => "考生交费"
     			);
-    		}elseif ($type == 2){
+    		}
+    		elseif ($type == 2){
     			//  生成订单
     			$arrOrder['id'] = $id;
     			$arrOrder['tid'] = $userid;
@@ -62,7 +86,8 @@ class WxpayController extends BaseController {
     					'order_amount' => $arrOrder['price'],
     					'order_title' => "考官交费"
     			);
-    		}elseif($type == 3){
+    		}
+    		elseif($type == 3){
     			//  生成订单
     			$arrOrder['id'] = $id;
     			$arrOrder['pid'] = $userid;
@@ -146,9 +171,10 @@ class WxpayController extends BaseController {
     	$this->assign('out_trade_no',$out_trade_no);
     	$this->assign('code_url',$code_url);
     	$this->assign('unifiedOrderResult',$unifiedOrderResult);
-    
+
     	$this->display('qrcode');
     }
+
     public function notify(){
     	vendor('Weixinpay.WxPayPubHelper');
 
@@ -171,6 +197,7 @@ class WxpayController extends BaseController {
         }
     	 $returnXml = $notify->returnXml();
     	 $parameter = $notify->xmlToArray($xml);
+//        echo $returnXml;
     
     	//==商户根据实际情况设置相应的处理流程，此处仅作举例=======
     	 
@@ -245,7 +272,7 @@ class WxpayController extends BaseController {
     	}
     }
     
-    
+
     public function js_api_call() {
     	$order_sn = I('get.order_sn');
 //     	dump($order_sn);
