@@ -18,6 +18,15 @@ class WxpayController extends BaseController {
         parent::__construct();
     }
 
+    /**
+     * 初始化引入微信支付类库
+     */
+
+    public function _initialize(){
+        //    	引入第三方类库
+        vendor('Weixinpay.WxPayPubHelper');
+    }
+
     //支付入口方法
     public function weixinpay(){
         //判断该报名用户是否有未支付的订单存在，存在取出他的信息，不存在就创建新的订单 start
@@ -122,8 +131,7 @@ class WxpayController extends BaseController {
     	
     	}
 
-//    	引入第三方类库
-    	vendor('Weixinpay.WxPayPubHelper');
+
     	//使用统一支付接口
     	$unifiedOrder = new \UnifiedOrder_pub();
     
@@ -178,12 +186,10 @@ class WxpayController extends BaseController {
     	$this->assign('out_trade_no',$out_trade_no);
     	$this->assign('code_url',$code_url);
     	$this->assign('unifiedOrderResult',$unifiedOrderResult);
-
     	$this->display('qrcode');
     }
 
     public function notify(){
-    	vendor('Weixinpay.WxPayPubHelper');
 
     	//使用通用通知接口
     	$notify = new \Notify_pub();
@@ -204,7 +210,7 @@ class WxpayController extends BaseController {
         }
     	 $returnXml = $notify->returnXml();
     	 $parameter = $notify->xmlToArray($xml);
-//        echo $returnXml;
+        echo $returnXml;
     
     	//==商户根据实际情况设置相应的处理流程，此处仅作举例=======
     	 
@@ -253,23 +259,25 @@ class WxpayController extends BaseController {
 	                $arrWhere['oid'] = $out_trade_no;
 	                $arrData=M('tg_order')->where(array('oid'=>$arrWhere['oid']))->find();
 	                if(!empty($arrData['sid'])){
-	                	//  更新答疑的状态
+	                	//  更新考生缴费的状态
 	                	$arrWheress['sid'] = $arrData['sid'];
 	                	$arrWheress['pay'] = 1;
 	                	M('tg_student')->data($arrWheress)->save();
+                        $this->success('支付成功','/Home/index/index');
 	                	/* D('Question','Service')->editQuestion($arrWheres); */
 	                }elseif (!empty($arrData['tid'])){
-	                	//  更新作文状态
+	                	//  更新考官缴费状态
 	                	$arrWherest['tid'] = $arrData['tid'];
 	                	$arrWherest['pay'] = 1;
 	                	M('tg_teacher')->data($arrWherest)->save();
 	                }elseif (!empty($arrData['pid'])){
-	                	//  更新作文状态
+	                	//  更新考点缴费状态
 	                	$arrWheresp['pid'] = $arrData['pid'];
 	                	$arrWheresp['pay'] = 1;
 	                	M('tg_place')->data($arrWheresp)->save();
 	                }
-		    	echo 'success';
+	                echo 'success';
+
     		}
     		 
     		//商户自行增加处理流程,
@@ -279,6 +287,11 @@ class WxpayController extends BaseController {
     	}
     }
     
+    public function check(){
+        $arrWhere['oid'] = I('get.orderID');
+        $arrData = D('Order','Service')->findOne($arrWhere);
+        $this->ajaxReturn($arrData['status'],'json');
+    }
 
     public function js_api_call() {
     	$order_sn = I('get.order_sn');
@@ -314,7 +327,9 @@ class WxpayController extends BaseController {
     		);
     		 
     	}
-    	vendor('Wechar.WxPayPubHelper');
+
+//    	vendor('Wechar.WxPayPubHelper');
+
     	//使用jsapi接口
     	$jsApi = new \JsApi_pub();
     	//=========步骤1：网页授权获取用户openid============
@@ -396,7 +411,7 @@ class WxpayController extends BaseController {
      
     //异步通知url，商户根据实际开发过程设定
     public function notify_url() {
-    	vendor('Wechar.WxPayPubHelper');
+//    	vendor('Wechar.WxPayPubHelper');
     	//使用通用通知接口
     	$notify = new \Notify_pub();
     	//存储微信的回调
@@ -464,7 +479,8 @@ class WxpayController extends BaseController {
     			//  更新商品状态
     			$arrWhere['oid'] = $out_trade_no;
     
-    			echo 'success';
+//    			echo 'success';
+                $this->redirect('/Home/Wxpay/success');
     		}
     	}
     }
