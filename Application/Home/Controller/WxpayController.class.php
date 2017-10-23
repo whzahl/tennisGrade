@@ -186,6 +186,8 @@ class WxpayController extends BaseController {
     	$this->assign('out_trade_no',$out_trade_no);
     	$this->assign('code_url',$code_url);
     	$this->assign('unifiedOrderResult',$unifiedOrderResult);
+//    	返回价格给模板
+    	$this->assign('price',$res['order_amount']);
     	$this->display('qrcode');
     }
 

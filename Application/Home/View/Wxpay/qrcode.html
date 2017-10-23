@@ -3,28 +3,109 @@
  <head>
     <meta charset="UTF-8">
     <title>微信安全支付</title>
-     <style>
-         /*body{*/
-             /*background: url("/Public/Home/images/common/headerimg_01.jpg") no-repeat;*/
-             /*background-size: cover;*/
-         /*}*/
+    <style>
+         body{
+             color: #666;
+         }
+         #content{
+             width: 1000px;
+             margin: 0 auto;
+             padding:60px 0;
+             box-shadow: 0 0 10px gray;
+
+         }
+        #header,#body{
+            width: 800px;
+            margin:0 auto;
+        }
+        #header{
+            margin-top: 40px;
+        }
+        #header-pt1{
+            width: 800px;
+        }
+        #header img{
+            width: 300px;
+            height: 67px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        #header a{
+            text-decoration: none;
+            color: #666;
+            display: inline-block;
+            line-height: 67px;
+            float: right;
+            vertical-align: middle;
+        }
+        #header a:hover{
+            color: #ff0000;
+        }
+        #header-pt2{
+         margin-top: 30px;
+        }
+         #header-pt2 p{
+             display: inline-block;
+         }
+         
+         #header-pt2 p:last-child{
+             float: right;
+         }
+         #header-pt2 span{
+             color: #ff0000;
+         }
+         #left{
+             display: inline-block;
+             width: 40%;
+             margin-top: 30px;
+         }
+         #qrcode img{
+             height: 300px;
+             width: 300px;
+         }
+         #qrcode-sao{
+             height: auto;
+             width: 300px;
+         }
+         #right{
+             display: inline-block;
+             width: 58%;
+         }
+         #right img{
+             padding-top: 30px;
+             padding-left: 150px;
+             margin-bottom: -40px;
+         }
      </style>
  </head>
- <body>
-    <div align="center" id="qrcode">
+<body>
+    <input type="hidden" name="orderID" value="<?php echo $out_trade_no; ?>">
+    <div id="content">
+        <div id="header">
+         <div id="header-pt1">
+             <img src="/Public/Home/images/common/logo.jpg" alt="">
+             <a href="/Home/User/index">&#171; 返回个人中心</a>
+         </div>
+         <hr>
+         <div id="header-pt2">
+             <p>请尽快完成支付，订单号：<?php echo $out_trade_no; ?></p>
+             <p>订单金额：<span><?php echo $price; ?></span>元</p>
+         </div>
+        </div>
+        <div id="body">
+         <div id="left">
+            <h3>微信支付</h3>
+             <div id="qrcode"></div>
+             <img id="qrcode-sao" src="/Public/Home/images/common/sao.png" alt="">
+         </div>
+         <div id="right">
+             <img src="/Public/Home/images/common/saoyisao.png" alt="">
+         </div>
+     </div>
     </div>
-    <div align="center">
-        <p>订单号：<?php echo $out_trade_no; ?></p>
-        <input type="hidden" name="orderID" value="<?php echo $out_trade_no; ?>">
-    </div>
-  
-    <br>
-    <div align="center">
-        <a href="/Home/User/index">返回个人中心</a>
-    </div>
- </body>
-    <script src="__PUBLIC__/js/qrcode.js"></script>
-    <script>
+</body>
+<script src="__PUBLIC__/js/qrcode.js"></script>
+<script>
         if(<?php echo $unifiedOrderResult["code_url"] != NULL; ?>)
         {
             var url = "<?php echo $code_url;?>";
@@ -41,50 +122,53 @@
             element.appendChild(code);
         }
     </script>
-
- <script>
-     var t = setInterval(function () {
+<script>
+ //页面入口函数
+ var startFunction = function () {
+     t = setInterval(function () {
          wasPaied();
      },100);
 
-     function wasPaied() {
-         var xmlhttp;
-         if(window.XMLHttpRequest){
+ };
+startFunction();
+ function wasPaied() {
+     var xmlhttp;
+     if(window.XMLHttpRequest){
 //            for others
-             xmlhttp = new XMLHttpRequest();
-         }
-         else{
+         xmlhttp = new XMLHttpRequest();
+     }
+     else{
 //             for IE6
-             xmlhttp = new ActiveXObject();
-         }
-         xmlhttp.onreadystatechange = function () {
-             if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
-                 var data = JSON.parse(xmlhttp.responseText);
-                 if (data === "1"){
-                     clearInterval(t);
-                     appendSuccessMsg();
-                     setTimeout(function () {
-                         window.location.href = '/Home/User/index';
-                     },1000);
-                 }
+         xmlhttp = new ActiveXObject();
+     }
+     xmlhttp.onreadystatechange = function () {
+         if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+             var data = JSON.parse(xmlhttp.responseText);
+             if (data === "1"){
+                 clearInterval(t);
+                 appendSuccessMsg();
+                 setTimeout(function () {
+                     window.location.href = '/Home/User/index';
+                 },1000);
              }
          }
-         var orderID = document.getElementsByTagName('input')[0].value;
-         xmlhttp.open('get','/Home/Wxpay/check?orderID=' + orderID);
-         xmlhttp.send();
      }
+     var orderID = document.getElementsByTagName('input')[0].value;
+     xmlhttp.open('get','/Home/Wxpay/check?orderID=' + orderID);
+     xmlhttp.send();
+ }
 
-     function appendSuccessMsg() {
+ function appendSuccessMsg() {
 //         只向页面中添加一个成功信息
-         if (!document.getElementById('Msg')){
-             var target = document.getElementsByTagName("body")[0];
-             var node = document.createTextNode('支付成功,即将跳转页面...');
-             var p = document.createElement('p');
-             p.appendChild(node);
-             p.style.textAlign = 'center';
-             p.id = 'Msg';
-             target.appendChild(p);
-         }
+     if (!document.getElementById('Msg')){
+         var target = document.getElementById("header");
+         var node = document.createTextNode('支付成功,即将跳转页面...');
+         var p = document.createElement('p');
+         p.appendChild(node);
+         p.style.textAlign = 'center';
+         p.id = 'Msg';
+         target.insertBefore(p,target.childNodes[0]);
      }
- </script>
- </html>
+ }
+</script>
+</html>
