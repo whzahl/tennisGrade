@@ -125,6 +125,7 @@
 <script>
  //页面入口函数
  var startFunction = function () {
+//     保存间歇调用函数的ID的变量定义为全局变量，不然在其他函数中可能不会被访问到
      t = setInterval(function () {
          wasPaied();
      },100);
