@@ -62,18 +62,29 @@ class WxpayController extends BaseController {
     		$type = I('get.type');
     		$id = I('get.id');
     		$userid = I('get.userid');
+//    		订单前缀
+    		$prefix = 'TG';
+//    		订单时间，示例：1710250922（2017年10月25日09点22分）
+    		$time = date("YmdHi");
+    		$time = substr($time,2);
+    		$posfix = rand(1000,9999);
+
+
     		/* 	dump($type);
     		 dump($id);
     		dump($userid);
     		exit(); */
     		if ($type == 1){
     			//  生成订单
+                $type = "S";
+                $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
     			$arrOrder['id'] = $id;
     			$arrOrder['sid'] = $userid;
     			$arrOrder['title'] = "考生交费";
     			$arrOrder['price'] = "0.01";
     			$arrOrder['type'] = "PC";
     			$arrOrder['create_time'] = time();
+//    			$notUnique = M('tg_order')-where("orderid='%s'",$arrOrder['orderid'])->find();
     			$order_sn = M('tg_order')->data($arrOrder)->add();
     				
     			// 传送微信支付参数
@@ -85,6 +96,8 @@ class WxpayController extends BaseController {
     		}
     		elseif ($type == 2){
     			//  生成订单
+                $type = "T";
+                $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
     			$arrOrder['id'] = $id;
     			$arrOrder['tid'] = $userid;
     			$arrOrder['title'] = "考官交费";
@@ -102,6 +115,8 @@ class WxpayController extends BaseController {
     		}
     		elseif($type == 3){
     			//  生成订单
+                $type = "P";
+                $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
     			$arrOrder['id'] = $id;
     			$arrOrder['pid'] = $userid;
     			$arrOrder['title'] = "考点交费";
@@ -188,6 +203,7 @@ class WxpayController extends BaseController {
     	$this->assign('unifiedOrderResult',$unifiedOrderResult);
 //    	返回价格给模板
     	$this->assign('price',$res['order_amount']);
+    	$this->assign('orderid',$result['orderid']);
     	$this->display('qrcode');
     }
 
