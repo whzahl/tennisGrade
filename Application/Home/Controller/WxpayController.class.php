@@ -58,14 +58,15 @@ class WxpayController extends BaseController {
 
 //        订单为空，增加新的订单
     	if(empty($order_sn)){
-    		//    添加订单
+    		//    添加订单（订单号规则理论上最多支持每秒钟同时生成9000条唯一的订单号，订单号只用来展示给用户，在查询中实际起作用的是order表的自增ID）
     		$type = I('get.type');
     		$id = I('get.id');
     		$userid = I('get.userid');
 //    		订单前缀
     		$prefix = 'TG';
-//    		订单时间，示例：1710250922（2017年10月25日09点22分）
-    		$time = date("YmdHi");
+//    		订单时间，示例：171025092201（2017年10月25日09点22分01秒）
+    		$time = date("YmdHis");
+//    		截取四位的年份数为两位，比如2017截取为17
     		$time = substr($time,2);
     		$posfix = rand(1000,9999);
 
@@ -84,7 +85,14 @@ class WxpayController extends BaseController {
     			$arrOrder['price'] = "0.01";
     			$arrOrder['type'] = "PC";
     			$arrOrder['create_time'] = time();
-//    			$notUnique = M('tg_order')-where("orderid='%s'",$arrOrder['orderid'])->find();
+    			$notUnique = M('tg_order')->where("orderid='%s'",$arrOrder['orderid'])->find();
+//    			当$notUnique查询不为空时，即orderid有重复，重新生成orderid
+    			while($notUnique){
+                    $posfix = rand(1000,9999);
+                    $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
+                    $notUnique = M('tg_order')-where("orderid='%s'",$arrOrder['orderid'])->find();
+                }
+                $data['orderid'] = $arrOrder['orderid'];
     			$order_sn = M('tg_order')->data($arrOrder)->add();
     				
     			// 传送微信支付参数
@@ -104,6 +112,14 @@ class WxpayController extends BaseController {
     			$arrOrder['price'] = "0.02";
     			$arrOrder['type'] = "PC";
     			$arrOrder['create_time'] = time();
+                $notUnique = M('tg_order')->where("orderid='%s'",$arrOrder['orderid'])->find();
+//    			当$notUnique查询不为空时，即orderid有重复，重新生成orderid
+                while($notUnique){
+                    $posfix = rand(1000,9999);
+                    $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
+                    $notUnique = M('tg_order')-where("orderid='%s'",$arrOrder['orderid'])->find();
+                }
+                $data['orderid'] = $arrOrder['orderid'];
     			$order_sn = M('tg_order')->data($arrOrder)->add();
     				
     			// 传送微信支付参数
@@ -123,8 +139,17 @@ class WxpayController extends BaseController {
     			$arrOrder['price'] = "0.03";
     			$arrOrder['type'] = "PC";
     			$arrOrder['create_time'] = time();
+
+                $notUnique = M('tg_order')->where("orderid='%s'",$arrOrder['orderid'])->find();
+                //    			当$notUnique查询不为空时，即orderid有重复，重新生成orderid
+                while($notUnique){
+                    $posfix = rand(1000,9999);
+                    $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
+                    $notUnique = M('tg_order')-where("orderid='%s'",$arrOrder['orderid'])->find();
+                }
+                $data['orderid'] = $arrOrder['orderid'];
     			$order_sn = M('tg_order')->data($arrOrder)->add();
-    	
+
     			// 传送微信支付参数
     			$res = array(
     					'order_sn' => $order_sn,
@@ -203,7 +228,7 @@ class WxpayController extends BaseController {
     	$this->assign('unifiedOrderResult',$unifiedOrderResult);
 //    	返回价格给模板
     	$this->assign('price',$res['order_amount']);
-    	$this->assign('orderid',$result['orderid']);
+    	$this->assign('orderid',$data['orderid']);
     	$this->display('qrcode');
     }
 
@@ -502,5 +527,4 @@ class WxpayController extends BaseController {
     		}
     	}
     }
-    
 }
