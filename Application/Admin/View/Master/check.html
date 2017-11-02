@@ -1,0 +1,75 @@
+<extend name="Public:base" />
+<block name="body">
+
+
+        <div class="tpl-content-wrapper" style="margin:0 20px">
+            <div class="tpl-content-page-title">
+                审核站长信息
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
+                <li class="am-active">审核站长信息</li>
+            </ol>
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span> 修改站长信息
+                    </div>
+                    <div class="tpl-portlet-input tpl-fz-ml">
+                        <div class="portlet-input input-small input-inline">
+                            <div class="input-icon right">
+                                <i class="am-icon-search"></i>
+                                <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tpl-block">
+                    <div class="am-g">
+                        <div class="tpl-form-body tpl-form-line">
+                            <form class="am-form tpl-form-line-form" method="post" action="/Admin/Master/checkm" enctype="multipart/form-data">
+
+                                <div class="am-form-group">
+                                	<label for="user-phone" class="am-u-sm-3 am-form-label">站长姓名：</label>
+                                    <p>{$data.master_name}</p>
+                                </div>
+                                <div class="am-form-group">
+                                	<label for="user-phone" class="am-u-sm-3 am-form-label">考点区域：</label>
+                                    <p>{$data.pro}{$data.city}{$data.area}</p>
+                                </div>
+                                <div class="am-form-group">
+                                	<label for="user-phone" class="am-u-sm-3 am-form-label">申请时间：</label>
+                                    <p>{$data.create_time|date='Y-m-d H:s:i',###}</p>
+                                </div>
+	                                <div class="am-form-group">
+	                                	<label for="user-phone" class="am-u-sm-3 am-form-label">备注：</label>
+	                                    <textarea style="width: 500px;" name="reason"></textarea>
+	                                </div>
+                                <!-- <textarea style="float:right; width:200px;" name="reason"></textarea> -->
+
+                                <input type="hidden" name="mid" value="{$data['mid']}">
+
+                                <div class="am-form-group">
+                                    <div class="am-u-sm-9 am-u-sm-push-3">
+                                    	<!-- <if condition="$data['status'] == 2">
+                                        <a href="/Admin/Master/checkm?mid={$data['mid']} & status=1" ><button type="button" class="am-btn am-btn-primary">通过</button></a>
+                                    	</if>
+                                    	<if condition="$data['status'] == 1">
+                                        <a href="/Admin/Master/checkm?mid={$data['mid']} & status=2" ><button type="button" class="am-btn am-btn-primary">确定</button></a>
+                                    	</if> -->
+
+                                        <a href="/Admin/Master/checkm?mid={$data['mid']} & status=1" ><button type="button" class="am-btn am-btn-primary">通过</button></a>
+                                        <a href="/Admin/Master/checkm" ><button type="submit" class="am-btn am-btn-primary">不通过</button></a>
+                                    	<!-- <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button> -->
+                                        <a href="" onclick="javascript:history.go(-1);return false;"><button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-warning ">返回</button></a>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</block>

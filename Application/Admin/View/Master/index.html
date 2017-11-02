@@ -4,24 +4,25 @@
 
  <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                                                     站长申请列表
+                站长列表
             </div>
             <ol class="am-breadcrumb">
-                <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
-                <li class="am-active">站长记录表</li>
+                <li><a href="#" class="am-icon-home">首页</a></li>
+                <!--<li><a href="#">站长列表</a></li>-->
+                <li>站长列表</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
                     <div class="caption font-green bold">
-                        <span class="am-icon-font-awesome"></span> 列表详情
+                        <span class="am-icon-code"></span> 列表
                     </div>
-<!--                     <div class="tpl-portlet-input tpl-fz-ml">
+                    <div class="tpl-portlet-input tpl-fz-ml">
                         <div class="portlet-input input-small input-inline">
                             <div class="input-icon right">
                                 <i class="am-icon-search"></i>
                                 <input type="text" class="form-control form-control-solid" placeholder="搜索..."> </div>
                         </div>
-                    </div> -->
+                    </div>
 
 
                 </div>
@@ -30,20 +31,20 @@
                         <div class="am-u-sm-12 am-u-md-6">
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
-                                    <!-- <a href="/Admin/Live/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a> -->
+                                    <a href="/Admin/Master/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
                                     <!-- <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button> -->
-                                    <!-- <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button> -->
-<!--                                     <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
+                                    <!-- <a href="" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</a> -->
+                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
                                 </div>
                             </div>
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
                             <div class="am-form-group">
                              <select data-am-selected="{btnSize: 'sm'}">
-				                <option value="option1">所有类别</option>
-				                <option value="option2">IT业界</option>
-				                <option value="option3">数码产品</option>
-				                <option value="option3">笔记本电脑</option>
+				                <option value="option1">未审核</option>
+				                <option value="option2">审核中</option>
+				                <option value="option3">已通过</option>
+				                <option value="option3">未通过</option>
 				            </select>
                             </div>
                         </div>
@@ -58,47 +59,44 @@
                   </div>
 		          <div class="am-g">
 		              <div class="am-u-sm-12">
-		                  <form class="am-form">
+		                  <form class="am-form" action="">
 		                      <table class="am-table am-table-striped am-table-hover table-main">
 		                          <thead>
 		                              <tr>
-		                                  <th></th>
-		                                  <!-- <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th> -->
+		                                  <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
 		                                  <th class="table-id">ID</th>
-		                                  <th class="table-title">姓名</th>
-		                                  <th class="table-type">考点名称</th>
-		                                  <th class="table-author am-hide-sm-only">地址</th>
+		                                  <th class="table-title">考点ID</th>
+		                                  <th class="table-type">站长名称</th>
+		                                  <th class="table-title">审核状态</th>
 		                                  <th class="table-date am-hide-sm-only">申请时间</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
 		                          </thead>
 		                          <tbody>
-		                          <volist name="list" id="vo">
+		                          	<volist name="data" id="vo">
 		                              <tr>
-		                                  <td></td>
-		                                  <!-- <td><input type="checkbox"></td> -->
+		                                  <td><input type="checkbox"></td>
 		                                  <td>{$vo.mid}</td>
-		                                  <td>{$vo.manager}</td>
-		                                  <td>{$vo.pname}</td>
-		                                  <td>{$vo.address}</td>
-		                                  <td>{$vo.creat_time}</td>
+		                                  <td>{$vo.pid}</td>
+		                                  <td>{$vo.master_name}</td>
+		                                  <td>
+		                                  	<if condition="$vo.status eq 0"><span style="color:#ea6e0c">未审核</span></if>
+		                                  	<if condition="$vo.status eq 1"><span style="color:#4db14d">已通过</span></if>
+		                                  	<if condition="$vo.status eq 2"><span style="color:#d93c37">未通过</span></if>
+		                              	  </td>
+		                                  <td class="am-hide-sm-only">{$vo.create_time|date='Y-m-d H:s:i',###}</td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
-		                                                <if condition="$vo['status'] eq 1">
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>已通过</button>
-			                                            <elseif condition="$vo['status'] eq 2"/>
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>待审核</button>
-			                                            <else />
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>未通过</button>
-			                                            </if>
-<!-- 		                                              <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><a href="/Admin/Master/edit?mid={$vo.mid}"><span class="am-icon-pencil-square-o"></span> 修改</a></button> -->
-		                                              <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><a href="/Admin/Master/delete?mid={$vo.mid}"   onclick="return del()"><span class="am-icon-trash-o"></span> 删除</a></button>
+		                                              <a href="/Admin/Master/edit?mid={$vo.mid}" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+		                                             <!--  <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
+		                                              <a href="/Admin/Master/check?mid={$vo.mid}" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#ea6e0c;"><span class="am-icon-archive"></span> 审核</a>
+		                                              <a href="/Admin/Master/delete?mid={$vo.mid}" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</a>
 		                                          </div>
 		                                      </div>
 		                                  </td>
 		                              </tr>
-		                          </volist>
+		                              </volist>
 		                          </tbody>
 		                      </table>
 		                      <div class="am-cf">
