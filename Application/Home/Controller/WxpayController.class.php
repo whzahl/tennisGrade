@@ -17,27 +17,82 @@ class WxpayController extends BaseController {
     public function __construct(){
         parent::__construct();
     }
-    
+
+    /**
+     * 初始化引入微信支付类库
+     */
+
+    public function _initialize(){
+        //    	引入第三方类库
+        vendor('Weixinpay.WxPayPubHelper');
+    }
+
+    //支付入口方法
     public function weixinpay(){
-    	
-    	$order_sn = I('get.order_sn');
+        //判断该报名用户是否有未支付的订单存在，存在取出他的信息，不存在就创建新的订单 start
+        $arrWhere = I('get.');
+        $where = array(
+            'id' => $arrWhere['id'],
+            'status' => 0
+        );
+        if($arrWhere['type'] == 1){
+            $where['sid'] = $arrWhere['userid'];
+        }
+        if($arrWhere['type'] == 2){
+            $where['tid'] = $arrWhere['userid'];
+        }
+        if($arrWhere['type'] == 3){
+            $where['pid'] = $arrWhere['userid'];
+        }
+        $data = D('Order','Service')->findOne($where);
+        if($data){
+            $order_sn = $data['oid'];
+        }
+        //判断该报名用户是否有未支付的订单存在，存在取出他的信息，不存在就创建新的订单 end
+
+//        凡姐的代码
+//    	$order_sn = I('get.order_sn');
+
+//    	dump(I('get.order_sn'));
+//    	exit();
+
+//        订单为空，增加新的订单
     	if(empty($order_sn)){
-    		//    添加订单
+    		//    添加订单（订单号规则理论上最多支持每秒钟同时生成9000条唯一的订单号，订单号只用来展示给用户，在查询中实际起作用的是order表的自增ID）
     		$type = I('get.type');
     		$id = I('get.id');
     		$userid = I('get.userid');
+//    		订单前缀
+    		$prefix = 'TG';
+//    		订单时间，示例：171025092201（2017年10月25日09点22分01秒）
+    		$time = date("YmdHis");
+//    		截取四位的年份数为两位，比如2017截取为17
+    		$time = substr($time,2);
+    		$posfix = rand(1000,9999);
+
+
     		/* 	dump($type);
     		 dump($id);
     		dump($userid);
     		exit(); */
     		if ($type == 1){
     			//  生成订单
+                $type = "S";
+                $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
     			$arrOrder['id'] = $id;
     			$arrOrder['sid'] = $userid;
     			$arrOrder['title'] = "考生交费";
     			$arrOrder['price'] = "0.01";
     			$arrOrder['type'] = "PC";
     			$arrOrder['create_time'] = time();
+    			$notUnique = M('tg_order')->where("orderid='%s'",$arrOrder['orderid'])->find();
+//    			当$notUnique查询不为空时，即orderid有重复，重新生成orderid
+    			while($notUnique){
+                    $posfix = rand(1000,9999);
+                    $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
+                    $notUnique = M('tg_order')-where("orderid='%s'",$arrOrder['orderid'])->find();
+                }
+                $data['orderid'] = $arrOrder['orderid'];
     			$order_sn = M('tg_order')->data($arrOrder)->add();
     				
     			// 传送微信支付参数
@@ -46,14 +101,25 @@ class WxpayController extends BaseController {
     					'order_amount' => $arrOrder['price'],
     					'order_title' => "考生交费"
     			);
-    		}elseif ($type == 2){
+    		}
+    		elseif ($type == 2){
     			//  生成订单
+                $type = "T";
+                $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
     			$arrOrder['id'] = $id;
     			$arrOrder['tid'] = $userid;
     			$arrOrder['title'] = "考官交费";
     			$arrOrder['price'] = "0.02";
     			$arrOrder['type'] = "PC";
     			$arrOrder['create_time'] = time();
+                $notUnique = M('tg_order')->where("orderid='%s'",$arrOrder['orderid'])->find();
+//    			当$notUnique查询不为空时，即orderid有重复，重新生成orderid
+                while($notUnique){
+                    $posfix = rand(1000,9999);
+                    $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
+                    $notUnique = M('tg_order')-where("orderid='%s'",$arrOrder['orderid'])->find();
+                }
+                $data['orderid'] = $arrOrder['orderid'];
     			$order_sn = M('tg_order')->data($arrOrder)->add();
     				
     			// 传送微信支付参数
@@ -62,16 +128,28 @@ class WxpayController extends BaseController {
     					'order_amount' => $arrOrder['price'],
     					'order_title' => "考官交费"
     			);
-    		}elseif($type == 3){
+    		}
+    		elseif($type == 3){
     			//  生成订单
+                $type = "P";
+                $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
     			$arrOrder['id'] = $id;
     			$arrOrder['pid'] = $userid;
     			$arrOrder['title'] = "考点交费";
     			$arrOrder['price'] = "0.03";
     			$arrOrder['type'] = "PC";
     			$arrOrder['create_time'] = time();
+
+                $notUnique = M('tg_order')->where("orderid='%s'",$arrOrder['orderid'])->find();
+                //    			当$notUnique查询不为空时，即orderid有重复，重新生成orderid
+                while($notUnique){
+                    $posfix = rand(1000,9999);
+                    $arrOrder['orderid'] = $prefix.$type.$time.$posfix;
+                    $notUnique = M('tg_order')-where("orderid='%s'",$arrOrder['orderid'])->find();
+                }
+                $data['orderid'] = $arrOrder['orderid'];
     			$order_sn = M('tg_order')->data($arrOrder)->add();
-    	
+
     			// 传送微信支付参数
     			$res = array(
     					'order_sn' => $order_sn,
@@ -80,7 +158,9 @@ class WxpayController extends BaseController {
     			);
     		}
     		 
-    	}else{
+    	}
+//    	不为空就通过查询到的订单号读取他的信息
+    	else{
     		$arrWhere['oid'] = $order_sn;
     		$result = M('tg_order')->where(array('oid'=>$arrWhere['oid']))->find();
     		$res = array(
@@ -90,8 +170,8 @@ class WxpayController extends BaseController {
     		);
     	
     	}
-    	
-    	vendor('Weixinpay.WxPayPubHelper');
+
+
     	//使用统一支付接口
     	$unifiedOrder = new \UnifiedOrder_pub();
     
@@ -146,11 +226,13 @@ class WxpayController extends BaseController {
     	$this->assign('out_trade_no',$out_trade_no);
     	$this->assign('code_url',$code_url);
     	$this->assign('unifiedOrderResult',$unifiedOrderResult);
-    
+//    	返回价格给模板
+    	$this->assign('price',$res['order_amount']);
+    	$this->assign('orderid',$data['orderid']);
     	$this->display('qrcode');
     }
+
     public function notify(){
-    	vendor('Weixinpay.WxPayPubHelper');
 
     	//使用通用通知接口
     	$notify = new \Notify_pub();
@@ -171,6 +253,7 @@ class WxpayController extends BaseController {
         }
     	 $returnXml = $notify->returnXml();
     	 $parameter = $notify->xmlToArray($xml);
+        echo $returnXml;
     
     	//==商户根据实际情况设置相应的处理流程，此处仅作举例=======
     	 
@@ -219,23 +302,25 @@ class WxpayController extends BaseController {
 	                $arrWhere['oid'] = $out_trade_no;
 	                $arrData=M('tg_order')->where(array('oid'=>$arrWhere['oid']))->find();
 	                if(!empty($arrData['sid'])){
-	                	//  更新答疑的状态
+	                	//  更新考生缴费的状态
 	                	$arrWheress['sid'] = $arrData['sid'];
 	                	$arrWheress['pay'] = 1;
 	                	M('tg_student')->data($arrWheress)->save();
+                        $this->success('支付成功','/Home/index/index');
 	                	/* D('Question','Service')->editQuestion($arrWheres); */
 	                }elseif (!empty($arrData['tid'])){
-	                	//  更新作文状态
+	                	//  更新考官缴费状态
 	                	$arrWherest['tid'] = $arrData['tid'];
 	                	$arrWherest['pay'] = 1;
 	                	M('tg_teacher')->data($arrWherest)->save();
 	                }elseif (!empty($arrData['pid'])){
-	                	//  更新作文状态
+	                	//  更新考点缴费状态
 	                	$arrWheresp['pid'] = $arrData['pid'];
 	                	$arrWheresp['pay'] = 1;
 	                	M('tg_place')->data($arrWheresp)->save();
 	                }
-		    	echo 'success';
+	                echo 'success';
+
     		}
     		 
     		//商户自行增加处理流程,
@@ -245,7 +330,12 @@ class WxpayController extends BaseController {
     	}
     }
     
-    
+    public function check(){
+        $arrWhere['oid'] = I('get.orderID');
+        $arrData = D('Order','Service')->findOne($arrWhere);
+        $this->ajaxReturn($arrData['status'],'json');
+    }
+
     public function js_api_call() {
     	$order_sn = I('get.order_sn');
 //     	dump($order_sn);
@@ -280,7 +370,9 @@ class WxpayController extends BaseController {
     		);
     		 
     	}
-    	vendor('Wechar.WxPayPubHelper');
+
+//    	vendor('Wechar.WxPayPubHelper');
+
     	//使用jsapi接口
     	$jsApi = new \JsApi_pub();
     	//=========步骤1：网页授权获取用户openid============
@@ -362,7 +454,7 @@ class WxpayController extends BaseController {
      
     //异步通知url，商户根据实际开发过程设定
     public function notify_url() {
-    	vendor('Wechar.WxPayPubHelper');
+//    	vendor('Wechar.WxPayPubHelper');
     	//使用通用通知接口
     	$notify = new \Notify_pub();
     	//存储微信的回调
@@ -430,9 +522,9 @@ class WxpayController extends BaseController {
     			//  更新商品状态
     			$arrWhere['oid'] = $out_trade_no;
     
-    			echo 'success';
+//    			echo 'success';
+                $this->redirect('/Home/Wxpay/success');
     		}
     	}
     }
-    
 }

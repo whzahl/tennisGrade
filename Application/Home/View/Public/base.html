@@ -93,10 +93,10 @@
                 <if condition="($Think.session.userInfo.unionid eq NULL)">
                 <button class="btn btn-success btn-lg" onclick="abc()">登录</button>
                 <else />
-                <button id="personal-center" class="btn btn-success btn-lg">
-                    <a href="/Home/User/index">个人中心</a>
+                <div id="personal-center" >
+                    <a href="/Home/User/index"  class="btn btn-success btn-lg">个人中心</a>
                     <a href="/Home/Login/logout" class="am-badge am-badge-warning login-out">退出</a>
-                </button>
+                </div>
                 </if>
             </div>
         </div>

@@ -23,8 +23,8 @@ class CheckController extends BaseController {
         //        暂时注释
 
 //        if(!$arrSession){
-//        	//	跳转登录界面
-//           $this->redirect('Admin/Login/login');
+//            //	跳转登录界面
+//            $this->redirect('Admin/Login/login');
 //        }else{
 //            $this->uid = $arrSession['uid'];
 //            $this->uname = $arrSession['uname'];
