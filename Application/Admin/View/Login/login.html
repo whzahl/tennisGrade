@@ -1,7 +1,56 @@
-<extend name="Public:base" />
-<block name="body">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网球等级考试平台登录页面</title>
+    <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="/Public/Home/images/common/title_icon.png">
+ </head>
+<style>
+body{
+    background: url("/Public/Admin/images/login2.jpg") no-repeat;
+    background-size: cover;
+}
+    .main{
+        display: block;
+        position: absolute;
+        left: 43%;
+        top: 30%;
+        /*bottom: 20%;*/
+        /*width: 300px;*/
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #fff;
+        /*opacity:0.7*/
+    }
+    #login-bt{
+        padding: 10px 116px;
+    }
+</style>
+<body>
 
-微信登录：<a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx97cea69a39e328a5&redirect_uri=http%3A%2F%2Fwww.wuti461.com%2Fwecharlogin.php&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect"><img src="https://open.weixin.qq.com/zh_CN/htmledition/res/assets/res-design-download/icon32_appwx_logo.png"/></a>
-    <!--https://open.weixin.qq.com/connect/qrconnect?appid=wx97cea69a39e328a5&redirect_uri=http%3A%2F%2Fwww.wuti461.com%2Fwecharlogin.php&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect-->
-    <!--https://open.weixin.qq.com/connect/qrconnect?appid=wx15359136cf22a1ed&redirect_uri=http%3A%2F%2Fwww.wuti461.com%2Fweixinlogin.php&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect-->
-</block>
+<div class="main">
+    <span>网球等级考试后台登录</span>
+    <hr>
+    <div class="login-form">
+        <form action="/Admin/Login/login">
+        <div class="form-group">
+            <label for="name">用户名</label>
+            <input type="text" name="username" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+            <label for="Password">密码</label>
+            <input type="password" name="password" class="form-control" id="Password">
+        </div>
+        <div align="center">
+            <button type="submit" class="btn btn-success" id="login-bt">登录</button>
+        </div>
+
+    </form>
+    </div>
+</div>
+</body>
+</html>

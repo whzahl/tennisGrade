@@ -12,8 +12,10 @@ class LoginController extends BaseController{
 	}
 	
 	public function login(){
-		$str = urlencode('www.zhongaotech.com');
-		echo $str;
+//		$str = urlencode('www.zhongaotech.com');
+//		echo $str;
+
+
 		$this->display();
 	}
 	public function weixinlogin(){

@@ -22,13 +22,13 @@ class CheckController extends BaseController {
         // 判断是否登录
         //        暂时注释
 
-//        if(!$arrSession){
+        if(!$arrSession){
 //            //	跳转登录界面
-//            $this->redirect('Admin/Login/login');
-//        }else{
-//            $this->uid = $arrSession['uid'];
-//            $this->uname = $arrSession['uname'];
-//        }
+            $this->redirect('Admin/Login/login');
+        }else{
+            $this->uid = $arrSession['uid'];
+            $this->uname = $arrSession['uname'];
+        }
         //        暂时注释
 
 
