@@ -41,13 +41,9 @@
                         <div class="am-u-sm-12 am-u-md-3">
                             <div class="am-form-group">
                              <select data-am-selected="{btnSize: 'sm'}">
-				                <option value="option1">所有类别</option>
-				                <option value="option2">IT业界</option>
-				                <option value="option3">数码产品</option>
-				                <option value="option3">笔记本电脑</option>
-				                <option value="option3">平板电脑</option>
-				                <option value="option3">只能手机</option>
-				                <option value="option3">超极本</option>
+				                <option value="option1">超级管理员</option>
+				                <option value="option2">站长</option>
+				                <option value="option3">考官</option>
 				            </select>
                             </div>
                         </div>
@@ -62,37 +58,41 @@
                   </div>
 		          <div class="am-g">
 		              <div class="am-u-sm-12">
-		                  <form class="am-form">
+		                  <form class="am-form" action="">
 		                      <table class="am-table am-table-striped am-table-hover table-main">
 		                          <thead>
 		                              <tr>
 		                                  <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
 		                                  <th class="table-id">ID</th>
-		                                  <th class="table-title">标题</th>
-		                                  <th class="table-type">类别</th>
-		                                  <th class="table-author am-hide-sm-only">作者</th>
-		                                  <th class="table-date am-hide-sm-only">修改日期</th>
+		                                  <th class="table-title">类别</th>
+		                                  <th class="table-type">管理员名称</th>
+		                                  <th class="table-date am-hide-sm-only">最后登录时间</th>
 		                                  <th class="table-set">操作</th>
 		                              </tr>
 		                          </thead>
 		                          <tbody>
+		                          	<volist name="data" id="vo">
 		                              <tr>
 		                                  <td><input type="checkbox"></td>
-		                                  <td>5</td>
-		                                  <td><a href="#">Business management</a></td>
-		                                  <td>default</td>
-		                                  <td class="am-hide-sm-only">测试1号</td>
-		                                  <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
+		                                  <td>{$vo.aid}</td>
+		                                  <td>
+		                                  	<if condition="$vo.type eq 1">超级管理员</if>
+		                                  	<if condition="$vo.type eq 2">站长</if>
+		                                  	<if condition="$vo.type eq 3">考官</if>
+		                              	  </td>
+		                                  <td>{$vo.name}</td>
+		                                  <td class="am-hide-sm-only">{$vo.create_time|date='Y-m-d H:s:i',###}</td>
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
-		                                              <a href="/Admin/Admin/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+		                                              <a href="/Admin/Admin/edit?aid={$vo.aid}" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
 		                                              <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button>
-		                                              <a href="/Admin/Admin/delete"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></a>
+		                                              <a href="/Admin/Admin/delete?aid={$vo.aid} & type={$vo.type}" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</a>
 		                                          </div>
 		                                      </div>
 		                                  </td>
 		                              </tr>
+		                              </volist>
 		                          </tbody>
 		                      </table>
 		                      <div class="am-cf">
