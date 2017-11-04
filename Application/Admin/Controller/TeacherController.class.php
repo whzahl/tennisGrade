@@ -14,9 +14,9 @@ class TeacherController extends CheckController{
 
 
     public function index(){
-//    	if (!empty($_SESSION['Type']['uid'])) {
-//    		$arrWhere['pid'] = $_SESSION['Type']['uid'];
-//    	}
+    	if (!empty($_SESSION['Type']['uid'])) {
+    		$arrWhere['pid'] = $_SESSION['Type']['uid'];
+    	}
     	$intCount = D('Teacher','Service') ->count($arrWhere);
     	$Page = new \Think\Page($intCount,10);
     	$show =  $Page ->show();
@@ -49,19 +49,10 @@ class TeacherController extends CheckController{
     		$arrWhere=I('post.');
     		$arrImage = $_FILES['picture']['name'];
     		$arrImages = $_FILES['certificate']['name'];
-//            dump($arrImage);
-//            dump($arrImages);
     		$arrWhere['create_time'] = time();
 
-    		//下面的代码逻辑有问题
-    		//下面的代码逻辑有问题
-    		//下面的代码逻辑有问题
-    		//下面的代码逻辑有问题
-    		//下面的代码逻辑有问题
-    		//下面的代码逻辑有问题
-    		//下面的代码逻辑有问题
-
     		if (empty($arrImage) && empty($arrImages)){
+    		    $arrWhere['certificate'] = implode("、", $arrWhere['certificate']);
     			$arrData=D('Teacher','Service')->edit($arrWhere);
     		}
     		else{
@@ -72,7 +63,7 @@ class TeacherController extends CheckController{
     			 
     			// 上传文件
     			$info   =    $upload->uploadOne($_FILES['picture']);
-    			$info1   =    $upload->uploadOne($_FILES['certificate']);
+    			$info1   =    $upload->upload(array($_FILES['certificate']));
     			if(!$info) {// 上传错误提示错误信息
 //                    $this->error($upload->getError());
                 }
@@ -83,10 +74,14 @@ class TeacherController extends CheckController{
 //    				$this->error($upload->getError());
     			}
     			else{// 上传成功
-    				$arrWhere['certificate'] = '/Public/Uploads/'.$info1['savepath'].$info1['savename'];
+                    foreach ($info1 as $key => $val){
+                        //向数组插入元素的两种写法
+                        $arrWhere['certificate'][] = '/Public/Uploads/'.$val['savepath'].$val['savename'];
+//                        array_push($arrWhere['certificate'],'/Public/Uploads/'.$val['savepath'].$val['savename']);
+                    }
     			}
-//                dump($arrWhere);
-//                exit();
+
+                $arrWhere['certificate'] = implode("、", $arrWhere['certificate']);
     			$arrData=D('Teacher','Service')->edit($arrWhere);
     		}
     		if ($arrData){
@@ -97,8 +92,9 @@ class TeacherController extends CheckController{
     	}else{
     		$arrWhere['tid']=I('get.tid');
     		$arrData=D('Teacher','Service')->findOne($arrWhere);
-    		$arrData['certificate'] = explode("、",$arrData['certificate'])[0];
+    		$list1 = explode("、",$arrData['certificate']);
     		$this->list=$arrData;
+    		$this->list1=$list1;
     		$this->display();
     	}
     }
@@ -108,19 +104,10 @@ class TeacherController extends CheckController{
             $arrWhere=I('post.');
             $arrImage = $_FILES['picture']['name'];
             $arrImages = $_FILES['certificate']['name'];
-//            dump($arrImage);
-//            dump($arrImages);
             $arrWhere['create_time'] = time();
 
-            //下面的代码逻辑有问题
-            //下面的代码逻辑有问题
-            //下面的代码逻辑有问题
-            //下面的代码逻辑有问题
-            //下面的代码逻辑有问题
-            //下面的代码逻辑有问题
-            //下面的代码逻辑有问题
-
             if (empty($arrImage) && empty($arrImages)){
+                $arrWhere['certificate'] = implode("、", $arrWhere['certificate']);
                 $arrData=D('Teacher','Service')->edit($arrWhere);
             }
             else{
@@ -131,7 +118,7 @@ class TeacherController extends CheckController{
 
                 // 上传文件
                 $info   =    $upload->uploadOne($_FILES['picture']);
-                $info1   =    $upload->uploadOne($_FILES['certificate']);
+                $info1   =    $upload->upload(array($_FILES['certificate']));
                 if(!$info) {// 上传错误提示错误信息
 //                    $this->error($upload->getError());
                 }
@@ -142,10 +129,13 @@ class TeacherController extends CheckController{
 //    				$this->error($upload->getError());
                 }
                 else{// 上传成功
-                    $arrWhere['certificate'] = '/Public/Uploads/'.$info1['savepath'].$info1['savename'];
+                    foreach ($info1 as $key => $val){
+                        //向数组插入元素的两种写法
+                        $arrWhere['certificate'][] = '/Public/Uploads/'.$val['savepath'].$val['savename'];
+//                        array_push($arrWhere['certificate'],'/Public/Uploads/'.$val['savepath'].$val['savename']);
+                    }
                 }
-//                dump($arrWhere);
-//                exit();
+                $arrWhere['certificate'] = implode("、", $arrWhere['certificate']);
                 $arrData=D('Teacher','Service')->edit($arrWhere);
             }
             if ($arrData){
@@ -156,8 +146,9 @@ class TeacherController extends CheckController{
         }else{
             $arrWhere['tid']=I('get.tid');
             $arrData=D('Teacher','Service')->findOne($arrWhere);
-            $arrData['certificate'] = explode("、",$arrData['certificate'])[0];
+            $list1 = explode("、",$arrData['certificate']);
             $this->list=$arrData;
+            $this->list1=$list1;
             $this->display();
         }
     }
