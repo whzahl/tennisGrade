@@ -19,16 +19,18 @@ class CheckController extends BaseController {
         
         // 获取登录的Session
         $arrSession = $_SESSION['Type'];
+        $arrSession1 = $_SESSION['TgAdmin'];
         // 判断是否登录
         //        暂时注释
 
-//        if(!$arrSession){
+
+        if(!($arrSession||$arrSession1)){
 //            //	跳转登录界面
-//            $this->redirect('Admin/Login/login');
-//        }else{
-//            $this->uid = $arrSession['uid'];
-//            $this->uname = $arrSession['uname'];
-//        }
+            $this->redirect('Admin/Login/login');
+        }else{
+            $this->uid = $arrSession['uid'];
+            $this->uname = $arrSession['uname'];
+        }
         //        暂时注释
 
 

@@ -30,6 +30,7 @@ class MasterController extends CheckController{
 			$arr = I('post.');
 
 			$arr['create_time'] = time();
+//			这里的给pid一个1000到9999的随机整数是什么意思？
 			$arr['pid'] = mt_rand(1000,9999);
 			$arrDate = M('tg_master')->add($arr);
 			if ($arrDate) {
