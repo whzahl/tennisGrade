@@ -1,0 +1,46 @@
+<extend name="Public:base" />
+<block name="body">
+
+
+        <div class="tpl-content-wrapper" style="margin:0 20px">
+            <div class="tpl-content-page-title">
+                申请站长
+            </div>
+            <ol class="am-breadcrumb">
+                <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
+                <li class="am-active">申请站长</li>
+            </ol>
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span> 申请站长
+                    </div>
+                    
+                </div>
+                <div class="tpl-block">
+                    <div class="am-g">
+                        <div class="tpl-form-body tpl-form-line">
+                            <form class="am-form tpl-form-line-form" method="post" action="/Admin/Masterapply/add" enctype="multipart/form-data">
+                               
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">申请原因</label>
+                                    <div class="am-u-sm-9">
+                                        <textarea name="apply_reason"></textarea>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <div class="am-u-sm-9 am-u-sm-push-3">
+                                        <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                        <a href="" onclick="javascript:history.go(-1);return false;"><button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-warning ">返回</button></a>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</block>

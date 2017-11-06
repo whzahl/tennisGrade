@@ -77,7 +77,7 @@
             </ul>
         </div>
     </header>
- <if condition="$_SESSION['Type']['type'] eq '3'">
+ <if condition="$_SESSION['Type']['type'] neq '3'">
  <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
            <div class="tpl-left-nav-title">
@@ -107,6 +107,11 @@
 		                   <a href="/Admin/Student/index">
 	                           <i class="am-icon-angle-right"></i>
 	                           <span>考生列表</span>
+	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
+		                   </a>
+		                   <a href="/Admin/Masterapply/index">
+	                           <i class="am-icon-angle-right"></i>
+	                           <span>站长列表</span>
 	                           <i class="tpl-left-nav-content tpl-badge-primary">5</i>
 		                   </a>
 		              </li>
