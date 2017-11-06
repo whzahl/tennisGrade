@@ -40,8 +40,8 @@
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="tpl-form-body tpl-form-line">
-                            <form class="am-form tpl-form-line-form" action="/Admin/Live/edit" enctype="multipart/form-data" method="post">
-                                <input name="lid" type="hidden" value="{$list.lid}">
+                            <form class="am-form tpl-form-line-form" action="/Admin/Video/edit" enctype="multipart/form-data" method="post">
+                                <input name="vid" type="hidden" value="{$list.vid}">
                                 <div class="am-form-group">
                                     <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                                     <div class="am-u-sm-9">
@@ -52,9 +52,9 @@
 
 
                               <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">视频连接</label>
+                                    <label class="am-u-sm-3 am-form-label">视频连接</label>
                                     <div class="am-u-sm-9">
-                                         <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入视频连接" name="url" value="{$list.url}">
+                                         <input type="text" class="tpl-form-input" placeholder="请输入视频连接" name="url" value="{$list.url}">
                                     </div>
                                 </div>
 
@@ -63,7 +63,7 @@
                                 <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">视频介绍</label>
                                     <div class="am-u-sm-9">
-                                        <script id="editor" type="text/plain" style="width:800px;height:500px;" name="content">   {$list.content|htmlspecialchars_decode|stripslashes}</script>
+                                        <script id="editor" type="text/plain" style="width:800px;height:500px;" name="intro">   {$list.intro|htmlspecialchars_decode|stripslashes}</script>
                                     </div>
                                 </div>
 

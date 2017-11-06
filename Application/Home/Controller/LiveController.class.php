@@ -19,8 +19,8 @@ class LiveController extends BaseController{
 
         $province =  M('tg_province')->select();
         $this->province = $province;
-        $chTitle = '视频中心';
-        $enTitle = 'Video Center';
+        $chTitle = '考试直播';
+        $enTitle = 'Exam Live';
         $this->chTitle = $chTitle;
         $this->enTitle = $enTitle;
         $this->display();

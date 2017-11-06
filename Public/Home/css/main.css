@@ -949,3 +949,12 @@ li{
     width: 794px;
     height: auto;
 }
+.video-describe{
+    padding:0 50px;
+    padding-top: 30px;
+}
+.video-play{
+    margin-top: 100px;
+    padding-bottom: 200px;
+    text-align: center;
+}
