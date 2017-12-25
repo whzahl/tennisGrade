@@ -99,7 +99,11 @@
 <!-- 		                                              <a href="/Admin/Place/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
 		                                              <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
 		                                              <!--<button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only">-->
-														  <a  class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" href="/Admin/Order/refund?oid={$vo.oid}&price={$vo.price}"><span class="am-icon-trash-o"></span> 退款</a>
+													  		<if condition="($vo.pay eq '3') OR ($vo.pay eq '2')">
+																<a  disabled="true" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" href="/Admin/Order/refund?oid={$vo.oid}&price={$vo.price}"><span class="am-icon-trash-o"></span> 退款</a>
+															<else/>
+																<a  class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" href="/Admin/Order/refund?oid={$vo.oid}&price={$vo.price}"><span class="am-icon-trash-o"></span> 退款</a>
+															</if>
 													  <!--</button>-->
 		                                          </div>
 		                                      </div>
