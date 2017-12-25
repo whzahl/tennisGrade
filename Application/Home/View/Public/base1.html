@@ -9,12 +9,20 @@
     <link rel="icon" type="image/png" href="\Public\Home\images\common\title_icon.png">
     <link rel="stylesheet" href="/Public/Admin/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Admin/css/amazeui.min.css">
-    <link rel="stylesheet" href="/Public/Home/css/main.css">
     <link rel="stylesheet" href="/Public/Admin/css/app.css">
+    <link rel="stylesheet" href="/Public/Home/css/main.css">
     <script src="/Public/Admin/js/jquery-2.1.1.js"></script>
     <script src="/Public/Admin/js/amazeui.min.js"></script>
     <script src="/Public/Home/js/alertMessage.js"></script>
     <script src="/Public/Home/js/common.js"></script>
+    <style>
+        a:hover{
+            text-decoration: none;
+        }
+        a:focus{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <block name="js"></block>
 <body>
@@ -24,7 +32,7 @@
     </div>
 </div>
 <!--滑动900px之后显示-->
-<div style="position: fixed;right: 200px;bottom: 80px;width: 60px;z-index: 1100;" data-am-widget="gotop" class="am-gotop am-gotop-fixed" >
+<div style="position: fixed;right: 5%;bottom: 80px;width: 60px;z-index: 1100;" data-am-widget="gotop" class="am-gotop am-gotop-fixed" >
     <a href="#top" title="">
         <!--<img style="max-width: 60px;" class="am-gotop-icon-custom" src="/Public/Home/images/common/rocket.png" width="100px"/>-->
         <img style="max-width: 60px;" class="am-gotop-icon-custom" src="/Public/Home/images/common/go_top.png" width="100px"/>
@@ -40,25 +48,42 @@
             <div class="h-p1-right">
                 <ul>
                     <li><a href="/Home/Index/index">首页</a></li>
-                    <li><a href="/Home/Intro/content">平台简介</a></li>
+
+                    <!--模板赋值-->
+                    <li><a href="/Home/Intro/content?inid=1">平台简介</a></li>
                     <li id="intro-a">
-                        <a href="/Home/Intro/index">考试介绍</a>
+                        <a href="/Home/Intro/content?inid=2">考试介绍</a>
                         <div class="intro">
+                            <div class="arrow"></div>
                             <ul>
-                                <li><a href="/Home/Intro/content">考级简介</a></li>
-                                <li><a href="/Home/Intro/content">考级内容</a></li>
-                                <li><a href="/Home/Intro/content">证书样板</a></li>
-                                <li><a href="/Home/Intro/content">考点协议</a></li>
-                                <li><a href="/Home/Intro/content">考官协议</a></li>
-                                <li><a href="/Home/Intro/content">报名协议</a></li>
+                                <li><a href="/Home/Intro/content?inid=2">考级简介</a></li>
+                                <li><a href="/Home/Intro/content?inid=4">考级内容</a></li>
+                                <li><a href="/Home/Intro/content?inid=5">证书样板</a></li>
+                                <li><a href="/Home/Intro/content?inid=6">考点协议</a></li>
+                                <li><a href="/Home/Intro/content?inid=7">考官协议</a></li>
+                                <li><a href="/Home/Intro/content?inid=8">报名协议</a></li>
                             </ul>
                         </div>
                     </li>
 
+                    <!--<li><a href="/Home/Intro/content">平台简介</a></li>-->
+                    <!--<li id="intro-a">-->
+                        <!--<a href="/Home/Intro/index">考试介绍</a>-->
+                        <!--<div class="intro">-->
+                            <!--<ul>-->
+                                <!--<li><a href="/Home/Intro/content">考级简介</a></li>-->
+                                <!--<li><a href="/Home/Intro/content">考级内容</a></li>-->
+                                <!--<li><a href="/Home/Intro/content">证书样板</a></li>-->
+                                <!--<li><a href="/Home/Intro/content">考点协议</a></li>-->
+                                <!--<li><a href="/Home/Intro/content">考官协议</a></li>-->
+                                <!--<li><a href="/Home/Intro/content">报名协议</a></li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</li>-->
                     <if condition="($Think.session.userInfo.unionid eq NULL)">
-                        <li><a href="#" onclick="a()">考级报名</a></li>
-                        <li><a href="#" onclick="b()">考官申请</a></li>
-                        <li><a href="#" onclick="c()">考点申办</a></li>
+                        <li><a href="#" onclick="abc()">考级报名</a></li>
+                        <li><a href="#" onclick="abc()">考官申请</a></li>
+                        <li><a href="#" onclick="abc()">考点申办</a></li>
                         <else />
                         <li><a href="/Home/Student/index">考级报名</a></li>
                         <li><a href="/Home/Teacher/index">考官申请</a></li>
@@ -71,15 +96,15 @@
                     <!--<li><a href="/Home/Teacher/index">考官申请</a></li>-->
                     <!--<li><a href="#" onclick="c()">考点申办</a></li>-->
                     <!--<li><a href="/Home/Place/index">考点申办</a></li>-->
-                    <li><a href="/Home/Live/index">视频中心</a></li>
+                    <li><a href="/Home/Live/index">考试直播</a></li>
                 </ul>
                 <if condition="($Think.session.userInfo.unionid eq NULL)">
                     <button class="btn btn-success btn-lg" onclick="abc()">登录</button>
                     <else />
-                    <button id="personal-center" class="btn btn-success btn-lg">
-                        <a href="/Home/User/index">个人中心</a>
+                    <div id="personal-center" >
+                        <a href="/Home/User/index"  class="btn btn-success btn-lg">个人中心</a>
                         <a href="/Home/Login/logout" class="am-badge am-badge-warning login-out">退出</a>
-                    </button>
+                    </div>
                 </if>
             </div>
         </div>
@@ -100,15 +125,14 @@
     </div>
     <div class="wrap2">
         <div class="common-pt1-ct-pt1" style="padding-top: 30px;">
-            <p>中文标题</p>
+            <p>{$chTitle}</p>
             <img class="p-line" src="/Public/Home/images/Student/line.jpg" alt="">
-            <p>English Title</p>
+            <p>{$enTitle}</p>
         </div>
         <block name="body"></block>
     </div>
 </div>
 <div class="footer">
-    <div style="height: 20px;width: 100%;background-color:#d9a4ed;"></div>
     <div class="footer-part">
         <ul>
             <li><img src="/Public/Home/images/common/logo_gjtyzj.jpg" alt=""><br>国家体育总局</li>
@@ -124,7 +148,23 @@
 </div>
 <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
 <script>
+    function addStyle() {
+//    var el = $("#login_container");
+//    el.css({'padding':'200px','backgroundColor':'gray'});
+        $('body').css('backgroundColor','#FDFCF9');
+    }
+
+    function addCloseBt() {
+        var el = $("#login_container");
+        var closeImg =  '<img style="width: 25px;height: auto;" ' +
+            'src = "/Public/Home/images/common/close.png"  class="close-bt" >';
+        el.append(closeImg);
+        $(".close-bt").click(function () {
+            el.hide();
+        })
+    }
     function abc(){
+        $("#login_container").show();
         var unionid =  $("input[name='unionid']").val();
         if (unionid == ''){
             var obj = new WxLogin({
@@ -136,9 +176,9 @@
                 style: "",
                 href: ""
             });
-        }else{
-            window.location.href="/Home/Student/index";
         }
+        addStyle();
+        addCloseBt();
     }
 </script>
 <script>

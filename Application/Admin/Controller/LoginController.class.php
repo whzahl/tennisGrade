@@ -12,9 +12,29 @@ class LoginController extends BaseController{
 	}
 	
 	public function login(){
-		$str = urlencode('www.zhongaotech.com');
-		echo $str;
-		$this->display();
+//		$str = urlencode('www.zhongaotech.com');
+//		echo $str;
+        if(IS_POST){
+            $arrWhere['name'] = I('post.name');
+            $password = I('post.password');
+//            $arrWhere['password'] = md5($password);
+            $arrWhere['password'] = $password;
+            $arrData = D('Admin','Service')->findOne($arrWhere);
+            if($arrData){
+                session('TgAdmin',array(
+                    'aid' => $arrData['aid'],
+                    'uname'=>$arrData['name']
+                ));
+                $this->redirect('/Admin/index/index');
+            }
+            else{
+                $this->error('登录失败');
+            }
+        }
+        else{
+            $this->display();
+        }
+
 	}
 	public function weixinlogin(){
 		$this->display();

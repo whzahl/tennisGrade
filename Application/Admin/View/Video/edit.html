@@ -17,12 +17,12 @@
 
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                Amaze UI 表单
+                修改视频
             </div>
             <ol class="am-breadcrumb">
-                <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">表单</a></li>
-                <li class="am-active">Amaze UI 表单</li>
+                <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
+                <li class="am-active">内容板块</li>
+                <li class="am-active">修改视频</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
@@ -40,8 +40,8 @@
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="tpl-form-body tpl-form-line">
-                            <form class="am-form tpl-form-line-form" action="/Admin/Live/edit" enctype="multipart/form-data" method="post">
-                                <input name="lid" type="hidden" value="{$list.lid}">
+                            <form class="am-form tpl-form-line-form" action="/Admin/Video/edit" enctype="multipart/form-data" method="post">
+                                <input name="vid" type="hidden" value="{$list.vid}">
                                 <div class="am-form-group">
                                     <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                                     <div class="am-u-sm-9">
@@ -52,9 +52,9 @@
 
 
                               <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">视频连接</label>
+                                    <label class="am-u-sm-3 am-form-label">视频连接</label>
                                     <div class="am-u-sm-9">
-                                         <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入视频连接" name="url" value="{$list.url}">
+                                         <input type="text" class="tpl-form-input" placeholder="请输入视频连接" name="url" value="{$list.url}">
                                     </div>
                                 </div>
 
@@ -63,13 +63,14 @@
                                 <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">视频介绍</label>
                                     <div class="am-u-sm-9">
-                                        <script id="editor" type="text/plain" style="width:800px;height:500px;" name="content">   {$list.content|htmlspecialchars_decode|stripslashes}</script>
+                                        <script id="editor" type="text/plain" style="width:800px;height:500px;" name="intro">   {$list.intro|htmlspecialchars_decode|stripslashes}</script>
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
                                         <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                        <a href=""  class="am-btn am-btn-primary tpl-btn-bg-color-warning " onclick ="javascript:history.go(-1);return false;" >返回</a>
                                     </div>
                                 </div>
                             </form>

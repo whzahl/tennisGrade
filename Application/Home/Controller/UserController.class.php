@@ -21,12 +21,9 @@ class UserController extends CheckController {
     public function index(){
     	//考生信息
     	$arrWhere['id'] = $_SESSION['userInfo']['id'];
-
-
-//    	$arrWhere['status'] = 1;
+    	$arrWhere['status'] = 1;
     	$arrUser = M('tg_student')->where($arrWhere)->order('create_time desc')->limit(1)->select();
-
-
+    	
     	if(empty($arrUser)){
     		$arrWheres['id'] = $_SESSION['userInfo']['id'];
     		$arrUsers = M('tg_student')->where($arrWheres)->order('create_time desc')->limit(1)->select();
@@ -44,6 +41,7 @@ class UserController extends CheckController {
     		$arrp = M('tg_place')->where(array('pid'=>$pid))->find();
     		$arrData[$k]['place'] = $arrp['pname'];
     	}
+    	
     	//考官信息
     	$arrWheret['id'] = $_SESSION['userInfo']['id'];
     	$arrTeach= M('tg_teacher')->where($arrWheret)->order('create_time desc')->select();
@@ -65,8 +63,9 @@ class UserController extends CheckController {
     	//考点信息
     	$arrWherep['id'] = $_SESSION['userInfo']['id'];
     	$arrPlace= M('tg_place')->where($arrWherep)->order('create_time desc')->select();
-    	//dump($arrData);
-    	
+//    	dump($arrPlace);
+//    	dump($arrWherep['id']);
+//    	exit();
     	if(empty($arrUser)){
     		$this->user = $arrUsers['0'];
     	}else {
@@ -76,6 +75,10 @@ class UserController extends CheckController {
     	$this->list = $arrData;
     	$this->teacher = $arrTeach;
     	$this->place = $arrPlace;
+        $chTitle = '用户中心';
+        $enTitle = 'User Center';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
     	$this->display();
     }
     

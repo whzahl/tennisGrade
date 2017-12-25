@@ -15,6 +15,10 @@ class StudentController extends CheckController{
     public function index(){
         $province = M('tg_province')->select();
         $this->province = $province;
+        $chTitle = '考生报名';
+        $enTitle = 'Candidates Application';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
 	    $this->display();
     }
 
@@ -39,7 +43,7 @@ class StudentController extends CheckController{
     			}
     			$strLevel = I('level');
     			$data['level'] = implode('、',$strLevel);
-    			$wx = M('tg_user')->where($_SESSION['userInfo']['unionid'])->select();  //从微信登录表里找到对应微信主键
+                $wx = M('tg_user')->where("unionid='%s'", $_SESSION['userInfo']['unionid'])->find();  //从微信登录表里找到对应微信主键
 //    			$wx = M('tg_user')->where(array('unionid'=>'o_vIF1FGUba-wAN9DyQ9jDoUAEu8'))->find();
     			$data['id'] = $wx['id'];
     			$data['status'] = 2;

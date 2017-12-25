@@ -19,7 +19,7 @@ class UserController extends CheckController {
 	
     public function index(){
     	$intCount = D('User','Service') ->count($arrWhere);
-    	$Page = new \Think\Page($intCount,3);
+    	$Page = new \Think\Page($intCount,10);
     	$show =  $Page ->show();
     	$first =  $Page->firstRow;
     	$list = $Page->listRows;

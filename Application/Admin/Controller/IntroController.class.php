@@ -29,7 +29,7 @@ class IntroController extends CheckController{
     *  */
     public function intros(){
         $arrWhere['type'] = 1;
-        $arrDate = D('Intro','Service')->findOne($arrWhere);
+        $arrDate = D('Intro','Service')->findAll($arrWhere);
         $this->list = $arrDate;
         $this->display();
     }
@@ -62,7 +62,9 @@ class IntroController extends CheckController{
                 $this->error('添加失败');
             }
         }
-        $this->display();
+        else{
+            $this->display();
+        }
     }
     
     /*
@@ -77,13 +79,15 @@ class IntroController extends CheckController{
             $arrWhere['modify_time'] = time();
             $arrData = D('Intro','Service')->add($arrWhere);
             if($arrData){
-                $this->success('添加成功','/Admin/Intro/intros');
+                $this->success('添加成功','/Admin/Intro/intros',1);
             }
             else{
                 $this->error('添加失败');
             }
         }
-        $this->display();
+        else{
+            $this->display();
+        }
     }
     
     /*
@@ -104,7 +108,9 @@ class IntroController extends CheckController{
                 $this->error('添加失败');
             }
         }
-        $this->display();
+        else{
+            $this->display();
+        }
     }
     
     /*
@@ -124,10 +130,12 @@ class IntroController extends CheckController{
                 $this->error('修改失败');
             }
         }
-        $arrWhere['inid'] = I('get.inid');
-        $arrData = D('Intro','Service')->findOne($arrWhere);
-        $this->list = $arrData;
-        $this->display();
+        else{
+            $arrWhere['inid'] = I('get.inid');
+            $arrData = D('Intro','Service')->findOne($arrWhere);
+            $this->list = $arrData;
+            $this->display();
+        }
 
     }
     
@@ -149,10 +157,12 @@ class IntroController extends CheckController{
                 $this->error('修改失败');
             }
         }
-        $arrWhere['inid'] = I('get.inid');
-        $arrData = D('Intro','Service')->findOne($arrWhere);
-        $this->list = $arrData;
-        $this->display();
+        else{
+            $arrWhere['inid'] = I('get.inid');
+            $arrData = D('Intro','Service')->findOne($arrWhere);
+            $this->list = $arrData;
+            $this->display();
+        }
 
     }
     
@@ -173,10 +183,12 @@ class IntroController extends CheckController{
                 $this->error('修改失败');
             }
         }
-        $arrWhere['inid'] = I('get.inid');
-        $arrData = D('Intro','Service')->findOne($arrWhere);
-        $this->list = $arrData;
-        $this->display();
+        else{
+            $arrWhere['inid'] = I('get.inid');
+            $arrData = D('Intro','Service')->findOne($arrWhere);
+            $this->list = $arrData;
+            $this->display();
+        }
     }
     
     

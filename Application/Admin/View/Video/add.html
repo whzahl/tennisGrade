@@ -17,12 +17,12 @@
 
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                                                          考试视频添加页
+            添加视频
             </div>
             <ol class="am-breadcrumb">
-                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
                 <li class="am-active">内容板块</li>
-                <li class="am-active">考试视频添加页</li>
+                <li class="am-active"> 添加视频</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
@@ -53,22 +53,23 @@
                               <div class="am-form-group">
                                     <label for="user-intro" class="am-u-sm-3 am-form-label">视频</label>
                                     <div class="am-u-sm-9">
-                                         <input type="file" class="tpl-form-input" placeholder="请输入视频连接" name="video">
+                                         <input type="text" class="tpl-form-input" placeholder="请输入视频连接" name="url">
                                     </div>
                                 </div>
 
                                 
 
                                 <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">视频介绍</label>
+                                    <label class="am-u-sm-3 am-form-label">视频介绍</label>
                                     <div class="am-u-sm-9">
-                                        <script id="editor" type="text/plain" style="width:800px;height:500px;" name="content"></script>
+                                        <script id="editor" type="text/plain" style="width:800px;height:500px;" name="intro"></script>
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
                                         <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                        <a href=""  class="am-btn am-btn-primary tpl-btn-bg-color-warning " onclick ="javascript:history.go(-1);return false;" >返回</a>
                                     </div>
                                 </div>
                             </form>

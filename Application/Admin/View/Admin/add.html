@@ -4,17 +4,16 @@
 
         <div class="tpl-content-wrapper" style="margin:0 20px">
             <div class="tpl-content-page-title">
-                Amaze UI 表单
+                新增管理员
             </div>
             <ol class="am-breadcrumb">
-                <li><a href="#" class="am-icon-home">首页</a></li>
-                <li><a href="#">表单</a></li>
-                <li class="am-active">Amaze UI 表单</li>
+                <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
+                <li class="am-active">新增管理员</li>
             </ol>
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
                     <div class="caption font-green bold">
-                        <span class="am-icon-code"></span> 表单
+                        <span class="am-icon-code"></span> 新增管理员
                     </div>
                     <div class="tpl-portlet-input tpl-fz-ml">
                         <div class="portlet-input input-small input-inline">
@@ -27,24 +26,47 @@
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="tpl-form-body tpl-form-line">
-                            <form class="am-form tpl-form-line-form">
+                            <form class="am-form tpl-form-line-form" method="post" action="/Admin/Admin/add" enctype="multipart/form-data">
+
                                 <div class="am-form-group">
-                                    <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                    <label for="user-phone" class="am-u-sm-3 am-form-label">管理员类型</label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字">
-                                        <small>请填写标题文字10-20字左右。</small>
+                                        <select name="type" data-am-selected="{searchBox: 1}">
+                                          <option value="1">超级管理员</option>
+                                          <option value="2">站长</option>
+                                          <option value="3">考点</option>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
-                                    <label for="user-email" class="am-u-sm-3 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">管理员名称</label>
                                     <div class="am-u-sm-9">
-                                        <input type="text" class="am-form-field tpl-form-no-bg" placeholder="发布时间" data-am-datepicker="" readonly/>
-                                        <small>发布时间为必填</small>
+                                        <input type="text" name="name" class="tpl-form-input" id="user-name" placeholder="请填写管理员登录名">
+                                        <!-- <small>请填写标题文字10-20字左右。</small> -->
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">登录密码</label>
+                                    <div class="am-u-sm-9">
+                                        <input type="password" name="password1" class="tpl-form-input" id="user-name" placeholder="请填写登录密码">
+                                        <!-- <small>请填写标题文字10-20字左右。</small> -->
+                                    </div>
+                                </div>
+                                <div class="am-form-group">
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">再次填写登录密码</label>
+                                    <div class="am-u-sm-9">
+                                        <input type="password" name="password2" class="tpl-form-input" id="user-name" placeholder="请再次填写登录密码，并与前一次保持一致">
+                                        <!-- <small>请填写标题文字10-20字左右。</small> -->
+                                    </div>
+                                </div>
+
+                                <input type="hidden" class="am-form-field tpl-form-no-bg" placeholder="时间" data-am-datepicker="" readonly/>
+
+                                
+                                <!-- 下拉选择 -->
+                                <!-- <div class="am-form-group">
                                     <label for="user-phone" class="am-u-sm-3 am-form-label">作者 <span class="tpl-form-line-small-title">Author</span></label>
                                     <div class="am-u-sm-9">
                                         <select data-am-selected="{searchBox: 1}">
@@ -53,64 +75,12 @@
 										  <option value="o">Orange</option>
 										</select>
                                     </div>
-                                </div>
-
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-form-label">SEO关键字 <span class="tpl-form-line-small-title">SEO</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" placeholder="输入SEO关键字">
-                                    </div>
-                                </div>
-
-                                <div class="am-form-group">
-                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">封面图 <span class="tpl-form-line-small-title">Images</span></label>
-                                    <div class="am-u-sm-9">
-                                        <div class="am-form-group am-form-file">
-                                            <div class="tpl-form-file-img">
-                                                <img src="/Public/Admin/images/a5.png" alt="">
-                                            </div>
-                                            <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                            <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
-                                            <input id="doc-form-file" type="file" multiple>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="am-form-group">
-                                    <label for="user-weibo" class="am-u-sm-3 am-form-label">添加分类 <span class="tpl-form-line-small-title">Type</span></label>
-                                    <div class="am-u-sm-9">
-                                        <input type="text" id="user-weibo" placeholder="请添加分类用点号隔开">
-                                        <div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">隐藏文章</label>
-                                    <div class="am-u-sm-9">
-                                        <div class="tpl-switch">
-                                            <input type="checkbox" class="ios-switch bigswitch tpl-switch-btn" checked />
-                                            <div class="tpl-switch-btn-view">
-                                                <div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="am-form-group">
-                                    <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
-                                    <div class="am-u-sm-9">
-                                        <textarea class="" rows="10" id="user-intro" placeholder="请输入文章内容"></textarea>
-                                    </div>
-                                </div>
+                                </div> -->
 
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
-                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                        <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                        <a href="" onclick="javascript:history.go(-1);return false;"><button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-warning ">返回</button></a>
                                     </div>
                                 </div>
                             </form>

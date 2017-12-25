@@ -31,7 +31,7 @@ function sendMessage() {
 	    　　 data: {mobile:mobile},  
 	    　　 error: function (XMLHttpRequest, textStatus, errorThrown) { },  
 	     　　success: function (msg){ 
-	    	 	 console.log(msg);
+//	    	 	 console.log(msg);
 	    	 	/*  console.log(msg.smsCode); */
 		    	 /* if(msg.code == 0){ */
 		    		 $("input[name='check']").val(msg.smsCode);
@@ -91,7 +91,7 @@ function sendMessage() {
                 {
                     path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
                     //path = imgFile.files[0].getAsDataURL();// FF 3.0
-                    document.getElementById(imgBoxId).innerHTML = "<img id='img1' style='max-height:300px;max-width:200px;' src='"+path+"'/>";
+                    document.getElementById(imgBoxId).innerHTML = "<img id='img1' style='width: 200px;height: auto;' src='"+path+"'/>";
                     //document.getElementById("img1").src = path;
                 }
             }
@@ -165,7 +165,7 @@ function sendMessage() {
                                 <div class="form-input-box input-width-02">
                                     <select name="sex" id="sex" class="am-form-field am-radius">
                                         <option value="1" selected>男</option>
-                                        <option value="2">女</option>
+                                        <option value="0">女</option>
                                     </select>
                                 </div>
                             </div>

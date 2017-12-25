@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*
  * 新闻资讯模块
  *   */
@@ -7,17 +7,17 @@ namespace Home\Controller;
 use Home\Controller\BaseController;
 
 class NewsController extends BaseController{
+	
+	public function  __construct(){
+		parent::__construct();
+	} 
 
-    public function  __construct(){
-        parent::__construct();
-    }
-
-    public function index(){
-        //查询已发布的新闻，并分页显示
+	public function index(){
+	    //查询已发布的新闻，并分页显示
         $arrWhere['status'] = 1;
 
         $intCount = D('News','Service')->count($arrWhere);
-        $Page = new \Think\Page($intCount,2);// 实例化分页类 传入总记录数和每页显示的记录数
+        $Page = new \Think\Page($intCount,10);// 实例化分页类 传入总记录数和每页显示的记录数
         $show = $Page->show();// 分页显示输出
         $first = $Page->firstRow;
         $list = $Page->listRows;
@@ -26,17 +26,26 @@ class NewsController extends BaseController{
         $this->page = $show;
         $this->list = $arrData;
 
+        $chTitle = '新闻列表';
+        $enTitle = 'News List';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
         $this->display();
     }
 
     public function content(){
-        $arrWhere['nid'] = I('get.nid');
-        $arrData = D('News','Service')->findOne($arrWhere);
-        $this->list = $arrData;
+	    $arrWhere['nid'] = I('get.nid');
+	    $arrData = D('News','Service')->findOne($arrWhere);
+        $chTitle = '新闻内容';
+        $enTitle = 'News Content';
+        $this->chTitle = $chTitle;
+        $this->enTitle = $enTitle;
+	    $this->list = $arrData;
+	    $this->display();
     }
-
-
-
+	
+	
+	
 }
 
 

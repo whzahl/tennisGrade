@@ -1,0 +1,24 @@
+<extend name="Public:base1" />
+<block name="js"></block>
+<block name="body">
+    <div class="intro-pt1-ct padding-7-8">
+        <div class="intro-pt1-ct-pt2">
+            <div class="content-pt1-ct-pt2-header">
+                <div class="content-content-pt1-ct-pt2-header-top">
+                    <p>{$list.title}</p>
+                    <!--<p>温网男单决赛H2H:费德勒6-1西里奇 去年救3赛点</p>-->
+                    <a href="javascript:history.go(-1)"><img src="/Public/Home/images/news/back.png" alt="">返回列表</a>
+                </div>
+                <div class="content-pt1-ct-pt2-header-bottom">
+                    <span>{:date('Y-m-d',$list['create_time'])}</span>
+                </div>
+            </div>
+            <div class="content-pt1-ct-pt2-content">
+                {$list.content|htmlspecialchars_decode}
+            </div>
+            <div class="content-pt1-ct-pt2-footer">
+                <a href="javascript:history.go(-1)">返回列表</a>
+            </div>
+        </div>
+    </div>
+</block>

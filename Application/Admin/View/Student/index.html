@@ -32,7 +32,7 @@
                                 <div class="am-btn-group am-btn-group-xs">
                                     <!-- <a href="/Admin/Student/add" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a> -->
 <!--                                     <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button> -->
-                                    <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
+                                    <button type="button" class="am-btn am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
                                     <!-- <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button> -->
                                 </div>
                             </div>
@@ -58,12 +58,12 @@
                             </div>
                         </div>
                         <div class="am-u-sm-12 am-u-md-3">
-                            <div class="am-input-group am-input-group-sm">
-                                <input type="text" class="am-form-field">
-                                <span class="am-input-group-btn">
-					              <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>
-					            </span>
-			                </div>
+                            <!--<div class="am-input-group am-input-group-sm">-->
+                                <!--<input type="text" class="am-form-field">-->
+                                <!--<span class="am-input-group-btn">-->
+					              <!--<button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>-->
+					            <!--</span>-->
+			                <!--</div>-->
 			            </div>
                   </div>
 		          <div class="am-g">
@@ -95,15 +95,27 @@
 		                                  <td>
 		                                      <div class="am-btn-toolbar">
 		                                          <div class="am-btn-group am-btn-group-xs">
-		                                              <if condition="$vo['status'] eq 1">
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><a href="/Admin/Student/shenhe?sid={$vo.sid}"><span class="am-icon-archive"></span>已通过</a></button>
-			                                            <elseif condition="$vo['status'] eq 2"/>
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><a href="/Admin/Student/shenhe?sid={$vo.sid}"><span class="am-icon-archive"></span>待审核</a></button>
-			                                            <else />
-			                                            <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><a href="/Admin/Student/shenhe?sid={$vo.sid}"><span class="am-icon-archive"></span>未通过</a></button>
-			                                            </if>
-		                                              <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><a href="/Admin/Student/edit?sid={$vo.sid}"><span class="am-icon-pencil-square-o"></span> 修改</a></button>
-		                                              <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><a href="/Admin/Student/delete?sid={$vo.sid}" onclick="return del()"><span class="am-icon-trash-o"></span> 删除</a></button>
+		                                              <!--<if condition="$vo['status'] eq 1">-->
+			                                            <!--<a class="am-btn am-btn-default am-btn-xs am-hide-sm-only" href="/Admin/Student/shenhe?sid={$vo.sid}"><span class="am-icon-archive"></span>已通过</a>-->
+			                                            <!--<elseif condition="$vo['status'] eq 2"/>-->
+			                                            <!--<a class="am-btn am-btn-default am-btn-xs am-hide-sm-only" href="/Admin/Student/shenhe?sid={$vo.sid}"><span class="am-icon-archive"></span>待审核</a>-->
+			                                            <!--<else />-->
+			                                            <!--<a class="am-btn am-btn-default am-btn-xs am-hide-sm-only" href="/Admin/Student/shenhe?sid={$vo.sid}"><span class="am-icon-archive"></span>未通过</a>-->
+			                                            <!--</if>-->
+
+													  <if condition="$vo['status'] eq 1">
+														  <a style="color: #6AA433;" class="am-btn am-btn-default am-btn-xs" href="/Admin/Student/check?sid={$vo.sid}"><span class="am-icon-archive"></span>已通过</a>
+														  <!--<button type="button" class="am-btn am-btn-default am-btn-xs"><span class="am-icon-archive"></span>已通过</button>-->
+														  <elseif condition="$vo['status'] eq 2"/>
+														  <a style="color: #dd514c;" class="am-btn am-btn-default am-btn-xs" href="/Admin/Student/check?sid={$vo.sid}"><span class="am-icon-archive"></span>待审核</a>
+														  <!--<button type="button" class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>待审核</button>-->
+														  <else />
+														  <a style="color: #d9d9d9;" class="am-btn am-btn-default am-btn-xs" href="/Admin/Student/check?sid={$vo.sid}"><span class="am-icon-archive"></span>未通过</a>
+														  <!--<button type="button" class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-archive"></span>未通过</button>-->
+													  </if>
+
+		                                              <a style="background-color:#fff;color:#3bb4f2;" class="am-btn am-btn-default am-btn-xs am-text-secondary" href="/Admin/Student/edit?sid={$vo.sid}" style="color: #3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
+		                                              <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" href="/Admin/Student/delete?sid={$vo.sid}" onclick="return del()"><span class="am-icon-trash-o"></span> 删除</a>
 		                                          </div>
 		                                      </div>
 		                                  </td>

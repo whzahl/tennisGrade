@@ -23,13 +23,25 @@ a:focus {
 li{
     list-style-type: none;
 }
+
+#login_container{
+    position: fixed;
+    top: 20%;
+    left:40%;
+    z-index: 1200;
+    background-color: #d9a4ed;
+    border:1px solid rgba(245,245,245,0.23);
+    box-shadow: 6px 6px 10px gray;
+    /*border:1px solid #d6e9c6;*/
+
+}
 /*.my-a-bt{*/
-/*font-size: 16px;*/
-/*color: #FFFFFF;*/
-/*display: inline-block;*/
-/*background: #F37B1D;*/
-/*text-align: center;*/
-/*padding:1px 5px;*/
+    /*font-size: 16px;*/
+    /*color: #FFFFFF;*/
+    /*display: inline-block;*/
+    /*background: #F37B1D;*/
+    /*text-align: center;*/
+    /*padding:1px 5px;*/
 /*}*/
 .my-a-bt:hover{
     color: #FFFFFF;
@@ -63,6 +75,13 @@ li{
     right: 0;
     left: 0;
     z-index:500;
+}
+.close-bt{
+    display: inline-block;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    cursor: pointer;
 }
 .common-part1{
     width: 100%;
@@ -124,6 +143,7 @@ li{
 /*header start*/
 .header-part1{
     padding:10px 0;
+    background-color: #fff;
 }
 
 .center-container{
@@ -132,7 +152,7 @@ li{
 }
 .header{
     width: 100%;
-    background-color: #fff;
+    background-color: #d9a4ed;
 }
 .header-part1-center{
     text-align: center;
@@ -154,6 +174,7 @@ li{
 }
 #personal-center{
     position: relative;
+    display: inline-block;
 }
 .h-p1-right button a{
     color: #FFFFFF;
@@ -192,6 +213,7 @@ li{
 }
 .h-p1-right button{
     display: inline-block;
+    outline-color: #FFFFFF;
 }
 .header-part2{
     width: 100%;
@@ -207,32 +229,45 @@ li{
     color: #0e90d2;
     display: none;
     background-color: #d9a4ed;
-    width: 100px;
-    padding: 8px 0;
+    width: 110%;
+    padding: 5% 0;
     position: absolute;
-    top: 45px;
-    left: -5px;
+    top: 100%;
+    left: -4%;
     z-index:500;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 0 -1px 5px gray;
+}
+.arrow{
+    position: absolute;
+    margin: -14% 0 0 39%;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 10px solid #d9a4ed;
 }
 .intro ul{
     height: 180px;
     margin:0;
     padding:0;
+    padding-bottom: 10px;
 }
 .intro li{
-
-    font-size: 20px;
+    font-size: 18px;
     display: block;
     line-height: 30px;
-    border-bottom: #FFFFFF;
+}
+.intro li:last-child{
+    border:none;
 }
 /*header end*/
 
 /*footer start*/
-
 .footer{
+    /*预留170px的margin-top让头部和尾部撑满整个屏幕*/
+    margin-top: 20px;
     width: 100%;
     background-color: #fff;
     font-size: 12px;
@@ -244,7 +279,7 @@ li{
     text-align: center;
 }
 .footer-part ul{
-    margin:0;
+    margin:0 auto;
     padding:0;
 }
 .footer-part li{
@@ -258,8 +293,17 @@ li{
 .user-pt1-ct{
     padding: 96px 83px;
 }
+.user-pt1-ct a{
+    color: #FFFFFF;
+}
 .user-pt1-ct p{
     font-size: 20px;
+}
+.user-pt1-ct button{
+    color: #FFFFFF;
+}
+.user-pt1-ct table button{
+    margin-top: -5px;
 }
 .user-pt1-ct-pt1{
     margin-bottom: 30px;
@@ -290,6 +334,9 @@ li{
 }
 .user-pt1-ct-pt2 a{
     font-size: 1.3rem;
+    /*float: right;*/
+}
+.appply-kd-a{
     float: right;
 }
 /*user end*/
@@ -416,11 +463,11 @@ li{
     display: inline-block;
 }
 /*.circle-number{*/
-/*display: inline-block;*/
-/*width: 1.2rem;*/
-/*height: 1.2rem;*/
-/*border-radius: 2.4rem;*/
-/*border:0.1rem solid #FFFFFF;*/
+    /*display: inline-block;*/
+    /*width: 1.2rem;*/
+    /*height: 1.2rem;*/
+    /*border-radius: 2.4rem;*/
+    /*border:0.1rem solid #FFFFFF;*/
 /*}*/
 /*Place end*/
 
@@ -541,14 +588,14 @@ li{
 
 }
 /*.home-pt2-ct-pt2-list-p p{*/
-/*width: 380px;*/
-/*display: inline-block;*/
-/*margin: 0;*/
-/*padding: 0;*/
-/*-ms-text-overflow: ellipsis;*/
-/*text-overflow: ellipsis;*/
-/*overflow: hidden;*/
-/*white-space:nowrap;*/
+    /*width: 380px;*/
+    /*display: inline-block;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*-ms-text-overflow: ellipsis;*/
+    /*text-overflow: ellipsis;*/
+    /*overflow: hidden;*/
+    /*white-space:nowrap;*/
 /*}*/
 .home-pt2-ct-common-span{
     width: 20%;
@@ -558,18 +605,18 @@ li{
 }
 /*absolute布局*/
 /*.home-pt2-ct-pt3{*/
-/*text-align: center;*/
-/*width: 150px;*/
-/*position: absolute;*/
-/*right: -138px;*/
-/*top:60px;*/
+    /*text-align: center;*/
+    /*width: 150px;*/
+    /*position: absolute;*/
+    /*right: -138px;*/
+    /*top:60px;*/
 /*}*/
 /*fixed布局*/
 .home-pt2-ct-pt3{
     text-align: center;
     width: 150px;
     position: fixed;
-    right: 50px;
+    right: 0px;
     top:300px;
     z-index:1000;
 }
@@ -591,6 +638,7 @@ li{
     margin-bottom: 20px;
     padding: 5px;
     background-color: #d9a4ed;
+    border:1px solid rgba(245,245,245,0.23);
 }
 .home-pt2-ct-pt3-erweima span{
     display: inline-block;
@@ -637,7 +685,7 @@ li{
     margin-bottom: 0;
 }
 .home-pt3-ct-pt2-video{
-    margin-right: 20px;
+    margin-right: 1%;
 }
 .home-pt3-ct h1{
     font-size: 24px;
@@ -660,18 +708,18 @@ li{
 }
 /*多图滚动的样式*/
 /*.am-control-thumbs li {*/
-/*width: 12.5%; !* 100%/n ,n为轮播图数量 *!*/
+    /*width: 12.5%; !* 100%/n ,n为轮播图数量 *!*/
 /*}*/
 .home-pt2-ct-common-slider{
     text-align: center;
 }
 /*.home-pt2-ct-common-slider img{*/
-/*width: 125px;*/
-/*height: 166px;*/
+    /*width: 125px;*/
+    /*height: 166px;*/
 /*}*/
 /*多图滚动的样式*/
 /*.am-slider-carousel li {*/
-/*margin-right: 5px;*/
+    /*margin-right: 5px;*/
 /*}*/
 .home-pt4-ct-pt1-title-border{
     border-left: 8px solid #ffe367;
@@ -682,14 +730,23 @@ li{
 /*home End*/
 
 /*News Strat*/
+.News-pt1-ct{
+    padding: 0 180px;
+    padding-bottom: 80px;
+}
 .News-pt1-ct-pt2{
     color: #505050;
     /*padding: 60px 0;*/
     padding-top: 30px;
 }
 .News-pt1-ct-pt2 li{
+    position: relative;
     border-bottom:1px dashed #808080;
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-right: 120px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .News-pt1-ct-pt2 li::before{
     content: "●";
@@ -697,15 +754,12 @@ li{
 }
 .News-pt1-ct-pt2 li a{
     color: #505050;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    width: 70%;
 }
-.News-pt1-ct-pt2 li p{
-    font-size: 16px;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+.News-pt1-ct-pt2 li span{
+    display: inline-block;
+    position: absolute;
+    right: 0;
 }
 
 .content-content-pt1-ct-pt2-header-top p::before{
@@ -741,6 +795,9 @@ li{
 .content-pt1-ct-pt2-header-bottom{
     margin-bottom: 30px;
 }
+.content-pt1-ct-pt2-header-bottom span{
+    padding-left: 10px;
+}
 .content-pt1-ct-pt2-content{
     padding-bottom: 40px;
 }
@@ -759,7 +816,7 @@ li{
 /*News End*/
 /*live Start*/
 /*.live-pt1-ct-pt2{*/
-/*margin-top: 40px;*/
+    /*margin-top: 40px;*/
 /*}*/
 .live-pt1-ct-pt2 ul{
     margin: 0;
@@ -867,8 +924,8 @@ li{
     margin-bottom: 20px;
 }
 .teacher-intro-img img{
-    width: 200px;
-    height:auto;
+    width: 160px;
+    height: 200px;
 }
 .teacher-intro-content{
     padding:0 80px;
@@ -880,6 +937,8 @@ li{
     color: #d9a4ed;
 }
 .teacher-certificate-img img{
+    display: inline-block;
+    padding-top: 40px;
     width: 794px;
     height:auto;
 }
@@ -889,4 +948,13 @@ li{
 .place-intro-img img{
     width: 794px;
     height: auto;
+}
+.video-describe{
+    padding:0 50px;
+    padding-top: 30px;
+}
+.video-play{
+    margin-top: 100px;
+    padding-bottom: 200px;
+    text-align: center;
 }

@@ -7,7 +7,7 @@
                                                         微信登录信息列表
             </div>
             <ol class="am-breadcrumb">
-                <li><a href="#" class="am-icon-home">首页</a></li>
+                <li><a href="/Admin/Index/index" class="am-icon-home">首页</a></li>
                 <li>微信信息记录表</li>
             </ol>
             <div class="tpl-portlet-components">
@@ -90,7 +90,7 @@
 		                                          <div class="am-btn-group am-btn-group-xs">
 <!-- 		                                              <a href="/Admin/Place/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="background-color:#fff;color:#3bb4f2;"><span class="am-icon-pencil-square-o"></span> 修改</a>
 		                                              <button class="am-btn am-btn-default am-btn-xs am-hide-sm-only"><span class="am-icon-copy"></span> 复制</button> -->
-		                                              <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><a href="/Admin/Place/delete?id={$vo.id}" onclick="return del()"><span class="am-icon-trash-o"></span> 删除</a></button>
+		                                              <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" href="/Admin/User/delete?id={$vo.id}" onclick="return del()"><span class="am-icon-trash-o"></span> 删除</a>
 		                                          </div>
 		                                      </div>
 		                                  </td>

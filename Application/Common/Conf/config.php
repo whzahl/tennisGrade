@@ -15,7 +15,8 @@ return array(
 	'TMPL_PARSE_STRING'  => array(
 		'__STATIC__' => __ROOT__ . '/Public/static/',
 	),
-		
+
+    'DEFAULT_CHARSET'       =>  'utf-8', // 默认输出编码
 	'DEFAULT_MODULE' => 'Home',    //默认模块
 	'MODULE_ALLOW_LIST'    =>    array('Home','Admin'),
 // 	'URL_PARAMS_BIND'       =>  true, // URL变量绑定到操作方法作为参数

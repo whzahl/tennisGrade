@@ -1,4 +1,50 @@
 <extend name="Public:base" />
+<block name="css">
+    <style>
+        .certificate-img{
+            width: 600px;
+            height: auto;
+        }
+    </style>
+</block>
+<block name="js">
+    <script>
+        $(document).ready(function () {
+            $(".no-image").width(200);
+            $(".imgPreview").css({'text-align':'center'});
+            $(".imgPreview img").css({'display':'inline-block'});
+        });
+        function PreviewImage(imgFile,imgBoxId)
+        {
+            console.log(imgBoxId);
+            var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+            filextension=filextension.toLowerCase();
+            if ((filextension!='.jpg')&&(filextension!='.gif')&&(filextension!='.jpeg')&&(filextension!='.png')&&(filextension!='.bmp'))
+            {
+                alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+                imgFile.focus();
+            }
+            else
+            {
+                var path;
+                if(document.all)//IE
+                {
+                    imgFile.select();
+                    path = document.selection.createRange().text;
+                    document.getElementById(imgBoxId).innerHTML="";
+                    document.getElementById(imgBoxId).style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+                }
+                else//FF
+                {
+                    path=window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+                    //path = imgFile.files[0].getAsDataURL();// FF 3.0
+                    document.getElementById(imgBoxId).innerHTML = "<img src='"+path+"'/>";
+                    //document.getElementById("img1").src = path;
+                }
+            }
+        }
+    </script>
+</block>
 <block name="body">
 
 
@@ -27,7 +73,7 @@
                 <div class="tpl-block">
                     <div class="am-g">
                         <div class="tpl-form-body tpl-form-line">
-                            <form class="am-form tpl-form-line-form"  action="/Admin/Teacher/edit" method="post">
+                            <form class="am-form tpl-form-line-form"  action="/Admin/Teacher/edit" method="post"  enctype="multipart/form-data">
                                 <input name="tid" type="hidden"  value="{$list.tid}" >
                                 <div class="am-form-group">
                                     <label class="am-u-sm-3 am-form-label">姓名<span class="tpl-form-line-small-title">Tname</span></label>
@@ -40,8 +86,15 @@
                                 <div class="am-form-group">
                                     <label class="am-u-sm-3 am-form-label">性别<span class="tpl-form-line-small-title">Sex</span></label>
                                     <div class="am-u-sm-9">
-                                        <input name="sex" type="radio" value="男" checked="checked" /><span style="color:#888;font-size:16px;margin-right:100px;">男</span>
-                                        <input name="sex" type="radio" value="女"  /><span style="color:#888;font-size:16px;">女</span>
+                                        <if condition="$list.sex eq 1">
+                                            <input name="sex" type="radio" value="1" checked="checked" /><span style="color:#888;font-size:16px;margin-right:100px;">男</span>
+                                            <input name="sex" type="radio" value="0"  /><span style="color:#888;font-size:16px;">女</span>
+                                            <else />
+                                            <input name="sex" type="radio" value="1" /><span style="color:#888;font-size:16px;margin-right:100px;">男</span>
+                                            <input name="sex" type="radio" value="0" checked="checked"  /><span style="color:#888;font-size:16px;">女</span>
+                                        </if>
+
+
                                         <!-- <small>发布时间为必填</small> -->
                                     </div>
                                 </div>
@@ -64,17 +117,29 @@
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">个人照片<span class="tpl-form-line-small-title">Picture</span></label>
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
-                                            <div class="tpl-form-file-img">
+                                            <!--<div class="tpl-form-file-img">-->
+                                                <!--<empty name="list['picture']">-->
+			                                	<!--<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">-->
+			                                	<!--<else />-->
+												<!--<img src="{$list.picture}" class="ml50 mt20" style="width:103px;height:107px;">-->
+												<!--<input type="hidden" name="picture" value="{$list.picture}">-->
+												<!--</empty>-->
+                                            <!--</div>-->
+
+                                            <div class="tpl-form-file-img imgPreview" style="width:200px;" id="imgPreview0">
                                                 <empty name="list['picture']">
-			                                	<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">
-			                                	<else />
-												<img src="{$list.picture}" class="ml50 mt20" style="width:103px;height:107px;">
-												<input type="hidden" name="picture" value="{$list.picture}">
-												</empty>
+                                                    <img src="/Public/Admin/images/2.jpg" class="ml50 mt20 no-image">
+                                                    <else />
+                                                    <img src="{$list.picture}" class="ml50 mt20">
+                                                    <input type="hidden" name="picture" value="{$list.picture}" >
+                                                </empty>
                                             </div>
+
+
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                            <i class="am-icon-cloud-upload"></i> 添加个人图片</button>
-                                            <input id="doc-form-file" type="file" name="picture" multiple>
+                                            <i class="am-icon-cloud-upload"></i> 修改个人图片</button>
+                                            <input  type="file" name="picture" onchange='PreviewImage(this,"imgPreview0")'>
+                                            <!--<input id="doc-form-file" type="file" name="picture" multiple>-->
                                         </div>
                                     </div>
                                 </div>
@@ -86,38 +151,86 @@
                                     </div>
                                 </div>
                                 
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-form-label">居住地址</label>
-                                    <div class="am-u-sm-9">
-                                        <input  type="text" placeholder="请输入居住地址"/>
-                                    </div>
-                                </div>
+                                <!--<div class="am-form-group">-->
+                                    <!--<label class="am-u-sm-3 am-form-label">居住地址</label>-->
+                                    <!--<div class="am-u-sm-9">-->
+                                        <!--<input  type="text" placeholder="请输入居住地址"/>-->
+                                    <!--</div>-->
+                                <!--</div>-->
 
                                 <div class="am-form-group">
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">资格证书图片<span class="tpl-form-line-small-title">Picture</span></label>
                                     <div class="am-u-sm-9">
                                         <div class="am-form-group am-form-file">
-                                            <div class="tpl-form-file-img">
-                                                <empty name="list['certificate']">
-			                                	<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">
-			                                	<else />
-												<img src="{$list.certificate}" class="ml50 mt20" style="width:103px;height:107px;">
-												<input type="hidden" name="certificate" value="{$list.certificate}">
-												</empty>
-                                            </div>
+                                            <div class="tpl-form-file-img imgPreview certificate-img" id="imgPreview1">
+                                            <empty name="list1[0]">
+                                                <img src="/Public/Admin/images/2.jpg" class="ml50 mt20 no-image">
+                                                <else />
+                                                <img src="{$list1[0]}" class="ml50 mt20">
+                                                <input type="hidden" name="certificate[]" value="{$list1[0]}" >
+                                            </empty>
+                                        </div>
+
                                             <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                            <i class="am-icon-cloud-upload"></i> 添加资格证书图片</button>
-                                            <input id="doc-form-file" type="file" name="certificate" multiple>
+                                                <i class="am-icon-cloud-upload"></i> 修改资格证书图片</button>
+                                            <input type="file" name="certificate[]" onchange='PreviewImage(this,"imgPreview1")'>
+                                            <!--<input id="doc-form-file" type="file" name="certificate" multiple>-->
+                                        </div>
+                                        <div class="am-form-group am-form-file">
+                                            <!--<div class="tpl-form-file-img">-->
+                                            <!--<empty name="list['certificate']">-->
+                                            <!--<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">-->
+                                            <!--<else />-->
+                                            <!--<img src="{$list.certificate}" class="ml50 mt20" style="width:103px;height:107px;">-->
+                                            <!--<input type="hidden" name="certificate" value="{$list.certificate}">-->
+                                            <!--</empty>-->
+                                            <!--</div>-->
+                                            <div class="tpl-form-file-img imgPreview certificate-img"  id="imgPreview2">
+                                                <empty name="list1[1]">
+                                                    <img src="/Public/Admin/images/2.jpg" class="ml50 mt20 no-image">
+                                                    <else />
+                                                    <img src="{$list1[1]}" class="ml50 mt20">
+                                                    <input type="hidden" name="certificate[]" value="{$list1[1]}" >
+                                                </empty>
+                                            </div>
+
+                                            <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                <i class="am-icon-cloud-upload"></i> 修改资格证书图片</button>
+                                            <input type="file" name="certificate[]" onchange='PreviewImage(this,"imgPreview2")'>
+                                            <!--<input id="doc-form-file" type="file" name="certificate" multiple>-->
+                                        </div>
+                                        <div class="am-form-group am-form-file">
+                                            <!--<div class="tpl-form-file-img">-->
+                                            <!--<empty name="list['certificate']">-->
+                                            <!--<img src="/Public/Admin/images/2.jpg" class="ml50 mt20">-->
+                                            <!--<else />-->
+                                            <!--<img src="{$list.certificate}" class="ml50 mt20" style="width:103px;height:107px;">-->
+                                            <!--<input type="hidden" name="certificate" value="{$list.certificate}">-->
+                                            <!--</empty>-->
+                                            <!--</div>-->
+                                            <div class="tpl-form-file-img imgPreview certificate-img" id="imgPreview3">
+                                                <empty name="list1[2]">
+                                                    <img src="/Public/Admin/images/2.jpg" class="ml50 mt20 no-image">
+                                                    <else />
+                                                    <img src="{$list1[2]}" class="ml50 mt20">
+                                                    <input type="hidden" name="certificate[]" value="{$list1[2]}" >
+                                                </empty>
+                                            </div>
+
+                                            <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                <i class="am-icon-cloud-upload"></i> 修改资格证书图片</button>
+                                            <input type="file" name="certificate[]" onchange='PreviewImage(this,"imgPreview3")'>
+                                            <!--<input id="doc-form-file" type="file" name="certificate" multiple>-->
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-form-label">考点地址</label>
-                                    <div class="am-u-sm-9">
-                                        <input  type="text" placeholder="请输入考点地址"/>
-                                    </div>
-                                </div>
+                                <!--<div class="am-form-group">-->
+                                    <!--<label class="am-u-sm-3 am-form-label">考点地址</label>-->
+                                    <!--<div class="am-u-sm-9">-->
+                                        <!--<input  type="text" placeholder="请输入考点地址"/>-->
+                                    <!--</div>-->
+                                <!--</div>-->
 <!--                                <div class="am-form-group">
                                     <label for="user-weibo" class="am-u-sm-3 am-form-label">添加分类 <span class="tpl-form-line-small-title">Type</span></label>
                                     <div class="am-u-sm-9">
@@ -141,8 +254,8 @@
 
                                 <div class="am-form-group">
                                     <div class="am-u-sm-9 am-u-sm-push-3">
-                                        <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">添加</button>
-                                        <a href=""  class="am-btn am-btn-primary tpl-btn-bg-color-success " onclick ="javascript:history.go(-1);" style="margin-left:20px;">返回</a>
+                                        <button type="submit" class="am-btn am-btn-primary tpl-btn-bg-color-success ">修改</button>
+                                        <a href=""  class="am-btn am-btn-primary tpl-btn-bg-color-warning " onclick ="javascript:history.go(-1);return false;" >返回</a>
                                     </div>
                                 </div>
                             </form>
